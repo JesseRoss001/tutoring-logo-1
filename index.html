@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="North Wales Tutoring offers premium online tutoring services for GCSE, A-Level, SATs, and more. Specialising in Mathematics, Science, and comprehensive exam preparation. Serving Bangor, Wrexham, Conwy, Llandudno, and surrounding areas." />
-  <meta name="keywords" content="North Wales Tutoring, GCSE Tutoring, A-Level Tutoring, Online Tutoring, Bangor, Wrexham, Conwy, Llandudno, Mathematics, Science, Exam Preparation" />
+  <meta name="description" content="North Wales Tutoring: Premium online tutoring in Math, Science, and more. Serving Bangor, Wrexham, Conwy, Llandudno, and beyond with fun and engaging lessons." />
+  <meta name="keywords" content="North Wales Tutoring, GCSE Tutoring, A-Level, Online Tutoring, Bangor, Wrexham, Conwy, Llandudno, Exam Preparation" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- Primary Meta Tags -->
-  <title>North Wales Tutoring | Premium Online GCSE & A-Level Support</title>
+  <title>North Wales Tutoring | Friendly & Interactive Learning</title>
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="North Wales Tutoring | Premium Online GCSE & A-Level Support" />
-  <meta property="og:description" content="Expert tutoring services in Mathematics and Science for GCSE, A-Levels, SATs, and beyond. Serving Bangor, Wrexham, Conwy, and beyond." />
+  <meta property="og:title" content="North Wales Tutoring | Friendly & Interactive Learning" />
+  <meta property="og:description" content="Join our fun and interactive tutoring sessions in Maths, Science, and more. Proudly serving North Wales: Bangor, Wrexham, Conwy, Llandudno, and beyond." />
   <meta property="og:url" content="https://www.northwalestutoring.com/" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter -->
   <meta name="twitter:title" content="North Wales Tutoring" />
-  <meta name="twitter:description" content="Expert tutoring services in Mathematics and Science for GCSE, A-Levels, SATs, and beyond. Serving Bangor, Wrexham, Conwy, and beyond." />
+  <meta name="twitter:description" content="Fun, friendly online tutoring. Achieve top grades in GCSE, A-Levels, SATs, and beyond." />
 
   <!-- Bootstrap 5 CSS -->
   <link
@@ -25,18 +25,247 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
   />
 
-  <!-- Your Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Animate.css for simple animations -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
+  />
 
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+
+  <!-- SweetAlert2 for alert messages -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
+    defer
+  ></script>
+
+  <!-- Custom CSS (Optional External) -->
+  <style>
+    /* ----------------------------------------------
+       COLOR SCHEME & GLOBAL STYLES
+    ---------------------------------------------- */
+    :root {
+      --primary-color: #09096a; /* Deep navy */
+      --accent-color: #ff28a8;  /* Bright magenta */
+    }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--primary-color);
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    p, h1, h2, h3, h4, h5, h6, span, a, li, label {
+      color: var(--primary-color);
+    }
+    a {
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: var(--accent-color);
+    }
+    strong {
+      color: var(--accent-color);
+    }
+
+    /* ----------------------------------------------
+       NAVBAR
+    ---------------------------------------------- */
+    .navbar {
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+    }
+    .navbar-brand {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      color: var(--accent-color) !important; 
+    }
+    .nav-link {
+      margin-left: 1rem;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      color: #fff !important;
+    }
+    .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
+
+    /* ----------------------------------------------
+       HERO SECTION
+    ---------------------------------------------- */
+    .hero-section {
+      position: relative;
+      background: url("https://via.placeholder.com/1920x800") no-repeat center center/cover;
+      min-height: 80vh;
+      color: #fff;
+    }
+    .hero-section .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(9, 9, 106, 0.5); /* #09096a with transparency */
+      top: 0;
+      left: 0;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .hero-section p.lead {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+    .btn-custom {
+      background-color: var(--accent-color);
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #ff70c0;
+      transform: translateY(-3px);
+    }
+
+    /* ----------------------------------------------
+       SECTION TITLES
+    ---------------------------------------------- */
+    .section-title h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--primary-color);
+    }
+
+    /* ----------------------------------------------
+       ABOUT, REMOTE IMAGES
+    ---------------------------------------------- */
+    .about-img img,
+    .remote-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .about-img img:hover,
+    .remote-img img:hover {
+      transform: scale(1.03);
+    }
+
+    /* ----------------------------------------------
+       COURSES
+    ---------------------------------------------- */
+    .course-card {
+      border-radius: 10px;
+      background-color: #fff;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .course-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+
+    /* ----------------------------------------------
+       AREAS WE SERVE
+    ---------------------------------------------- */
+    .area-card {
+      border-radius: 10px;
+      background-color: #ffffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .area-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .area-card h5 {
+      color: var(--accent-color);
+    }
+
+    /* ----------------------------------------------
+       CONTACT FORM
+    ---------------------------------------------- */
+    .form-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    button.btn-custom {
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    /* ----------------------------------------------
+       LONG TEXT CONTENT (APPROACH SECTION)
+    ---------------------------------------------- */
+    .long-text-content p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    /* ----------------------------------------------
+       GALLERY (MOSAIC)
+    ---------------------------------------------- */
+    .mosaic-gallery img {
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* ----------------------------------------------
+       FOOTER
+    ---------------------------------------------- */
+    .footer-section {
+      background-color: var(--primary-color);
+    }
+    .footer-section p {
+      font-size: 0.9rem;
+      color: #fff;
+    }
+    .footer-section a {
+      color: #ffffff;
+    }
+    .footer-section a:hover {
+      color: var(--accent-color);
+    }
+
+    /* ----------------------------------------------
+       MEDIA QUERIES
+    ---------------------------------------------- */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      .nav-link {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
 
 <!-- =================================
-     NAVIGATION
+     STICKY NAVIGATION
 ===================================== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#hero">NORTH WALES TUTORING</a>
+    <a class="navbar-brand fw-bold text-uppercase" href="#hero">
+      <i class="bi bi-mortarboard-fill me-2"></i> North Wales Tutoring
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -48,28 +277,42 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div
-      class="collapse navbar-collapse justify-content-end"
-      id="navbarResponsive"
-    >
+    <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-uppercase" href="#about">About</a>
+          <a class="nav-link text-uppercase" href="#about">
+            <i class="bi bi-info-circle me-1"></i> About
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-uppercase" href="#courses">Courses</a>
+          <a class="nav-link text-uppercase" href="#courses">
+            <i class="bi bi-book me-1"></i> Courses
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-uppercase" href="#remote">Remote</a>
+          <a class="nav-link text-uppercase" href="#remote">
+            <i class="bi bi-laptop me-1"></i> Remote
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-uppercase" href="#cities">Areas</a>
+          <a class="nav-link text-uppercase" href="#areas">
+            <i class="bi bi-geo-alt me-1"></i> Areas
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-uppercase" href="#contact">Contact</a>
+          <a class="nav-link text-uppercase" href="#contact">
+            <i class="bi bi-envelope me-1"></i> Contact
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-uppercase" href="#gallery">Gallery</a>
+          <a class="nav-link text-uppercase" href="#approach">
+            <i class="bi bi-person-check me-1"></i> Approach
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" href="#gallery">
+            <i class="bi bi-images me-1"></i> Gallery
+          </a>
         </li>
       </ul>
     </div>
@@ -82,440 +325,488 @@
 ===================================== -->
 <header class="hero-section d-flex align-items-center justify-content-center" id="hero">
   <div class="overlay"></div>
-  <div class="container text-center">
-    <h1 class="display-3 text-white fw-bold mb-3">
-      Premium Tutoring in North Wales
+  <div class="container text-center animate__animated animate__fadeInDown">
+    <h1 class="display-3 fw-bold mb-3">
+      Fun & Engaging Learning in North Wales
     </h1>
-    <p class="lead text-white-50 fw-semibold mb-4">
-      Boost Your Grades with Expert Online GCSE & A-Level Tutoring
+    <p class="lead mb-4">
+      Boost your grades with our friendly and interactive GCSE & A-Level tutoring
     </p>
-    <a href="#contact" class="btn btn-custom btn-lg px-4">Get Started</a>
+    <a href="#contact" class="btn btn-custom btn-lg px-4">
+      <i class="bi bi-person-plus-fill me-2"></i>Join Us
+    </a>
   </div>
 </header>
-<!-- /HERO SECTION -->
 
-<!-- =================================
-     ABOUT SECTION
-===================================== -->
-<section id="about" class="py-5">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>About North Wales Tutoring</h2>
-      <p class="text-muted">Professional & Affordable Online Tutoring</p>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <div class="about-img rounded-3 overflow-hidden shadow-sm">
-          <img
-            src="https://via.placeholder.com/800x500"
-            alt="About North Wales Tutoring"
-            class="img-fluid"
-          />
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <p class="mb-4">
-          At <strong>North Wales Tutoring</strong>, we provide specialised educational services designed to
-          elevate student performance in GCSE, A-Level, SATs, and more. Whether you’re in Wrexham,
-          Bangor, Conwy, or beyond, our expert online tutoring ensures your needs are met with 
-          competence and care. <strong>All lessons are £10 per hour</strong>, conducted conveniently over webcam.
+<main>
+
+  <!-- =================================
+       ABOUT SECTION
+  ===================================== -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
+        <h2><i class="bi bi-chalkboard me-2"></i>About North Wales Tutoring</h2>
+        <p class="section-subtitle">
+          Professional, Fun, and Results-Focused
         </p>
-        <p class="mb-4">
-          With over a decade of experience, we focus on delivering quality instruction in Mathematics, 
-          Science, and exam preparation. Our qualified Chemical Engineer (B.Eng, University of Manchester) 
-          has proven teaching experience and a solid STEM background, ensuring a top-notch learning 
-          experience. 
-        </p>
-        <a href="#contact" class="btn btn-custom">Book a Lesson</a>
       </div>
-    </div>
-  </div>
-</section>
-<!-- /ABOUT SECTION -->
-
-<!-- =================================
-     COURSES SECTION
-===================================== -->
-<section id="courses" class="py-5 bg-light">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>Our Tutoring Courses</h2>
-      <p class="text-muted">Excel in Key Subjects & Exams</p>
-    </div>
-    <div class="row g-4">
-      <!-- Mathematics -->
-      <div class="col-md-4">
-        <div class="course-card shadow-sm p-4 text-center">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Mathematics"
-            class="mb-3"
-          />
-          <h4 class="fw-bold mb-2">Mathematics</h4>
-          <p class="text-muted">
-            From basic arithmetic to advanced calculus, master mathematical concepts with
-            tailored coursework.
-          </p>
-        </div>
-      </div>
-      <!-- Science -->
-      <div class="col-md-4">
-        <div class="course-card shadow-sm p-4 text-center">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Science"
-            class="mb-3"
-          />
-          <h4 class="fw-bold mb-2">Science</h4>
-          <p class="text-muted">
-            Dive into the world of Biology, Chemistry, and Physics with expert tutors and
-            modern teaching methods.
-          </p>
-        </div>
-      </div>
-      <!-- Exam Prep -->
-      <div class="col-md-4">
-        <div class="course-card shadow-sm p-4 text-center">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Exam Preparation"
-            class="mb-3"
-          />
-          <h4 class="fw-bold mb-2">Exam Preparation</h4>
-          <p class="text-muted">
-            Excel in your GCSEs and A-Levels with strategic sessions, practice exams, and
-            tailored feedback.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Additional Info -->
-    <div class="mt-5">
-      <h5 class="fw-bold">Age Ranges & Exam Boards</h5>
-      <p class="mb-2">
-        <strong>Key Stages:</strong> KS1 (5-7), KS2 (7-11), KS3 (11-14), GCSE (14-16), A-Level (16-18)
-      </p>
-      <p class="mb-0">
-        <strong>Subjects:</strong> Mathematics, Chemistry, Physics, Further Mathematics <br />
-        <strong>Exam Boards:</strong> AQA, Edexcel, OCR, WJEC, CCEA
-      </p>
-    </div>
-  </div>
-</section>
-<!-- /COURSES SECTION -->
-
-<!-- =================================
-     REMOTE TUTORING
-===================================== -->
-<section id="remote" class="py-5">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>Remote Tutoring Across North Wales</h2>
-      <p class="text-muted">Flexible, Convenient & Interactive Learning</p>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-lg-6 order-2 order-lg-1">
-        <p class="mb-4">
-          Stay ahead in today’s fast-paced educational environment with our
-          comprehensive remote tutoring services. Learn from the comfort of your home using 
-          interactive technology and engaging teaching methods.
-        </p>
-        <p class="mb-4">
-          Whether you’re in <strong>Bangor, Conwy, Llandudno, Wrexham</strong>, or beyond, we bring the 
-          classroom to you, focusing on Mathematics, Sciences, Humanities, and specialized exam 
-          preparation for GCSEs and A-Levels.
-        </p>
-        <a href="#contact" class="btn btn-custom">Start Remote Lessons</a>
-      </div>
-      <div class="col-lg-6 mb-4 mb-lg-0 order-1 order-lg-2">
-        <div class="remote-img rounded-3 overflow-hidden shadow-sm">
-          <img
-            src="https://via.placeholder.com/700x400"
-            alt="Remote Tutoring"
-            class="img-fluid"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /REMOTE TUTORING -->
-
-<!-- =================================
-     AREAS WE SERVE
-===================================== -->
-<section id="cities" class="py-5 bg-light">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>Areas We Serve</h2>
-      <p class="text-muted">Serving All Major Towns & Cities Across North Wales</p>
-    </div>
-    <!-- Cards layout for each area -->
-    <div class="row g-4">
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Wrexham</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Bangor</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Conwy</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Llandudno</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Rhyl</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Colwyn Bay</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Holyhead</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Caernarfon</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Pwllheli</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Porthmadog</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Denbigh</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Ruthin</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">St Asaph</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Mold</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Flint</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="area-card p-4 text-center shadow-sm">
-          <h5 class="fw-bold">Prestatyn</h5>
-        </div>
-      </div>
-      <!-- Add additional towns/cities as needed -->
-    </div>
-  </div>
-</section>
-<!-- /AREAS WE SERVE -->
-
-<!-- =================================
-     CONTACT SECTION
-===================================== -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>Contact Us</h2>
-      <p class="text-muted">Start Your Tutoring Journey Today</p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          class="needs-validation"
-          novalidate
-        >
-          <!-- Replace with your Access Key -->
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-
-          <!-- Honeypot field to prevent spam -->
-          <input type="checkbox" name="botcheck" id="botcheck" style="display: none;" />
-
-          <!-- Custom Confirmation / Success Page
-            <input type="hidden" name="redirect" value="https://www.northwalestutoring.com/thank-you.html">
-          -->
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="name" class="form-label fw-bold">Name</label>
-              <input
-                type="text"
-                class="form-control"
-                name="name"
-                id="name"
-                placeholder="Your Name"
-                required
-              />
-              <div class="invalid-feedback">Please enter your name</div>
-            </div>
-            <div class="col-md-6">
-              <label for="email" class="form-label fw-bold">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                name="email"
-                id="email"
-                placeholder="Your Email"
-                required
-              />
-              <div class="invalid-feedback">Please enter a valid email</div>
-            </div>
-            <div class="col-md-6">
-              <label for="phone" class="form-label fw-bold">Phone</label>
-              <input
-                type="tel"
-                class="form-control"
-                name="phone"
-                id="phone"
-                placeholder="Phone (Optional)"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="subject" class="form-label fw-bold">Subject</label>
-              <input
-                type="text"
-                class="form-control"
-                name="subject"
-                id="subject"
-                placeholder="Reason for Contact"
-                required
-              />
-              <div class="invalid-feedback">Please enter the subject</div>
-            </div>
-            <div class="col-12">
-              <label for="message" class="form-label fw-bold">Message</label>
-              <textarea
-                class="form-control"
-                name="message"
-                id="message"
-                rows="5"
-                placeholder="Your message"
-                required
-              ></textarea>
-              <div class="invalid-feedback">Please enter your message</div>
-            </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="about-img rounded-3 overflow-hidden shadow-sm">
+            <img
+              src="https://via.placeholder.com/800x500"
+              alt="About North Wales Tutoring"
+              class="img-fluid"
+            />
           </div>
-          <button type="submit" class="btn btn-custom mt-4">
-            Send Message
-          </button>
-        </form>
+        </div>
+        <div class="col-lg-6 animate__animated animate__fadeInRight">
+          <p>
+            Welcome to <strong>North Wales Tutoring</strong>—your friendly hub for learning success! 
+            We’re all about making academic progress as fun and accessible as possible. Our expert tutors 
+            offer a <strong>£10/hour</strong> rate and specialize in helping students with their 
+            <strong>GCSEs</strong>, <strong>A-Levels</strong>, and beyond.
+          </p>
+          <p>
+            Whether you’re in <strong>Bangor</strong>, <strong>Wrexham</strong>, or <strong>Llandudno</strong>, 
+            we provide engaging online and in-person lessons tailored to your busy schedule. Our secret sauce? 
+            A fantastic mix of lively lesson plans, relatable real-world examples, and a heap of encouragement. 
+            We believe in bringing out every student’s potential in a relaxed, positive atmosphere.
+          </p>
+          <p>
+            Ready to experience the difference a supportive tutor can make? <strong>North Wales Tutoring</strong> 
+            is here to turn tricky topics into stepping stones on your path to academic success.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- /CONTACT SECTION -->
+  </section>
 
-<!-- =================================
-     ADDITIONAL TUTORING INFO
-===================================== -->
-<section class="py-5">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>Our Tutoring Approach</h2>
-      <p class="text-muted">Personalized Sessions, Proven Results</p>
-    </div>
-    <p class="mb-4">
-      Before starting each lesson, we research exam board requirements to ensure our material 
-      aligns with the official syllabus. Our priority is deep understanding, followed by 
-      teaching exam techniques to maximize success.
-    </p>
-    <p class="mb-4">
-      We tailor each lesson to the individual needs of our students. Whether they struggle 
-      with complex equations or need help with revision techniques, we provide dynamic and 
-      engaging sessions. Our approach encourages students to feel at ease, building 
-      confidence alongside knowledge.
-    </p>
-    <p class="mb-4 fw-semibold">
-      “I’m a qualified Chemical Engineer (B.Eng, University of Manchester, 2:1) with years of 
-      experience in teaching GCSE & A-Level Chemistry, Maths, and more. I focus on making 
-      challenging concepts easy to understand and apply.”
-    </p>
-  </div>
-</section>
+  <!-- =================================
+       COURSES SECTION
+  ===================================== -->
+  <section id="courses" class="py-5">
+    <div class="container">
+      <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
+        <h2><i class="bi bi-bookmarks-fill me-2"></i>Our Tutoring Courses</h2>
+        <p class="section-subtitle">
+          Fun & Interactive Lessons for All Levels
+        </p>
+      </div>
+      <div class="row g-4">
+        <!-- Mathematics -->
+        <div class="col-md-4">
+          <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
+            <i class="bi bi-superscript fa-3x mb-3" style="font-size:2rem; color: #ff28a8;"></i>
+            <h4 class="fw-bold">Mathematics</h4>
+            <p class="mb-0">
+              Dive into number crunching like never before! Our lively approach transforms 
+              everything from fractions to calculus into a breeze. Let’s make those equations fun!
+            </p>
+          </div>
+        </div>
+        <!-- Science -->
+        <div class="col-md-4">
+          <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
+            <i class="bi bi-beaker-fill fa-3x mb-3" style="font-size:2rem; color: #ff28a8;"></i>
+            <h4 class="fw-bold">Science</h4>
+            <p class="mb-0">
+              Explore biology, chemistry, and physics with real-world examples and 
+              interactive experiments. We’ll help you see science in a whole new light!
+            </p>
+          </div>
+        </div>
+        <!-- Exam Prep -->
+        <div class="col-md-4">
+          <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
+            <i class="bi bi-check2-square fa-3x mb-3" style="font-size:2rem; color: #ff28a8;"></i>
+            <h4 class="fw-bold">Exam Prep</h4>
+            <p class="mb-0">
+              GCSEs, A-Levels, or SATs—bring it on! We’ll guide you through practice tests, 
+              time-saving tips, and proven strategies for exam success.
+            </p>
+          </div>
+        </div>
+      </div>
 
-<!-- =================================
-     GALLERY SECTION (MOSAIC)
-===================================== -->
-<section id="gallery" class="py-5 bg-light">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>Our Gallery</h2>
-      <p class="text-muted">Snapshots of Our Tutoring Experience</p>
+      <!-- Additional Info -->
+      <div class="mt-5 animate__animated animate__fadeInLeft">
+        <h5 class="fw-bold"><i class="bi bi-award-fill me-2"></i>We Cover</h5>
+        <p class="mb-2">
+          <strong>Key Stages:</strong> KS1 (5-7), KS2 (7-11), KS3 (11-14), 
+          GCSE (14-16), A-Level (16-18)
+        </p>
+        <p class="mb-2">
+          <strong>Subjects:</strong> Mathematics, Chemistry, Physics, Further Mathematics, SATs, and more
+        </p>
+        <p class="mb-0">
+          <strong>Exam Boards:</strong> AQA, Edexcel, OCR, WJEC, CCEA
+        </p>
+      </div>
     </div>
-    <div class="row g-3 mosaic-gallery">
-      <div class="col-6 col-md-3">
-        <img
-          src="https://via.placeholder.com/500x500"
-          alt="Gallery Image 1"
-          class="img-fluid shadow-sm rounded-3"
-        />
+  </section>
+
+  <!-- =================================
+       REMOTE TUTORING
+  ===================================== -->
+  <section id="remote" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
+        <h2><i class="bi bi-wifi me-2"></i>Remote Tutoring in North Wales</h2>
+        <p class="section-subtitle">
+          Online Lessons That Feel Just as Warm and Personal
+        </p>
       </div>
-      <div class="col-6 col-md-3">
-        <img
-          src="https://via.placeholder.com/400x500"
-          alt="Gallery Image 2"
-          class="img-fluid shadow-sm rounded-3"
-        />
+      <div class="row align-items-center">
+        <div class="col-lg-6 animate__animated animate__fadeInLeft">
+          <p class="mb-4">
+            Busy schedule? Live in a remote area? No problem! Our remote tutoring 
+            sessions bring the classroom directly to you—no commute necessary. 
+            We use interactive technology like shared whiteboards, quizzes, and live 
+            chat to keep students fully engaged and motivated.
+          </p>
+          <p class="mb-4">
+            Whether you’re in <strong>Bangor</strong>, <strong>Conwy</strong>, 
+            or <strong>Wrexham</strong>, you’ll enjoy a top-notch learning 
+            experience right from your living room. We customize each session 
+            to tackle your trickiest topics without any travel hassles.
+          </p>
+          <p class="mb-4">
+            Dive in today and discover how easy and fun online learning can be—especially 
+            when it’s delivered North Wales style!
+          </p>
+          <a href="#contact" class="btn btn-custom">
+            <i class="bi bi-laptop-fill me-2"></i>Start Remote Lessons
+          </a>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0 animate__animated animate__fadeInRight">
+          <div class="remote-img rounded-3 overflow-hidden shadow-sm">
+            <img
+              src="https://via.placeholder.com/700x400"
+              alt="Remote Tutoring"
+              class="img-fluid"
+            />
+          </div>
+        </div>
       </div>
-      <div class="col-6 col-md-3">
-        <img
-          src="https://via.placeholder.com/300x300"
-          alt="Gallery Image 3"
-          class="img-fluid shadow-sm rounded-3"
-        />
-      </div>
-      <div class="col-6 col-md-3">
-        <img
-          src="https://via.placeholder.com/600x600"
-          alt="Gallery Image 4"
-          class="img-fluid shadow-sm rounded-3"
-        />
-      </div>
-      <!-- Add more images as desired -->
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- =================================
+       AREAS WE SERVE
+  ===================================== -->
+  <section id="areas" class="py-5">
+    <div class="container">
+      <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
+        <h2><i class="bi bi-geo-alt-fill me-2"></i>Areas We Serve</h2>
+        <p class="section-subtitle">
+          Proudly Supporting Students All Over North Wales
+        </p>
+      </div>
+      <!-- Card layout for areas -->
+      <div class="row g-4 animate__animated animate__fadeIn">
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Wrexham</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Bangor</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Conwy</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Llandudno</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Rhyl</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Colwyn Bay</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Holyhead</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Caernarfon</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Pwllheli</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Porthmadog</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Denbigh</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Ruthin</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">St Asaph</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Mold</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Flint</h5>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="area-card p-4 text-center shadow-sm">
+            <h5 class="fw-bold">Prestatyn</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 animate__animated animate__fadeIn">
+        <p>
+          No matter where you live in our stunning region, <strong>North Wales Tutoring</strong> 
+          is here to help. We bring quality education to students in every corner—no matter 
+          how far the school bus travels! From bustling market towns to scenic coastal areas, 
+          our tutors adapt to each community’s unique needs.
+        </p>
+        <p>
+          Choose between in-person visits (where available) or our popular remote tutoring option. 
+          Either way, you’ll enjoy the same supportive environment, engaging lessons, and sincere 
+          commitment to your success.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================
+       CONTACT SECTION
+  ===================================== -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
+        <h2><i class="bi bi-envelope-fill me-2"></i>Contact Us</h2>
+        <p class="section-subtitle">We Can’t Wait to Hear from You!</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 animate__animated animate__fadeIn">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="needs-validation"
+            novalidate
+            id="contactForm"
+          >
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
+            <!-- Honeypot field to prevent spam -->
+            <input type="checkbox" name="botcheck" id="botcheck" style="display: none;" />
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label fw-bold">
+                  Name <i class="bi bi-person-fill"></i>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <div class="invalid-feedback">Please enter your name</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label fw-bold">
+                  Email <i class="bi bi-envelope"></i>
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <div class="invalid-feedback">Please enter a valid email</div>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label fw-bold">
+                  Phone <i class="bi bi-telephone-forward-fill"></i>
+                </label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone (Optional)"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="subject" class="form-label fw-bold">
+                  Subject <i class="bi bi-question-circle-fill"></i>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  placeholder="Reason for Contact"
+                  required
+                />
+                <div class="invalid-feedback">Please enter the subject</div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label fw-bold">
+                  Message <i class="bi bi-chat-right-dots-fill"></i>
+                </label>
+                <textarea
+                  class="form-control"
+                  name="message"
+                  id="message"
+                  rows="5"
+                  placeholder="Tell us what's on your mind!"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Please enter your message</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-custom mt-4">
+              <i class="bi bi-send-fill me-2"></i>Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================
+       OUR APPROACH (LONG TEXT FOR SEO)
+  ===================================== -->
+  <section id="approach" class="py-5">
+    <div class="container">
+      <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
+        <h2><i class="bi bi-lightbulb-fill me-2"></i>Our Tutoring Approach</h2>
+        <p class="section-subtitle">Personalized, Uplifting & Results-Oriented</p>
+      </div>
+      <article class="long-text-content animate__animated animate__fadeIn">
+        <p>
+          At <strong>North Wales Tutoring</strong>, we’ve learned that students thrive 
+          when they’re having fun, feeling valued, and being challenged at just the right 
+          level. Our approach is all about striking this perfect balance—starting every 
+          lesson with a warm welcome and ending each session with clear action steps to 
+          keep the momentum going.
+        </p>
+        <p>
+          Our tutors believe in <strong>hands-on learning</strong>. Whether it’s working 
+          through real exam questions, performing a quick experiment, or trying out 
+          an interactive demo, every session is brimming with ways to apply new knowledge. 
+          We don’t just cover the “what”; we tackle the “why,” helping students see the 
+          bigger picture behind each concept.
+        </p>
+        <p>
+          We’re also big on <strong>exam strategy</strong>. From pacing yourself during 
+          timed tests to mastering multiple-choice questions, we’ll show you how to walk 
+          into exam day feeling confident and prepared. Yet our goal goes beyond 
+          short-term achievements. We strive to inspire a lifelong love of learning that 
+          outlasts any single quiz or test.
+        </p>
+        <p>
+          Regular communication with parents and guardians is essential to us. Expect 
+          progress updates, collaborative lesson planning, and flexible scheduling that 
+          adapts to your family’s lifestyle. Need extra time on a tough subject? Or maybe 
+          you’d like to plan around extracurriculars? We’ll make it work.
+        </p>
+        <p>
+          Lastly, we take pride in creating a <strong>supportive community</strong> of 
+          learners. We celebrate milestones big and small, turning every improvement into 
+          a motivational boost. We can’t wait to be part of your academic journey!
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =================================
+       GALLERY SECTION (MOSAIC)
+  ===================================== -->
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
+        <h2><i class="bi bi-images me-2"></i>Our Gallery</h2>
+        <p class="section-subtitle">Take a Peek at Our Tutoring Adventures</p>
+      </div>
+      <div class="row g-3 mosaic-gallery animate__animated animate__fadeIn">
+        <div class="col-6 col-md-3">
+          <img
+            src="https://via.placeholder.com/500x500"
+            alt="Gallery Image 1"
+            class="img-fluid shadow-sm rounded-3"
+          />
+        </div>
+        <div class="col-6 col-md-3">
+          <img
+            src="https://via.placeholder.com/400x500"
+            alt="Gallery Image 2"
+            class="img-fluid shadow-sm rounded-3"
+          />
+        </div>
+        <div class="col-6 col-md-3">
+          <img
+            src="https://via.placeholder.com/300x300"
+            alt="Gallery Image 3"
+            class="img-fluid shadow-sm rounded-3"
+          />
+        </div>
+        <div class="col-6 col-md-3">
+          <img
+            src="https://via.placeholder.com/600x600"
+            alt="Gallery Image 4"
+            class="img-fluid shadow-sm rounded-3"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <!-- =================================
      FOOTER
 ===================================== -->
 <footer class="footer-section text-white pt-5 pb-3">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-md-6 mb-3 mb-md-0">
         <p class="m-0">
-          <a href="#" class="text-white text-decoration-none me-2">Privacy Policy</a> | 
-          <a href="#" class="text-white text-decoration-none ms-2">Terms of Service</a>
+          <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+          <a href="#" class="text-white text-decoration-none">Terms of Service</a>
         </p>
       </div>
       <div class="col-md-6 text-md-end">
@@ -527,12 +818,15 @@
   </div>
 </footer>
 
+<!-- =================================
+     EXTERNAL SCRIPTS
+===================================== -->
 <!-- Bootstrap 5 JavaScript -->
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 ></script>
 
-<!-- Optional: Bootstrap Form Validation Script -->
+<!-- Optional: Basic Form Validation -->
 <script>
   (function () {
     'use strict'
@@ -547,6 +841,57 @@
       }, false)
     })
   })()
+</script>
+
+<!-- SweetAlert Logic for Form Submission -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      if (!contactForm.checkValidity()) {
+        contactForm.classList.add('was-validated');
+        return;
+      }
+
+      // Collect form data
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Message Sent!',
+            text: 'Thank you for reaching out. We’ll get back to you soon!',
+            confirmButtonColor: '#ff28a8'
+          });
+          contactForm.reset();
+          contactForm.classList.remove('was-validated');
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Submission Error',
+            text: 'Oops! Something went wrong. Please try again.',
+            confirmButtonColor: '#ff28a8'
+          });
+        }
+      } catch (error) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Network Error',
+          text: 'Unable to send your message. Please check your connection and try again.',
+          confirmButtonColor: '#ff28a8'
+        });
+      }
+    });
+  });
 </script>
 
 </body>
