@@ -4,229 +4,686 @@
    Color Scheme: #09096a (Primary Text), #ff28a8 (Accent)
 ========================================== */
 
-/* GLOBAL STYLES */
+/* ----------------------------------------------
+   COLOR SCHEME & GLOBAL STYLES
+---------------------------------------------- */
+:root {
+  --primary-color: #09096a;      /* Deep Navy */
+  --accent-color: #ff28a8;       /* Bright Magenta */
+  --background-color: #fafafa;   /* Light Background */
+  --text-color: #373b3e;         /* Primary Text Color */
+  --navbar-bg-color: #000000;    /* Navbar Background */
+  --footer-bg-color: #070766;    /* Footer Background */
+  --btn-hover-color: #ff70c0;    /* Button Hover Color */
+  --overlay-color: rgb(92 92 135 / 70%) /* Hero Section Overlay */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: #09096a; /* Primary text color */
-    background-color: #fafafa;
-    margin: 0;
-    padding: 0;
-  }
-  
-  p, h1, h2, h3, h4, h5, h6, span, a, li, label {
-    color: #09096a; /* Default text color */
-  }
-  
-  a {
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  a:hover {
-    color: #ff28a8;
-  }
-  
-  strong {
-    color: #ff28a8; /* Highlight important words in accent color */
-  }
-  
-  /* SECTION TITLES & SUBTITLES */
-  .section-title h2 {
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ff28a8; /* Headings in accent color for contrast */
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-  }
-  .section-subtitle {
-    font-size: 1rem;
-    margin-bottom: 0;
-    color: #09096a;
-    font-style: italic;
-  }
-  
-  /* NAVIGATION */
-  .navbar {
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-  }
-  .navbar-brand {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: #ff28a8 !important; /* Brand in accent color */
-  }
-  .nav-link {
-    margin-left: 1rem;
-    text-transform: uppercase;
-    transition: color 0.2s ease;
-  }
-  .nav-link:hover {
-    color: #ff28a8 !important;
-  }
-  
-  /* HERO SECTION */
-  .hero-section {
-    position: relative;
-    background: url("https://via.placeholder.com/1920x800") no-repeat center center/cover;
-    min-height: 80vh;
-  }
-  .hero-section .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(9, 9, 106, 0.5); /* #09096a with transparency */
-    top: 0;
-    left: 0;
-  }
-  .hero-section h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .hero-section p.lead {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #fff;
-  }
-  .btn-custom {
-    background-color: #ff28a8;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  .btn-custom:hover {
-    background-color: #ff70c0;
-    transform: translateY(-3px);
-  }
-  
-  /* ABOUT IMAGES, REMOTE IMAGES */
-  .about-img img,
-  .remote-img img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  .about-img img:hover,
-  .remote-img img:hover {
-    transform: scale(1.03);
-  }
-  
-  /* COURSES */
-  .course-card {
-    border-radius: 10px;
-    background-color: #fff;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  .course-card:hover {
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    transform: translateY(-5px);
-  }
-  .course-card img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  /* REMOTE TUTORING */
-  .remote-img {
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  /* AREAS WE SERVE (CARDS) */
-  .area-card {
-    border-radius: 10px;
-    background-color: #ffffff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #09096a;
-  }
-  .area-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  .area-card h5 {
-    color: #ff28a8;
-  }
-  
-  /* CONTACT FORM */
-  .form-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  .btn-custom.mt-4 {
-    margin-top: 1rem;
-    width: 100%;
-  }
-  
-  /* LONG TEXT CONTENT (APPROACH SECTION) */
-  .long-text-content p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-  
-  /* GALLERY */
-  .mosaic-gallery img {
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-/* FOOTER */
-.footer-section {
-  background: linear-gradient(145deg, #070766, #0b0b8a) !important;
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
-  color: #fff !important;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+strong {
+  color: var(--accent-color);
+}
+
+/* ----------------------------------------------
+   NAVBAR
+---------------------------------------------- */
+.navbar {
+  background-color: var(--navbar-bg-color) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Custom Navbar Toggler */
+.navbar-toggler-icon {
+  display: none; /* Hide Bootstrap's default toggler icon */
+}
+
+.navbar-toggler {
+  width: 20px; /* Adjust as needed */
+  height: 14px;
   position: relative;
+  border: none; /* Remove default border */
+  cursor: pointer;
+}
+
+.navbar-toggler::before,
+.navbar-toggler::after,
+.navbar-toggler .navbar-toggler-icon {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff; /* Line color */
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.navbar-toggler::before {
+  top: 0;
+}
+
+.navbar-toggler::after {
+  bottom: 0;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler:not(.collapsed)::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler:not(.collapsed)::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  opacity: 0; /* Hide the middle line when active */
+}
+
+/* Optional: Add hover effect */
+.navbar-toggler:hover::before,
+.navbar-toggler:hover::after,
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-color: #ff28a8; /* Change color on hover */
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--accent-color) !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-brand i {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #ffffff !important;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width .3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ----------------------------------------------
+   HERO SECTION
+---------------------------------------------- */
+/* ----------------------------------------------
+   HERO VIDEO STYLES
+---------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden; /* Ensure no overflow from video */
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Ensures the video covers the area */
+}
+
+/* Adjust overlay to cover the video */
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
   z-index: 1;
+}
+
+/* Ensure content is above the video and overlay */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.hero-section p.lead {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.btn-custom {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-custom:hover {
+  background-color: var(--btn-hover-color);
+  transform: translateY(-3px);
+}
+
+/* ----------------------------------------------
+   SECTION TITLES
+---------------------------------------------- */
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-title h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+/* ----------------------------------------------
+   ABOUT & REMOTE IMAGES
+---------------------------------------------- */
+.about-img img,
+.remote-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures full image is visible */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img img:hover,
+.remote-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ----------------------------------------------
+   COURSES SECTION
+---------------------------------------------- */
+.courses-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.course-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures all cards are the same height */
+}
+
+.course-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--accent-color);
+  transform: rotate(45deg);
+  transition: opacity 0.3s ease;
+  opacity: 0.1;
+}
+
+.course-card:hover::before {
+  opacity: 0.2;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.course-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+}
+
+.course-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+  flex-grow: 1; /* Allows the paragraph to take up remaining space */
+}
+
+/* ----------------------------------------------
+   AREAS WE SERVE SECTION
+---------------------------------------------- */
+.areas-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.area-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.area-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--accent-color);
+  transform: rotate(45deg);
+  transition: opacity 0.3s ease;
+  opacity: 0.1;
+}
+
+.area-card:hover::before {
+  opacity: 0.2;
+}
+
+.area-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.area-card h5 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* ----------------------------------------------
+   CONTACT FORM
+---------------------------------------------- */
+.form-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.form-control {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: none;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 0.875rem;
+}
+
+button.btn-custom {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+button.btn-custom:hover {
+  background-color: var(--btn-hover-color);
+  transform: translateY(-3px);
+}
+
+/* ----------------------------------------------
+   LONG TEXT CONTENT (APPROACH SECTION)
+---------------------------------------------- */
+.long-text-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* ----------------------------------------------
+   GALLERY (MOSAIC)
+---------------------------------------------- */
+
+
+.mosaic-gallery img {
+  width: 100%;
+  height: auto; /* Ensures full image is visible */
+  object-fit: contain; /* Changed from cover to contain */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #fff; /* Provides a clean background */
+  padding: 5px; /* Adds spacing around images */
+}
+
+.mosaic-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ----------------------------------------------
+   FOOTER
+---------------------------------------------- */
+.footer-section {
+  background: var(--footer-bg-color);
+  color: #ffffff;
+  padding: 3rem 1rem;
+  position: relative;
   overflow: hidden;
 }
+
 .footer-section::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
   z-index: 0;
 }
-.footer-section h5 {
-  color: #ff28a8;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 1px;
+
+.footer-section .container {
+  position: relative;
+  z-index: 1;
 }
+
+.footer-section h5 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.footer-section h5::after {
+  content: '';
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-section p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
 .footer-section a {
   color: #ffffff;
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .footer-section a:hover {
-  color: #ff70c0;
+  color: var(--accent-color);
   transform: scale(1.1);
 }
+
 .footer-section i {
-  transition: transform 0.3s ease;
-}
-.footer-section i:hover {
-  transform: translateY(-3px);
-  color: #ff28a8;
-}
-.footer-section p {
-  font-size: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-  
-  /* MEDIA QUERIES */
-  @media (max-width: 768px) {
-    .hero-section h1 {
-      font-size: 2rem;
-    }
-    .navbar-brand {
-      font-size: 1rem;
-    }
-    .nav-link {
-      margin-left: 0;
-    }
+.footer-section i:hover {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.footer-section .text-uppercase {
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------------------
+   MEDIA QUERIES
+---------------------------------------------- */
+@media (max-width: 1200px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
   }
-  
+
+  .section-title h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.25rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .course-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .area-card h5 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1.1rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn-custom {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .course-card, .area-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-custom {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .course-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .area-card h5 {
+    font-size: 1.1rem;
+  }
+
+  .mosaic-gallery img {
+    height: auto; /* Ensures images adapt to their natural height */
+  }
+}
+
+/* ----------------------------------------------
+   ANIMATIONS
+---------------------------------------------- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.8); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
