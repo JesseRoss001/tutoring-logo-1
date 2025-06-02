@@ -1,0 +1,992 @@
+/* =========================================
+   ABOUT PAGE HERO STYLES (BRANDING COLORS)
+========================================== */
+
+/* Brand Color Palette */
+:root {
+  --primary-color: #09096A;      /* Deep Navy for text & buttons */
+  --accent-color: #FF28A8;       /* Bright Magenta accent */
+  --hero-bg-color: #F9F9F9;      /* Very light gray background */
+  --card-bg-color: #FFFFFF;      /* White card */
+  --text-dark: #373B3E;          /* Dark gray for paragraph text */
+  --highlight-bg: #FF28A8;       /* Use magenta for highlighted word */
+  --highlight-text: #FFFFFF;     /* White text on magenta highlight */
+}
+
+/* Remove default margins/padding */
+#about-hero {
+  margin: 0;
+  padding: 0;
+  background-color: var(--hero-bg-color);
+}
+
+/* Top Caption & Title */
+.hero-top {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.hero-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero-title .highlight {
+  display: inline-block;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+  padding: 0.2rem 0.4rem;
+  margin-left: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+/* White Card Container */
+.hero-card {
+  background-color: var(--card-bg-color);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure proper spacing in the card */
+.hero-card .row {
+  margin: 0;
+}
+
+/* Text Column */
+.hero-text .intro-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.hero-text .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  background-color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.hero-text .btn-cta i {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+.hero-text .btn-cta:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+/* Image Column */
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-title .highlight {
+    font-size: 2rem;
+  }
+  .hero-text .intro-heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #about-hero {
+    padding: 2rem 1rem;
+  }
+  .hero-top {
+    padding-top: 2rem;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-title .highlight {
+    font-size: 1.75rem;
+  }
+  .hero-text .intro-heading {
+    font-size: 1.25rem;
+  }
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+  .hero-text .btn-cta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-title .highlight {
+    font-size: 1.5rem;
+  }
+  .hero-text .intro-heading {
+    font-size: 1.1rem;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  .hero-text .btn-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================
+   WHY TUTOR SECTION (HEIGHT‐LIMITED IMAGE)
+========================================== */
+
+/* Brand Colour Variables */
+:root {
+  --primary-color: #09096A;      /* Deep Navy for text */
+  --accent-color: #FF28A8;       /* Bright Magenta accent */
+  --light-bg: #FAFAFA;           /* Very light gray background */
+  --text-dark: #373B3E;          /* Dark gray for paragraph text */
+}
+
+/* Section Background & Spacing */
+#why-tutor {
+  background-color: var(--light-bg);
+  padding-bottom: 5rem; /* Room below the overlapping stats card */
+}
+
+/* Heading + Centre Icon */
+#why-tutor .section-heading {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+#why-tutor .heading-icon {
+  font-size: 2rem;
+  color: var(--accent-color);
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+
+#why-tutor .section-heading h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#why-tutor .section-heading p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Banner Container: centres content and sets up relative positioning */
+.banner-container {
+  padding-top: 2rem;
+  position: relative; /* For stats-card absolute positioning */
+}
+
+/* Banner Image: Limit Height & Use Object‐Fit */
+.banner-image {
+  display: block;
+  width: 100%;
+  max-height: 400px; /* Cap the height here */
+  height: 100%;
+  object-fit: cover; /* Crop if needed to fill area */
+  border-radius: 0.75rem;
+}
+
+/* Stats Card (Overlapping) */
+.stats-card {
+  position: absolute;
+  bottom: -40px; /* Overlap amount */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem 0.5rem;
+  width: 100%;
+  max-width: 1000px;
+  z-index: 2;
+  color: #FFFFFF;
+}
+
+/* Individual Stat Items */
+.stat-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #FFFFFF;
+}
+
+.stat-item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+/* Vertical Divider Between Stats (Except Last) */
+.stat-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  #why-tutor .section-heading h2 {
+    font-size: 2rem;
+  }
+  #why-tutor .section-heading p {
+    font-size: 0.95rem;
+  }
+  .stat-item h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats-card {
+    padding: 1rem 0.5rem;
+  }
+  .stat-item {
+    border-right: none;
+    margin-bottom: 1rem;
+  }
+  .stats-card .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-item h3 {
+    font-size: 1.5rem;
+  }
+  .stat-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================
+   OUR CORE VALUES SECTION (BRANDING COLORS)
+========================================== */
+
+/* Brand Colours & Utility Variables */
+:root {
+  --primary-color: #09096A;      /* Deep Navy for headings */
+  --accent-color: #FF28A8;       /* Bright Magenta accent */
+  --text-dark: #373B3E;          /* Dark gray for body text */
+  --bg-purple: #F2E8FF;          /* Light purple for Community First */
+  --bg-pink: #FFE8F1;            /* Light pink for Cost-Effectiveness */
+  --bg-green: #E8FFF2;           /* Light mint green for Accessibility */
+  --bg-yellow: #FFF8E8;          /* Light yellow for Personalised Learning */
+}
+
+/* Section Padding */
+#core-values {
+  background-color: #FFFFFF;
+}
+
+/* Section Title Styles */
+#core-values .text-center h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+#core-values .text-center h2 .text-accent {
+  color: #7F5FFF; /* Slightly different purple for “Values” */
+}
+
+#core-values .text-center p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Value Cards Grid */
+#core-values .row {
+  margin-top: 2rem;
+}
+
+/* Individual Card */
+.value-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Background colours for each card */
+.bg-purple {
+  background-color: var(--bg-purple);
+}
+
+.bg-pink {
+  background-color: var(--bg-pink);
+}
+
+.bg-green {
+  background-color: var(--bg-green);
+}
+
+.bg-yellow {
+  background-color: var(--bg-yellow);
+}
+
+/* Icon wrapper */
+.value-card .icon i {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.value-card .icon {
+  text-align: center;
+}
+
+/* Card Heading */
+.value-card h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Card Paragraph */
+.value-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 180px;
+  line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  #core-values .text-center h2 {
+    font-size: 2rem;
+  }
+  #core-values .text-center p {
+    font-size: 0.95rem;
+  }
+  .value-card h5 {
+    font-size: 1.1rem;
+  }
+  .value-card p {
+    font-size: 0.9rem;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  #core-values .text-center h2 {
+    font-size: 1.75rem;
+  }
+  #core-values .text-center p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+  .value-card h5 {
+    font-size: 1rem;
+  }
+  .value-card p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   QUALIFICATIONS & EDUCATION (WOW STYLE, UNIFIED HEIGHTS)
+========================================== */
+
+/* Brand Colours */
+:root {
+  --primary-color: #09096A;      /* Deep Navy */
+  --accent-color: #FF28A8;       /* Bright Magenta */
+  --light-bg: #F9FAFF;           /* Very light off-white, slight blue tint */
+  --text-dark: #373B3E;          /* Dark gray for text */
+  --shadow-color: rgba(9, 9, 106, 0.15); /* Stronger navy shadow */
+}
+
+/* Section Background & Padding */
+.qualifications-section {
+  background-color: var(--light-bg);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Section Header */
+.qual-header h2.qual-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.qual-header h2.qual-title .text-accent {
+  color: var(--accent-color);
+}
+
+.qual-header p.qual-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-dark);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Qualification Card */
+.qual-card,
+.qual-card-clickable {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px var(--shadow-color);
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.qual-card:hover,
+.qual-card-clickable:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 45px var(--shadow-color);
+}
+
+/* Logo */
+.qual-logo {
+  max-width: 120px;
+  height: auto;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease;
+}
+
+.qual-card:hover .qual-logo,
+.qual-card-clickable:hover .qual-logo {
+  transform: scale(1.1);
+}
+
+/* Qualification Title */
+.qual-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+/* Institution Name */
+.qual-institution {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: #6C6F74; /* Mid gray */
+}
+
+/* Clickable Card: remove underline and ensure it behaves like a block */
+.qual-card-clickable {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CTA Button */
+.btn-view-profile {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+}
+
+.btn-view-profile:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .qual-header h2.qual-title {
+    font-size: 2.25rem;
+  }
+  .qual-header p.qual-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .qual-card,
+  .qual-card-clickable {
+    max-width: 240px;
+    padding: 1.75rem 1.25rem;
+  }
+  .qual-logo {
+    max-width: 100px;
+  }
+  .qual-name {
+    font-size: 1rem;
+  }
+  .qual-institution {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .qual-header h2.qual-title {
+    font-size: 2rem;
+  }
+  .qual-header p.qual-subtitle {
+    font-size: 0.9rem;
+    max-width: 95%;
+  }
+  .qual-card,
+  .qual-card-clickable {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+  .qual-logo {
+    max-width: 80px;
+    margin-bottom: 0.75rem;
+  }
+  .qual-name {
+    font-size: 0.95rem;
+  }
+  .qual-institution {
+    font-size: 0.75rem;
+  }
+  .btn-view-profile {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+
+/* =========================================
+   TEACHING APPROACH SECTION (SIMPLIFIED, WOW STYLE)
+========================================== */
+
+/* Brand Colours */
+:root {
+  --primary-color: #09096A;      /* Deep Navy */
+  --accent-color: #FF28A8;       /* Bright Magenta */
+  --text-dark: #373B3E;          /* Dark Gray for body text */
+}
+
+/* Section Background & Spacing */
+.teaching-section {
+  background-color: #F9FAFF; /* Very light off-white with slight blue tint */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Title Styles */
+.teach-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.teach-title .text-accent {
+  color: var(--accent-color);
+}
+
+/* Subtitle */
+.teach-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-dark);
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+/* Bullet List: Approach Features */
+.teach-features li {
+  align-items: flex-start;
+}
+
+.check-icon {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin-top: 0.2rem;
+}
+
+/* CTA Button */
+.btn-teach-cta {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-teach-cta i {
+  margin-right: 0.5rem;
+}
+
+.btn-teach-cta:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Image Styles */
+.teach-image-wrapper {
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(9, 9, 106, 0.15);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teach-image-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(9, 9, 106, 0.2);
+}
+
+.teach-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .teach-title {
+    font-size: 2.5rem;
+  }
+  .teach-subtitle {
+    font-size: 1rem;
+  }
+  .teach-features li div {
+    font-size: 0.95rem;
+  }
+  .btn-teach-cta {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .teach-title {
+    font-size: 2.25rem;
+  }
+  .teach-subtitle {
+    font-size: 0.95rem;
+  }
+  .teach-features li div {
+    font-size: 0.9rem;
+  }
+  .btn-teach-cta {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .teach-title {
+    font-size: 2rem;
+  }
+  .teach-subtitle {
+    font-size: 0.9rem;
+  }
+  .teach-features li div {
+    font-size: 0.85rem;
+  }
+  .btn-teach-cta {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+/* =========================================
+   TESTIMONIALS SECTION (WOW STYLE)
+========================================== */
+
+/* Brand Colours */
+:root {
+  --primary-color: #09096A;        /* Deep Navy for headings/text */
+  --accent-color: #FF28A8;         /* Bright Magenta accent */
+  --card-bg: #F2EBFF;              /* Pale lavender for testimonial cards */
+  --text-dark: #373B3E;            /* Dark gray for body text */
+  --light-gray: #F9F9FA;           /* Light gray page background */
+}
+
+/* Section Background */
+#testimonials {
+  background-color: var(--light-gray);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Section Label */
+.section-label {
+  display: inline-block;
+  background-color: var(--card-bg);
+  color: var(--accent-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Section Title */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(9, 9, 106, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(9, 9, 106, 0.15);
+}
+
+/* Quote Text */
+.quote {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Author Name */
+.author {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+/* Star Rating */
+.star-rating i {
+  color: #FFCC00; /* Gold for stars */
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .quote {
+    font-size: 0.95rem;
+  }
+  .author {
+    font-size: 0.9rem;
+  }
+  .star-rating i {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .quote {
+    font-size: 0.9rem;
+  }
+  .author {
+    font-size: 0.85rem;
+  }
+  .star-rating i {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================
+   CTA SECTION: BACKGROUND IMAGE AT 1200×627 ASPECT RATIO
+========================================== */
+
+/* Brand Colour Variables */
+:root {
+  --btn-bg-color: #09096A;    /* Deep navy for button */
+  --btn-hover: #FF28A8;       /* Magenta accent on hover */
+  --white: #FFFFFF;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Outer Section: light gray background with vertical padding */
+#cta-section {
+  /* .py-5 and .bg-light from Bootstrap handle this */
+}
+
+/* CTA Wrapper: 
+   - Maintains 1200×627 aspect ratio via padding‐top
+   - Uses background‐cover with no distortion */
+.cta-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;              /* Keeps it from getting too wide */
+  margin: 0 auto;                 /* Centre horizontally */
+  
+  /* Aspect‐ratio technique: 
+     padding-top = (627 / 1200) * 100% ≈ 52.25% */
+  padding-top: 52.25%;
+  
+  background: url("images/cta-bg.jpg") 
+              center center / cover no-repeat;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px var(--shadow-color);
+  overflow: hidden;
+}
+
+/* CTA Content container:
+   Absolutely positioned to fit inside the padded wrapper */
+.cta-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 1rem; /* Small side padding on mobile */
+  z-index: 1;
+}
+
+/* CTA Title */
+.cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* CTA Button */
+.btn-cta {
+  background-color: var(--btn-bg-color);
+  color: var(--white);
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+/* Tablet (≤992px) */
+@media (max-width: 992px) {
+  .cta-title {
+    font-size: 2.5rem;
+  }
+  .btn-cta {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+}
+
+/* Small Tablet (≤768px) */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 2.25rem;
+  }
+  .btn-cta {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.75rem;
+  }
+}
+
+/* Mobile (≤576px) */
+@media (max-width: 576px) {
+  .cta-title {
+    font-size: 2rem;
+  }
+  .btn-cta {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
