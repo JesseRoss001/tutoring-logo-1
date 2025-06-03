@@ -1,0 +1,263 @@
+/* ===================================================================
+   COURSES PAGE STYLES (courses.css)
+   ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   1) Hero + Exam-Board Filters
+   2) Lesson Cards (enlarged, fluid‐width pills)
+   3) Responsive Adjustments
+   4) Footer Overrides
+=================================================================== */
+
+/* ---------------------------------------
+   1) HERO + EXAM‐BOARD FILTERS
+--------------------------------------- */
+#courses-hero {
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+#courses-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #09096A;   /* deep navy for “Browse Our” */
+}
+
+#courses-hero .text-highlight {
+  color: #7F5FFF;   /* purple for “Courses” */
+}
+
+#courses-hero .lead {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;   /* ~18px */
+  color: #555555;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.5;
+}
+
+/* Exam-Board Pills wrapper */
+.category-filters {
+  background-color: #F0F0F0;   /* light grey background */
+  border-radius: 50px;
+  display: inline-flex;
+  padding: 0.5rem 1rem;        /* vertical/horizontal padding */
+}
+
+/* Individual filter button (no extra margins) */
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: #333333;                   /* dark charcoal text */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;                  /* ~16px */
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;          /* controls spacing between pills */
+  border-radius: 50px;              /* ensures full rounding when active */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;                        /* remove default margins */
+}
+
+/* Hover state for non-active pills */
+.filter-btn:hover {
+  background-color: rgba(127, 95, 255, 0.1);
+  color: #7F5FFF;
+}
+
+/* Active filter button (purple pill) */
+.filter-btn.active {
+  background-color: #7F5FFF;       /* purple */
+  color: #FFFFFF;
+  position: relative;              /* sits on top of the grey bar */
+  z-index: 1;                      /* brings the active pill above the bar */
+}
+
+
+/* ---------------------------------------
+   2) LESSON CARDS (enlarged, fluid‐width pills)
+--------------------------------------- */
+
+/* Base card container */
+.course-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;       /* single-pixel light grey border */
+  border-radius: 0.5rem;           /* slightly rounded corners */
+  padding: 0.75rem 1rem;           /* minimal vertical padding, more horizontal */
+  display: flex;                   /* for JS toggling display:flex / none */
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+/* Subtle hover lift */
+.course-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Enlarged pill styling:
+   • inline-block → fluid width around text
+   • font-size increased to 0.875rem
+   • vertical padding 0.5rem, horizontal 1rem
+   • margin-bottom set to 1rem (to separate from title)
+*/
+.course-tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;            /* ~14px */
+  font-weight: 600;
+  padding: 0.5rem 1rem;            /* top/bottom 0.5rem, left/right 1rem */
+  border-radius: 999px;            /* fully rounded “pill” */
+  margin-bottom: 1rem;             /* larger gap before title */
+}
+
+/* AQA = pastel-blue pill */
+.tag-aqa {
+  background-color: #B3E5FC;     /* pastel sky-blue */
+  color: #01579B;                /* darker blue text */
+}
+
+/* Edexcel = pastel-purple pill */
+.tag-edexcel {
+  background-color: #E1BEE7;     /* pastel lavender */
+  color: #6A1B9A;                /* deep purple text */
+}
+
+/* OCR = pastel-green pill */
+.tag-ocr {
+  background-color: #C8E6C9;     /* pastel mint-green */
+  color: #2E7D32;                /* dark green text */
+}
+
+/* WJEC = pastel-orange pill */
+.tag-wjec {
+  background-color: #FFE0B2;     /* pastel peach-orange */
+  color: #E65100;                /* dark orange text */
+}
+
+/* CCEA = pastel-pink pill */
+.tag-ccea {
+  background-color: #F8BBD0;     /* pastel pink */
+  color: #C2185B;                /* deep magenta text */
+}
+
+/* CAIE = pastel-teal pill */
+.tag-caie {
+  background-color: #B2DFDB;     /* pastel teal */
+  color: #00695C;                /* dark teal text */
+}
+
+/* Title inside each card */
+.course-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;           /* ~18px */
+  font-weight: 700;
+  color: #09096A;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+/* Single-sentence description beneath the title */
+.course-info {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;             /* ~14px */
+  color: #555555;
+  margin: 0;
+  flex-grow: 1;                  /* ensures footer sits at bottom if needed */
+  line-height: 1.4;
+}
+
+/* Footer row: only the “Try it free →” link */
+.course-footer {
+  margin-top: 0.75rem;
+}
+
+/* CTA link style */
+.cta-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #3366FF;                /* bright blue link */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------------------------------------
+   3) RESPONSIVE ADJUSTMENTS
+--------------------------------------- */
+@media (max-width: 992px) {
+  #courses-hero h1 {
+    font-size: 2.5rem;
+  }
+  .filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #courses-hero h1 {
+    font-size: 2rem;
+  }
+  #courses-hero .lead {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .filter-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #courses-hero h1 {
+    font-size: 1.75rem;
+  }
+  #courses-hero .lead {
+    font-size: 0.9rem;
+  }
+  .category-filters {
+    flex-wrap: wrap;
+    padding: 0.25rem;
+  }
+  .filter-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ---------------------------------------
+   4) FOOTER OVERRIDES (UNCHANGED)
+--------------------------------------- */
+.footer-section {
+  background-color: #212529;
+}
+
+.footer-section .text-white {
+  color: #FFFFFF !important;
+}
+
+.footer-section a.text-white:hover {
+  color: #F8F9FA !important;
+}
+
+.footer-section h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.footer-section p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-section .fa-2x {
+  font-size: 2rem;
+}
