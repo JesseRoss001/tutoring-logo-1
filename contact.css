@@ -1,231 +1,404 @@
-/* =========================================
-   CONTACT PAGE ‒ Additional Styles Only
-   (Navbar, Footer, Testimonials, Typography, etc. 
-    are imported via style.css)
-========================================== */
+/* ===================================================================
+   CONTACT PAGE SPECIFIC STYLES (contact.css)
+   ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   • Banner + Heading
+   • Contact‐form + Info cards (now larger “wow” size)
+   • Testimonials
+   • Footer
+=================================================================== */
 
-/* -----------------------------------------
-   COLOUR VARIABLES (Should match style.css)
------------------------------------------- */
-:root {
-  --primary-color: #09096A;      /* Deep Navy (text) */
-  --accent-color: #FF28A8;       /* Bright Magenta (buttons, highlights) */
-  --accent-yellow: #FFD100;      /* Gold/Yellow icon accent */
-  --light-purple: #F2EBFF;       /* Light lavender background for form shape */
-  --background-light: #F9F9FA;   /* Very light gray page background */
-  --text-color: #373B3E;         /* Dark Gray text */
-  --white: #FFFFFF;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+/* ---------------------------------------
+   1) BANNER + HEADING (LARGE, CENTERED)
+--------------------------------------- */
+#contact-banner {
+  background-color: #FFFFFF;
+  padding: 4rem 1rem;            /* maintain generous vertical padding */
+  text-align: center;
 }
 
-/* -----------------------------------------
-   HERO BANNER (Contact Page)
------------------------------------------- */
-.contact-hero {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background: url("images/contact-bg.jpg") center center / cover no-repeat;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-hero .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(15, 15, 45, 0.4);
-  z-index: 1;
-}
-
-.hero-title {
-  position: relative;
-  font-size: 2.75rem;
+.banner-heading h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;             /* ~56px */
   font-weight: 700;
-  color: var(--white);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.banner-heading .text-highlight {
+  color: #7F5FFF;                /* purple accent */
+}
+
+.banner-heading .banner-subtext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;           /* ~18px */
+  color: #333333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------
+   2) CONTACT FORM SECTION
+--------------------------------------- */
+#contact-form-section {
+  background-color: #F8F9FB;     /* very light gray behind cards */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* White “Send Us A Message” Card */
+.contact-card {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  position: relative;
   z-index: 2;
 }
 
-.hero-title .text-yellow {
-  color: var(--accent-yellow);
+.contact-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;               /* ~32px */
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-/* Responsive Hero Height */
-@media (max-width: 992px) {
-  .contact-hero {
-    height: 350px;
-  }
-  .hero-title {
-    font-size: 2.5rem;
-  }
+.contact-card .card-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .contact-hero {
-    height: 300px;
-  }
-  .hero-title {
-    font-size: 2.25rem;
-  }
+/* Form Labels */
+.contact-card .form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.25rem;
 }
 
-@media (max-width: 576px) {
-  .contact-hero {
-    height: 250px;
-  }
-  .hero-title {
-    font-size: 2rem;
-  }
-}
-
-/* -----------------------------------------
-   CONTACT FORM SECTION
------------------------------------------- */
-.contact-section {
-  position: relative;
-  margin-top: -50px; /* Pull up over the hero */
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: var(--background-light);
-}
-
-/* Light lavender shape behind the form */
-.background-shape {
-  width: 90%;
-  max-width: 1100px;
-  height: 500px;
-  background: var(--light-purple);
-  border-radius: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-@media (max-width: 992px) {
-  .background-shape {
-    height: 450px;
-  }
-}
-@media (max-width: 768px) {
-  .background-shape {
-    height: 400px;
-  }
-}
-@media (max-width: 576px) {
-  .background-shape {
-    height: 350px;
-  }
-}
-
-/* Contact Form Card */
-.contact-card {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  background: var(--accent-yellow);
-  border-radius: 1rem;
-  padding: 3rem 2rem;
-  z-index: 10;
-  margin: 0 auto;
-  box-shadow: 0 8px 30px var(--shadow-color);
-}
-
-/* Title & Subtitle */
-.contact-card-title {
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-.contact-card-subtitle {
-  font-size: 0.95rem;
-  color: var(--primary-color);
-  opacity: 0.85;
-}
-
-/* Form Controls */
+/* Form Inputs/Textarea */
 .contact-card .form-control {
-  border: none;
   border-radius: 0.75rem;
+  border: 1px solid rgba(0,0,0,0.1);
   padding: 0.75rem 1rem;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+  background-color: #FFFFFF;
 }
 
-.contact-card textarea.form-control {
-  resize: none;
+.contact-card .form-control:focus {
+  outline: none;
+  border-color: #7F5FFF;         /* purple accent on focus */
+  box-shadow: none;
 }
 
 /* Submit Button */
-.btn-submit {
-  background-color: var(--primary-color);
-  color: var(--white);
+.btn-contact-submit {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  background-color: #000000;     /* black */
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 50px;
-  padding: 0.75rem 1.5rem;
-  width: 100%;
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-submit:hover {
-  background-color: var(--accent-color);
+.btn-contact-submit:hover {
+  background-color: #7F5FFF;     /* purple on hover */
   transform: translateY(-3px);
 }
 
-/* Bootstrap Validation */
-.was-validated .form-control:invalid {
-  border: 2px solid #dc3545;
-}
-.was-validated .form-control:invalid:focus {
-  box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25);
+/* ---------------------------------------
+   3) INFO CARDS (ENLARGED “WOW” STYLE)
+--------------------------------------- */
+.info-card {
+  background-color: var(--bg-color, #fff); /* each card’s background */
+  border-radius: 1.5rem;        /* slightly larger corner radius */
+  box-shadow: 0 6px 30px rgba(0,0,0,0.1); /* a bit deeper shadow for “pop” */
+  width: 100%;
+  max-width: 400px;             /* widen the cards */
+  padding: 2rem 1.5rem;         /* increase padding top/bottom and left/right */
+  margin-bottom: 1.5rem;        /* comfortable gap between cards */
+  transition: transform 0.3s ease;
 }
 
-/* -----------------------------------------
-   TESTIMONIALS & FOOTER
-   (All global styles are already in style.css)
-   No overrides needed here
------------------------------------------- */
+.info-card:hover {
+  transform: translateY(-5px) scale(1.02); /* subtle hover lift */
+}
 
-/* =========================================
-   ADDITIONAL RESPONSIVE ADJUSTMENTS (Optional)
-========================================== */
-@media (max-width: 768px) {
-  .contact-card {
-    padding: 2.5rem 1.5rem;
+.info-card.bg-lavender {
+  --bg-color: #F2E8FF;
+}
+
+.info-card.bg-peach {
+  --bg-color: #FFE8E8;
+}
+
+.info-card.bg-mint {
+  --bg-color: #E8FFF2;
+}
+
+/* Container inside each card—align items vertically centered */
+.info-card > .d-flex {
+  align-items: center;
+}
+
+/* Icon inside each card (increased size) */
+.info-icon {
+  font-size: 3rem;              /* ~48px */
+  color: #7F5FFF;               /* purple accent */
+  margin-top: 0;                /* no extra top margin */
+  margin-bottom: 0;             /* no extra bottom margin */
+}
+
+/* The block wrapping text elements inside each card */
+.info-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card Heading (increased) */
+.info-card h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;            /* ~24px */
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+/* Small Subtext (increased) */
+.info-card .small {
+  font-size: 1.125rem;          /* ~18px */
+  color: #555555;
+  margin-bottom: 0.5rem;
+}
+
+/* Link (Email or Phone) */
+.info-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;              /* ~16px */
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+}
+
+.info-link:hover {
+  color: #7F5FFF;               /* purple accent */
+  text-decoration: underline;
+}
+
+/* ---------------------------------------
+   4) SOCIAL ICONS (LARGER SIZE, CENTERED)
+--------------------------------------- */
+.social-icons-container {
+  display: flex;
+  gap: 1.5rem;                 /* increase spacing between icons */
+  margin-left: calc(3rem + 1.5rem); /* align under “Follow Us” heading */
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;                 /* ~48px square */
+  height: 3rem;                /* ~48px square */
+  background-color: transparent;
+  color: #7F5FFF;              /* purple accent */
+  font-size: 1.75rem;          /* ~28px icon size */
+  border-radius: 50%;          /* circular icon background if needed */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: rgba(127, 95, 255, 0.1); /* light purple halo */
+  color: #000000;              /* icon turns dark on hover */
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------
+   5) TESTIMONIALS (LARGE LAVENDER CARDS)
+--------------------------------------- */
+
+/* Section Label (PILL) */
+.section-label {
+  display: inline-block;
+  background-color: #FF28A8;     /* bright pink */
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;           /* ~14px */
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Section Title (increased) */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.75rem;             /* ~44px */
+  font-weight: 700;
+  color: #09096A;                /* deep navy */
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Testimonial Card Container */
+.testimonial-card {
+  background-color: #F2E8FF;     /* lavender */
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Quote Text (slightly larger) */
+.testimonial-card .quote {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;            /* ~18px */
+  color: #2C2F47;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Author Name (slightly larger) */
+.testimonial-card .author {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;            /* ~18px */
+  font-weight: 700;
+  color: #09096A;                /* deep navy */
+  margin-bottom: 0.75rem;
+}
+
+/* Star Rating (slightly larger) */
+.testimonial-card .star-rating i {
+  font-size: 1.25rem;             /* ~20px */
+  color: #FFC700;                /* gold */
+  margin-right: 0.25rem;
+}
+
+/* ---------------------------------------
+   6) RESPONSIVE ADJUSTMENTS
+--------------------------------------- */
+
+/* ≤992px: reduce banner font, shift spacing */
+@media (max-width: 992px) {
+  .banner-heading h1 {
+    font-size: 3rem;
   }
-  .contact-card-title {
+  .section-title {
+    font-size: 2.25rem;
+  }
+  .info-card {
+    max-width: 100%;              /* allow full width on smaller screens */
+  }
+}
+
+/* ≤768px: stack columns, shrink text, adjust spacing */
+@media (max-width: 768px) {
+  .banner-heading h1 {
+    font-size: 2.25rem;
+  }
+  .banner-heading .banner-subtext {
+    font-size: 1rem;
+  }
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+  .contact-card h2 {
     font-size: 1.75rem;
   }
-  .contact-card-subtitle {
+  .contact-card .card-description {
     font-size: 0.9rem;
   }
-  .btn-submit {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.2rem;
+  .info-card {
+    padding: 1.5rem 1rem;         /* slightly reduce padding on narrow screens */
+  }
+  .info-card h5 {
+    font-size: 1.25rem;
+  }
+  .info-card .small {
+    font-size: 1rem;
+  }
+  .info-icon {
+    font-size: 2.5rem;
+  }
+  .social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .testimonial-card .quote {
+    font-size: 1rem;
+  }
+  .testimonial-card .author {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 2rem;
   }
 }
 
+/* ≤576px: minimal margins, further shrink */
 @media (max-width: 576px) {
-  .contact-card {
-    padding: 2rem 1rem;
+  .banner-heading h1 {
+    font-size: 1.75rem;
   }
-  .contact-card-title {
+  .banner-heading .banner-subtext {
+    font-size: 0.9rem;
+  }
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
+  .contact-card h2 {
     font-size: 1.5rem;
   }
-  .contact-card-subtitle {
+  .contact-card .card-description {
     font-size: 0.85rem;
   }
-  .btn-submit {
+  .info-card {
+    padding: 1rem;
+  }
+  .info-card h5 {
+    font-size: 1.125rem;
+  }
+  .info-card .small {
     font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+  }
+  .info-icon {
+    font-size: 2rem;
+  }
+  .social-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.25rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .testimonial-card .quote {
+    font-size: 0.9rem;
+  }
+  .testimonial-card .author {
+    font-size: 0.9rem;
   }
 }
