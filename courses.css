@@ -1,3 +1,36 @@
+/* =========================================
+   ROOT VARIABLES
+========================================== */
+:root {
+  /* Core Brand Colors */
+  --primary-color: #09096A;      /* Deep Navy */
+  --accent-color: #FF28A8;       /* Bright Magenta */
+  --text-dark: #373B3E;          /* Dark gray for body text */
+
+  /* Backgrounds and Cards */
+  --hero-bg-color: #F9F9F9;      /* Very light gray background */
+  --card-bg-color: #FFFFFF;      /* White card */
+  --light-bg: #FAFAFA;           /* Very light gray for sections */
+  --bg-purple: #F2E8FF;          /* Light purple for Core Values */
+  --bg-pink: #FFE8F1;            /* Light pink for Core Values */
+  --bg-green: #E8FFF2;           /* Light mint green for Core Values */
+  --bg-yellow: #FFF8E8;          /* Light yellow for Core Values */
+
+  /* Highlight */
+  --highlight-bg: #FF28A8;       /* Magenta highlight */
+  --highlight-text: #FFFFFF;     /* White on magenta highlight */
+
+  /* Shadows */
+  --shadow-color-navy: rgba(9, 9, 106, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* CTA Button */
+  --btn-bg-color: #09096A;
+  --btn-hover: #FF28A8;
+  --white: #FFFFFF;
+}
+
+
 /* ===================================================================
    COURSES PAGE STYLES (courses.css)
    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -167,7 +200,15 @@
   line-height: 1.4;
 }
 
-/* Footer row: only the “Try it free →” link */
+/* The “Exam boards:” line (for the new “All” cards) */
+.course-boards {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;           /* ~14px */
+  color: #333333;
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+/* Footer row: only the CTA link */
 .course-footer {
   margin-top: 0.75rem;
 }
@@ -260,4 +301,73 @@
 
 .footer-section .fa-2x {
   font-size: 2rem;
+}
+
+/* =========================================
+   TESTIMONIALS SECTION
+========================================== */
+#testimonials {
+  background-color: var(--light-bg);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-label {
+  display: inline-block;
+  background-color: var(--bg-purple);
+  color: var(--accent-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+.testimonial-card {
+  background-color: var(--bg-purple);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(9, 9, 106, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(9, 9, 106, 0.15);
+}
+
+.quote {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.author {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.star-rating i {
+  color: #FFCC00;
+  font-size: 1rem;
 }
