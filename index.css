@@ -75,6 +75,42 @@
   background-color: var(--btn-hover-color);
   transform: translateY(-3px);
 }
+/* Hero form – keep elements centred & responsive */
+.hero-content form input.form-control-lg{
+  padding:.75rem 1.25rem;
+}
+.hero-content .btn-cta{            /* reuse existing pill styling */
+  background:var(--btn-bg-color);
+  border-radius:50px;
+  white-space:nowrap;
+}
+.hero-content .btn-cta:hover{
+  background:var(--btn-hover);
+}
+
+/* hero form – make the button exactly match the pill-input height */
+.hero-content form .col-auto{               /* keep row height equalised */
+  display:flex;
+  align-items:stretch;                      /* button fills full height */
+}
+
+
+/* 1.  Make the input + button row share one exact height */
+.hero-section form .row.g-2 {
+  align-items: stretch;      /* the col-auto with the button now stretches */
+}
+
+/* 2.  Force the “Try One Lesson for Free” pill to match .form-control-lg */
+.hero-section form .btn-cta {
+  /* .form-control-lg default height = 3.5 rem (≈ 56 px) */
+  height: 3.5rem;
+  padding: 0 2rem;           /* keep horizontal padding comfortable */
+  display: flex;             /* vertically centre text & icon */
+  align-items: center;
+  border-radius: 50px;       /* identical pill curve */
+  line-height: 1;            /* stops extra vertical growth */
+}
+
 
 /* ----------------------------------------------
    SECTION TITLES
@@ -106,86 +142,188 @@
   margin-bottom: 3rem;
 }
 
-/* ----------------------------------------------
-   ABOUT & REMOTE IMAGES
----------------------------------------------- */
-.about-img img,
-.remote-img img {
-  width: 100%;
-  height: auto;
-  object-fit: contain; /* Ensures full image is visible */
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ===== About (Bright-Mind inspired) ===================== */
+.about-split { background:#fff; }
+
+.about-img { position:relative; border-radius:1.25rem; overflow:hidden; }
+.about-img img { object-fit:cover; width:100%; height:100%; }
+
+.about-badge{
+  position:absolute; bottom:1.25rem; left:1.25rem;
+  background:#fff; border-radius:1rem; padding:1.5rem 2rem;
+  max-width:260px;
+}
+.about-badge .label{ font-weight:600; line-height:1.3; }
+.about-badge .value{
+  font-size:2rem; font-weight:700; color:var(--accent-color,#7F5FFF);
 }
 
-.about-img img:hover,
-.remote-img img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.brand-accent{ color:var(--accent-color,#7F5FFF); }
+
+.about-stats .stat-value{
+  font-weight:700; font-size:2rem; margin-bottom:.25rem;
+}
+.about-stats .stat-label{ font-size:1rem; color:#47515e; }
+
+@media (max-width: 991.98px){
+  .about-badge{ left:50%; transform:translateX(-50%); }
 }
 
-/* ----------------------------------------------
-   COURSES SECTION
----------------------------------------------- */
-.courses-section .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+/* default / large-screen look */
+.about-photo{
+  width:auto;
+  height:auto;          /* keep full height on desktops */
+  object-fit:cover;     /* keeps image nicely cropped when we limit height */
 }
 
+/* tablet (≤ 992 px) */
+@media (max-width:991.98px){
+  .about-photo{
+    max-width:380px;    /* from earlier */
+    max-height:320px;   /* NEW: shorten the image */
+  }
+}
+
+/* phones (≤ 768 px) */
+@media (max-width:767.98px){
+  .about-photo{
+    max-width:280px;    /* from earlier */
+    max-height:220px;   /* NEW: even shorter */
+  }
+}
+
+/* =========================================================
+   COURSES SECTION  –  Mentor-Card Look & Feel
+   (works with: <div class="row g-4 courses-grid"> … <div class="col-md-4">)
+   ========================================================= */
+
+/* ---------- GRID WRAPPER ---------- */
+.courses-grid {
+  display: grid;                           /* instead of the default flex row   */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;                             /* identical spacing at every size   */
+  margin-top: 3rem;
+}
+
+/* Remove Bootstrap’s fixed column widths so each tile obeys our grid */
+.courses-grid > .col-md-4 {
+  width: 100% !important;                  /* override col-md-4 width           */
+  flex: 0 0 auto;                          /* stop flex-basis interference      */
+  padding: 0 !important;                   /* we use gap instead                */
+}
+
+/* ---------- CARD ---------- */
 .course-card {
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 1.75rem;
+  padding: 2.5rem 2rem 2rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.05);
+  transition: transform .25s ease, box-shadow .25s ease;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* Ensures all cards are the same height */
-}
-
-.course-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: var(--accent-color);
-  transform: rotate(45deg);
-  transition: opacity 0.3s ease;
-  opacity: 0.1;
-}
-
-.course-card:hover::before {
-  opacity: 0.2;
+  justify-content: flex-start;
 }
 
 .course-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 22px 60px rgba(0,0,0,.10);
 }
 
-.course-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin: 0 auto 1.5rem;
+/* ---------- ICON ---------- */
+/* ===== Courses – responsive square thumbnail ===== */
+.course-card img{
+  /* the old fixed 400 px width is removed */
+  width:clamp(64px, 18vw, 110px);  /* 64 px on small phones → max 110 px on xl */
+  height:auto;                     /* preserves aspect-ratio               */
+  aspect-ratio:1/1;                /* guarantees a square frame            */
+  object-fit:cover;                /* neat crop if source isn’t square     */
+  border-radius:12px;              /* same subtle rounding you wanted      */
+  margin:0 auto 1.25rem;           /* centred with tidy spacing            */
 }
 
+/* optional – if you kept the media-query overrides, remove or soften them  */
+@media (max-width:992px){
+  .course-card img{width:clamp(60px, 22vw, 90px);}
+}
+@media (max-width:576px){
+  .course-card img{width:64px;}
+}
+
+/* ---------- TEXT ---------- */
 .course-card h4 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #06171f;
+  margin-bottom: .6rem;
 }
 
 .course-card p {
   font-size: 1rem;
-  color: var(--text-color);
-  flex-grow: 1; /* Allows the paragraph to take up remaining space */
+  line-height: 1.65;
+  color: #47515e;
+  margin: 0;                               /* tighten */
 }
+
+/* =====  We Cover (colour-block version)  ===== */
+#we-cover{ background:linear-gradient(180deg,#fff 0%,#fafffe 100%); }
+
+.we-cover-inner{            /* keeps everything centred & medium width  */
+  max-width:920px;
+  margin:0 auto;
+}
+
+.we-cover-tile{
+  display:flex;
+  align-items:flex-start;
+  gap:1.25rem;
+  border-radius:18px;
+  padding:1.75rem 2rem;
+  color:#06171f;
+  margin-bottom:1.1rem;
+  box-shadow:0 12px 30px rgba(9,9,106,.05);
+  transition:box-shadow .25s, transform .25s;
+}
+.we-cover-tile:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 46px rgba(9,9,106,.09);
+}
+
+/* icons now float without a circle */
+.tile-icon{
+  font-size:1.9rem;
+  line-height:1;
+  margin-top:.15rem;
+}
+
+/* lock paragraph width on big screens for neatness */
+.tile-copy{ max-width:640px; }
+
+/* pastel card fills */
+.bg-mint   { background:#E8FFF2; }
+.bg-pink   { background:#FFE8F1; }
+.bg-purple { background:#F2E8FF; }
+
+/* ----------  responsiveness  ---------- */
+@media(max-width:768px){
+  .we-cover-tile{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    padding:1.5rem 1.6rem;
+  }
+  .tile-icon{ margin-top:0; }
+  .tile-copy{ max-width:none; }
+}
+@media(max-width:576px){
+  .we-cover-inner{ padding:0 1rem; }
+  .we-cover-tile{ padding:1.4rem 1.2rem; }
+  .tile-icon{ font-size:1.6rem; }
+}
+
+
 
 /* ----------------------------------------------
    AREAS WE SERVE SECTION

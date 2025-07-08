@@ -406,3 +406,56 @@
 .footer-bottom .design-credit a:hover {
   color: #09096A;
 }
+
+/* ---------- FAQ section ---------- */
+#faq { background: #fff; }
+
+.faq-title        { color:#390332; }          /* deep green */
+.faq-sub          { max-width:680px;color:rgb(124, 4, 114); }
+
+.faq-accordion .accordion-item{
+  border:1px solid #efe7ef;
+  border-radius:12px;
+  margin-bottom:1.25rem;
+  overflow:hidden;
+  transition:box-shadow .25s ease, border-color .25s ease;
+}
+.faq-accordion .accordion-button{
+  font-family:'Montserrat',sans-serif;
+  font-size:1.15rem;
+  font-weight:600;
+  padding:1.25rem;
+  color:#370339;
+  background-color:#fff;
+  box-shadow:none;
+}
+.faq-accordion .accordion-button::after{     /* custom “+” icon */
+  flex-shrink:0;
+  width:1.25rem;
+  height:1.25rem;
+  background-image:url("data:image/svg+xml,%3Csvg fill='currentColor' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1a.75.75 0 0 1 .75.75v5.5h5.5a.75.75 0 0 1 0 1.5h-5.5v5.5a.75.75 0 0 1-1.5 0v-5.5h-5.5a.75.75 0 0 1 0-1.5h5.5v-5.5A.75.75 0 0 1 8 1z'/%3E%3C/svg%3E");
+  transform:none;
+}
+.faq-accordion .accordion-button:not(.collapsed)::after{ /* turn into “–” */
+  background-image:url("data:image/svg+xml,%3Csvg fill='currentColor' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.25z'/%3E%3C/svg%3E");
+}
+
+.faq-accordion .accordion-button:not(.collapsed){
+  background-image:linear-gradient(135deg,#f7e8f6 0%,#fdf7fc 100%);
+  border-color:#f0c4ec;
+}
+.faq-accordion .accordion-item.show,
+.faq-accordion .accordion-item:not(.collapsed) {
+  box-shadow:0 12px 40px rgba(124, 0, 128, 0.12);
+}
+.faq-accordion .accordion-body{
+  padding:0 1.25rem 1.25rem;
+  color:rgb(68, 51, 68);
+  line-height:1.6;
+}
+
+/* centre the FAQ container */
+.faq-accordion{
+  max-width: 850px;   /* tweak width if you’d like it wider/narrower */
+  margin: 0 auto;     /* ← this does the actual centring */
+}

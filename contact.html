@@ -28,44 +28,85 @@
 
   <!-- Main site CSS -->
   <link rel="stylesheet" href="style.css" />
-  <!-- Updated Contact‐page‐specific CSS -->
   <link rel="stylesheet" href="contact.css" />
+  
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
-  <!-- ======================================
-       STICKY NAVIGATION (UNCHANGED)
-  ======================================= -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-uppercase" href="index.html#hero">
-        <i class="bi bi-mortarboard-fill me-2"></i> North Wales Tutoring
+<body>
+
+<!-- =================================
+     STICKY NAVIGATION
+===================================== -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/north wales tutoring logo (1).png" alt="North Wales Tutoring Logo" width="50" height="50" class="me-2">
+      <span class="fw-bold">North Wales Tutoring</span>
+    </a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links + CTA -->
+   <!-- Nav Links + CTA -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mx-auto align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="courses.html"
+            id="coursesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Courses
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="courses.html">All course</a></li>
+            <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
+            <li><a class="dropdown-item" href="physics.html">Physics</a></li>
+            <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
+            <li><a class="dropdown-item" href="coding.html">Coding</a></li>
+            <li><a class="dropdown-item" href="english-course.html">English & ESL</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+      </ul>
+
+      <!-- CTA Button -->
+      <a href="contact.html"
+         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
+        Book Your Free Trial 🡥
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link text-uppercase" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#courses"><i class="bi bi-book me-1"></i>Courses</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#remote"><i class="bi bi-laptop me-1"></i>Remote</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#areas"><i class="bi bi-geo-alt me-1"></i>Areas</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase active" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#approach"><i class="bi bi-person-check me-1"></i>Approach</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#gallery"><i class="bi bi-images me-1"></i>Gallery</a></li>
-        </ul>
-      </div>
     </div>
-  </nav>
-  <!-- /NAVIGATION -->
+  </div>
+</nav>
 
   <!-- ======================================
        CONTACT BANNER (“We’re Here To Help!”)
@@ -164,33 +205,7 @@
               <div class="info-text-block">
                 <h5 class="mb-1">Email Us</h5>
                 <p class="mb-1 small">Ask about our GCSE &amp; A-Level packages</p>
-                <a href="mailto:hello@northwalestutoring.com" class="info-link">hello@northwalestutoring.com</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Follow Us -->
-          <div class="info-card bg-peach mb-4">
-            <div class="d-flex flex-column">
-              <!-- First row: share icon + headings -->
-              <div class="d-flex align-items-start mb-2">
-                <i class="bi bi-share-fill info-icon me-3"></i>
-                <div>
-                  <h5 class="mb-1">Follow Us</h5>
-                  <p class="mb-0 small">Stay updated on our tutoring tips</p>
-                </div>
-              </div>
-              <!-- Second row: icons only, indented -->
-              <div class="social-icons-container">
-                <a href="https://www.facebook.com/NorthWalesTutor" target="_blank">
-                  <i class="bi bi-facebook social-icon"></i>
-                </a>
-                <a href="https://www.instagram.com/northwalestutoring" target="_blank">
-                  <i class="bi bi-instagram social-icon"></i>
-                </a>
-                <a href="https://g.page/northwalestutoring" target="_blank">
-                  <i class="bi bi-google social-icon"></i>
-                </a>
+                <a href="mailto:nwalestutoring@gmail.com" class="info-link">nwalestutoring@gmail.com</a>
               </div>
             </div>
           </div>
@@ -203,6 +218,17 @@
                 <h5 class="mb-1">Contact Us</h5>
                 <p class="mb-1 small">Book a free GCSE maths trial</p>
                 <a href="tel:+447367292269" class="info-link">+44 7367 292269</a>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Location -->
+          <div class="info-card bg-yellow">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-geo-alt-fill info-icon me-3"></i>
+              <div class="info-text-block">
+                <h5 class="mb-1">Our Location</h5>
+                <p class="mb-1 small">LL65 3LU Holyhead, United Kingdom</p>
               </div>
             </div>
           </div>
@@ -294,47 +320,168 @@
     </div><!-- /.container -->
   </section>
 
+<!-- ======================================
+     FREQUENTLY ASKED QUESTIONS
+======================================= -->
+<section id="faq" class="py-5">
+  <div class="container">
+
+    <!-- Heading + sub-text -->
+    <div class="text-center mb-5">
+      <h2 class="faq-title display-6 fw-bold mb-3">
+        Frequently Asked Questions
+      </h2>
+      <p class="faq-sub mx-auto">
+        Quick answers about our North-Wales maths &amp; physics tutoring, GCSE / A-Level
+        pricing, free trials and more.
+      </p>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion faq-accordion" id="faqAccordion">
+      <!-- Question 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1-h">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#q1"
+                  aria-expanded="false" aria-controls="q1">
+            Which subjects and exam boards do you cover?
+          </button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse"
+             aria-labelledby="q1-h" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We tutor <strong>Mathematics, Physics, Chemistry, Coding,
+            English &amp; ESL</strong> for every UK board:
+            <strong>AQA, OCR, Edexcel, WJEC & CCEA</strong>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2-h">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#q2"
+                  aria-expanded="false" aria-controls="q2">
+            How much is a one-to-one online lesson?
+          </button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse"
+             aria-labelledby="q2-h" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Every 55-minute session costs <strong>£15</strong>. 
+            Try a <strong>free 30-minute trial lesson</strong> first.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q3-h">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#q3"
+                  aria-expanded="false" aria-controls="q3">
+            How do I book my free trial class?
+          </button>
+        </h2>
+        <div id="q3" class="accordion-collapse collapse"
+             aria-labelledby="q3-h" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Fill in the phone form above or call
+            <a href="tel:+447367292269">+44 7367 292269</a>; we’ll confirm your time in 24 hours.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q4-h">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#q4"
+                  aria-expanded="false" aria-controls="q4">
+            Can you help with urgent GCSE Maths &amp; Physics revision?
+          </button>
+        </h2>
+        <div id="q4" class="accordion-collapse collapse"
+             aria-labelledby="q4-h" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes — our <strong>exam-cram packages</strong> provide mock-paper marking,
+            examiner feedback and last-minute topic boosters.
+          </div>
+        </div>
+      </div>
+    </div><!-- /.accordion -->
+  </div>
+</section>
+
+
+
   <!-- ======================================
        FOOTER (UNCHANGED)
   ======================================= -->
-  <footer class="footer-section bg-dark text-white pt-5 pb-3">
-    <div class="container">
-      <div class="row align-items-center mb-4">
-        <!-- Contact Section -->
-        <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
-          <h5 class="fw-bold text-uppercase mb-3">Contact Us</h5>
-          <p><i class="bi bi-telephone-fill me-2"></i>+44 7367 292269</p>
-          <p><i class="bi bi-envelope-fill me-2"></i>cleandesign.uk@gmail.com</p>
-        </div>
+ <footer class="footer-section">
+  <div class="container">
+    <div class="row gy-4">
 
-        <!-- Social Media Section -->
-        <div class="col-lg-4 text-center mb-4 mb-lg-0">
-          <h5 class="fw-bold text-uppercase mb-3">Follow Us</h5>
-          <a href="https://www.facebook.com/NorthWalesTutor" target="_blank" class="text-white me-3">
-            <i class="bi bi-facebook fa-2x"></i>
-          </a>
-          <a href="https://www.instagram.com/northwalestutoring" target="_blank" class="text-white me-3">
-            <i class="bi bi-instagram fa-2x"></i>
-          </a>
-          <a href="https://g.page/northwalestutoring" target="_blank" class="text-white">
-            <i class="bi bi-google fa-2x"></i>
-          </a>
+      <!-- Logo & Description -->
+      <div class="col-md-4">
+        <p class="footer-logo d-inline-flex align-items-center mb-3">
+          <img src="images/north wales tutoring logo (4) (1).png" alt="North Wales Tutoring Logo" width="32" height="32">
+          <span class="ms-2 h5 mb-0">North Wales Tutoring</span>
+        </p>
+        <p class="footer-desc text-muted mb-3">
+          North Wales’ leading online tutors for GCSE & A-Level: personalised Mathematics & Physics tutoring, Chemistry, Coding & English exam prep with expert-led WJEC, AQA, OCR & Edexcel sessions.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/NorthWalesTutor" class="me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/northwalestutoring"><i class="bi bi-instagram"></i></a>
+          <a href="https://g.co/kgs/ws3Yd5u"><i class="bi bi-google"></i></a>
         </div>
       </div>
-
-      <!-- Designed By -->
-      <div class="row">
-        <div class="col text-center">
-          <p class="m-0">
-            &copy; 2024 <strong>North Wales Tutoring</strong>. All Rights Reserved. | Designed by
-            <a href="https://cleandesignuk.com/" target="_blank" class="text-white fw-bold text-decoration-underline">
-              Clean Design UK
-            </a>
-          </p>
-        </div>
+      <!-- Quick Links -->
+      <div class="col-md-2">
+        <h6 class="footer-title">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
       </div>
+
+      <!-- Others -->
+      <div class="col-md-2">
+        <h6 class="footer-title">Others</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <h6 class="footer-title">Contact Us</h6>
+        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+44 7367 292269</p>
+        <p class="mb-2"><i class="bi bi-envelope me-2"></i>nwalestutoring@gmail.com</p>
+        <p><i class="bi bi-geo-alt me-2"></i>4 Ffordd Cerrig Mawr, Holyhead, United Kingdom</p>
+      </div>
+
     </div>
-  </footer>
+  </div>
+
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom text-center mt-5 pt-3">
+    <small>© 2025 <strong>North Wales Tutoring</strong>. All rights reserved.</small>
+    <p class="design-credit mt-2">
+      Website Design by 
+      <a href="https://cleandesignuk.com" target="_blank" rel="noopener">
+        Clean Design UK
+      </a>
+    </p>
+  </div>
+</footer>
 
   <!-- Bootstrap 5 JS Bundle -->
   <script
@@ -356,5 +503,17 @@
       });
     })();
   </script>
+
+<script>
+  document.querySelectorAll('#faqAccordion .accordion-collapse')
+    .forEach(collapse => {
+      collapse.addEventListener('show.bs.collapse', () =>
+        collapse.parentElement.classList.add('show'));
+      collapse.addEventListener('hide.bs.collapse', () =>
+        collapse.parentElement.classList.remove('show'));
+    });
+</script>
+
+
 </body>
 </html>

@@ -231,70 +231,6 @@
   transform: scale(1.1);
 }
 
-/* ---------------------------------------
-   5) TESTIMONIALS (LARGE LAVENDER CARDS)
---------------------------------------- */
-
-/* Section Label (PILL) */
-.section-label {
-  display: inline-block;
-  background-color: #FF28A8;     /* bright pink */
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;           /* ~14px */
-  font-weight: 700;
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-/* Section Title (increased) */
-.section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.75rem;             /* ~44px */
-  font-weight: 700;
-  color: #09096A;                /* deep navy */
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Testimonial Card Container */
-.testimonial-card {
-  background-color: #F2E8FF;     /* lavender */
-  border-radius: 1rem;
-  padding: 2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Quote Text (slightly larger) */
-.testimonial-card .quote {
-  font-family: 'Montserrat', sans-serif;
-  font-style: italic;
-  font-size: 1.125rem;            /* ~18px */
-  color: #2C2F47;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-/* Author Name (slightly larger) */
-.testimonial-card .author {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.125rem;            /* ~18px */
-  font-weight: 700;
-  color: #09096A;                /* deep navy */
-  margin-bottom: 0.75rem;
-}
-
-/* Star Rating (slightly larger) */
-.testimonial-card .star-rating i {
-  font-size: 1.25rem;             /* ~20px */
-  color: #FFC700;                /* gold */
-  margin-right: 0.25rem;
-}
 
 /* ---------------------------------------
    6) RESPONSIVE ADJUSTMENTS
@@ -402,3 +338,4 @@
     font-size: 0.9rem;
   }
 }
+

@@ -29,76 +29,79 @@
 
 <body>
 
-  <!-- STICKY NAVIGATION -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
-    <div class="container">
+<!-- =================================
+     STICKY NAVIGATION
+===================================== -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+  <div class="container">
 
-      <!-- Brand -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/north wales tutoring logo (1).png"
-             alt="North Wales Tutoring Logo"
-             width="32" height="32" class="me-2">
-        <span class="fw-bold">North Wales Tutoring</span>
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/north wales tutoring logo (1).png" alt="North Wales Tutoring Logo" width="50" height="50" class="me-2">
+      <span class="fw-bold">North Wales Tutoring</span>
+    </a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links + CTA -->
+   <!-- Nav Links + CTA -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mx-auto align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="courses.html"
+            id="coursesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Courses
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="courses.html">All course</a></li>
+            <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
+            <li><a class="dropdown-item" href="physics.html">Physics</a></li>
+            <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
+            <li><a class="dropdown-item" href="coding.html">Coding</a></li>
+            <li><a class="dropdown-item" href="english-course.html">English & ESL</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+      </ul>
+
+      <!-- CTA Button -->
+      <a href="contact.html"
+         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
+        Book Your Free Trial 🡥
       </a>
-
-      <!-- Toggler -->
-      <button class="navbar-toggler border-0"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links + CTA -->
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav mx-auto align-items-center">
-
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"
-               href="courses.html"
-               id="coursesDropdown"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false">
-              Courses
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-              <li><a class="dropdown-item" href="courses.html">All Subjects</a></li>
-              <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
-              <li><a class="dropdown-item" href="physics.html">Physics</a></li>
-              <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
-              <li><a class="dropdown-item" href="coding.html">Coding</a></li>
-              <li><a class="dropdown-item" href="english-course.html">English &amp; ESL</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-
-        </ul>
-
-        <!-- CTA Button -->
-        <a href="contact.html"
-           class="btn btn-outline-dark btn-trial d-inline-flex align-items-center ms-3">
-          Book Your Free Trial 
-          <span class="btn-details__icon">🡥</span>
-        </a>
-      </div>
     </div>
-  </nav>
-  <!-- /NAVIGATION -->
+  </div>
+</nav>
 
   <!-- HERO -->
 <section class="hero position-relative py-5">

@@ -62,67 +62,79 @@
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
 
-  <!-- =================================
-       STICKY NAVIGATION (SAME AS INDEX)
-  ====================================== -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-uppercase" href="index.html#hero">
-        <i class="bi bi-mortarboard-fill me-2"></i> North Wales Tutoring
+<!-- =================================
+     STICKY NAVIGATION
+===================================== -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/north wales tutoring logo (1).png" alt="North Wales Tutoring Logo" width="50" height="50" class="me-2">
+      <span class="fw-bold">North Wales Tutoring</span>
+    </a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links + CTA -->
+   <!-- Nav Links + CTA -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mx-auto align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="courses.html"
+            id="coursesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Courses
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="courses.html">All course</a></li>
+            <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
+            <li><a class="dropdown-item" href="physics.html">Physics</a></li>
+            <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
+            <li><a class="dropdown-item" href="coding.html">Coding</a></li>
+            <li><a class="dropdown-item" href="english-course.html">English & ESL</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+      </ul>
+
+      <!-- CTA Button -->
+      <a href="contact.html"
+         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
+        Book Your Free Trial 🡥
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="about.html">
-              <i class="bi bi-info-circle me-1"></i> About
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html#courses">
-              <i class="bi bi-book me-1"></i> Courses
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html#remote">
-              <i class="bi bi-laptop me-1"></i> Remote
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html#areas">
-              <i class="bi bi-geo-alt me-1"></i> Areas
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html#contact">
-              <i class="bi bi-envelope me-1"></i> Contact
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html#approach">
-              <i class="bi bi-person-check me-1"></i> Approach
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html#gallery">
-              <i class="bi bi-images me-1"></i> Gallery
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
-  </nav>
-  <!-- /NAVIGATION -->
+  </div>
+</nav>
 
   <!-- =================================
        ABOUT HERO SECTION
@@ -514,24 +526,43 @@
   </div>
 </section>
 
-<!-- =================================
-     CTA SECTION: “WOW” VERSION
-===================================== -->
-<section id="cta-section" class="py-5 bg-light">
+<section class="cta-section py-5">
   <div class="container">
-    <!-- CTA wrapper with animated gradient overlay + background image -->
-    <div class="cta-wrapper position-relative mx-auto wow-animation">
+    <div class="cta-card p-5 rounded-4 text-center position-relative overflow-hidden">
+      <h2 class="fw-bold mb-3">Claim Your Free 30-Minute Trial Class</h2>
+      <p class="text-muted mb-4">
+        Experience a complimentary 30-minute session with North Wales’ top  
+        <strong>maths and physics tutors</strong>, covering all UK exam boards,  
+        GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel. Try one-to-one Mathematics,  
+        Physics, Chemistry, Coding or English &amp; ESL at no cost!
+      </p>
 
-      <!-- The gradient overlay (purely CSS, so no extra HTML needed) -->
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="row g-2 justify-content-center align-items-center"
+      >
+        <input type="hidden" name="access_key" value="2f8b66ae-5de1-48ee-b2e4-aee11d9dc319" />
+        <input type="hidden" name="subject" value="Free 30-Min Trial Class Request" />
 
-      <!-- Main Content (centered atop the wrapper) -->
-      <div class="cta-content text-center text-white">
-        <h2 class="cta-title mb-4">
-          Take The First Step –<br class="d-none d-md-block">
-          Start Learning Today!
-        </h2>
-        <a href="#contact" class="btn btn-cta btn-lg">Contact Us</a>
-      </div>
+        <div class="col-sm-6 col-md-5">
+          <input
+            type="tel"
+            name="phone"
+            class="form-control form-control-lg"
+            placeholder="Your phone number"
+            pattern="\+?[0-9]{7,15}"
+            title="Please enter a valid phone number (7–15 digits, optional leading '+')"
+            required
+          />
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-lg btn-cta d-flex align-items-center">
+            Get Your Free 30-Min Trial
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
