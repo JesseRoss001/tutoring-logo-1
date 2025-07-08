@@ -19,6 +19,16 @@
   <meta name="twitter:title" content="North Wales Tutoring" />
   <meta name="twitter:description" content="Fun, friendly online tutoring. Achieve top grades in GCSE, A-Levels, SATs, and beyond." />
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN5W5PMKD1');
+</script>
+
   <!-- Bootstrap 5 CSS -->
   <link
     rel="stylesheet"
@@ -45,6 +55,7 @@
 
   <!-- Custom CSS (Optional External) -->
 <!-- Custom CSS -->
+ <link rel="stylesheet" href="cookie.css" />
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="index.css" />
 
@@ -52,16 +63,37 @@
  
  
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CN5W5PMKD1');
-</script>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+<!-- ======================================================
+     COOKIE CONSENT BANNER
+     ====================================================== -->
+<div id="cookie-banner"
+     class="cookie-banner visually-hidden"
+     role="dialog"
+     aria-live="polite"
+     aria-label="Cookie consent banner">
+
+  <p class="cookie-text mb-2">
+    🍪 We use cookies to improve your browsing experience, deliver
+    personalised content, and analyse our traffic. By clicking
+    “Accept All”, you consent to our use of cookies.
+    See our <a href="cookie-policy.html" class="cookie-link">Cookie&nbsp;Policy</a>
+    for details.
+  </p>
+
+  <div class="cookie-actions d-flex gap-2">
+    <button id="cookie-accept"
+            class="btn btn-primary btn-sm flex-grow-1">
+      Accept&nbsp;All 🍪
+    </button>
+
+    <button id="cookie-decline"
+            class="btn btn-outline-secondary btn-sm flex-grow-1">
+      Decline
+    </button>
+  </div>
+</div>
+<!-- /COOKIE BANNER -->
 
 <!-- =================================
      STICKY NAVIGATION
@@ -101,25 +133,8 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="courses.html"
-            id="coursesDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Courses
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-            <li><a class="dropdown-item" href="courses.html">All course</a></li>
-            <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
-            <li><a class="dropdown-item" href="physics.html">Physics</a></li>
-            <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
-            <li><a class="dropdown-item" href="coding.html">Coding</a></li>
-            <li><a class="dropdown-item" href="english-course.html">English & ESL</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="courses.html">Courses & Pricing</a>
         </li>
 
         <li class="nav-item">
@@ -143,25 +158,29 @@
 ===================================== -->
 <header class="hero-section d-flex align-items-center justify-content-center" id="hero">
   <div class="overlay"></div>
-  <video
-    id="heroVideo"
-    class="hero-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    poster="https://via.placeholder.com/1920x800" <!-- Optional: Placeholder image -->
-  >
-    <!-- Sources will be set via JavaScript -->
-    Your browser does not support the video tag.
-  </video>
+    <!-- NEW: responsive hero image  -->
+  <picture class="hero-media">
+    <!-- large / retina screens (served first so the browser can pick quickly) -->
+    <source
+      srcset="images/north-wales-tutoring-hero.webp"
+      media="(min-width: 800px)"
+      type="image/webp">
+
+    <!-- small / mobile fallback -->
+    <img
+      src="images/north-wales-tutoring-hero.webp"
+      alt="Confident student studying online with North Wales Tutoring"
+      width="1920" height="800"       
+      loading="eager"                 
+      decoding="async"                 
+      class="hero-img">
+  </picture>
   <div class="container text-center animate__animated animate__fadeInDown">
     <h1 class="display-3 text-white fw-bold mb-3">
       Remote Tutoring North Wales 
     </h1>
     <p class="lead text-white  mb-4">
-      Boost your grades with our friendly and interactive GCSE & A-Level tutoring
+      Boost your grades with our friendly and interactive WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE tutoring.
     </p>
           <!-- phone-capture form -->
       <form class="row g-2 justify-content-center"
@@ -269,8 +288,9 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
 
         <div class="col-md-4">
           <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
-            <img src="images/maths-tutor-north-wales-2.jpg" alt="Science Tutoring" class="img-fluid mb-3" />
-            <h4 class="fw-bold">Mathematics</h4>
+            <img src="images/maths-tutor-north-wales-2.jpg" alt="Science Tutoring"      class="card-img-top">
+
+          <h3 class="fw-bold h4">Mathematics</h3>
             <p class="mb-0">
               Dive into number crunching like never before! Our lively approach transforms 
               everything from fractions to calculus into a breeze. Let’s make those equations fun!
@@ -280,8 +300,9 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         <!-- Science -->
         <div class="col-md-4">
           <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
-            <img src="images/chemistry-tutor-north-wales-3.jpg" alt="Science Tutoring" class="img-fluid mb-3" />
-            <h4 class="fw-bold">Science</h4>
+            <img src="images/chemistry-tutor-north-wales-3.jpg" alt="Science Tutoring"      class="card-img-top">
+
+          <h3 class="fw-bold h4">Science</h3>
             <p class="mb-0">
               Explore biology, chemistry, and physics with real-world examples and 
               interactive experiments. We’ll help you see science in a whole new light!
@@ -291,8 +312,9 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         <!-- Exam Prep -->
         <div class="col-md-4">
           <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
-            <img src="images/physics-tutor-north-wales-3.jpg" alt="Exam Preparation" class="img-fluid mb-3" />
-            <h4 class="fw-bold">Exam Prep</h4>
+            <img src="images/physics-tutor-north-wales-3.jpg" alt="Exam Preparation"      class="card-img-top">
+
+          <h3 class="fw-bold h4">Exam Prep</h3>
             <p class="mb-0">
               GCSEs, A-Levels, or SATs, bring it on! We’ll guide you through practice tests, 
               time-saving tips, and proven strategies for exam success.
@@ -301,25 +323,22 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         </div>
       </div>
 
- <!-- =========  We Cover (colour-block cards)  ========= -->
+<!-- =========  We Cover (colour-block cards)  ========= -->
 <section id="we-cover" class="py-5">
   <div class="container">
 
-    <!-- Narrow wrapper keeps cards centred & not full-width -->
+    <!-- ✅ single centred wrapper ------------------------------------ -->
     <div class="we-cover-inner mx-auto">
 
-      <h2 class="display-6 fw-bold text-center mb-4">
-        We&nbsp;Cover
-      </h2>
+      <h2 class="display-6 fw-bold text-center mb-4">We Cover</h2>
 
       <!-- 1 ▸ Key Stages -->
       <div class="we-cover-tile bg-mint">
         <i class="bi bi-layers-fill tile-icon"></i>
-        <div class="tile-copy">
+        <div>
           <h5 class="fw-semibold mb-1">Key Stages</h5>
           <p class="mb-0">
-            KS1&nbsp;(5-7), KS2&nbsp;(7-11), KS3&nbsp;(11-14),
-            GCSE&nbsp;(14-16), A-Level&nbsp;(16-18)
+            KS1 (5-7), KS2 (7-11), KS3 (11-14), GCSE (14-16), A-Level (16-18)
           </p>
         </div>
       </div>
@@ -327,23 +346,20 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
       <!-- 2 ▸ Subjects -->
       <div class="we-cover-tile bg-pink">
         <i class="bi bi-lightbulb-fill tile-icon"></i>
-        <div class="tile-copy">
+        <div>
           <h5 class="fw-semibold mb-1">Subjects</h5>
           <p class="mb-0">
-            Mathematics, Chemistry, Physics, Further Maths,
-            SATs&nbsp;and more
+            Mathematics, Chemistry, Physics, Further Maths, SATs and more
           </p>
         </div>
       </div>
 
       <!-- 3 ▸ Exam Boards -->
       <div class="we-cover-tile bg-purple">
-        <i class="bi bi-patch-check-fill tile-icon"></i>
-        <div class="tile-copy">
+        <i class="bi bi-award-fill tile-icon"></i>
+        <div>
           <h5 class="fw-semibold mb-1">Exam Boards</h5>
-          <p class="mb-0">
-            AQA, Edexcel, OCR, WJEC, CCEA
-          </p>
+          <p class="mb-0">WJEC, AQA, Edexcel, OCR, Eduqas, & CAIE.</p>
         </div>
       </div>
 
@@ -358,6 +374,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
     </div><!-- /.we-cover-inner -->
   </div><!-- /.container -->
 </section>
+
 
 
 
@@ -400,7 +417,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         <div class="col-lg-6 mt-4 mt-lg-0 animate__animated animate__fadeInRight">
           <div class="remote-img rounded-3 overflow-hidden shadow-sm">
             <img
-              src="images/remote-tutoring.png"
+              src="images/online-course-north-wales-tutoring.jpg"
               alt="Remote Tutoring"
               class="img-fluid"
             />
@@ -422,88 +439,26 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         </p>
       </div>
       <!-- Card layout for areas -->
-      <div class="row g-4 animate__animated animate__fadeIn">
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Wrexham</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Bangor</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Conwy</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Llandudno</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Rhyl</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Colwyn Bay</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Holyhead</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Caernarfon</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Pwllheli</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Porthmadog</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Denbigh</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Ruthin</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">St Asaph</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Mold</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Flint</h5>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="area-card p-4 text-center shadow-sm">
-            <h5 class="fw-bold">Prestatyn</h5>
-          </div>
-        </div>
-      </div>
+ <!-- New pill list -->
+<div class="areas-pill-list animate__animated animate__fadeIn">
+  <a class="area-pill" href="contact.html">Wrexham</a>
+  <a class="area-pill" href="contact.html">Bangor</a>
+  <a class="area-pill" href="contact.html">Conwy</a>
+  <a class="area-pill" href="contact.html">Llandudno</a>
+  <a class="area-pill" href="contact.html">Rhyl</a>
+  <a class="area-pill" href="contact.html">Colwyn Bay</a>
+  <a class="area-pill" href="contact.html">Holyhead</a>
+  <a class="area-pill" href="contact.html">Caernarfon</a>
+  <a class="area-pill" href="contact.html">Pwllheli</a>
+  <a class="area-pill" href="contact.html">Porthmadog</a>
+  <a class="area-pill" href="contact.html">Denbigh</a>
+  <a class="area-pill" href="contact.html">Ruthin</a>
+  <a class="area-pill" href="contact.html">St Asaph</a>
+  <a class="area-pill" href="contact.html">Mold</a>
+  <a class="area-pill" href="contact.html">Flint</a>
+  <a class="area-pill" href="contact.html">Prestatyn</a>
+</div>
+
 
       <div class="mt-5 animate__animated animate__fadeIn">
         <p>
@@ -527,15 +482,20 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
 ===================================== -->
 <section id="approach" class="py-5">
   <div class="container">
-    <div class="section-title text-center mb-5 animate__animated animate__fadeInUp">
-      <h2><i class="bi bi-lightbulb-fill me-2"></i>Our Tutoring Approach</h2>
-      <p class="section-subtitle">Personalised, Uplifting & Results-Oriented</p>
-    </div>
+
+    <!-- NEW: dark card wrapper -->
+    <div class="approach-card shadow-lg">
+
+      <!-- keep your title block -->
+      <div class="section-title text-center mb-5">
+        <h2><i class="bi bi-lightbulb-fill me-2"></i>Our Tutoring Approach</h2>
+        <p class="section-subtitle">Personalised, Uplifting &amp; Results-Oriented</p>
+      </div>
     <div class="row align-items-center animate__animated animate__fadeIn">
       <!-- Image Column -->
       <div class="col-lg-6 col-xl-6 text-center mb-4 mb-lg-0">
         <img 
-          src="images/gummy-work-from-home.png" 
+          src="images/approach-north-wales-tutoring.jpg" 
           alt="Personalized Tutoring Approach at North Wales Tutoring" 
           style="max-width: 800px; max-height: 800px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);"
         />
@@ -612,7 +572,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
           <div class="accordion-body">
             We tutor <strong>Mathematics, Physics, Chemistry, Coding,
             English &amp; ESL</strong> for every UK board:
-            <strong>AQA, OCR, Edexcel, WJEC & CCEA</strong>.
+            <strong>WJEC, AQA, Edexcel, OCR, Eduqas, & CAIE.</strong>.
           </div>
         </div>
       </div>
@@ -682,7 +642,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
       <p class="text-muted mb-4">
         Experience a complimentary 30-minute session with North Wales’ top  
         <strong>maths and physics tutors</strong>, covering all UK exam boards,  
-        GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel. Try one-to-one Mathematics,  
+        WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE. Try one-to-one Mathematics,  
         Physics, Chemistry, Coding or English &amp; ESL at no cost!
       </p>
 
@@ -735,14 +695,14 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
           Unlock knowledge with expert-led online courses.
         </p>
         <div class="social-icons">
-          <a href="https://www.facebook.com/NorthWalesTutor" class="me-2"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/northwalestutoring"><i class="bi bi-instagram"></i></a>
-          <a href="https://g.co/kgs/ws3Yd5u"><i class="bi bi-google"></i></a>
+          <a href="https://www.facebook.com/NorthWalesTutor"  aria-label="North Wales Tutoring on Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/northwalestutoring"  aria-label="North Wales Tutoring on Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://g.co/kgs/ws3Yd5u" aria-label="North Wales Tutoring on Google"><i class="bi bi-google"></i></a>
         </div>
       </div>
       <!-- Quick Links -->
       <div class="col-md-2">
-        <h6 class="footer-title">Quick Links</h6>
+      <h3 class="footer-title h6">Quick Links</h3>
         <ul class="list-unstyled footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -753,7 +713,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
 
       <!-- Others -->
       <div class="col-md-2">
-        <h6 class="footer-title">Others</h6>
+      <h3 class="footer-title h6">Others</h3>
         <ul class="list-unstyled footer-links">
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="cookie-policy.html">Cookie Policy</a></li>
@@ -762,7 +722,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
 
       <!-- Contact Info -->
       <div class="col-md-4">
-        <h6 class="footer-title">Contact Us</h6>
+      <h3 class="footer-title h6">Contact Us</h3>
         <p class="mb-2"><i class="bi bi-telephone me-2"></i>+44 7367 292269</p>
         <p class="mb-2"><i class="bi bi-envelope me-2"></i>nwalestutoring@gmail.com</p>
         <p><i class="bi bi-geo-alt me-2"></i>4 Ffordd Cerrig Mawr, Holyhead, United Kingdom</p>
@@ -792,106 +752,79 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 ></script>
 
-<!-- Optional: Basic Form Validation -->
+<!-- SWEETALERT HANDLER FOR ALL WEB3FORMS ON THIS PAGE -->
 <script>
-  (function () {
-    'use strict'
-    const forms = document.querySelectorAll('.needs-validation')
-    Array.prototype.slice.call(forms).forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()
-</script>
+document.addEventListener('DOMContentLoaded', () => {
 
-<!-- SweetAlert Logic for Form Submission -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', async function(event) {
-      event.preventDefault();
+  /* ---------- 1 ▸ helpers ---------- */
+  // very loose real-world phone check: optional +, 7-15 digits,
+  // cannot be all the same digit or perfectly ascending
+  const clean    = v => v.replace(/\s+/g,'');
+  const validTel = v => {
+    const s = clean(v);
+    if (!/^\+?\d{7,15}$/.test(s))         return false;        // basic shape
+    if (/^(\d)\1+$/.test(s))              return false;        // 111111…
+    if (/^0123456789+$/.test(s))          return false;        // 012345…
+    return true;
+  };
 
-      if (!contactForm.checkValidity()) {
-        contactForm.classList.add('was-validated');
-        return;
-      }
+  /* ---------- 2 ▸ bind every Web3Forms form ---------- */
+  document
+    .querySelectorAll('form[action^="https://api.web3forms.com"]')
+    .forEach(form => {
 
-      // Collect form data
-      const formData = new FormData(contactForm);
+      form.addEventListener('submit', async ev => {
+        ev.preventDefault();
 
-      try {
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData
-        });
-        const result = await response.json();
-
-        if (result.success) {
-          Swal.fire({
-            icon: 'success',
-            title: 'Message Sent!',
-            text: 'Thank you for reaching out. We’ll get back to you soon!',
-            confirmButtonColor: '#ff28a8'
-          });
-          contactForm.reset();
-          contactForm.classList.remove('was-validated');
-        } else {
+        /* 2.1 ▸ client-side checks (phone only on this page) */
+        const telInput = form.querySelector('input[name="phone"]');
+        if (telInput && !validTel(telInput.value)) {
           Swal.fire({
             icon: 'error',
-            title: 'Submission Error',
-            text: 'Oops! Something went wrong. Please try again.',
+            title: 'Invalid phone number',
+            text : 'Please enter a real UK/international number.',
+            confirmButtonColor: '#ff28a8'
+          });
+          return;
+        }
+
+        /* 2.2 ▸ send to Web3Forms */
+        try {
+          const res   = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+          const data  = await res.json();
+
+          if (data.success) {
+            Swal.fire({
+              icon : 'success',
+              title: 'Thank you!',
+              text : 'Your request was received — our team will contact you soon.',
+              confirmButtonColor: '#ff28a8'
+            });
+            form.reset();
+          } else {
+            Swal.fire({
+              icon : 'error',
+              title: 'Submission error',
+              text : 'Something went wrong on our end. Please try again in a minute.',
+              confirmButtonColor: '#ff28a8'
+            });
+          }
+        } catch (err) {
+          Swal.fire({
+            icon : 'error',
+            title: 'Network error',
+            text : 'Could not reach the server. Check your connection and try again.',
             confirmButtonColor: '#ff28a8'
           });
         }
-      } catch (error) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Network Error',
-          text: 'Unable to send your message. Please check your connection and try again.',
-          confirmButtonColor: '#ff28a8'
-        });
-      }
+      });
     });
-  });
+});
 </script>
-<!-- JavaScript to dynamically set hero video based on screen size -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const heroVideo = document.getElementById('heroVideo');
-    const videoSmall = 'https://res.cloudinary.com/dnemqfp1d/video/upload/v1735140539/hero-800px_subaxd.mp4';
-    const videoLarge = 'https://res.cloudinary.com/dnemqfp1d/video/upload/v1735140575/hero-1600px_owzdoo.mp4';
-    const breakpoint = 800; // px
 
-    // Function to set video source
-    function setHeroVideo() {
-      const viewportWidth = window.innerWidth;
-      const currentSrc = heroVideo.getAttribute('src');
 
-      if (viewportWidth < breakpoint && currentSrc !== videoSmall) {
-        heroVideo.setAttribute('src', videoSmall);
-      } else if (viewportWidth >= breakpoint && currentSrc !== videoLarge) {
-        heroVideo.setAttribute('src', videoLarge);
-      }
-    }
+<script src="cookie.js" defer></script>
 
-    // Initial check
-    setHeroVideo();
-
-    // Add event listener for window resize with debounce
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function() {
-        setHeroVideo();
-      }, 250); // Adjust debounce delay as needed
-    });
-  });
-</script>
 
 </body>
 </html>

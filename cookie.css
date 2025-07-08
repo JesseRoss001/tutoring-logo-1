@@ -1,0 +1,76 @@
+/* ======================================================
+   COOKIE BANNER
+   ====================================================== */
+.cookie-banner{
+  position:fixed;
+  bottom:1rem; left:50%;
+  transform:translateX(-50%);
+  z-index:1050; /* above nav & modals */
+  max-width:420px;
+  width:90vw;
+  background:#FF28A8;
+  border-radius:0.75rem;
+  box-shadow:0 8px 28px rgba(0,0,0,.15);
+  padding:1.25rem 1.5rem;
+  font-size:.95rem;
+}
+
+.cookie-banner .cookie-text{
+  margin:0;
+  color:#fff;
+}
+
+.cookie-banner .cookie-link{
+  text-decoration:underline;
+  color: #09096A;
+}
+
+.cookie-banner .btn{
+  font-size:.875rem;
+  background-color: #09096A;
+}
+
+
+/* Utility: hide element but keep for a11y */
+.visually-hidden{
+  display:none !important;
+}
+
+/* Small screens – full width */
+@media (max-width:576px){
+  .cookie-banner{
+    left:0; right:0;
+    transform:none;
+    width:100%;
+    border-radius:0;
+  }
+}
+/* ─────────────────────────────────────
+   Cookie-banner buttons – colour tweak
+   ──────────────────────────────────── */
+
+/* Accept  ▸ soft cream  #fffcec */
+#cookie-accept {
+  background-color: #ffd900;
+  color: #09096A;           /* navy text keeps contrast AA-level */
+  border-color: #fffcec;    /* optional: matches background */
+}
+
+/* Decline ▸ pure white */
+#cookie-decline {
+  background-color: #ffffff;
+  color: #09096A;
+  border-color: #e0e0e0;    /* outline remains subtle */
+}
+
+/* Optional: keep hover focus state consistent */
+#cookie-accept:hover,
+#cookie-accept:focus {
+  background-color: #4400ff; /* 4 % darker */
+  color: #fff;
+}
+
+#cookie-decline:hover,
+#cookie-decline:focus {
+  background-color: #f7f7f7; /* light‐grey tint */
+}

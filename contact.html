@@ -6,6 +6,16 @@
   <meta name="keywords" content="North Wales Tutoring, Contact, Online Tutor UK, Email, Phone, Social Media, Facebook, Instagram, Google Business" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN5W5PMKD1');
+</script>
+
   <!-- Page Title & Favicon -->
   <title>Contact | North Wales Tutoring</title>
   <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dnemqfp1d/image/upload/v1735140498/NWT-logo_cftrw7.png">
@@ -27,13 +37,43 @@
   />
 
   <!-- Main site CSS -->
+    <link rel="stylesheet" href="cookie.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="contact.css" />
   
 </head>
 
 <body>
+<!-- ======================================================
+     COOKIE CONSENT BANNER
+     ====================================================== -->
+<div id="cookie-banner"
+     class="cookie-banner visually-hidden"
+     role="dialog"
+     aria-live="polite"
+     aria-label="Cookie consent banner">
 
+  <p class="cookie-text mb-2">
+    🍪 We use cookies to improve your browsing experience, deliver
+    personalised content, and analyse our traffic. By clicking
+    “Accept All”, you consent to our use of cookies.
+    See our <a href="cookie-policy.html" class="cookie-link">Cookie&nbsp;Policy</a>
+    for details.
+  </p>
+
+  <div class="cookie-actions d-flex gap-2">
+    <button id="cookie-accept"
+            class="btn btn-primary btn-sm flex-grow-1">
+      Accept&nbsp;All 🍪
+    </button>
+
+    <button id="cookie-decline"
+            class="btn btn-outline-secondary btn-sm flex-grow-1">
+      Decline
+    </button>
+  </div>
+</div>
+<!-- /COOKIE BANNER -->
 <!-- =================================
      STICKY NAVIGATION
 ===================================== -->
@@ -72,27 +112,10 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="courses.html"
-            id="coursesDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Courses
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-            <li><a class="dropdown-item" href="courses.html">All course</a></li>
-            <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
-            <li><a class="dropdown-item" href="physics.html">Physics</a></li>
-            <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
-            <li><a class="dropdown-item" href="coding.html">Coding</a></li>
-            <li><a class="dropdown-item" href="english-course.html">English & ESL</a></li>
-          </ul>
+                <li class="nav-item">
+          <a class="nav-link" href="courses.html">Courses & Pricing</a>
         </li>
-
+ 
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
@@ -129,10 +152,10 @@
         <div class="col-lg-6">
           <div class="contact-card mx-auto">
             <h2>Send Us A Message</h2>
-            <p class="card-description">Whether you need help with GCSE maths, A-Level physics, or WJEC revision, send us your questions below and we’ll be in touch.</p>
+            <p class="card-description">Whether you need help with WJEC revision GCSE maths, or A-Level physics, send us your questions below and we’ll be in touch.</p>
             <form id="contactForm" method="POST" action="https://api.web3forms.com/submit">
               <!-- Replace with your actual access key if using Web3Forms -->
-              <input type="hidden" name="access_key" value="a7c568e1-0119-44b4-8a94-81dcab69097f" />
+              <input type="hidden" name="access_key" value="2f8b66ae-5de1-48ee-b2e4-aee11d9dc319" />
 
               <!-- Row: Full Name / Email -->
               <div class="row mb-3">
@@ -204,7 +227,7 @@
               <i class="bi bi-envelope-fill info-icon me-3"></i>
               <div class="info-text-block">
                 <h5 class="mb-1">Email Us</h5>
-                <p class="mb-1 small">Ask about our GCSE &amp; A-Level packages</p>
+                <p class="mb-1 small">Ask about our WJEC, GCSE &amp; A-Level packages</p>
                 <a href="mailto:nwalestutoring@gmail.com" class="info-link">nwalestutoring@gmail.com</a>
               </div>
             </div>
@@ -216,7 +239,7 @@
               <i class="bi bi-telephone-fill info-icon me-3"></i>
               <div class="info-text-block">
                 <h5 class="mb-1">Contact Us</h5>
-                <p class="mb-1 small">Book a free GCSE maths trial</p>
+                <p class="mb-1 small">Book a free trial</p>
                 <a href="tel:+447367292269" class="info-link">+44 7367 292269</a>
               </div>
             </div>
@@ -353,7 +376,7 @@
           <div class="accordion-body">
             We tutor <strong>Mathematics, Physics, Chemistry, Coding,
             English &amp; ESL</strong> for every UK board:
-            <strong>AQA, OCR, Edexcel, WJEC & CCEA</strong>.
+            <strong> WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, CAIE</strong>.
           </div>
         </div>
       </div>
@@ -370,7 +393,7 @@
         <div id="q2" class="accordion-collapse collapse"
              aria-labelledby="q2-h" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Every 55-minute session costs <strong>£15</strong>. 
+            Every 1 hour session costs <strong>£15</strong>. 
             Try a <strong>free 30-minute trial lesson</strong> first.
           </div>
         </div>
@@ -431,7 +454,7 @@
           <span class="ms-2 h5 mb-0">North Wales Tutoring</span>
         </p>
         <p class="footer-desc text-muted mb-3">
-          North Wales’ leading online tutors for GCSE & A-Level: personalised Mathematics & Physics tutoring, Chemistry, Coding & English exam prep with expert-led WJEC, AQA, OCR & Edexcel sessions.
+          North Wales’ leading online tutors for GCSE & A-Level: personalised Mathematics & Physics tutoring, Chemistry, Coding & English exam prep with expert-led  WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, CAIE sessions.
         </p>
         <div class="social-icons">
           <a href="https://www.facebook.com/NorthWalesTutor" class="me-2"><i class="bi bi-facebook"></i></a>
@@ -487,21 +510,100 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
-  <!-- (Optional) Simple Form Validation Script -->
-  <script>
-    (function () {
-      'use strict';
-      const forms = document.querySelectorAll('.needs-validation');
-      Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
+<!-- contact-form guard + SweetAlert feedback  -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ── helpers ───────────────────────────────────────── */
+
+  // 1 ▸ phone validator
+  function isValidPhone(raw) {
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length < 7 || digits.length > 15) return false;
+
+    // reject all-same-digit  (e.g. “999999999”)
+    if (/^(\d)\1+$/.test(digits)) return false;
+
+    // reject any 3-plus identical digits in a row
+    if (/(\d)\1{2,}/.test(digits)) return false;
+
+    // reject straight ascending / descending sequences
+    const asc  = '01234567890',
+          desc = '09876543210';
+    if (asc.includes(digits)  || desc.includes(digits)) return false;
+
+    return true;            // looks OK
+  }
+
+  // 2 ▸ quick spam-phrase check
+  const banned = [
+    /rank\s+your\s+website/i,
+    /i\s+can\s+help\s+your\s+website/i,
+    /improve\s+your\s+seo/i,
+    /back\s?links?/i
+  ];
+  const isSpam = txt => banned.some(r => r.test(txt));
+
+  /* ── form logic ────────────────────────────────────── */
+
+  const form   = document.getElementById('contactForm'),
+        phone  = document.getElementById('phoneNumber'),
+        msgBox = document.getElementById('messageText');
+
+  if (!form) return;  // nothing to do
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    /* 1 ▸ client-side checks */
+    if (!isValidPhone(phone.value)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid phone number',
+        text: 'Please enter a genuine phone number (no obvious repeats or sequences).',
+        confirmButtonColor: '#ff28a8'
       });
-    })();
+      return;
+    }
+
+    if (isSpam(msgBox.value)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Message blocked',
+        text: 'Please re-phrase your enquiry and try again.',
+        confirmButtonColor: '#ff28a8'
+      });
+      return;
+    }
+
+    /* 2 ▸ send to Web3Forms */
+    try {
+      const res   = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+      const json  = await res.json();
+
+      if (json.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Thank you!',
+          text: 'Our team will contact you soon.',
+          confirmButtonColor: '#ff28a8'
+        });
+        form.reset();
+      } else {
+        throw new Error('server');
+      }
+    } catch (err) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Submission error',
+        text: 'Something went wrong – please try again later.',
+        confirmButtonColor: '#ff28a8'
+      });
+    }
+  });
+});
+</script>
+
   </script>
 
 <script>
@@ -514,6 +616,9 @@
     });
 </script>
 
+
+
+<script src="cookie.js" defer></script>
 
 </body>
 </html>

@@ -16,18 +16,17 @@
   overflow: hidden; /* Ensure no overflow from video */
 }
 
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  transform: translate(-50%, -50%);
-  object-fit: cover; /* Ensures the video covers the area */
+/* hero background image – positioned exactly like the old video */
+.hero-media,
+.hero-img{
+  position:absolute;
+  top:50%; left:50%;
+  width:100%; height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+  z-index:0;                   /* still sits behind overlay & content */
 }
+
 
 /* Adjust overlay to cover the video */
 .hero-section .overlay {
@@ -38,6 +37,18 @@
   height: 100%;
   background: var(--overlay-color);
   z-index: 1;
+}
+/* Hero – dark overlay that sits above the image */
+.hero-section .overlay{
+  position:absolute;
+  inset:0;                              /* shorthand for top/right/bottom/left:0 */
+  background:linear-gradient(
+              rgba(0,0,0,.55) 0%,       /* solid tint on top */
+              rgba(0,0,0,.35) 30%,      /* fades a bit */
+              rgba(0,0,0,.35) 70%,
+              rgba(0,0,0,.55) 100%);    /* darker again at the bottom */
+  z-index:1;                            /* above .hero-media but below content */
+  pointer-events:none;                  /* clicks go through to links & inputs */
 }
 
 /* Ensure content is above the video and overlay */
@@ -141,54 +152,92 @@
   font-style: italic;
   margin-bottom: 3rem;
 }
+/* ==============================================================
+   “UNLOCKING KNOWLEDGE” / ABOUT SECTION
+   ============================================================== */
 
-/* ===== About (Bright-Mind inspired) ===================== */
-.about-split { background:#fff; }
+/* ---------- Section wrapper ---------- */
+.about-split{
+  background:#fff;
+  padding-top:5rem;                     /* breathing room above */
+  padding-bottom:5rem;                  /* breathing room below */
+}
 
-.about-img { position:relative; border-radius:1.25rem; overflow:hidden; }
-.about-img img { object-fit:cover; width:100%; height:100%; }
+/* ---------- Image container ---------- */
+.about-img{
+  position:relative;
+  border-radius:1.25rem;
+  overflow:hidden;                      /* rounded-corner crop */
+  box-shadow:0 12px 40px rgba(0,0,0,.06);
+}
 
+/* ---------- Actual photo ---------- */
+.about-photo{
+  display:block;
+  width:auto;                           /* desktop: keep original size */
+  height:auto;
+  object-fit:cover;                     /* neat crop when we limit h / w */
+}
+
+/* ---------- Badge on the image (hours, questions, etc.) ---------- */
 .about-badge{
-  position:absolute; bottom:1.25rem; left:1.25rem;
-  background:#fff; border-radius:1rem; padding:1.5rem 2rem;
+  position:absolute;
+  bottom:1.25rem;
+  left:1.25rem;
+  background:#fff;
+  border-radius:1rem;
+  padding:1.5rem 2rem;
   max-width:260px;
+  box-shadow:0 6px 24px rgba(0,0,0,.08);
 }
 .about-badge .label{ font-weight:600; line-height:1.3; }
-.about-badge .value{
-  font-size:2rem; font-weight:700; color:var(--accent-color,#7F5FFF);
-}
+.about-badge .value{ font-size:2rem; font-weight:700; color:var(--accent-color); }
 
-.brand-accent{ color:var(--accent-color,#7F5FFF); }
+/* ---------- Headline styling ---------- */
+.brand-accent{ color:var(--accent-color); }   /* bright pink word */
 
+/* ---------- Stat numbers under text column ---------- */
 .about-stats .stat-value{
-  font-weight:700; font-size:2rem; margin-bottom:.25rem;
+  font-weight:700;
+  font-size:2rem;
+  margin-bottom:.25rem;
 }
-.about-stats .stat-label{ font-size:1rem; color:#47515e; }
-
-@media (max-width: 991.98px){
-  .about-badge{ left:50%; transform:translateX(-50%); }
-}
-
-/* default / large-screen look */
-.about-photo{
-  width:auto;
-  height:auto;          /* keep full height on desktops */
-  object-fit:cover;     /* keeps image nicely cropped when we limit height */
+.about-stats .stat-label{
+  font-size:1rem;
+  color:#47515e;
 }
 
-/* tablet (≤ 992 px) */
+/* --------------------------------------------------------------
+   BREAK-POINT TWEAKS
+   -------------------------------------------------------------- */
+
+/* md & below (≤ 991 px): centre badge & let photo fill column */
 @media (max-width:991.98px){
+
+  /* 1 ▸ centre the badge so it doesn’t overflow a narrower img */
+  .about-badge{
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  /* 2 ▸ ***FIX FOR WHITE GAP*** — photo now grows to column width */
   .about-photo{
-    max-width:380px;    /* from earlier */
-    max-height:320px;   /* NEW: shorten the image */
+    width:100%    !important;           /* fill full column */
+    max-width:100%!important;           /* override earlier max-width */
+    height:auto    !important;          /* keep aspect ratio */
   }
 }
 
-/* phones (≤ 768 px) */
+/* sm & below (≤ 767 px): smaller photo & tighter badge */
 @media (max-width:767.98px){
+
   .about-photo{
-    max-width:280px;    /* from earlier */
-    max-height:220px;   /* NEW: even shorter */
+    max-height:none;                    /* let 100 % width control size */
+  }
+
+  .about-badge{
+    padding:1.25rem 1.5rem;
+    max-width:200px;
   }
 }
 
@@ -235,13 +284,12 @@
 /* ---------- ICON ---------- */
 /* ===== Courses – responsive square thumbnail ===== */
 .course-card img{
-  /* the old fixed 400 px width is removed */
-  width:clamp(64px, 18vw, 110px);  /* 64 px on small phones → max 110 px on xl */
-  height:auto;                     /* preserves aspect-ratio               */
-  aspect-ratio:1/1;                /* guarantees a square frame            */
-  object-fit:cover;                /* neat crop if source isn’t square     */
-  border-radius:12px;              /* same subtle rounding you wanted      */
-  margin:0 auto 1.25rem;           /* centred with tidy spacing            */
+  display:block;                         /* removes inline-img baseline gap    */
+  width:100%;                            /* spans the entire card width        */
+  height:230px;                          /* fixed banner height for consistency*/
+  object-fit:cover;                      /* neat crop, preserves aspect ratio  */
+  border-radius:1.75rem 1.75rem 0 0;     /* same curve as card, top only       */
+  margin:0 0 1.5rem;   
 }
 
 /* optional – if you kept the media-query overrides, remove or soften them  */
@@ -251,6 +299,35 @@
 @media (max-width:576px){
   .course-card img{width:64px;}
 }
+/* ======================================================
+   COURSE-CARD   — reference-matching banner images
+   ====================================================== */
+
+/* basic card look (shadows, rounding, hover lift) */
+.course-card{
+  border-radius:1rem;
+  overflow:hidden;                     /* keeps img corners flushed */
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.course-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 16px 40px rgba(9,9,106,.15);
+}
+
+/* full-width top image … class="card-img-top" */
+.course-card .card-img-top{
+  display:block;
+  width:100%;
+  height:400px;                        /* reference height */
+  object-fit:cover;                    /* centre-crop */
+  border-top-left-radius:1rem;
+  border-top-right-radius:1rem;
+}
+
+/* a little smaller on tablets / phones so the grid breathes */
+@media(max-width:991.98px){ .course-card .card-img-top{ height:320px; } }
+@media(max-width:767.98px){ .course-card .card-img-top{ height:240px; } }
+
 
 /* ---------- TEXT ---------- */
 .course-card h4 {
@@ -267,64 +344,210 @@
   margin: 0;                               /* tighten */
 }
 
-/* =====  We Cover (colour-block version)  ===== */
-#we-cover{ background:linear-gradient(180deg,#fff 0%,#fafffe 100%); }
+/* =====  We Cover – centred narrow layout  ===== */
+#we-cover            { background:#fbfefd; }         /* subtle page tint   */
 
-.we-cover-inner{            /* keeps everything centred & medium width  */
-  max-width:920px;
-  margin:0 auto;
+.we-cover-inner{
+  max-width:920px;                                   /* feel free to tweak */
+  margin:0 auto;                                     /* <- centres block   */
+  padding:0 1rem;                                    /* gutter on phones   */
 }
 
 .we-cover-tile{
   display:flex;
-  align-items:flex-start;
   gap:1.25rem;
+  align-items:flex-start;
   border-radius:18px;
   padding:1.75rem 2rem;
-  color:#06171f;
-  margin-bottom:1.1rem;
+  margin-bottom:1.25rem;
   box-shadow:0 12px 30px rgba(9,9,106,.05);
-  transition:box-shadow .25s, transform .25s;
+  transition:transform .25s, box-shadow .25s;
 }
 .we-cover-tile:hover{
   transform:translateY(-3px);
   box-shadow:0 18px 46px rgba(9,9,106,.09);
 }
 
-/* icons now float without a circle */
+/* Icons (now without the big leftover space) */
 .tile-icon{
-  font-size:1.9rem;
+  font-size:1.75rem;
   line-height:1;
+  color:#06171f;
   margin-top:.15rem;
 }
 
-/* lock paragraph width on big screens for neatness */
-.tile-copy{ max-width:640px; }
-
-/* pastel card fills */
+/* Pastel backgrounds */
 .bg-mint   { background:#E8FFF2; }
 .bg-pink   { background:#FFE8F1; }
 .bg-purple { background:#F2E8FF; }
 
-/* ----------  responsiveness  ---------- */
+/* Responsive: stack & centre on small screens */
 @media(max-width:768px){
   .we-cover-tile{
     flex-direction:column;
     text-align:center;
     align-items:center;
-    padding:1.5rem 1.6rem;
+    padding:1.5rem 1.4rem;
   }
   .tile-icon{ margin-top:0; }
-  .tile-copy{ max-width:none; }
 }
+
+/* ==========================================================
+   REMOTE TUTORING  –  reference-style makeover
+   ========================================================== */
+
+/* 1 ▸ overall look ------------------------------------------------ */
+#remote{
+  background:#fff;                       /* clean background           */
+  position:relative;                     /* lets us place decorations  */
+  overflow:hidden;                       /* hide pattern overflow      */
+  padding-top:4rem; padding-bottom:4rem; /* a little extra breathing   */
+}
+
+/* 2 ▸ headline + subtitle ----------------------------------------- */
+#remote .section-title{
+  text-align:center !important;          /* centre title & subtitle       */
+  margin-left:auto;                      /* kick the whole node to centre */
+  margin-right:auto;
+}
+
+#remote .section-title h2{
+    text-align:center !important;          /* centre title & subtitle       */
+  margin-left:auto;                      /* keeps icon + text centred     */
+  margin-right:auto;
+}
+/* --- Remote subtitle centring fix ------------------------------- */
+#remote .section-subtitle{
+  text-align:center;      /* centre the line itself           */
+  margin-left:auto;       /* keep the block centred           */
+  margin-right:auto;      /* (lets max-width work symmetrically) */
+}
+
+#remote .btn-custom{                     /* pink “Start Remote Lessons”   */
+  width:100%;                            /* fluid width                   */
+  max-width:580px;                       /* but not crazy-wide on big screens */
+  margin:2.5rem auto 0;                  /* centred, with top space       */
+  display:flex; justify-content:center; /* centre icon & text inside     */
+  font-size:1.05rem;
+}
+/* 3 ▸ left-hand column – turn paragraphs into icon rows ----------- */
+#remote .row.align-items-center{ row-gap:2.75rem; }   /* space between cols */
+
+/* wrap all three <p class="mb-4"> in one flex column */
+#remote .col-lg-6:first-child{
+  display:flex; flex-direction:column;
+}
+
+#remote .col-lg-6:first-child p.mb-4{
+  position:relative;
+  padding-left:84px;                     /* room for icon circle       */
+  margin-bottom:2.25rem !important;
+  font-size:1rem;
+  color:#47515e;
+  max-width:520px;
+}
+
+/* headline for each feature (grab first sentence) */
+#remote .col-lg-6:first-child p.mb-4::first-line{
+  font-weight:700;
+  color:#06171f;
+  font-size:1.25rem;
+}
+
+/* pastel icon circles (use Bootstrap Icons’ “mortarboard”, “people” etc.) */
+@font-face{font-family:"bootstrap-icons";src:url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.woff2") format("woff2");}
+
+#remote .col-lg-6:first-child p.mb-4::before{
+  content:"\F4D5";                       /* default icon               */
+  font-family:"bootstrap-icons";
+  font-size:1.7rem;
+  line-height:84px;                      /* vertical centre            */
+  text-align:center;
+  color:#00936c;
+  position:absolute;
+  left:0; top:0;
+  width:72px; height:72px;
+  border-radius:50%;
+  background:#E8FFF2;
+}
+
+/* second & third icons with different glyph + colour */
+#remote .col-lg-6:first-child p.mb-4:nth-of-type(2)::before{
+  content:"\F2B7";                       /* bi-layers icon             */
+  background:#F2E8FF;
+  color:#8B46FF;
+}
+#remote .col-lg-6:first-child p.mb-4:nth-of-type(3)::before{
+  content:"\F3D2";                       /* bi-graph-up                */
+  background:#FFE8F1;
+  color:#FF2860;
+}
+
+/* CTA button */
+#remote .col-lg-6:first-child .btn-custom{
+  margin-top:.75rem;
+  font-weight:600;
+  padding:.85rem 2rem;
+  border-radius:40px;
+}
+
+/* 4 ▸ right-hand column – layered card ----------------------------- */
+.remote-img{
+  position:relative;
+  border-radius:1.5rem;
+  overflow:hidden;
+  box-shadow:0 28px 80px rgba(6,23,31,.15);
+  display:grid;                           /* build simple collage grid  */
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:1rem;
+  background:#fff;
+  padding:1rem;                           /* white gutter around shots  */
+}
+
+/* main <img> fills first cell – duplicate via ::after for extra shots */
+.remote-img img{
+  width:100%; height:100%;
+  object-fit:cover;
+  grid-column:1/3; grid-row:1/2;           /* spans two columns top      */
+}
+/* dotted decorative pattern */
+.remote-img::before{
+  content:"";
+  position:absolute;
+  right:100%; top:45%;
+  width:140px; height:140px;
+  background-image:radial-gradient(rgba(9,9,106,.25) 1.5px, transparent 1.5px);
+  background-size:18px 18px;
+  transform:translate(60%,-50%);
+  opacity:.35;
+}
+
+/* 5 ▸ responsiveness ---------------------------------------------- */
+@media(max-width:991.98px){
+  #remote .row.align-items-center{ flex-direction:column-reverse; }
+  .remote-img{ margin-bottom:3rem; }
+  #remote .section-title h2{ font-size:2.25rem; }
+}
+
 @media(max-width:576px){
-  .we-cover-inner{ padding:0 1rem; }
-  .we-cover-tile{ padding:1.4rem 1.2rem; }
-  .tile-icon{ font-size:1.6rem; }
+  #remote .col-lg-6:first-child p.mb-4{
+    padding-left:68px;
+  }
+  #remote .col-lg-6:first-child p.mb-4::before{
+    width:56px;height:56px;line-height:56px;font-size:1.4rem;
+  }
+  .remote-img{
+    padding:.6rem;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+  }
+  .remote-img::after{ grid-column:1/2; grid-row:2/3; min-height:160px; }
 }
-
-
-
+/* a little tighter on phones */
+@media(max-width:576px){
+  #remote .btn-custom{ max-width:100%; font-size:.95rem; }
+}
 /* ----------------------------------------------
    AREAS WE SERVE SECTION
 ---------------------------------------------- */
@@ -375,48 +598,99 @@
   color: var(--accent-color);
   margin-bottom: 0.5rem;
 }
-
-/* ----------------------------------------------
-   CONTACT FORM
----------------------------------------------- */
-.form-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-color);
+/* === Areas – pill-link style =================================== */
+.areas-pill-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  justify-content:center;
+  padding:0 1rem;
 }
 
-.form-control {
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  transition: border-color 0.3s ease;
+.area-pill{
+  background:#FF28A8;           /* soft yellow                   */
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  padding:.7rem 2.2rem;
+  border-radius:50px;
+  display:inline-block;
+  transition:background .25s, transform .25s, box-shadow .25s;
 }
 
-.form-control:focus {
-  border-color: var(--accent-color);
-  box-shadow: none;
+.area-pill:hover,
+.area-pill:focus{
+  background:#8B46FF;
+  transform:translateY(-3px);
+  box-shadow:0 6px 18px rgba(9,9,106,.1);
 }
 
-.invalid-feedback {
-  color: red;
-  font-size: 0.875rem;
+/* smaller screens – tighten gaps */
+@media (max-width:576px){
+  .areas-pill-list{ gap:1rem; }
+  .area-pill{ padding:.6rem 1.4rem; font-size:.9rem; }
 }
 
-button.btn-custom {
-  background-color: var(--accent-color);
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 50px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 100%;
+/* === Tutoring Approach → dark profile-card look =============== */
+.approach-card{
+  background:#06171f;                       /* deep black card            */
+  border-radius:1.5rem;                  /* big rounded corners        */
+  padding:4rem 3rem;                     /* roomy interior             */
+  color:#fff;                            /* default text to white      */
+  overflow:hidden;
 }
 
-button.btn-custom:hover {
-  background-color: var(--btn-hover-color);
-  transform: translateY(-3px);
+/* full-bleed on big screens, stay comfy in the usual container */
+@media (min-width:1400px){
+  .approach-card{ padding-left:4.5rem; padding-right:4.5rem; }
 }
+
+/* title inside card – white text & subtle under-line */
+.approach-card .section-title h2{
+  color:#fff;
+}
+.approach-card .section-title h2::after{
+  background:#7F5FFF;                    /* small accent bar           */
+}
+
+/* subtitle – lighter grey for contrast */
+.approach-card .section-subtitle{
+  color:#B7B7B7;
+  font-style:normal;
+  max-width:520px;
+  margin:0 auto 2.5rem;
+}
+
+/* paragraphs – soft grey for readability on black */
+.approach-card p{
+  color:#D1D1D1;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+/* make the image fill its column & add a gentle radius */
+.approach-card img{
+  width:100%;
+  height:auto;
+  border-radius:1rem;
+  object-fit:cover;
+  box-shadow:0 12px 32px rgba(0,0,0,.35);
+}
+
+/* tighten the columns on XL so text doesn’t sprawl */
+@media (min-width:1200px){
+  .approach-card .col-xl-6:first-child{ max-width:520px; }
+}
+
+/* stack image over text on ≤ lg (keeps nice mobile flow) */
+@media (max-width:991.98px){
+  .approach-card .row{ flex-direction:column; }
+  .approach-card img{ margin-bottom:2rem; }
+}
+
+/* ensure any <strong> still pops */
+.approach-card strong{ color:#fff; }
+
 
 /* ----------------------------------------------
    LONG TEXT CONTENT (APPROACH SECTION)

@@ -10,6 +10,16 @@
   <title>About Jesse | North Wales Tutoring</title>
   <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dnemqfp1d/image/upload/v1735140498/NWT-logo_cftrw7.png">
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN5W5PMKD1');
+</script>
+
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="About Jesse | North Wales Tutoring" />
   <meta property="og:description" content="Get to know Jesse—your friendly, qualified online tutor covering Maths, Physics, Chemistry & English for GCSE & A-Level (WJEC, AQA, Edexcel, OCR, Eduqas, CAIE)." />
@@ -43,6 +53,7 @@
     src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
     defer
   ></script>
+ <link rel="stylesheet" href="cookie.css" />
 
   <!-- Your main site CSS (as on index) -->
   <link rel="stylesheet" href="style.css" />
@@ -51,17 +62,37 @@
   <link rel="stylesheet" href="about.css" />
 </head>
 
-<!-- Google Analytics / Tag Manager (if used on index) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-CN5W5PMKD1');
-</script>
-
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+<!-- ======================================================
+     COOKIE CONSENT BANNER
+     ====================================================== -->
+<div id="cookie-banner"
+     class="cookie-banner visually-hidden"
+     role="dialog"
+     aria-live="polite"
+     aria-label="Cookie consent banner">
 
+  <p class="cookie-text mb-2">
+    🍪 We use cookies to improve your browsing experience, deliver
+    personalised content, and analyse our traffic. By clicking
+    “Accept All”, you consent to our use of cookies.
+    See our <a href="cookie-policy.html" class="cookie-link">Cookie&nbsp;Policy</a>
+    for details.
+  </p>
+
+  <div class="cookie-actions d-flex gap-2">
+    <button id="cookie-accept"
+            class="btn btn-primary btn-sm flex-grow-1">
+      Accept&nbsp;All 🍪
+    </button>
+
+    <button id="cookie-decline"
+            class="btn btn-outline-secondary btn-sm flex-grow-1">
+      Decline
+    </button>
+  </div>
+</div>
+<!-- /COOKIE BANNER -->
 <!-- =================================
      STICKY NAVIGATION
 ===================================== -->
@@ -100,25 +131,8 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="courses.html"
-            id="coursesDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Courses
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-            <li><a class="dropdown-item" href="courses.html">All course</a></li>
-            <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
-            <li><a class="dropdown-item" href="physics.html">Physics</a></li>
-            <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
-            <li><a class="dropdown-item" href="coding.html">Coding</a></li>
-            <li><a class="dropdown-item" href="english-course.html">English & ESL</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="courses.html">Courses & Pricing</a>
         </li>
 
         <li class="nav-item">
@@ -532,8 +546,8 @@
       <h2 class="fw-bold mb-3">Claim Your Free 30-Minute Trial Class</h2>
       <p class="text-muted mb-4">
         Experience a complimentary 30-minute session with North Wales’ top  
-        <strong>maths and physics tutors</strong>, covering all UK exam boards,  
-        GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel. Try one-to-one Mathematics,  
+        <strong>maths and physics tutors</strong>, covering all UK exam boards, WJEC,  
+        GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, CAIE. Try one-to-one Mathematics,  
         Physics, Chemistry, Coding or English &amp; ESL at no cost!
       </p>
 
@@ -572,46 +586,68 @@
   <!-- =================================
        FOOTER (SAME AS INDEX)
   ====================================== -->
-  <footer class="footer-section bg-dark text-white pt-5 pb-3">
-    <div class="container">
-      <div class="row align-items-center mb-4">
-        <!-- Contact Section -->
-        <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
-          <h5 class="fw-bold text-uppercase mb-3">Contact Us</h5>
-          <p>
-            <i class="bi bi-telephone-fill me-2"></i>+44 7367 292269
-          </p>
-          <p>
-            <i class="bi bi-envelope-fill me-2"></i>cleandesign.uk@gmail.com
-          </p>
-        </div>
+<footer class="footer-section">
+  <div class="container">
+    <div class="row gy-4">
 
-        <!-- Social Media Section -->
-        <div class="col-lg-4 text-center mb-4 mb-lg-0">
-          <h5 class="fw-bold text-uppercase mb-3">Follow Us</h5>
-          <a href="https://www.facebook.com/NorthWalesTutor" target="_blank" class="text-white me-3">
-            <i class="bi bi-facebook fa-2x"></i>
-          </a>
-          <a href="https://www.instagram.com/northwalestutoring" target="_blank" class="text-white">
-            <i class="bi bi-instagram fa-2x"></i>
-          </a>
+      <!-- Logo & Description -->
+      <div class="col-md-4">
+        <p class="footer-logo d-inline-flex align-items-center mb-3">
+          <img src="images/north wales tutoring logo (4) (1).png" alt="North Wales Tutoring Logo" width="32" height="32">
+          <span class="ms-2 h5 mb-0">North Wales Tutoring</span>
+        </p>
+        <p class="footer-desc text-muted mb-3">
+          North Wales’ leading online tutors for GCSE & A-Level: personalised Mathematics & Physics tutoring, Chemistry, Coding & English exam prep with expert-led WJEC, AQA, OCR & Edexcel sessions.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/NorthWalesTutor" class="me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/northwalestutoring"><i class="bi bi-instagram"></i></a>
+          <a href="https://g.co/kgs/ws3Yd5u"><i class="bi bi-google"></i></a>
         </div>
       </div>
-
-      <!-- Designed by Section -->
-      <div class="row">
-        <div class="col text-center">
-          <p class="m-0">
-            &copy; 2024 <strong>North Wales Tutoring</strong>. All Rights Reserved. | Designed by
-            <a href="https://cleandesignuk.com/" target="_blank" class="text-white fw-bold text-decoration-underline">
-              Clean Design UK
-            </a>
-          </p>
-        </div>
+      <!-- Quick Links -->
+      <div class="col-md-2">
+        <h6 class="footer-title">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
       </div>
+
+      <!-- Others -->
+      <div class="col-md-2">
+        <h6 class="footer-title">Others</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <h6 class="footer-title">Contact Us</h6>
+        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+44 7367 292269</p>
+        <p class="mb-2"><i class="bi bi-envelope me-2"></i>nwalestutoring@gmail.com</p>
+        <p><i class="bi bi-geo-alt me-2"></i>4 Ffordd Cerrig Mawr, Holyhead, United Kingdom</p>
+      </div>
+
     </div>
-  </footer>
+  </div>
 
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom text-center mt-5 pt-3">
+    <small>© 2025 <strong>North Wales Tutoring</strong>. All rights reserved.</small>
+    <p class="design-credit mt-2">
+      Website Design by 
+      <a href="https://cleandesignuk.com" target="_blank" rel="noopener">
+        Clean Design UK
+      </a>
+    </p>
+  </div>
+</footer>
   <!-- =================================
        EXTERNAL SCRIPTS
   ====================================== -->
@@ -619,5 +655,8 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
+
+<script src="cookie.js" defer></script>
+
 </body>
 </html>

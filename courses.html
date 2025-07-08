@@ -9,6 +9,16 @@
   <meta name="keywords"
         content="math and physics tutor, mathematics and physics tutor, wjec, physics math tutor, gcse, a level, online tutor uk, gcse tutor, gcse online courses, maths tutor gcse" />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN5W5PMKD1');
+</script>
+
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
@@ -23,12 +33,42 @@
 
 
   <!-- Custom Styles -->
+    <link rel="stylesheet" href="cookie.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="courses.css" />
 </head>
 
 <body>
+<!-- ======================================================
+     COOKIE CONSENT BANNER
+     ====================================================== -->
+<div id="cookie-banner"
+     class="cookie-banner visually-hidden"
+     role="dialog"
+     aria-live="polite"
+     aria-label="Cookie consent banner">
 
+  <p class="cookie-text mb-2">
+    🍪 We use cookies to improve your browsing experience, deliver
+    personalised content, and analyse our traffic. By clicking
+    “Accept All”, you consent to our use of cookies.
+    See our <a href="cookie-policy.html" class="cookie-link">Cookie&nbsp;Policy</a>
+    for details.
+  </p>
+
+  <div class="cookie-actions d-flex gap-2">
+    <button id="cookie-accept"
+            class="btn btn-primary btn-sm flex-grow-1">
+      Accept&nbsp;All 🍪
+    </button>
+
+    <button id="cookie-decline"
+            class="btn btn-outline-secondary btn-sm flex-grow-1">
+      Decline
+    </button>
+  </div>
+</div>
+<!-- /COOKIE BANNER -->
 <!-- =================================
      STICKY NAVIGATION
 ===================================== -->
@@ -66,26 +106,8 @@
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
         </li>
-
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="courses.html"
-            id="coursesDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Courses
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-            <li><a class="dropdown-item" href="courses.html">All course</a></li>
-            <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
-            <li><a class="dropdown-item" href="physics.html">Physics</a></li>
-            <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
-            <li><a class="dropdown-item" href="coding.html">Coding</a></li>
-            <li><a class="dropdown-item" href="english-course.html">English & ESL</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="courses.html">Courses & Pricing</a>
         </li>
 
         <li class="nav-item">
@@ -139,7 +161,7 @@
               <h2 class="h4 mb-3">Private Maths Tutoring</h2>
               <p class="text-muted flex-grow-1 mb-4">
                 Our top-rated North Wales <strong>mathematics tutor</strong> delivers  
-                1 hour, one-to-one lessons for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel, tailored  
+                1 hour, one-to-one lessons for  WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, CAIE, GCSE, and A-Level, tailored  
                 to boost grades and confidence at just <strong>£15/hour</strong>.
               </p>
 
@@ -218,7 +240,7 @@
       </div>
       <h5 class="fw-semibold mb-2">Mathematics Tutor</h5>
       <p class="text-muted mb-3">
-        Tailored mathematics lessons for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel.
+        Tailored mathematics lessons for WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE.
       </p>
       <div class="d-flex text-muted mb-3">
         <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
@@ -245,7 +267,7 @@
       </div>
       <h5 class="fw-semibold mb-2">Physics Tutor</h5>
       <p class="text-muted mb-3">
-        One-to-one physics sessions for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel.
+        One-to-one physics sessions for WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE.
       </p>
       <div class="d-flex text-muted mb-3">
         <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
@@ -272,8 +294,7 @@
       </div>
       <h5 class="fw-semibold mb-2">Chemistry Tutor</h5>
       <p class="text-muted mb-3">
-        Expert chemistry support for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel exams.
-      </p>
+        Expert chemistry support for WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE.
       <div class="d-flex text-muted mb-3">
         <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
         <div><i class="bi bi-journal-text me-1"></i>All Exam Boards</div>
@@ -299,7 +320,7 @@
       </div>
       <h5 class="fw-semibold mb-2">English &amp; ESL Tutor</h5>
       <p class="text-muted mb-3">
-        Improve reading, writing &amp; exam skills for GCSE, A-Level, WJEC, Essay writing competition guide &amp; more.
+        Improve reading, writing &amp; exam skills for WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE, Essay writing competition guide &amp; more.
       </p>
       <div class="d-flex text-muted mb-3">
         <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
@@ -426,7 +447,7 @@
       <p class="text-muted mb-4">
         Experience a complimentary 30-minute session with North Wales’ top  
         <strong>maths and physics tutors</strong>, covering all UK exam boards,  
-        GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel. Try one-to-one Mathematics,  
+        WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE. Try one-to-one Mathematics,  
         Physics, Chemistry, Coding or English &amp; ESL at no cost!
       </p>
 
@@ -472,7 +493,7 @@
           <span class="ms-2 h5 mb-0">North Wales Tutoring</span>
         </p>
         <p class="footer-desc text-muted mb-3">
-          North Wales’ leading online tutors for GCSE & A-Level: personalised Mathematics & Physics tutoring, Chemistry, Coding & English exam prep with expert-led WJEC, AQA, OCR & Edexcel sessions.
+          North Wales’ leading online tutors for GCSE & A-Level: personalised Mathematics & Physics tutoring, Chemistry, Coding & English exam prep with expert-led  WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, CAIE sessions.
         </p>
         <div class="social-icons">
           <a href="https://www.facebook.com/NorthWalesTutor" class="me-2"><i class="bi bi-facebook"></i></a>
@@ -603,6 +624,7 @@
   });
 </script>
 
+<script src="cookie.js" defer></script>
 
 </body>
 </html>

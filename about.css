@@ -1,34 +1,3 @@
-/* =========================================
-   ROOT VARIABLES
-========================================== */
-:root {
-  /* Core Brand Colors */
-  --primary-color: #09096A;      /* Deep Navy */
-  --accent-color: #FF28A8;       /* Bright Magenta */
-  --text-dark: #373B3E;          /* Dark gray for body text */
-
-  /* Backgrounds and Cards */
-  --hero-bg-color: #F9F9F9;      /* Very light gray background */
-  --card-bg-color: #FFFFFF;      /* White card */
-  --light-bg: #FAFAFA;           /* Very light gray for sections */
-  --bg-purple: #F2E8FF;          /* Light purple for Core Values */
-  --bg-pink: #FFE8F1;            /* Light pink for Core Values */
-  --bg-green: #E8FFF2;           /* Light mint green for Core Values */
-  --bg-yellow: #FFF8E8;          /* Light yellow for Core Values */
-
-  /* Highlight */
-  --highlight-bg: #FF28A8;       /* Magenta highlight */
-  --highlight-text: #FFFFFF;     /* White on magenta highlight */
-
-  /* Shadows */
-  --shadow-color-navy: rgba(9, 9, 106, 0.15);
-  --shadow-color: rgba(0, 0, 0, 0.1);
-
-  /* CTA Button */
-  --btn-bg-color: #09096A;
-  --btn-hover: #FF28A8;
-  --white: #FFFFFF;
-}
 
 /* =========================================
    ABOUT PAGE HERO STYLES
@@ -495,129 +464,7 @@
   object-fit: cover;
 }
 
-/* =========================================
-   TESTIMONIALS SECTION
-========================================== */
-#testimonials {
-  background-color: var(--light-bg);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
 
-.section-label {
-  display: inline-block;
-  background-color: var(--bg-purple);
-  color: var(--accent-color);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin: 0 auto;
-  line-height: 1.2;
-}
-
-.testimonial-card {
-  background-color: var(--bg-purple);
-  border-radius: 1rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 8px 25px rgba(9, 9, 106, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(9, 9, 106, 0.15);
-}
-
-.quote {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--text-dark);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.author {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.75rem;
-}
-
-.star-rating i {
-  color: #FFCC00;
-  font-size: 1rem;
-}
-
-/* =========================================
-   CTA SECTION: BACKGROUND IMAGE AT 1200×627
-========================================== */
-.cta-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 52.25%; /* Aspect ratio 627/1200 */
-  background: url("images/cta-bg.jpg") center center / cover no-repeat;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px var(--shadow-color);
-  overflow: hidden;
-}
-
-.cta-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  padding: 0 1rem;
-  z-index: 1;
-}
-
-.cta-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.btn-cta {
-  background-color: var(--btn-bg-color);
-  color: var(--white);
-  border-radius: 50px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 1rem 2.5rem;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-cta:hover {
-  background-color: var(--btn-hover);
-  transform: translateY(-3px);
-  text-decoration: none;
-}
 
 /* =========================================
    CONSOLIDATED RESPONSIVE ADJUSTMENTS
@@ -887,5 +734,109 @@
   .btn-cta {
     font-size: 0.9rem;
     padding: 0.7rem 1.5rem;
+  }
+}
+/* =======================================================
+   1 ▸ HERO CARD — stack & reorder on small screens
+   ======================================================= */
+@media (max-width: 991.98px){           /* md-down */
+  .hero-card .row{
+    flex-direction: column-reverse;     /* ⬆ text first, image below */
+    gap: 2rem;                          /* breathing space */
+  }
+  .hero-image img{
+    max-width: 320px;                   /* stop giant portrait */
+    margin-inline: auto;                /* centre it */
+  }
+}
+
+/* =======================================================
+   2 ▸ “WHY TUTOR” BANNER + STATS
+   ======================================================= */
+@media (max-width: 991.98px){
+  /* let the purple stats card flow under the image instead
+     of overlapping (prevents odd cropping on mobiles) */
+  .stats-card{
+    position: static;
+    transform: none;
+    margin-top: 1.5rem;                 /* nice gap under banner */
+    border-radius: .75rem;              /* keep pill curve */
+  }
+  .stats-card .row{
+    flex-wrap: wrap;                    /* 2-up on tablets, 1-up on phones */
+  }
+  .stat-item{
+    flex: 0 0 50%;                      /* two per row */
+    padding-block: 1rem;
+    border-right: none !important;      /* get rid of desktop divider */
+    border-bottom: 1px solid rgba(255,255,255,.35);
+  }
+  .stat-item:nth-child(odd){border-right:1px solid rgba(255,255,255,.35);} /* thin vertical line */
+
+  @media (max-width: 575.98px){         /* xs */
+    .stat-item{flex: 0 0 100%; border-right:none;}
+    .stat-item h3{font-size: 1.35rem;}
+  }
+}
+
+/* =======================================================
+   3 ▸ CORE VALUES — 2-up grid on tablets, 1-up on phones
+   ======================================================= */
+@media (max-width: 991.98px){
+  #core-values .row{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap:1.5rem;
+    margin-inline: auto;
+    max-width: 600px;                   /* keeps cards centred */
+  }
+}
+
+/* =======================================================
+   4 ▸ QUALIFICATION CARDS — full-width on phones
+   ======================================================= */
+@media (max-width: 575.98px){
+  .qual-card,
+  .qual-card-clickable{
+    max-width: 100%;
+  }
+}
+
+/* =======================================================
+   5 ▸ TESTIMONIAL CARDS — allow equal height & spacing
+   ======================================================= */
+@media (max-width: 991.98px){
+  #testimonials .row{
+    row-gap: 2rem;
+  }
+  .testimonial-card{
+    height: auto;                       /* stop stretch when stacked */
+  }
+}
+
+/* =======================================================
+   6 ▸ GENERAL TYPO & SPACING FINE-TUNES
+   ======================================================= */
+@media (max-width: 767.98px){
+  :root{
+    --h2-size-mobile: 1.75rem;          /* helper var */
+  }
+  /* shrink the big headings */
+  #about-hero .hero-title,
+  #why-tutor .section-heading h2,
+  #core-values h2,
+  .qual-title,
+  .teach-title,
+  .section-title{
+    font-size: var(--h2-size-mobile);
+  }
+
+  /* stop side-to-side scrolling caused by large paddings */
+  .hero-card,
+  .qualifications-section,
+  .teaching-section,
+  #core-values,
+  #testimonials{
+    padding-inline: 1rem;
   }
 }
