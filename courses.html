@@ -2,840 +2,346 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- ======================================
-       SEO META TAGS
-  ====================================== -->
-  <meta name="description"
-        content="Browse our expert-led tutoring services—including Maths & Physics tutor sessions, GCSE online courses, A-Level tutoring, and WJEC exam prep. Learn at your own pace with an online tutor UK!" />
-  <meta name="keywords"
-        content="
-          maths and physics tutor,
-          mathematics and physics tutor,
-          WJEC,
-          physics maths tutor,
-          GCSE,
-          A Level,
-          online tutor UK,
-          physics and maths tutor physics,
-          GCSE tutor,
-          GCSE online courses,
-          maths tutor GCSE,
-          GCSE tutors near me,
-          GCSE maths tutors near me,
-          study GCSE online,
-          maths tutor GCSE near me,
-          mathematics GCSE,
-          GCSE tutor maths,
-          GCSE mathematics tutor,
-          GCSes maths tutor,
-          A Level tutor,
-          GCSE tutoring,
-          A Level Maths tutor,
-          a levels online,
-          GCSE online learning,
-          A Level Maths,
-          Maths tutor GCSE,
-          online A Level courses,
-          chemistry A Level tutors,
-          study GCSE online,
-          physics and maths tutor physics,
-          further Maths A Level,
-          A Level grades,
-          A Level mathematics tutor,
-          aqa A Level Maths,
-          a levels chemistry,
-          GCSE tutor Maths,
-          further mathematics A Level,
-          aqa A Level,
-          online learning for GCSE,
-          levels in GCSE,
-          A Level Maths further Maths,
-          A Level Maths and further Maths,
-          AS and A Level,
-          mathematics and science tutor,
-          test prep tutoring,
-          A Level maths and physics tutor,
-          physics and Maths tutor Maths,
-          exam and tutors,
-          online tuitions in UK,
-          tutors and exam,
-          online GCSE tutoring,
-          online Maths tutor GCSE,
-          GCSE online,
-          GCSE tuition,
-          GCSE tuition near me,
-          GCSE science tutor near me,
-          Maths tutor GCSE online,
-          private GCSE tutors near me,
-          GCSE private tutor,
-          tuition for GCSE near me,
-          Maths tutors near me GCSE,
-          GCSE tuition online,
-          GCSE Maths tuition,
-          GCSE Maths tuition near me,
-          GCSE science tuition,
-          GCSE A Level,
-          GCSE online Maths tutor,
-          private GCSE tuition,
-          GCSE advanced level,
-          7 in GCSE,
-          GCSE level Maths,
-          GCSE 7,
-          online GCSE tutoring,
-          A Level online tutor,
-          online Maths tutor GCSE,
-          A Level Maths tutor online,
-          study A levels online,
-          A Level Maths online,
-          A Level physics tutor,
-          A Level tuition,
-          A Level English,
-          further Maths tutor A Level,
-          A Level Maths tuition,
-          A Level physics tuition,
-          A Level physics tutor online,
-          Maths tutor GCSE online,
-          A Level further Maths tutor,
-          A Level colleges,
-          GCSE private tutor,
-          A Level private tutor,
-          GCSE learning,
-          Maths A Level tutor online,
-          Maths and physics tutor GCSE,
-          A Level study,
-          A Level science,
-          GCSE A Level,
-          online A Level tuition,
-          A Level tuition online,
-          A Level Maths and physics tutor,
-          A levels education,
-          GCSE advanced level,
-          mathematics levels,
-          Maths and physics tutor A Level,
-          physics and Maths tutor physics A Level,
-          all A Level courses,
-          7 in GCSE,
-          Maths A Level courses,
-          GCSE level Maths,
-          A Level RE,
-          physics Maths tutor GCSE,
-          A Level physics Maths tutor,
-          study levels,
-          A levels level,
-          A AS Level,
-          AQA A,
-          AQA A Level further Maths,
-          GCSE 7,
-          aqa A Level biology physics and Maths tutor
-        " />
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Courses | North Wales Tutoring</title>
-  <link rel="icon" href="https://res.cloudinary.com/dnemqfp1d/image/upload/v1735140498/NWT-logo_cftrw7.png" />
+  <meta name="description"
+        content="Expert Mathematics Tutor sessions across all UK exam boards—GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel. One-to-one 55-minute lessons at £15/hour. Book your free trial now!" />
+  <meta name="keywords"
+        content="math and physics tutor, mathematics and physics tutor, wjec, physics math tutor, gcse, a level, online tutor uk, gcse tutor, gcse online courses, maths tutor gcse" />
 
   <!-- Bootstrap 5 CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  />
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <!-- Bootstrap Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-  />
-  <!-- Main site CSS -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+/>
+
+
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css" />
-  <!-- Custom CSS for Courses Page -->
   <link rel="stylesheet" href="courses.css" />
 </head>
 
 <body>
-  <!-- ======================================
-       STICKY NAVIGATION (UNCHANGED)
-  ======================================= -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
+
+  <!-- STICKY NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold text-uppercase" href="index.html#hero">
-        <i class="bi bi-mortarboard-fill me-2"></i> North Wales Tutoring
+
+      <!-- Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/north wales tutoring logo (1).png"
+             alt="North Wales Tutoring Logo"
+             width="32" height="32" class="me-2">
+        <span class="fw-bold">North Wales Tutoring</span>
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+
+      <!-- Toggler -->
+      <button class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link text-uppercase" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#courses"><i class="bi bi-book me-1"></i>Courses</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#remote"><i class="bi bi-laptop me-1"></i>Remote</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#areas"><i class="bi bi-geo-alt me-1"></i>Areas</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase active" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#approach"><i class="bi bi-person-check me-1"></i>Approach</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html#gallery"><i class="bi bi-images me-1"></i>Gallery</a></li>
+
+      <!-- Links + CTA -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto align-items-center">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               href="courses.html"
+               id="coursesDropdown"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Courses
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+              <li><a class="dropdown-item" href="courses.html">All Subjects</a></li>
+              <li><a class="dropdown-item" href="maths.html">Mathematics</a></li>
+              <li><a class="dropdown-item" href="physics.html">Physics</a></li>
+              <li><a class="dropdown-item" href="chemistry.html">Chemistry</a></li>
+              <li><a class="dropdown-item" href="coding.html">Coding</a></li>
+              <li><a class="dropdown-item" href="english-course.html">English &amp; ESL</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+
         </ul>
+
+        <!-- CTA Button -->
+        <a href="contact.html"
+           class="btn btn-outline-dark btn-trial d-inline-flex align-items-center ms-3">
+          Book Your Free Trial 
+          <span class="btn-details__icon">🡥</span>
+        </a>
       </div>
     </div>
   </nav>
   <!-- /NAVIGATION -->
 
-  <!-- ======================================
-       HERO + EXAM‐BOARD FILTERS
-  ======================================= -->
-  <section id="courses-hero" class="py-5 text-center bg-white">
-    <div class="container">
-      <h1 class="display-4 fw-bold">
-        Browse Our <span class="text-highlight">Courses</span>
-      </h1>
-      <p class="lead text-secondary mb-4">
-        Explore 500+ hours of expert-led tutoring, including our top<br />
-        Maths & Physics tutor sessions, GCSE online courses, A-Level tutoring,<br />
-        and WJEC exam prep. Learn at your own pace with an online tutor UK!
-      </p>
+  <!-- HERO -->
+<section class="hero position-relative py-5">
+  <div class="container">
+    <!-- Centered text row -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="display-4 fw-bold mb-3">
+          Private Tutoring in North Wales
+        </h1>
+        <p class="lead mb-5">
+          One-to-one sessions in <strong>Mathematics</strong>, Physics, Chemistry,
+          Coding, and English &amp; ESL, serving learners across <strong>North Wales</strong> and covering
+          <strong>all UK exam boards</strong>: GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel. Learn
+          with our top-rated <strong>math and physics tutors</strong> at just <strong>£15/hour</strong>.
+          <em>Book your free trial now!</em>
+        </p>
+      </div>
+    </div>
+      <div class="card mx-auto mb-5 shadow border-0 rounded-4 overflow-hidden" style="max-width:900px;">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="images/maths-tutor.jpg"
+                 class="img-fluid h-100 object-fit-cover"
+                 alt="Mathematics Tutor Session" />
+          </div>
+          <div class="col-md-7">
+            <div class="card-body d-flex flex-column h-100">
 
-      <!-- Exam‐Board Pills -->
-      <div class="category-filters d-inline-flex">
-        <button class="filter-btn active">All</button>
-        <button class="filter-btn">AQA</button>
-        <button class="filter-btn">Edexcel</button>
-        <button class="filter-btn">OCR</button>
-        <button class="filter-btn">WJEC</button>
-        <button class="filter-btn">CCEA</button>
-        <button class="filter-btn">CAIE</button>
+              <div class="d-flex justify-content-between mb-3">
+                <span class="badge bg-primary">Mathematics</span>
+                <span class="badge bg-dark">🔥 Popular</span>
+              </div>
+
+              <h2 class="h4 mb-3">Private Maths Tutoring</h2>
+              <p class="text-muted flex-grow-1 mb-4">
+                Our top-rated North Wales <strong>mathematics tutor</strong> delivers  
+                1 hour, one-to-one lessons for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel, tailored  
+                to boost grades and confidence at just <strong>£15/hour</strong>.
+              </p>
+
+              <div class="d-flex text-muted mb-4">
+                <small class="me-4">⏰ 1 hour</small>
+                <small>📖 All Exam Boards</small>
+              </div>
+              <div
+                class="d-flex flex-column flex-md-row align-items-start align-md-items-center justify-content-between mt-auto"
+              >
+                <!-- Price -->
+                <div class="fs-4 fw-bold">£15/hour</div>
+
+                <!-- Free Trial button -->
+                <a
+                  href="#"
+           class="btn btn-outline-dark btn-trial d-inline-flex align-items-center ms-3">
+                
+                  Book Your Free Trial
+                  <span class="btn-details__icon">🡥</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================================
-       LESSON CARDS GRID (36 CARDS)
-       +––– PLUS NEW “All” SUB‐SECTION –––
-  ======================================= -->
-  <section id="courses-grid" class="py-5 bg-light">
+  <!-- ALL COURSES GRID -->
+  <section class="all-courses py-5">
     <div class="container">
-      <!-- ============= NEW “All” SUB‐SECTION ============= -->
-      <div class="row g-4 mb-5">
-        <!-- Mathematics (for All) -->
-        <div
-          class="col-sm-6 col-md-4 col-lg-3 course-col"
-          data-boards="AQA,Edexcel,OCR,WJEC,CCEA,CAIE"
-        >
-          <div class="course-card">
-            <h3 class="course-title">Mathematics</h3>
-            <p class="course-info">
-              One-to-one Maths tuition for GCSE &amp; A-Level—expert UK tutors.
-            </p>
-            <p class="course-boards">
-              Exam boards: AQA, Edexcel, OCR, WJEC, CCEA, CAIE
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Try it free →</a>
-            </div>
-          </div>
-        </div>
+      <h2 class="text-center fw-bold mb-4">Explore Our Courses</h2>
 
-        <!-- Chemistry (for All) -->
-        <div
-          class="col-sm-6 col-md-4 col-lg-3 course-col"
-          data-boards="AQA,Edexcel,OCR,WJEC,CCEA,CAIE"
-        >
-          <div class="course-card">
-            <h3 class="course-title">Chemistry</h3>
-            <p class="course-info">
-              One-to-one Chemistry tuition for GCSE &amp; A-Level—practical focus.
-            </p>
-            <p class="course-boards">
-              Exam boards: AQA, Edexcel, OCR, WJEC, CCEA, CAIE
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Try it free →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Physics (for All) -->
-        <div
-          class="col-sm-6 col-md-4 col-lg-3 course-col"
-          data-boards="AQA,Edexcel,OCR,WJEC,CCEA,CAIE"
-        >
-          <div class="course-card">
-            <h3 class="course-title">Physics</h3>
-            <p class="course-info">
-              One-to-one Physics tuition for GCSE &amp; A-Level—master core concepts.
-            </p>
-            <p class="course-boards">
-              Exam boards: AQA, Edexcel, OCR, WJEC, CCEA, CAIE
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Try it free →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Further Mathematics (for All) -->
-        <div
-          class="col-sm-6 col-md-4 col-lg-3 course-col"
-          data-boards="AQA,Edexcel,OCR,WJEC,CCEA,CAIE"
-        >
-          <div class="course-card">
-            <h3 class="course-title">Further Mathematics</h3>
-            <p class="course-info">
-              Advanced Further Maths tuition for A-Level—exam-focused practice.
-            </p>
-            <p class="course-boards">
-              Exam boards: AQA, Edexcel, OCR, WJEC, CCEA, CAIE
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Try it free →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SATs (for All) -->
-        <div
-          class="col-sm-6 col-md-4 col-lg-3 course-col"
-          data-boards="AQA,Edexcel,OCR,WJEC,CCEA,CAIE"
-        >
-          <div class="course-card">
-            <h3 class="course-title">SATs</h3>
-            <p class="course-info">
-              Comprehensive SATs preparation for Key Stage 2 students.
-            </p>
-            <p class="course-boards">
-              Exam boards: AQA, Edexcel, OCR, WJEC, CCEA, CAIE
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Try it free →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- English (for All) -->
-        <div
-          class="col-sm-6 col-md-4 col-lg-3 course-col"
-          data-boards="AQA,Edexcel,OCR,WJEC,CCEA,CAIE"
-        >
-          <div class="course-card">
-            <h3 class="course-title">English</h3>
-            <p class="course-info">
-              One-to-one English tuition for GCSE &amp; A-Level—exam technique focus.
-            </p>
-            <p class="course-boards">
-              Exam boards: AQA, Edexcel, OCR, WJEC, CCEA, CAIE
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Try it free →</a>
-            </div>
-          </div>
-        </div>
+      <!-- Filters -->
+      <div class="filters d-flex justify-content-center flex-wrap gap-3 mb-5">
+        <button class="filter-btn active" data-filter="all">
+          <i class="bi bi-grid-3x3-gap"></i>
+          All Subjects
+        </button>
+        <button class="filter-btn" data-filter="Mathematics">
+          <i class="bi bi-calculator"></i>
+          Mathematics
+        </button>
+        <button class="filter-btn" data-filter="Physics">
+          <i class="bi bi-lightbulb"></i>
+          Physics
+        </button>
+        <button class="filter-btn" data-filter="Chemistry">
+          <i class="bi bi-flask-fill"></i>
+          Chemistry
+        </button>
+        <button class="filter-btn" data-filter="English &amp; ESL">
+          <i class="bi bi-book"></i>
+          English &amp; ESL
+        </button>
+        <button class="filter-btn" data-filter="Coding">
+          <i class="bi bi-code-slash"></i>
+          Coding
+        </button>
       </div>
-      <!-- =========== END OF NEW “All” SUB‐SECTION =========== -->
 
-      <div class="row g-4">
-        <!-- ===============================
-             AQA × 6 Subjects (data-boards="AQA")
-        =============================== -->
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="AQA">
-          <div class="course-card">
-            <span class="course-tag tag-aqa">AQA</span>
-            <h3 class="course-title">Mathematics</h3>
-            <p class="course-info">
-              One-to-one AQA Maths tuition, ideal for GCSE and A-Level exam success.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free AQA Mathematics Trial →</a>
-            </div>
-          </div>
-        </div>
+      <!-- Courses Cards -->
+      <div class="row g-4" id="courses-container">
 
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="AQA">
-          <div class="course-card">
-            <span class="course-tag tag-aqa">AQA</span>
-            <h3 class="course-title">Chemistry</h3>
-            <p class="course-info">
-              Expert AQA Chemistry tuition for GCSE and A-Level students.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free AQA Chemistry Trial →</a>
-            </div>
-          </div>
-        </div>
+<!-- Mathematics -->
+<div class="col-md-4 course-item" data-category="Mathematics">
+  <div class="card course-card h-100 shadow-sm border-0">
+    <img src="images/maths-tutor-north-wales.jpg"
+         class="card-img-top"
+         alt="Mathematics Course">
+    <div class="card-body d-flex flex-column">
+      <div class="d-flex justify-content-between mb-3">
+        <span class="category-pill">Mathematics</span>
+        <span class="price text-success">£15/hr</span>
+      </div>
+      <h5 class="fw-semibold mb-2">Mathematics Tutor</h5>
+      <p class="text-muted mb-3">
+        Tailored mathematics lessons for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel.
+      </p>
+      <div class="d-flex text-muted mb-3">
+        <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
+        <div><i class="bi bi-journal-text me-1"></i>All Exam Boards</div>
+      </div>
+      <a href="#"
+         class="btn-details mt-auto align-self-start">
+        Free Maths Class Trial 🡥
+      </a>
+    </div>
+  </div>
+</div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="AQA">
-          <div class="course-card">
-            <span class="course-tag tag-aqa">AQA</span>
-            <h3 class="course-title">Physics</h3>
-            <p class="course-info">
-              GCSE &amp; A-Level AQA Physics tutoring to master difficult concepts.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free AQA Physics Trial →</a>
-            </div>
-          </div>
-        </div>
+<!-- Physics -->
+<div class="col-md-4 course-item" data-category="Physics">
+  <div class="card course-card h-100 shadow-sm border-0">
+    <img src="images/physics-tutor-north-wales.jpg"
+         class="card-img-top"
+         alt="Physics Course">
+    <div class="card-body d-flex flex-column">
+      <div class="d-flex justify-content-between mb-3">
+        <span class="category-pill">Physics</span>
+        <span class="price text-success">£15/hr</span>
+      </div>
+      <h5 class="fw-semibold mb-2">Physics Tutor</h5>
+      <p class="text-muted mb-3">
+        One-to-one physics sessions for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel.
+      </p>
+      <div class="d-flex text-muted mb-3">
+        <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
+        <div><i class="bi bi-journal-text me-1"></i>All Exam Boards</div>
+      </div>
+      <a href="#"
+         class="btn-details mt-auto align-self-start">
+        Free Physics Class Trial 🡥
+      </a>
+    </div>
+  </div>
+</div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="AQA">
-          <div class="course-card">
-            <span class="course-tag tag-aqa">AQA</span>
-            <h3 class="course-title">Further Mathematics</h3>
-            <p class="course-info">
-              Advanced AQA Further Maths sessions tailored for A-Level excellence.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free AQA Further Maths Trial →</a>
-            </div>
-          </div>
-        </div>
+<!-- Chemistry -->
+<div class="col-md-4 course-item" data-category="Chemistry">
+  <div class="card course-card h-100 shadow-sm border-0">
+    <img src="images/chemistry-tutor-north-wales.jpg"
+         class="card-img-top"
+         alt="Chemistry Course">
+    <div class="card-body d-flex flex-column">
+      <div class="d-flex justify-content-between mb-3">
+        <span class="category-pill">Chemistry</span>
+        <span class="price text-success">£15/hr</span>
+      </div>
+      <h5 class="fw-semibold mb-2">Chemistry Tutor</h5>
+      <p class="text-muted mb-3">
+        Expert chemistry support for GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel exams.
+      </p>
+      <div class="d-flex text-muted mb-3">
+        <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
+        <div><i class="bi bi-journal-text me-1"></i>All Exam Boards</div>
+      </div>
+      <a href="#"
+         class="btn-details mt-auto align-self-start">
+        Free Chemistry Class Trial 🡥
+      </a>
+    </div>
+  </div>
+</div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="AQA">
-          <div class="course-card">
-            <span class="course-tag tag-aqa">AQA</span>
-            <h3 class="course-title">SATs</h3>
-            <p class="course-info">
-              Comprehensive AQA SATs preparation for Key Stage 2 students.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free AQA SATs Trial →</a>
-            </div>
-          </div>
-        </div>
+<!-- English & ESL -->
+<div class="col-md-4 course-item" data-category="English &amp; ESL">
+  <div class="card course-card h-100 shadow-sm border-0">
+    <img src="images/english-esl-tutor-north-wales.jpg"
+         class="card-img-top"
+         alt="English & ESL Course">
+    <div class="card-body d-flex flex-column">
+      <div class="d-flex justify-content-between mb-3">
+        <span class="category-pill">English &amp; ESL</span>
+        <span class="price text-success">£15/hr</span>
+      </div>
+      <h5 class="fw-semibold mb-2">English &amp; ESL Tutor</h5>
+      <p class="text-muted mb-3">
+        Improve reading, writing &amp; exam skills for GCSE, A-Level, WJEC, Essay writing competition guide &amp; more.
+      </p>
+      <div class="d-flex text-muted mb-3">
+        <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
+        <div><i class="bi bi-journal-text me-1"></i>All Exam Boards</div>
+      </div>
+      <a href="#"
+         class="btn-details mt-auto align-self-start">
+        Free English Class Trial 🡥
+      </a>
+    </div>
+  </div>
+</div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="AQA">
-          <div class="course-card">
-            <span class="course-tag tag-aqa">AQA</span>
-            <h3 class="course-title">English</h3>
-            <p class="course-info">
-              One-to-one AQA English tuition for GCSE and A-Level exam technique.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free AQA English Trial →</a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- ===============================
-             Edexcel × 6 Subjects (data-boards="Edexcel")
-        =============================== -->
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="Edexcel">
-          <div class="course-card">
-            <span class="course-tag tag-edexcel">Edexcel</span>
-            <h3 class="course-title">Mathematics</h3>
-            <p class="course-info">
-              Edexcel Maths tuition for GCSE &amp; A-Level, exam practice included.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free Edexcel Maths Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="Edexcel">
-          <div class="course-card">
-            <span class="course-tag tag-edexcel">Edexcel</span>
-            <h3 class="course-title">Chemistry</h3>
-            <p class="course-info">
-              One-to-one Edexcel Chemistry tuition, ideal for top GCSE grades.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free Edexcel Chemistry Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="Edexcel">
-          <div class="course-card">
-            <span class="course-tag tag-edexcel">Edexcel</span>
-            <h3 class="course-title">Physics</h3>
-            <p class="course-info">
-              Personalized Edexcel Physics tuition for GCSE &amp; A-Level revision.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free Edexcel Physics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="Edexcel">
-          <div class="course-card">
-            <span class="course-tag tag-edexcel">Edexcel</span>
-            <h3 class="course-title">Further Mathematics</h3>
-            <p class="course-info">
-              Advanced Edexcel Further Maths sessions for A-Level excellence.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free Edexcel Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="Edexcel">
-          <div class="course-card">
-            <span class="course-tag tag-edexcel">Edexcel</span>
-            <h3 class="course-title">SATs</h3>
-            <p class="course-info">
-              Edexcel SATs preparation for Key Stage 2, including practice papers.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free Edexcel SATs Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="Edexcel">
-          <div class="course-card">
-            <span class="course-tag tag-edexcel">Edexcel</span>
-            <h3 class="course-title">English</h3>
-            <p class="course-info">
-              Edexcel English tuition focused on exam technique and essay writing.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free Edexcel English Trial →</a>
-            </div>
-          </div>
-        </div>
+<!-- Coding -->
+<div class="col-md-4 course-item" data-category="Coding">
+  <div class="card course-card h-100 shadow-sm border-0">
+    <img src="images/coding-tutor-north-wales.jpg"
+         class="card-img-top"
+         alt="Coding Course">
+    <div class="card-body d-flex flex-column">
+      <div class="d-flex justify-content-between mb-3">
+        <span class="category-pill">Coding</span>
+        <span class="price text-success">£15/hr</span>
+      </div>
+      <h5 class="fw-semibold mb-2">Coding Tutor</h5>
+      <p class="text-muted mb-3">
+        Hands-on lessons in Python, Java, JavaScript &amp; more, ideal for beginner &amp; intermediate.
+      </p>
+      <div class="d-flex text-muted mb-3">
+        <div class="me-4"><i class="bi bi-clock me-1"></i>1 hour</div>
+        <div><i class="bi bi-journal-text me-1"></i>All Exam Boards</div>
+      </div>
+      <a href="#"
+         class="btn-details mt-auto align-self-start">
+        Free Coding Class Trial 🡥
+      </a>
+    </div>
+  </div>
+</div>
 
 
-        <!-- ===============================
-             OCR × 6 Subjects (data-boards="OCR")
-        =============================== -->
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="OCR">
-          <div class="course-card">
-            <span class="course-tag tag-ocr">OCR</span>
-            <h3 class="course-title">Mathematics</h3>
-            <p class="course-info">
-              OCR Maths tuition for GCSE &amp; A-Level with exam‐style practice.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free OCR Mathematics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="OCR">
-          <div class="course-card">
-            <span class="course-tag tag-ocr">OCR</span>
-            <h3 class="course-title">Chemistry</h3>
-            <p class="course-info">
-              OCR Chemistry tutoring, practical skills &amp; theory for top grades.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free OCR Chemistry Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="OCR">
-          <div class="course-card">
-            <span class="course-tag tag-ocr">OCR</span>
-            <h3 class="course-title">Physics</h3>
-            <p class="course-info">
-              OCR Physics tuition to strengthen conceptual understanding for exams.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free OCR Physics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="OCR">
-          <div class="course-card">
-            <span class="course-tag tag-ocr">OCR</span>
-            <h3 class="course-title">Further Mathematics</h3>
-            <p class="course-info">
-              OCR Further Maths tuition, perfect for A-Level challenge and exam prep.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free OCR Further Maths Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="OCR">
-          <div class="course-card">
-            <span class="course-tag tag-ocr">OCR</span>
-            <h3 class="course-title">SATs</h3>
-            <p class="course-info">
-              OCR SATs prep for Key Stage 2, practice papers and expert feedback.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free OCR SATs Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="OCR">
-          <div class="course-card">
-            <span class="course-tag tag-ocr">OCR</span>
-            <h3 class="course-title">English</h3>
-            <p class="course-info">
-              OCR English tuition, focus on comprehension, literature analysis, and exam technique.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free OCR English Trial →</a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- ===============================
-             WJEC × 6 Subjects (data-boards="WJEC")
-        =============================== -->
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="WJEC">
-          <div class="course-card">
-            <span class="course-tag tag-wjec">WJEC</span>
-            <h3 class="course-title">Mathematics</h3>
-            <p class="course-info">
-              WJEC Maths tuition for GCSE &amp; A-Level, exam technique and practise.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free WJEC Mathematics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="WJEC">
-          <div class="course-card">
-            <span class="course-tag tag-wjec">WJEC</span>
-            <h3 class="course-title">Chemistry</h3>
-            <p class="course-info">
-              WJEC Chemistry tutoring, practical skills and theory for top grades.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free WJEC Chemistry Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="WJEC">
-          <div class="course-card">
-            <span class="course-tag tag-wjec">WJEC</span>
-            <h3 class="course-title">Physics</h3>
-            <p class="course-info">
-              WJEC Physics tuition, build exam-ready confidence in core concepts.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free WJEC Physics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="WJEC">
-          <div class="course-card">
-            <span class="course-tag tag-wjec">WJEC</span>
-            <h3 class="course-title">Further Mathematics</h3>
-            <p class="course-info">
-              WJEC Further Maths tuition, targeted A-Level problem solving.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free WJEC Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="WJEC">
-          <div class="course-card">
-            <span class="course-tag tag-wjec">WJEC</span>
-            <h3 class="course-title">SATs</h3>
-            <p class="course-info">
-              WJEC SATs prep for Key Stage 2, practise papers and expert feedback.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free WJEC SATs Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="WJEC">
-          <div class="course-card">
-            <span class="course-tag tag-wjec">WJEC</span>
-            <h3 class="course-title">English</h3>
-            <p class="course-info">
-              WJEC English tuition, focus on literature, language, and exam essays.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free WJEC English Trial →</a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- ===============================
-             CCEA × 6 Subjects (data-boards="CCEA")
-        =============================== -->
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CCEA">
-          <div class="course-card">
-            <span class="course-tag tag-ccea">CCEA</span>
-            <h3 class="course-title">Mathematics</h3>
-            <p class="course-info">
-              CCEA Maths tuition for GCSE &amp; A-Level, tailored exam practise.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CCEA Mathematics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CCEA">
-          <div class="course-card">
-            <span class="course-tag tag-ccea">CCEA</span>
-            <h3 class="course-title">Chemistry</h3>
-            <p class="course-info">
-              CCEA Chemistry tutoring, focus on practical skills and key concepts.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CCEA Chemistry Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CCEA">
-          <div class="course-card">
-            <span class="course-tag tag-ccea">CCEA</span>
-            <h3 class="course-title">Physics</h3>
-            <p class="course-info">
-              CCEA Physics tuition, master exam technique with expert guidance.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CCEA Physics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CCEA">
-          <div class="course-card">
-            <span class="course-tag tag-ccea">CCEA</span>
-            <h3 class="course-title">Further Mathematics</h3>
-            <p class="course-info">
-              CCEA Further Maths tuition, advanced problem solving for top grades.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CCEA Further Maths Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CCEA">
-          <div class="course-card">
-            <span class="course-tag tag-ccea">CCEA</span>
-            <h3 class="course-title">SATs</h3>
-            <p class="course-info">
-              CCEA SATs prep for Key Stage 2, practice exams and feedback.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CCEA SATs Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CCEA">
-          <div class="course-card">
-            <span class="course-tag tag-ccea">CCEA</span>
-            <h3 class="course-title">English</h3>
-            <p class="course-info">
-              CCEA English tuition, improve comprehension and exam technique.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CCEA English Trial →</a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- ===============================
-             CAIE × 6 Subjects (data-boards="CAIE")
-        =============================== -->
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CAIE">
-          <div class="course-card">
-            <span class="course-tag tag-caie">CAIE</span>
-            <h3 class="course-title">Mathematics</h3>
-            <p class="course-info">
-              CAIE IGCSE &amp; A-Level Maths tuition with targeted exam practice.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CAIE Mathematics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CAIE">
-          <div class="course-card">
-            <span class="course-tag tag-caie">CAIE</span>
-            <h3 class="course-title">Chemistry</h3>
-            <p class="course-info">
-              CAIE IGCSE &amp; A-Level Chemistry tuition with exam‐ready guidance.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CAIE Chemistry Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CAIE">
-          <div class="course-card">
-            <span class="course-tag tag-caie">CAIE</span>
-            <h3 class="course-title">Physics</h3>
-            <p class="course-info">
-              CAIE Physics tutoring, concept clarity and exam practise for IGCSE/A-Level.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CAIE Physics Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CAIE">
-          <div class="course-card">
-            <span class="course-tag tag-caie">CAIE</span>
-            <h3 class="course-title">Further Mathematics</h3>
-            <p class="course-info">
-              CAIE A-Level Further Maths tuition, exam-focused problem solving.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CAIE Further Maths Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CAIE">
-          <div class="course-card">
-            <span class="course-tag tag-caie">CAIE</span>
-            <h3 class="course-title">SATs</h3>
-            <p class="course-info">
-              CAIE SATs prep for Key Stage 2, build confidence with practice tests.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CAIE SATs Trial →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 course-col" data-boards="CAIE">
-          <div class="course-card">
-            <span class="course-tag tag-caie">CAIE</span>
-            <h3 class="course-title">English</h3>
-            <p class="course-info">
-              CAIE IGCSE &amp; A-Level English tuition to sharpen analysis and writing.
-            </p>
-            <div class="course-footer">
-              <a href="contact.html" class="cta-link">Free CAIE English Trial →</a>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /.row -->
-    </div><!-- /.container -->
+      </div>
+    </div>
   </section>
 
-<!-- =================================
-     TESTIMONIALS SECTION
-===================================== -->
 <section id="testimonials" class="py-5">
   <div class="container">
 
@@ -910,83 +416,190 @@
   </div>
 </section>
 
- <!-- ======================================
-       FOOTER (UNCHANGED)
-  ======================================= -->
-  <footer class="footer-section bg-dark text-white pt-5 pb-3">
-    <div class="container">
-      <div class="row align-items-center mb-4">
-        <!-- Contact Section -->
-        <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
-          <h5 class="fw-bold text-uppercase mb-3">Contact Us</h5>
-          <p><i class="bi bi-telephone-fill me-2"></i>+44 7367 292269</p>
-          <p><i class="bi bi-envelope-fill me-2"></i>cleandesign.uk@gmail.com</p>
+<section class="cta-section py-5">
+  <div class="container">
+    <div class="cta-card p-5 rounded-4 text-center position-relative overflow-hidden">
+      <h2 class="fw-bold mb-3">Claim Your Free 30-Minute Trial Class</h2>
+      <p class="text-muted mb-4">
+        Experience a complimentary 30-minute session with North Wales’ top  
+        <strong>maths and physics tutors</strong>, covering all UK exam boards,  
+        GCSE, A-Level, WJEC, OCR, AQA &amp; Edexcel. Try one-to-one Mathematics,  
+        Physics, Chemistry, Coding or English &amp; ESL at no cost!
+      </p>
+
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="row g-2 justify-content-center align-items-center"
+      >
+        <input type="hidden" name="access_key" value="2f8b66ae-5de1-48ee-b2e4-aee11d9dc319" />
+        <input type="hidden" name="subject" value="Free 30-Min Trial Class Request" />
+
+        <div class="col-sm-6 col-md-5">
+          <input
+            type="tel"
+            name="phone"
+            class="form-control form-control-lg"
+            placeholder="Your phone number"
+            pattern="\+?[0-9]{7,15}"
+            title="Please enter a valid phone number (7–15 digits, optional leading '+')"
+            required
+          />
         </div>
 
-        <!-- Social Media Section -->
-        <div class="col-lg-4 text-center mb-4 mb-lg-0">
-          <h5 class="fw-bold text-uppercase mb-3">Follow Us</h5>
-          <a href="https://www.facebook.com/NorthWalesTutor" target="_blank" class="text-white me-3">
-            <i class="bi bi-facebook fa-2x"></i>
-          </a>
-          <a href="https://www.instagram.com/northwalestutoring" target="_blank" class="text-white me-3">
-            <i class="bi bi-instagram fa-2x"></i>
-          </a>
-          <a href="https://g.page/northwalestutoring" target="_blank" class="text-white">
-            <i class="bi bi-google fa-2x"></i>
-          </a>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-lg btn-cta d-flex align-items-center">
+            Get Your Free 30-Min Trial
+          </button>
         </div>
-      </div>
-
-      <!-- Designed By -->
-      <div class="row">
-        <div class="col text-center">
-          <p class="m-0">
-            &copy; 2024 <strong>North Wales Tutoring</strong>. All Rights Reserved. | Designed by
-            <a href="https://cleandesignuk.com/" target="_blank" class="text-white fw-bold text-decoration-underline">
-              Clean Design UK
-            </a>
-          </p>
-        </div>
-      </div>
+      </form>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Bootstrap 5 JS Bundle -->
+
+<footer class="footer-section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Logo & Description -->
+      <div class="col-md-4">
+        <p class="footer-logo d-inline-flex align-items-center mb-3">
+          <img src="images/north wales tutoring logo (4) (1).png" alt="North Wales Tutoring Logo" width="32" height="32">
+          <span class="ms-2 h5 mb-0">North Wales Tutoring</span>
+        </p>
+        <p class="footer-desc text-muted mb-3">
+          North Wales’ leading online tutors for GCSE & A-Level: personalised Mathematics & Physics tutoring, Chemistry, Coding & English exam prep with expert-led WJEC, AQA, OCR & Edexcel sessions.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/NorthWalesTutor" class="me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/northwalestutoring"><i class="bi bi-instagram"></i></a>
+          <a href="https://g.co/kgs/ws3Yd5u"><i class="bi bi-google"></i></a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-md-2">
+        <h6 class="footer-title">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Others -->
+      <div class="col-md-2">
+        <h6 class="footer-title">Others</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <h6 class="footer-title">Contact Us</h6>
+        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+44 7367 292269</p>
+        <p class="mb-2"><i class="bi bi-envelope me-2"></i>nwalestutoring@gmail.com</p>
+        <p><i class="bi bi-geo-alt me-2"></i>4 Ffordd Cerrig Mawr, Holyhead, United Kingdom</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom text-center mt-5 pt-3">
+    <small>© 2025 <strong>North Wales Tutoring</strong>. All rights reserved.</small>
+    <p class="design-credit mt-2">
+      Website Design by 
+      <a href="https://cleandesignuk.com" target="_blank" rel="noopener">
+        Clean Design UK
+      </a>
+    </p>
+  </div>
+</footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- ======================================
-       FILTERING SCRIPT (UNCHANGED)
-  ======================================= -->
   <script>
-    // Grab all filter buttons and "course-col" containers
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const courseCols = document.querySelectorAll('.course-col');
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // 1) Toggle active class on pills
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // 2) Determine selected board
-        const selectedBoard = btn.textContent.trim(); // e.g. "AQA" or "All"
-
-        // 3) Show/hide entire .course-col based on data-boards
-        courseCols.forEach(col => {
-          const boards = col.dataset.boards.split(',');
-          if (selectedBoard === 'All') {
-            col.style.display = 'block'; // show all columns
-          } else {
-            if (boards.includes(selectedBoard)) {
-              col.style.display = 'block';
-            } else {
-              col.style.display = 'none';
-            }
-          }
-        });
-      });
-    });
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach(btn =>
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.dataset.filter;
+          document
+            .querySelectorAll(".course-item")
+            .forEach(card => {
+              card.style.display =
+                filter === "all" || card.dataset.category === filter
+                ? "block"
+                : "none";
+            });
+        })
+      );
   </script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  // select the Web3Forms trial form
+  const trialForm = document.querySelector('.cta-section form');
+
+  trialForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const submitBtn = this.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+
+    const formData = new FormData(this);
+
+    try {
+      const response = await fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Network response was not ok');
+
+      // show SweetAlert2 success popup
+      await Swal.fire({
+        icon: 'success',
+        title: 'Thank you!',
+        text: 'Our team will get in touch with you shortly.',
+        confirmButtonText: 'Close'
+      });
+
+      // reset form
+      this.reset();
+    } catch (error) {
+      // show error popup
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong. Please try again later.',
+        confirmButtonText: 'Close'
+      });
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,    // animation duration
+    once: true        // only animate once
+  });
+</script>
+
+
 </body>
 </html>

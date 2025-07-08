@@ -1,373 +1,191 @@
-/* =========================================
-   ROOT VARIABLES
-========================================== */
-:root {
-  /* Core Brand Colors */
-  --primary-color: #09096A;      /* Deep Navy */
-  --accent-color: #FF28A8;       /* Bright Magenta */
-  --text-dark: #373B3E;          /* Dark gray for body text */
-
-  /* Backgrounds and Cards */
-  --hero-bg-color: #F9F9F9;      /* Very light gray background */
-  --card-bg-color: #FFFFFF;      /* White card */
-  --light-bg: #FAFAFA;           /* Very light gray for sections */
-  --bg-purple: #F2E8FF;          /* Light purple for Core Values */
-  --bg-pink: #FFE8F1;            /* Light pink for Core Values */
-  --bg-green: #E8FFF2;           /* Light mint green for Core Values */
-  --bg-yellow: #FFF8E8;          /* Light yellow for Core Values */
-
-  /* Highlight */
-  --highlight-bg: #FF28A8;       /* Magenta highlight */
-  --highlight-text: #FFFFFF;     /* White on magenta highlight */
-
-  /* Shadows */
-  --shadow-color-navy: rgba(9, 9, 106, 0.15);
-  --shadow-color: rgba(0, 0, 0, 0.1);
-
-  /* CTA Button */
-  --btn-bg-color: #09096A;
-  --btn-hover: #FF28A8;
-  --white: #FFFFFF;
-}
 
 
-/* ===================================================================
+/* ================================================================
    COURSES PAGE STYLES (courses.css)
-   ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-   1) Hero + Exam-Board Filters
-   2) Lesson Cards (enlarged, fluid‐width pills)
+   ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   1) Hero + Pattern
+   2) Testimonials
    3) Responsive Adjustments
-   4) Footer Overrides
-=================================================================== */
+   4) Explore All Courses
+   5) View Details CTA
+================================================================ */
 
-/* ---------------------------------------
-   1) HERO + EXAM‐BOARD FILTERS
---------------------------------------- */
-#courses-hero {
-  background-color: #FFFFFF;
-  text-align: center;
+/* --- 1) Hero background + pattern dots --- */
+.hero {
+  background: url('images/cta-bg.svg') center/cover no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+.pattern {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(#ccd1d9 1px, transparent 1px);
+  background-size: 8px 8px;
+  opacity: 0.5;
+}
+/* Utility override for hero heading */
+.hero .display-4 {
+  max-width: 800px;
+}
+/* Optional padding override for any card-body in hero context */
+.hero .card-body {
+  padding: 2rem;
+}
+.badge.bg-dark {
+  position: relative;
+  animation: ribbon-pulse 1.5s ease-in-out infinite;
+}
+@keyframes ribbon-pulse {
+  0%,100% { transform: scale(1) }
+  50%     { transform: scale(1.1) }
 }
 
-#courses-hero h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #09096A;   /* deep navy for “Browse Our” */
+.hero .card {
+  transition: transform .3s ease, box-shadow .3s ease;
 }
-
-#courses-hero .text-highlight {
-  color: #7F5FFF;   /* purple for “Courses” */
-}
-
-#courses-hero .lead {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.125rem;   /* ~18px */
-  color: #555555;
-  max-width: 600px;
-  margin: 0 auto 1.5rem auto;
-  line-height: 1.5;
-}
-
-/* Exam-Board Pills wrapper */
-.category-filters {
-  background-color: #F0F0F0;   /* light grey background */
-  border-radius: 50px;
-  display: inline-flex;
-  padding: 0.5rem 1rem;        /* vertical/horizontal padding */
-}
-
-/* Individual filter button (no extra margins) */
-.filter-btn {
-  background: transparent;
-  border: none;
-  color: #333333;                   /* dark charcoal text */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;                  /* ~16px */
-  font-weight: 600;
-  padding: 0.5rem 1.25rem;          /* controls spacing between pills */
-  border-radius: 50px;              /* ensures full rounding when active */
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 0;                        /* remove default margins */
-}
-
-/* Hover state for non-active pills */
-.filter-btn:hover {
-  background-color: rgba(127, 95, 255, 0.1);
-  color: #7F5FFF;
-}
-
-/* Active filter button (purple pill) */
-.filter-btn.active {
-  background-color: #7F5FFF;       /* purple */
-  color: #FFFFFF;
-  position: relative;              /* sits on top of the grey bar */
-  z-index: 1;                      /* brings the active pill above the bar */
+.hero .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(9,9,106,0.15);
 }
 
 
-/* ---------------------------------------
-   2) LESSON CARDS (enlarged, fluid‐width pills)
---------------------------------------- */
-
-/* Base card container */
-.course-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E0E0E0;       /* single-pixel light grey border */
-  border-radius: 0.5rem;           /* slightly rounded corners */
-  padding: 0.75rem 1rem;           /* minimal vertical padding, more horizontal */
-  display: flex;                   /* for JS toggling display:flex / none */
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-}
-
-/* Subtle hover lift */
-.course-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Enlarged pill styling:
-   • inline-block → fluid width around text
-   • font-size increased to 0.875rem
-   • vertical padding 0.5rem, horizontal 1rem
-   • margin-bottom set to 1rem (to separate from title)
-*/
-.course-tag {
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;            /* ~14px */
-  font-weight: 600;
-  padding: 0.5rem 1rem;            /* top/bottom 0.5rem, left/right 1rem */
-  border-radius: 999px;            /* fully rounded “pill” */
-  margin-bottom: 1rem;             /* larger gap before title */
-}
-
-/* AQA = pastel-blue pill */
-.tag-aqa {
-  background-color: #B3E5FC;     /* pastel sky-blue */
-  color: #01579B;                /* darker blue text */
-}
-
-/* Edexcel = pastel-purple pill */
-.tag-edexcel {
-  background-color: #E1BEE7;     /* pastel lavender */
-  color: #6A1B9A;                /* deep purple text */
-}
-
-/* OCR = pastel-green pill */
-.tag-ocr {
-  background-color: #C8E6C9;     /* pastel mint-green */
-  color: #2E7D32;                /* dark green text */
-}
-
-/* WJEC = pastel-orange pill */
-.tag-wjec {
-  background-color: #FFE0B2;     /* pastel peach-orange */
-  color: #E65100;                /* dark orange text */
-}
-
-/* CCEA = pastel-pink pill */
-.tag-ccea {
-  background-color: #F8BBD0;     /* pastel pink */
-  color: #C2185B;                /* deep magenta text */
-}
-
-/* CAIE = pastel-teal pill */
-.tag-caie {
-  background-color: #B2DFDB;     /* pastel teal */
-  color: #00695C;                /* dark teal text */
-}
-
-/* Title inside each card */
-.course-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.125rem;           /* ~18px */
-  font-weight: 700;
-  color: #09096A;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.2;
-}
-
-/* Single-sentence description beneath the title */
-.course-info {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;             /* ~14px */
-  color: #555555;
-  margin: 0;
-  flex-grow: 1;                  /* ensures footer sits at bottom if needed */
-  line-height: 1.4;
-}
-
-/* The “Exam boards:” line (for the new “All” cards) */
-.course-boards {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;           /* ~14px */
-  color: #333333;
-  margin: 0.75rem 0 0.5rem 0;
-}
-
-/* Footer row: only the CTA link */
-.course-footer {
-  margin-top: 0.75rem;
-}
-
-/* CTA link style */
-.cta-link {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  color: #3366FF;                /* bright blue link */
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cta-link:hover {
-  text-decoration: underline;
-}
-
-
-/* ---------------------------------------
-   3) RESPONSIVE ADJUSTMENTS
---------------------------------------- */
-@media (max-width: 992px) {
-  #courses-hero h1 {
-    font-size: 2.5rem;
-  }
-  .filter-btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #courses-hero h1 {
-    font-size: 2rem;
-  }
-  #courses-hero .lead {
-    font-size: 1rem;
+/* --- 3) Responsive Adjustments --- */
+@media (max-width: 576px) {
+  #featured-course h1 {
+    font-size: 1.75rem;
     margin-bottom: 1rem;
   }
-  .filter-btn {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.9rem;
+  #featured-course .lesson-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
   }
-}
-
-@media (max-width: 576px) {
-  #courses-hero h1 {
-    font-size: 1.75rem;
+  #featured-course h2 {
+    font-size: 1.25rem;
   }
-  #courses-hero .lead {
-    font-size: 0.9rem;
-  }
-  .category-filters {
-    flex-wrap: wrap;
-    padding: 0.25rem;
-  }
-  .filter-btn {
-    padding: 0.4rem 0.7rem;
+  #featured-course p.small {
     font-size: 0.85rem;
   }
+  #featured-course .display-6 {
+    font-size: 1.5rem;
+  }
+  #featured-course .btn-lg {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
 }
 
 
-/* ---------------------------------------
-   4) FOOTER OVERRIDES (UNCHANGED)
---------------------------------------- */
-.footer-section {
-  background-color: #212529;
+/* --- 4) Explore Our All Courses Section --- */
+/* Heading */
+.all-courses h2 {
+  color: #06171f;
 }
 
-.footer-section .text-white {
-  color: #FFFFFF !important;
-}
-
-.footer-section a.text-white:hover {
-  color: #F8F9FA !important;
-}
-
-.footer-section h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.footer-section p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
-}
-
-.footer-section .fa-2x {
-  font-size: 2rem;
-}
-
-/* =========================================
-   TESTIMONIALS SECTION
-========================================== */
-#testimonials {
-  background-color: var(--light-bg);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.section-label {
-  display: inline-block;
-  background-color: var(--bg-purple);
-  color: var(--accent-color);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin: 0 auto;
-  line-height: 1.2;
-}
-
-.testimonial-card {
-  background-color: var(--bg-purple);
-  border-radius: 1rem;
-  padding: 2rem;
+/* Filter Buttons */
+.filters .filter-btn {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 8px 25px rgba(9, 9, 106, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 50px;
+  background: #fff;
+  color: #06171f;
+  font-weight: 500;
+  transition: 0.2s ease;
 }
-
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(9, 9, 106, 0.15);
-}
-
-.quote {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--text-dark);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.author {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.75rem;
-}
-
-.star-rating i {
-  color: #FFCC00;
+.filters .filter-btn i {
   font-size: 1rem;
 }
+.filters .filter-btn:hover,
+.filters .filter-btn.active {
+  background: #06171f;
+  border-color: #06171f;
+  color: #fff;
+}
+
+/* Course Cards */
+.course-card {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.course-card .card-img-top {
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.course-card {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.course-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(9,9,106,0.15);
+}
+
+
+
+.category-pill {
+  background: #f1f3f5;
+  color: #47515e;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+.price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FF28A8 !important;
+}
+.course-card .card-body {
+  padding: 1rem 1.25rem 1.5rem;
+}
+.course-card .card-body h5 {
+  margin-bottom: 0.5rem;
+}
+.course-card .card-body .text-muted {
+  font-size: 0.9rem;
+}
+
+/* Remove default focus outline if desired */
+.filters .filter-btn:focus,
+.btn:focus {
+  box-shadow: none !important;
+}
+
+/* ————— View Details CTA ————— */
+.btn-details {
+  display: inline-flex;        /* shrink-to-fit */
+  align-items: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #09096A;
+  border-radius: 50px;         /* pill shape */
+  width: auto !important;      /* <-- change here */
+  white-space: nowrap;
+}
+
+.btn-details__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  background-color: #06171f;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+
+
+
