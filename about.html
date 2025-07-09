@@ -2,13 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Learn more about Jesse—an experienced online maths, physics, chemistry & English tutor from North Wales. Qualified from The University of Manchester & Bangor University." />
-  <meta name="keywords" content="Online Tutor UK, Math and Physics Tutor, Chemistry A-Level Tutor, GCSE Tutor, WJEC, A-Level, North Wales Tutoring" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- Primary Meta Tags -->
-  <title>About Jesse | North Wales Tutoring</title>
-  <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dnemqfp1d/image/upload/v1735140498/NWT-logo_cftrw7.png">
+  <title>About Jesse | North Wales Tutoring – WJEC, GCSE & A-Level Tutor</title>
+  <meta name="description"
+        content="Meet Jesse, your friendly North Wales online tutor for WJEC, GCSE & A-Level Maths, Physics, Chemistry & English. Qualified at Manchester & Bangor, serving Bangor, Wrexham, Conwy & Llandudno." />
+  <meta name="keywords"
+        content="WJEC, GCSE tutor, A-Level tutor, AQA, Edexcel, OCR, Eduqas, CAIE, online tutor UK, Maths tutor, Physics tutor, Chemistry tutor, English tutor, North Wales, Bangor, Wrexham, Conwy, Llandudno" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title"
+        content="About Jesse | North Wales Tutoring – WJEC, GCSE & A-Level" />
+  <meta property="og:description"
+        content="Get to know Jesse—qualified online tutor from North Wales covering WJEC, GCSE & A-Level Maths, Physics, Chemistry & English. Book your free trial today!" />
+  <meta property="og:url" content="https://www.northwalestutoring.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+        content="https://www.northwalestutoring.com/assets/og-about-jesse.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+        content="About Jesse | North Wales Tutoring – WJEC, GCSE & A-Level" />
+  <meta name="twitter:description"
+        content="Learn more about Jesse—your expert online tutor in WJEC, GCSE & A-Level Maths, Physics, Chemistry & English, proudly serving North Wales." />
+  <meta name="twitter:image"
+        content="https://www.northwalestutoring.com/assets/twitter-about-jesse.jpg" />
+
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
@@ -144,7 +165,7 @@
       <!-- CTA Button -->
       <a href="contact.html"
          class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
-        Book Your Free Trial 🡥
+        Book Your Free Trial
       </a>
     </div>
   </div>
@@ -180,7 +201,7 @@
             My tutoring approach emphasizes <strong>individualized assessment</strong>, <strong>exam-focused strategies</strong>, and <strong>interactive lessons</strong>. Together, we’ll break down complex
             concepts into manageable steps, practice past papers, and build the confidence you need to succeed.
           </p>
-          <a href="index.html#contact" class="btn btn-cta">
+          <a href="contact.html" class="btn btn-cta">
             <i class="bi bi-person-plus-fill me-2"></i>Book a Free Consultation
           </a>
         </div>
@@ -446,7 +467,7 @@
         </ul>
 
         <!-- CTA Button -->
-        <a href="#contact" class="btn btn-teach-cta btn-lg">
+        <a href="contact.html" class="btn btn-teach-cta btn-lg">
           <i class="bi bi-envelope-fill me-2"></i>Book a Lesson
         </a>
       </div>
@@ -648,15 +669,79 @@
     </p>
   </div>
 </footer>
-  <!-- =================================
-       EXTERNAL SCRIPTS
-  ====================================== -->
-  <!-- Bootstrap 5 JavaScript -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
 
-<script src="cookie.js" defer></script>
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- SweetAlert2 (for pop-ups) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Free-Trial Form + SweetAlert + Phone Validation -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.cta-section form');
+    if (!form) return;
+
+    function isValidPhone(raw) {
+      const digits = raw.replace(/\D/g, '');
+      // 1. length
+      if (digits.length < 7 || digits.length > 15) return false;
+      // 2. all same digit
+      if (/^(\d)\1+$/.test(digits)) return false;
+      // 3. exact full ascending/descending run
+      if (digits === '0123456789' || digits === '9876543210') return false;
+      // 4. more than 3 repeats in a row
+      if (/(\d)\1{3,}/.test(digits)) return false;
+      return true;
+    }
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const phone = form.querySelector('input[name="phone"]').value;
+      if (!isValidPhone(phone)) {
+        return Swal.fire({
+          icon: 'error',
+          title: 'Invalid phone number',
+          text: 'Please enter a real UK/international number.',
+          confirmButtonColor: '#ff28a8'
+        });
+      }
+
+      try {
+        const res  = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        const json = await res.json();
+
+        if (json.success) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Thank you!',
+              text : 'Your request was received — our team will contact you soon.',
+            confirmButtonColor: '#ff28a8'
+          });
+          form.reset();
+        } else {
+          throw new Error('server');
+        }
+      } catch {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: 'Something went wrong. Please try again later.',
+          confirmButtonColor: '#ff28a8'
+        });
+      }
+    });
+  });
+  </script>
+
+  <!-- Cookie banner logic -->
+  <script src="cookie.js" defer></script>
 </body>
 </html>
+
+
+

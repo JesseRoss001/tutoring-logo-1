@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Get in touch with North Wales Tutoring. Send us a message, email us, follow us on social media, or call to book your next online tutoring session." />
-  <meta name="keywords" content="North Wales Tutoring, Contact, Online Tutor UK, Email, Phone, Social Media, Facebook, Instagram, Google Business" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<!-- Primary Meta Tags -->
+  <title>Contact | North Wales Tutoring – WJEC, GCSE &amp; A-Level Tuition</title>
+  <meta name="description"
+        content="Get in touch with North Wales Tutoring. Book private WJEC, GCSE & A-Level maths & physics lessons at £15/hr. Serving Bangor, Wrexham, Conwy, Llandudno & across North Wales. Email, call or message us today!" />
+  <meta name="keywords"
+        content="WJEC, GCSE tutoring, A-Level tutoring, AQA, Edexcel, OCR, Eduqas, CAIE, North Wales Tutoring, Bangor, Wrexham, Conwy, Llandudno, contact, phone, email, social media" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title"
+        content="Contact | North Wales Tutoring – WJEC, GCSE & A-Level" />
+  <meta property="og:description"
+        content="Reach out to book your free 30-min trial. Private WJEC, GCSE & A-Level maths & physics tutoring at £15/hr. Proudly serving Bangor, Wrexham, Conwy, Llandudno & North Wales." />
+  <meta property="og:url" content="https://www.northwalestutoring.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.northwalestutoring.com/assets/og-contact.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+        content="Contact | North Wales Tutoring – WJEC, GCSE & A-Level" />
+  <meta name="twitter:description"
+        content="Book your free trial: private WJEC, GCSE & A-Level maths & physics tuition at £15/hr. Serving Bangor, Wrexham, Conwy, Llandudno & throughout North Wales." />
+  <meta name="twitter:image" content="https://www.northwalestutoring.com/assets/twitter-contact.jpg" />
+
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
@@ -125,7 +148,7 @@
       <!-- CTA Button -->
       <a href="contact.html"
          class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
-        Book Your Free Trial 🡥
+        Book Your Free Trial
       </a>
     </div>
   </div>
@@ -507,118 +530,103 @@
 </footer>
 
   <!-- Bootstrap 5 JS Bundle -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
-<!-- contact-form guard + SweetAlert feedback  -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  /* ── helpers ───────────────────────────────────────── */
+  <!-- SweetAlert2 (must come before your code that calls Swal.fire) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  // 1 ▸ phone validator
-  function isValidPhone(raw) {
-    const digits = raw.replace(/\D/g, '');
-    if (digits.length < 7 || digits.length > 15) return false;
+  <!-- contact-form guard + SweetAlert feedback -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form   = document.getElementById('contactForm'),
+          phone  = document.getElementById('phoneNumber'),
+          msgBox = document.getElementById('messageText');
+    if (!form) return;
 
-    // reject all-same-digit  (e.g. “999999999”)
-    if (/^(\d)\1+$/.test(digits)) return false;
-
-    // reject any 3-plus identical digits in a row
-    if (/(\d)\1{2,}/.test(digits)) return false;
-
-    // reject straight ascending / descending sequences
-    const asc  = '01234567890',
-          desc = '09876543210';
-    if (asc.includes(digits)  || desc.includes(digits)) return false;
-
-    return true;            // looks OK
-  }
-
-  // 2 ▸ quick spam-phrase check
-  const banned = [
-    /rank\s+your\s+website/i,
-    /i\s+can\s+help\s+your\s+website/i,
-    /improve\s+your\s+seo/i,
-    /back\s?links?/i
-  ];
-  const isSpam = txt => banned.some(r => r.test(txt));
-
-  /* ── form logic ────────────────────────────────────── */
-
-  const form   = document.getElementById('contactForm'),
-        phone  = document.getElementById('phoneNumber'),
-        msgBox = document.getElementById('messageText');
-
-  if (!form) return;  // nothing to do
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    /* 1 ▸ client-side checks */
-    if (!isValidPhone(phone.value)) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Invalid phone number',
-        text: 'Please enter a genuine phone number (no obvious repeats or sequences).',
-        confirmButtonColor: '#ff28a8'
-      });
-      return;
+    // Only check that it's 7–15 digits long
+    function isValidPhone(raw) {
+      const digits = raw.replace(/\D/g, '');
+      return digits.length >= 7 && digits.length <= 15;
     }
 
-    if (isSpam(msgBox.value)) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Message blocked',
-        text: 'Please re-phrase your enquiry and try again.',
-        confirmButtonColor: '#ff28a8'
-      });
-      return;
-    }
+    // Quick spam-phrase check (unchanged)
+    const banned = [
+      /rank\s+your\s+website/i,
+      /i\s+can\s+help\s+your\s+website/i,
+      /improve\s+your\s+seo/i,
+      /back\s?links?/i
+    ];
+    const isSpam = txt => banned.some(r => r.test(txt));
 
-    /* 2 ▸ send to Web3Forms */
-    try {
-      const res   = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-      const json  = await res.json();
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
 
-      if (json.success) {
+      // Phone check
+      if (!isValidPhone(phone.value)) {
         Swal.fire({
-          icon: 'success',
-          title: 'Thank you!',
-          text: 'Our team will contact you soon.',
+          icon: 'error',
+          title: 'Invalid phone number',
+          text: 'Please enter a real phone number (7–15 digits).',
           confirmButtonColor: '#ff28a8'
         });
-        form.reset();
-      } else {
-        throw new Error('server');
+        return;
       }
-    } catch (err) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Submission error',
-        text: 'Something went wrong – please try again later.',
-        confirmButtonColor: '#ff28a8'
-      });
-    }
-  });
-});
-</script>
 
+      // Spam check
+      if (isSpam(msgBox.value)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Message blocked',
+          text: 'Please re-phrase your enquiry and try again.',
+          confirmButtonColor: '#ff28a8'
+        });
+        return;
+      }
+
+      // Send to Web3Forms
+      try {
+        const res  = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        const json = await res.json();
+
+        if (json.success) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Thank you!',
+            text: 'Our team will contact you soon.',
+            confirmButtonColor: '#ff28a8'
+          });
+          form.reset();
+        } else {
+          throw new Error('server');
+        }
+      } catch {
+        Swal.fire({
+          icon: 'error',
+          title: 'Submission error',
+          text: 'Something went wrong – please try again later.',
+          confirmButtonColor: '#ff28a8'
+        });
+      }
+    });
+  });
   </script>
 
-<script>
-  document.querySelectorAll('#faqAccordion .accordion-collapse')
-    .forEach(collapse => {
-      collapse.addEventListener('show.bs.collapse', () =>
-        collapse.parentElement.classList.add('show'));
-      collapse.addEventListener('hide.bs.collapse', () =>
-        collapse.parentElement.classList.remove('show'));
-    });
-</script>
+  <!-- FAQ accordion show/hide styling -->
+  <script>
+    document.querySelectorAll('#faqAccordion .accordion-collapse')
+      .forEach(collapse => {
+        collapse.addEventListener('show.bs.collapse', () =>
+          collapse.parentElement.classList.add('show')
+        );
+        collapse.addEventListener('hide.bs.collapse', () =>
+          collapse.parentElement.classList.remove('show')
+        );
+      });
+  </script>
 
-
-
-<script src="cookie.js" defer></script>
-
+  <!-- Cookie banner logic -->
+  <script src="cookie.js" defer></script>
 </body>
+
+
 </html>

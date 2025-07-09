@@ -102,6 +102,14 @@
     margin: 1rem 0 0;
   }
 }
+@media (max-width: 991.98px) {
+  /* Remove any invert filter you had */
+  .navbar-custom .navbar-toggler-icon {
+    filter: none; 
+    /* Inject a black‐stroked SVG instead of the default grey/white */
+    color: #06171f;
+  }
+}
 
 /* ===================================================================
    TESTIMONIALS SECTION
