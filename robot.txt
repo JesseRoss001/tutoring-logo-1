@@ -1,0 +1,8 @@
+# robots.txt — northwalestutoring.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://northwalestutoring.com/sitemap.xml
+Sitemap: https://www.northwalestutoring.com/sitemap.xml
