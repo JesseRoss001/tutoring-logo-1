@@ -447,12 +447,7 @@
   max-width:520px;
 }
 
-/* headline for each feature (grab first sentence) */
-#remote .col-lg-6:first-child p.mb-4::first-line{
-  font-weight:700;
-  color:#06171f;
-  font-size:1.25rem;
-}
+
 
 /* pastel icon circles (use Bootstrap Icons’ “mortarboard”, “people” etc.) */
 @font-face{font-family:"bootstrap-icons";src:url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.woff2") format("woff2");}
@@ -548,6 +543,31 @@
 @media(max-width:576px){
   #remote .btn-custom{ max-width:100%; font-size:.95rem; }
 }
+
+/* remove this rule completely */
+/* #remote .col-lg-6:first-child p.mb-4::first-line{ ... } */
+
+/* make “title” visually consistent and not wrap-dependent */
+#remote .col-lg-6:first-child p.feature .feature-title{
+  display:block;
+  font-weight:700;
+  color:#06171f;
+  font-size:1.25rem;
+  margin-bottom:.2rem;     /* tiny gap before the body */
+}
+
+/* keep your existing paragraph styling */
+#remote .col-lg-6:first-child p.mb-4{
+  position:relative;
+  padding-left:84px;
+  margin-bottom:2.25rem !important;
+  font-size:1rem;
+  color:#47515e;
+  max-width:520px;
+}
+
+/* your icon rules stay the same */
+
 /* ----------------------------------------------
    AREAS WE SERVE SECTION
 ---------------------------------------------- */
