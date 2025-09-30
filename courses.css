@@ -186,6 +186,77 @@
   line-height: 1;
 }
 
+.card-bottom-row {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;      /* keeps it tidy on mobile */
+}
 
+.price-stack {
+  display: flex;
+  flex-direction: row;  /* side by side, not stacked */
+  gap: 12px;
+}
 
+.price-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,.15);
+}
 
+.price-chip.alt { background: #0d6efd; }
+.price-chip .sub { font-size: 0.8em; opacity: .8; }
+
+/* Bottom block: prices row, then CTA on its own line, both flush-left */
+.card-bottom-row{
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;   /* stack: prices first, then CTA */
+  align-items: flex-start;  /* start at same left edge as other content */
+  gap: 12px;
+}
+
+/* price chips side-by-side */
+.price-stack{
+  display: flex;
+  gap: 12px;
+}
+
+/* ensure the button never picks up left margins from utility classes */
+.card-bottom-row .btn-trial{
+  align-self: flex-start;
+  margin-left: 0 !important;
+  font-size: 1.1rem;        /* bigger button */
+  padding: 14px 30px;       /* more presence */
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* optional: make CTA full width on small screens */
+@media (max-width: 576px){
+  .card-bottom-row .btn-trial{ width: 100%; text-align: center; }
+}
+
+.category-pill {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Level-based colors */
+.category-pill.primary { background-color: #ffcb29; color: #000; }  /* yellow */
+.category-pill.gcse    { background-color: #fa60d9; }  /* pink */
+.category-pill.alevel  { background-color: #a611ff; }  /* purple */
