@@ -39,8 +39,26 @@
   gtag('js', new Date());
 
   gtag('config', 'G-CN5W5PMKD1');
+
+  gtag('config', 'AW-16513767694');
 </script>
 
+<!-- Event snippet for Contact conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16513767694/53BRCOn52swZEI6ysMI9',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 
   <!-- Bootstrap 5 CSS -->
@@ -142,7 +160,8 @@
 
       <!-- CTA Button -->
       <a href="contact.html"
-         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
+         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3"
+         onclick="return gtag_report_conversion('contact.html');">
         Book Your First Lesson
       </a>
     </div>
@@ -799,6 +818,9 @@ North Wales’ leading online tutors for GCSE, A-Level & SATs: personalised Math
         const json = await res.json();
 
         if (json.success) {
+
+            gtag('event','conversion',{'send_to':'AW-16513767694/53BRCOn52swZEI6ysMI9'});
+
           Swal.fire({
             icon: 'success',
             title: 'Thank you!',

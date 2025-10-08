@@ -39,17 +39,26 @@
   gtag('js', new Date());
 
   gtag('config', 'G-CN5W5PMKD1');
+  gtag('config', 'AW-16513767694');
 </script>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="About Jesse | North Wales Tutoring" />
-  <meta property="og:description" content="Get to know Jesse—your friendly, qualified online tutor covering Maths, Physics, Chemistry, Biology & English for GCSE & A-Level (WJEC, AQA, Edexcel, OCR, Eduqas, CAIE)." />
-  <meta property="og:url" content="https://www.northwalestutoring.com/about.html" />
-  <meta property="og:type" content="website" />
+<!-- Event snippet for Contact conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16513767694/53BRCOn52swZEI6ysMI9',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
-  <!-- Twitter -->
-  <meta name="twitter:title" content="About Jesse | North Wales Tutoring" />
-  <meta name="twitter:description" content="Get to know Jesse—your expert online tutor in Maths, Physics, Chemistry, Biology & English." />
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/north wales tutoring logo (1).png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/north wales tutoring logo (1).png">
@@ -168,7 +177,8 @@
 
       <!-- CTA Button -->
       <a href="contact.html"
-         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
+         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3"
+         onclick="return gtag_report_conversion('contact.html');">
         Book Your First Lesson
       </a>
     </div>
@@ -719,6 +729,8 @@ North Wales’ leading online tutors for GCSE, A-Level & SATs: personalised Math
         const json = await res.json();
 
         if (json.success) {
+            gtag('event','conversion',{'send_to':'AW-16513767694/53BRCOn52swZEI6ysMI9'});
+
           Swal.fire({
             icon: 'success',
             title: 'Thank you!',
