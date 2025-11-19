@@ -2,9 +2,7 @@
 /* ----------------------------------------------
    HERO SECTION
 ---------------------------------------------- */
-/* ----------------------------------------------
-   HERO VIDEO STYLES
----------------------------------------------- */
+
 .hero-section {
   position: relative;
   min-height: 80vh;
@@ -13,10 +11,9 @@
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  overflow: hidden; /* Ensure no overflow from video */
+  overflow: hidden;
 }
 
-/* hero background image – positioned exactly like the old video */
 .hero-media,
 .hero-img{
   position:absolute;
@@ -24,11 +21,10 @@
   width:100%; height:100%;
   transform:translate(-50%,-50%);
   object-fit:cover;
-  z-index:0;                   /* still sits behind overlay & content */
+  z-index:0;                   
 }
 
 
-/* Adjust overlay to cover the video */
 .hero-section .overlay {
   position: absolute;
   top: 0;
@@ -38,20 +34,18 @@
   background: var(--overlay-color);
   z-index: 1;
 }
-/* Hero – dark overlay that sits above the image */
 .hero-section .overlay{
   position:absolute;
-  inset:0;                              /* shorthand for top/right/bottom/left:0 */
+  inset:0;                              
   background:linear-gradient(
-              rgba(0,0,0,.55) 0%,       /* solid tint on top */
-              rgba(0,0,0,.35) 30%,      /* fades a bit */
+              rgba(0,0,0,.55) 0%,       
+              rgba(0,0,0,.35) 30%,      
               rgba(0,0,0,.35) 70%,
-              rgba(0,0,0,.55) 100%);    /* darker again at the bottom */
-  z-index:1;                            /* above .hero-media but below content */
-  pointer-events:none;                  /* clicks go through to links & inputs */
+              rgba(0,0,0,.55) 100%);    
+  z-index:1;                           
+  pointer-events:none;                 
 }
 
-/* Ensure content is above the video and overlay */
 .hero-section .container {
   position: relative;
   z-index: 2;
@@ -86,11 +80,11 @@
   background-color: var(--btn-hover-color);
   transform: translateY(-3px);
 }
-/* Hero form – keep elements centred & responsive */
+
 .hero-content form input.form-control-lg{
   padding:.75rem 1.25rem;
 }
-.hero-content .btn-cta{            /* reuse existing pill styling */
+.hero-content .btn-cta{            
   background:var(--btn-bg-color);
   border-radius:50px;
   white-space:nowrap;
@@ -99,33 +93,26 @@
   background:var(--btn-hover);
 }
 
-/* hero form – make the button exactly match the pill-input height */
-.hero-content form .col-auto{               /* keep row height equalised */
+.hero-content form .col-auto{               
   display:flex;
-  align-items:stretch;                      /* button fills full height */
+  align-items:stretch;                     
 }
 
 
-/* 1.  Make the input + button row share one exact height */
 .hero-section form .row.g-2 {
-  align-items: stretch;      /* the col-auto with the button now stretches */
+  align-items: stretch;      
 }
 
-/* 2.  Force the “Try One Lesson for Free” pill to match .form-control-lg */
 .hero-section form .btn-cta {
-  /* .form-control-lg default height = 3.5 rem (≈ 56 px) */
   height: 3.5rem;
-  padding: 0 2rem;           /* keep horizontal padding comfortable */
-  display: flex;             /* vertically centre text & icon */
+  padding: 0 2rem;          
+  display: flex;             
   align-items: center;
-  border-radius: 50px;       /* identical pill curve */
-  line-height: 1;            /* stops extra vertical growth */
+  border-radius: 50px;      
+  line-height: 1;            
 }
 
 
-/* ----------------------------------------------
-   SECTION TITLES
----------------------------------------------- */
 .section-title h2 {
   font-size: 2.5rem;
   color: var(--accent-color);
@@ -152,34 +139,27 @@
   font-style: italic;
   margin-bottom: 3rem;
 }
-/* ==============================================================
-   “UNLOCKING KNOWLEDGE” / ABOUT SECTION
-   ============================================================== */
 
-/* ---------- Section wrapper ---------- */
 .about-split{
   background:#fff;
-  padding-top:5rem;                     /* breathing room above */
-  padding-bottom:5rem;                  /* breathing room below */
+  padding-top:5rem;                    
+  padding-bottom:5rem;                  
 }
 
-/* ---------- Image container ---------- */
 .about-img{
   position:relative;
   border-radius:1.25rem;
-  overflow:hidden;                      /* rounded-corner crop */
+  overflow:hidden;                      
   box-shadow:0 12px 40px rgba(0,0,0,.06);
 }
 
-/* ---------- Actual photo ---------- */
 .about-photo{
   display:block;
-  width:auto;                           /* desktop: keep original size */
+  width:auto;                          
   height:auto;
-  object-fit:cover;                     /* neat crop when we limit h / w */
+  object-fit:cover;                     
 }
 
-/* ---------- Badge on the image (hours, questions, etc.) ---------- */
 .about-badge{
   position:absolute;
   bottom:1.25rem;
@@ -193,10 +173,8 @@
 .about-badge .label{ font-weight:600; line-height:1.3; }
 .about-badge .value{ font-size:2rem; font-weight:700; color:var(--accent-color); }
 
-/* ---------- Headline styling ---------- */
-.brand-accent{ color:var(--accent-color); }   /* bright pink word */
+.brand-accent{ color:var(--accent-color); }   
 
-/* ---------- Stat numbers under text column ---------- */
 .about-stats .stat-value{
   font-weight:700;
   font-size:2rem;
@@ -207,32 +185,25 @@
   color:#47515e;
 }
 
-/* --------------------------------------------------------------
-   BREAK-POINT TWEAKS
-   -------------------------------------------------------------- */
 
-/* md & below (≤ 991 px): centre badge & let photo fill column */
 @media (max-width:991.98px){
 
-  /* 1 ▸ centre the badge so it doesn’t overflow a narrower img */
   .about-badge{
     left:50%;
     transform:translateX(-50%);
   }
 
-  /* 2 ▸ ***FIX FOR WHITE GAP*** — photo now grows to column width */
   .about-photo{
-    width:100%    !important;           /* fill full column */
-    max-width:100%!important;           /* override earlier max-width */
-    height:auto    !important;          /* keep aspect ratio */
+    width:100%    !important;          
+    max-width:100%!important;          
+    height:auto    !important;         
   }
 }
 
-/* sm & below (≤ 767 px): smaller photo & tighter badge */
 @media (max-width:767.98px){
 
   .about-photo{
-    max-height:none;                    /* let 100 % width control size */
+    max-height:none; 
   }
 
   .about-badge{
@@ -241,24 +212,22 @@
   }
 }
 
-/* =========================================================
-   COURSES SECTION  –  Mentor-Card Look & Feel
-   (works with: <div class="row g-4 courses-grid"> … <div class="col-md-4">)
-   ========================================================= */
+/* 
+   COURSES SECTION 
+ */
 
 /* ---------- GRID WRAPPER ---------- */
 .courses-grid {
-  display: grid;                           /* instead of the default flex row   */
+  display: grid;                          
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;                             /* identical spacing at every size   */
+  gap: 2.5rem;                            
   margin-top: 3rem;
 }
 
-/* Remove Bootstrap’s fixed column widths so each tile obeys our grid */
 .courses-grid > .col-md-4 {
-  width: 100% !important;                  /* override col-md-4 width           */
-  flex: 0 0 auto;                          /* stop flex-basis interference      */
-  padding: 0 !important;                   /* we use gap instead                */
+  width: 100% !important;                  
+  flex: 0 0 auto;                         
+  padding: 0 !important;                  
 }
 
 /* ---------- CARD ---------- */
@@ -281,32 +250,27 @@
   box-shadow: 0 22px 60px rgba(0,0,0,.10);
 }
 
-/* ---------- ICON ---------- */
 /* ===== Courses – responsive square thumbnail ===== */
 .course-card img{
-  display:block;                         /* removes inline-img baseline gap    */
-  width:100%;                            /* spans the entire card width        */
-  height:230px;                          /* fixed banner height for consistency*/
-  object-fit:cover;                      /* neat crop, preserves aspect ratio  */
-  border-radius:1.75rem 1.75rem 0 0;     /* same curve as card, top only       */
+  display:block;                        
+  width:100%;                           
+  height:230px;                        
+  object-fit:cover;                      
+  border-radius:1.75rem 1.75rem 0 0;    
   margin:0 0 1.5rem;   
 }
 
-/* optional – if you kept the media-query overrides, remove or soften them  */
 @media (max-width:992px){
   .course-card img{width:clamp(60px, 22vw, 90px);}
 }
 @media (max-width:576px){
   .course-card img{width:64px;}
 }
-/* ======================================================
-   COURSE-CARD   — reference-matching banner images
-   ====================================================== */
+/*   COURSE-CARD */
 
-/* basic card look (shadows, rounding, hover lift) */
 .course-card{
   border-radius:1rem;
-  overflow:hidden;                     /* keeps img corners flushed */
+  overflow:hidden;                   
   transition:transform .3s ease, box-shadow .3s ease;
 }
 .course-card:hover{
@@ -314,17 +278,15 @@
   box-shadow:0 16px 40px rgba(9,9,106,.15);
 }
 
-/* full-width top image … class="card-img-top" */
 .course-card .card-img-top{
   display:block;
   width:100%;
-  height:400px;                        /* reference height */
-  object-fit:cover;                    /* centre-crop */
+  height:400px;                     
+  object-fit:cover;                    
   border-top-left-radius:1rem;
   border-top-right-radius:1rem;
 }
 
-/* a little smaller on tablets / phones so the grid breathes */
 @media(max-width:991.98px){ .course-card .card-img-top{ height:320px; } }
 @media(max-width:767.98px){ .course-card .card-img-top{ height:240px; } }
 
@@ -341,16 +303,16 @@
   font-size: 1rem;
   line-height: 1.65;
   color: #47515e;
-  margin: 0;                               /* tighten */
+  margin: 0;                             
 }
 
 /* =====  We Cover – centred narrow layout  ===== */
-#we-cover            { background:#fbfefd; }         /* subtle page tint   */
+#we-cover            { background:#fbfefd; }       
 
 .we-cover-inner{
-  max-width:920px;                                   /* feel free to tweak */
-  margin:0 auto;                                     /* <- centres block   */
-  padding:0 1rem;                                    /* gutter on phones   */
+  max-width:920px;                                  
+  margin:0 auto;                                    
+  padding:0 1rem;                                   
 }
 
 .we-cover-tile{
@@ -392,55 +354,160 @@
   .tile-icon{ margin-top:0; }
 }
 
-/* ==========================================================
-   REMOTE TUTORING  –  reference-style makeover
-   ========================================================== */
+/* TUTOR SPOTLIGHT SECTION*/
 
-/* 1 ▸ overall look ------------------------------------------------ */
-#remote{
-  background:#fff;                       /* clean background           */
-  position:relative;                     /* lets us place decorations  */
-  overflow:hidden;                       /* hide pattern overflow      */
-  padding-top:4rem; padding-bottom:4rem; /* a little extra breathing   */
+.tutor-spotlight-section {
+  background-color: #ffffff;
 }
 
-/* 2 ▸ headline + subtitle ----------------------------------------- */
+.tutor-spotlight-image-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(9, 9, 106, 0.15);
+}
+
+.tutor-spotlight-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tutor-spotlight-badge {
+  position: absolute;
+  left: 1.75rem;
+  bottom: 1.75rem;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 0.8rem 1.3rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  max-width: 260px;
+}
+
+.tutor-badge-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.tutor-badge-text {
+  font-size: 0.8rem;
+  color: var(--text-dark);
+}
+
+/* Right content */
+.tutor-spotlight-heading {
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+.tutor-highlight {
+  color: var(--accent-color);
+}
+
+.tutor-spotlight-lead {
+
+  color: var(--text-dark);
+  max-width: 620px;
+}
+
+/* Stats row */
+.tutor-spotlight-stats .tutor-stat {
+  padding-right: 0.5rem;
+}
+
+.tutor-stat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  margin-bottom: 0.15rem;
+}
+
+.tutor-stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.1rem;
+}
+
+.tutor-stat-text {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+
+/* CTA button in this section */
+.tutor-spotlight-cta {
+  margin-top: 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .tutor-spotlight-heading {
+    font-size: 1.8rem;
+  }
+  .tutor-spotlight-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .tutor-spotlight-image-wrapper {
+    border-radius: 18px;
+  }
+  .tutor-spotlight-badge {
+    left: 1.1rem;
+    bottom: 1.1rem;
+    padding: 0.7rem 1rem;
+  }
+}
+
+
+/*REMOTE TUTORING */
+
+#remote{
+  background:#fff;                   
+  position:relative;                 
+  overflow:hidden;                     
+  padding-top:4rem; padding-bottom:4rem; 
+}
+
 #remote .section-title{
-  text-align:center !important;          /* centre title & subtitle       */
-  margin-left:auto;                      /* kick the whole node to centre */
+  text-align:center !important;          
+  margin-left:auto;                      
   margin-right:auto;
 }
 
 #remote .section-title h2{
-    text-align:center !important;          /* centre title & subtitle       */
-  margin-left:auto;                      /* keeps icon + text centred     */
+    text-align:center !important;          
+  margin-left:auto;                      
   margin-right:auto;
 }
-/* --- Remote subtitle centring fix ------------------------------- */
+
 #remote .section-subtitle{
-  text-align:center;      /* centre the line itself           */
-  margin-left:auto;       /* keep the block centred           */
-  margin-right:auto;      /* (lets max-width work symmetrically) */
+  text-align:center;     
+  margin-left:auto;       
+  margin-right:auto;     
 }
 
-#remote .btn-custom{                     /* pink “Start Remote Lessons”   */
-  width:100%;                            /* fluid width                   */
-  max-width:580px;                       /* but not crazy-wide on big screens */
-  margin:2.5rem auto 0;                  /* centred, with top space       */
-  display:flex; justify-content:center; /* centre icon & text inside     */
+#remote .btn-custom{                    
+  width:100%;                          
+  max-width:580px;                      
+  margin:2.5rem auto 0;                 
+  display:flex; justify-content:center;
   font-size:1.05rem;
 }
-/* 3 ▸ left-hand column – turn paragraphs into icon rows ----------- */
-#remote .row.align-items-center{ row-gap:2.75rem; }   /* space between cols */
+#remote .row.align-items-center{ row-gap:2.75rem; }   
 
-/* wrap all three <p class="mb-4"> in one flex column */
 #remote .col-lg-6:first-child{
   display:flex; flex-direction:column;
 }
 
 #remote .col-lg-6:first-child p.mb-4{
   position:relative;
-  padding-left:84px;                     /* room for icon circle       */
+  padding-left:84px;                  
   margin-bottom:2.25rem !important;
   font-size:1rem;
   color:#47515e;
@@ -449,14 +516,20 @@
 
 
 
-/* pastel icon circles (use Bootstrap Icons’ “mortarboard”, “people” etc.) */
-@font-face{font-family:"bootstrap-icons";src:url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.woff2") format("woff2");}
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff2?211fa40e8") format("woff2"),
+       url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff?211fa40e8") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;   
+}
 
 #remote .col-lg-6:first-child p.mb-4::before{
-  content:"\F4D5";                       /* default icon               */
+  content:"\F4D5";                      
   font-family:"bootstrap-icons";
   font-size:1.7rem;
-  line-height:84px;                      /* vertical centre            */
+  line-height:84px;                      
   text-align:center;
   color:#00936c;
   position:absolute;
@@ -466,14 +539,13 @@
   background:#E8FFF2;
 }
 
-/* second & third icons with different glyph + colour */
 #remote .col-lg-6:first-child p.mb-4:nth-of-type(2)::before{
-  content:"\F2B7";                       /* bi-layers icon             */
+  content:"\F2B7";                       
   background:#F2E8FF;
   color:#8B46FF;
 }
 #remote .col-lg-6:first-child p.mb-4:nth-of-type(3)::before{
-  content:"\F3D2";                       /* bi-graph-up                */
+  content:"\F3D2";                      
   background:#FFE8F1;
   color:#FF2860;
 }
@@ -486,27 +558,24 @@
   border-radius:40px;
 }
 
-/* 4 ▸ right-hand column – layered card ----------------------------- */
 .remote-img{
   position:relative;
   border-radius:1.5rem;
   overflow:hidden;
   box-shadow:0 28px 80px rgba(6,23,31,.15);
-  display:grid;                           /* build simple collage grid  */
+  display:grid;                        
   grid-template-columns:1fr 1fr;
   grid-template-rows:auto auto;
   gap:1rem;
   background:#fff;
-  padding:1rem;                           /* white gutter around shots  */
+  padding:1rem;                   
 }
 
-/* main <img> fills first cell – duplicate via ::after for extra shots */
 .remote-img img{
   width:100%; height:100%;
   object-fit:cover;
-  grid-column:1/3; grid-row:1/2;           /* spans two columns top      */
+  grid-column:1/3; grid-row:1/2;          
 }
-/* dotted decorative pattern */
 .remote-img::before{
   content:"";
   position:absolute;
@@ -518,7 +587,6 @@
   opacity:.35;
 }
 
-/* 5 ▸ responsiveness ---------------------------------------------- */
 @media(max-width:991.98px){
   #remote .row.align-items-center{ flex-direction:column-reverse; }
   .remote-img{ margin-bottom:3rem; }
@@ -539,24 +607,19 @@
   }
   .remote-img::after{ grid-column:1/2; grid-row:2/3; min-height:160px; }
 }
-/* a little tighter on phones */
 @media(max-width:576px){
   #remote .btn-custom{ max-width:100%; font-size:.95rem; }
 }
 
-/* remove this rule completely */
-/* #remote .col-lg-6:first-child p.mb-4::first-line{ ... } */
 
-/* make “title” visually consistent and not wrap-dependent */
 #remote .col-lg-6:first-child p.feature .feature-title{
   display:block;
   font-weight:700;
   color:#06171f;
   font-size:1.25rem;
-  margin-bottom:.2rem;     /* tiny gap before the body */
+  margin-bottom:.2rem;    
 }
 
-/* keep your existing paragraph styling */
 #remote .col-lg-6:first-child p.mb-4{
   position:relative;
   padding-left:84px;
@@ -566,11 +629,8 @@
   max-width:520px;
 }
 
-/* your icon rules stay the same */
 
-/* ----------------------------------------------
-   AREAS WE SERVE SECTION
----------------------------------------------- */
+/* AREAS WE SERVE*/
 .areas-section .row {
   display: flex;
   flex-wrap: wrap;
@@ -618,7 +678,7 @@
   color: var(--accent-color);
   margin-bottom: 0.5rem;
 }
-/* === Areas – pill-link style =================================== */
+
 .areas-pill-list{
   display:flex;
   flex-wrap:wrap;
@@ -628,7 +688,7 @@
 }
 
 .area-pill{
-  background:#FF28A8;           /* soft yellow                   */
+  background:#FF28A8;          
   color:#fff;
   font-weight:600;
   text-decoration:none;
@@ -645,35 +705,31 @@
   box-shadow:0 6px 18px rgba(9,9,106,.1);
 }
 
-/* smaller screens – tighten gaps */
 @media (max-width:576px){
   .areas-pill-list{ gap:1rem; }
   .area-pill{ padding:.6rem 1.4rem; font-size:.9rem; }
 }
 
-/* === Tutoring Approach → dark profile-card look =============== */
+/* Tutoring Approach*/
 .approach-card{
-  background:#06171f;                       /* deep black card            */
-  border-radius:1.5rem;                  /* big rounded corners        */
-  padding:4rem 3rem;                     /* roomy interior             */
-  color:#fff;                            /* default text to white      */
+  background:#06171f;                      
+  border-radius:1.5rem;                  
+  padding:4rem 3rem;                     
+  color:#fff;                            
   overflow:hidden;
 }
 
-/* full-bleed on big screens, stay comfy in the usual container */
 @media (min-width:1400px){
   .approach-card{ padding-left:4.5rem; padding-right:4.5rem; }
 }
 
-/* title inside card – white text & subtle under-line */
 .approach-card .section-title h2{
   color:#fff;
 }
 .approach-card .section-title h2::after{
-  background:#7F5FFF;                    /* small accent bar           */
+  background:#7F5FFF;                   
 }
 
-/* subtitle – lighter grey for contrast */
 .approach-card .section-subtitle{
   color:#B7B7B7;
   font-style:normal;
@@ -681,14 +737,12 @@
   margin:0 auto 2.5rem;
 }
 
-/* paragraphs – soft grey for readability on black */
 .approach-card p{
   color:#D1D1D1;
   font-size:1.05rem;
   line-height:1.7;
 }
 
-/* make the image fill its column & add a gentle radius */
 .approach-card img{
   width:100%;
   height:auto;
@@ -697,24 +751,19 @@
   box-shadow:0 12px 32px rgba(0,0,0,.35);
 }
 
-/* tighten the columns on XL so text doesn’t sprawl */
 @media (min-width:1200px){
   .approach-card .col-xl-6:first-child{ max-width:520px; }
 }
 
-/* stack image over text on ≤ lg (keeps nice mobile flow) */
 @media (max-width:991.98px){
   .approach-card .row{ flex-direction:column; }
   .approach-card img{ margin-bottom:2rem; }
 }
 
-/* ensure any <strong> still pops */
 .approach-card strong{ color:#fff; }
 
 
-/* ----------------------------------------------
-   LONG TEXT CONTENT (APPROACH SECTION)
----------------------------------------------- */
+
 .long-text-content p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -722,20 +771,18 @@
   color: var(--text-color);
 }
 
-/* ----------------------------------------------
-   GALLERY (MOSAIC)
----------------------------------------------- */
+
 
 
 .mosaic-gallery img {
   width: 100%;
-  height: auto; /* Ensures full image is visible */
-  object-fit: contain; /* Changed from cover to contain */
+  height: auto; 
+  object-fit: contain; 
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  background-color: #fff; /* Provides a clean background */
-  padding: 5px; /* Adds spacing around images */
+  background-color: #fff; 
+  padding: 5px; 
 }
 
 .mosaic-gallery img:hover {
@@ -743,12 +790,6 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-
-
-
-/* ----------------------------------------------
-   MEDIA QUERIES
----------------------------------------------- */
 @media (max-width: 1200px) {
   .hero-section h1 {
     font-size: 2.5rem;
@@ -829,13 +870,11 @@
   }
 
   .mosaic-gallery img {
-    height: auto; /* Ensures images adapt to their natural height */
+    height: auto; 
   }
 }
 
-/* ----------------------------------------------
-   ANIMATIONS
----------------------------------------------- */
+
 @keyframes fadeInDown {
   from {
     opacity: 0;

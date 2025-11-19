@@ -110,7 +110,104 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
 <link rel="stylesheet" href="index.css" />
 
 
- 
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://www.northwalestutoring.com/#organisation",
+  "name": "North Wales Tutoring",
+  "url": "https://www.northwalestutoring.com",
+  "logo": "https://www.northwalestutoring.com/images/north%20wales%20tutoring%20logo%20(1).png",
+  "image": "https://www.northwalestutoring.com/images/north-wales-tutoring-hero.webp",
+  "telephone": "+447480231362",
+  "email": "nwalestutoring@gmail.com",
+  "description": "North Wales Tutoring provides experienced online tutors for Primary, KS3, GCSE and A-Level across Maths, Science, English, Economics, Coding and more. Covering all UK exam boards including AQA, Edexcel, OCR, WJEC, Eduqas and CAIE.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4 Ffordd Cerrig Mawr",
+    "addressLocality": "Holyhead",
+    "addressRegion": "Anglesey",
+    "postalCode": "LL65 3LU",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "53.309",
+    "longitude": "-4.632"
+  },
+  "areaServed": [
+    "Bangor",
+    "Wrexham",
+    "Conwy",
+    "Llandudno",
+    "Rhyl",
+    "Colwyn Bay",
+    "Holyhead",
+    "Caernarfon",
+    "Denbigh",
+    "Ruthin",
+    "Mold",
+    "Flint",
+    "Prestatyn",
+    "North Wales",
+    "London",
+    "Manchester",
+    "Birmingham",
+    "United Kingdom"
+  ],
+  "knowsAbout": [
+    "GCSE Maths tutoring",
+    "A-Level Maths tutoring",
+    "GCSE Science tutoring",
+    "A-Level Physics tutoring",
+    "A-Level Chemistry tutoring",
+    "A-Level Biology tutoring",
+    "Economics tutoring",
+    "English Language tutoring",
+    "English Literature tutoring",
+    "Computer Science tutoring",
+    "SATs preparation",
+    "WJEC tutoring",
+    "AQA tutoring",
+    "Edexcel tutoring",
+    "OCR tutoring",
+    "Eduqas tutoring",
+    "CAIE tutoring"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/NorthWalesTutor",
+    "https://www.instagram.com/northwalestutoring",
+    "https://g.co/kgs/ws3Yd5u"
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "21:00"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+447480231362",
+    "contactType": "customer service",
+    "availableLanguage": ["English"],
+    "areaServed": "GB"
+  },
+  "serviceType": "Online one-to-one tutoring",
+  "provider": {
+    "@type": "Organization",
+    "name": "North Wales Tutoring"
+  }
+}
+</script>
+
  
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
@@ -184,7 +281,11 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="courses.html">Courses & Pricing</a>
+          <a class="nav-link" href="find-tutors-north-wales-uk.html">Our Tutors & Pricing</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="courses.html">Courses</a>
         </li>
 
         <li class="nav-item">
@@ -213,17 +314,18 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
   <picture class="hero-media">
     <!-- large / retina screens (served first so the browser can pick quickly) -->
     <source
-      srcset="images/north-wales-tutoring-hero.webp"
+      srcset="images/hero-nwt.webp"
       media="(min-width: 800px)"
       type="image/webp">
 
     <!-- small / mobile fallback -->
     <img
-      src="images/north-wales-tutoring-hero.webp"
+      src="images/hero-nwt.webp"
       alt="Confident student studying online with North Wales Tutoring"
       width="1920" height="800"       
       loading="eager"                 
-      decoding="async"                 
+      decoding="async"
+      fetchpriority="high"                 
       class="hero-img">
   </picture>
   <div class="container text-center animate__animated animate__fadeInDown">
@@ -273,8 +375,12 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
       <div class="col-lg-5 mb-4 mb-lg-0">
         <div class="about-img shadow-sm">
           <img src="images/about-north-wales-tutoring.jpg"
-               alt="About North Wales Tutoring"
-         class="img-fluid about-photo">
+     alt="About North Wales Tutoring"
+     class="img-fluid about-photo"
+     width="800" height="800"
+       loading="lazy"
+  decoding="async">
+
         </div>
       </div>
 
@@ -322,6 +428,91 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
   </div><!-- /.container -->
 </section>
 
+<!-- TUTOR SPOTLIGHT SECTION -->
+<section class="tutor-spotlight-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left on desktop: copy + stats + CTA -->
+      <!-- On mobile this appears under the image (order classes) -->
+      <div class="col-lg-7 order-1 order-lg-0">
+        <h2 class="display-5 fw-bold lh-sm mb-3 tutor-spotlight-heading">
+          Experienced UK Tutors Helping Students Succeed
+          <span class="tutor-highlight">Across the UK</span>
+        </h2>
+
+        <p class="lead mb-4 tutor-spotlight-lead">
+          Our tutors are experienced, friendly and great at breaking down tricky topics. Families from all across the UK trust us for supportive online lessons in every major subject including Maths, English, Sciences, Languages, Business and more.
+        </p>
+        <p class="lead mb-4 tutor-spotlight-lead">
+We tailor each lesson to match the UK curriculum and all exam boards, including WJEC, AQA, Edexcel, OCR, Eduqas and CAIE, helping students grow in confidence and achieve their best.        </p>
+
+        <div class="row g-4 mb-4 tutor-spotlight-stats">
+          <div class="col-md-4">
+            <div class="tutor-stat">
+              <div class="tutor-stat-label">Levels</div>
+              <div class="tutor-stat-value">KS1 to A Level</div>
+              <p class="tutor-stat-text mb-0">
+                Consistent support as students move through the key stages.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="tutor-stat">
+              <div class="tutor-stat-label">Subjects</div>
+              <div class="tutor-stat-value">Wide subject coverage</div>
+              <p class="tutor-stat-text mb-0">
+                From core subjects to Maths, Science, Business, Languages and
+                more, tailored to each student's needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="tutor-stat">
+              <div class="tutor-stat-label">Tutoring style</div>
+              <div class="tutor-stat-value">Supportive</div>
+              <p class="tutor-stat-text mb-0">
+                Lessons built around confidence, clarity and exam success.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="find-tutors-north-wales-uk.html"
+          class="btn btn-primary btn-cta tutor-spotlight-cta"
+        >
+          Browse tutor profiles
+        </a>
+      </div>
+
+      <!-- Right on desktop: image with badge -->
+      <!-- On mobile this comes first -->
+      <div class="col-lg-5 order-0 order-lg-1">
+        <div class="tutor-spotlight-image-wrapper">
+          <img
+  src="images/tutor-hero.jpg"
+  alt="Online tutoring session"
+  class="img-fluid tutor-spotlight-image"
+  width="800" height="800"   loading="lazy"
+  decoding="async">
+
+
+          <div class="tutor-spotlight-badge">
+            <p class="mb-1 tutor-badge-title">Personalised online lessons</p>
+            <p class="mb-0 tutor-badge-text">
+              KS1 · KS2 · KS3 · GCSE · A Level
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <!-- =================================
        COURSES SECTION
@@ -339,7 +530,8 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
 
         <div class="col-md-4">
           <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
-            <img src="images/maths-tutor-north-wales-2.jpg" alt="Science Tutoring"      class="card-img-top">
+            <img src="images/maths-tutor-north-wales-2.jpg" alt="Science Tutoring"      class="card-img-top"   loading="lazy"
+  decoding="async">
 
           <h3 class="fw-bold h4">Mathematics & Economics</h3>
             <p class="mb-0">
@@ -352,7 +544,8 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         <!-- Science -->
         <div class="col-md-4">
           <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
-            <img src="images/chemistry-tutor-north-wales-3.jpg" alt="Science Tutoring"      class="card-img-top">
+            <img src="images/chemistry-tutor-north-wales-3.webp" alt="Science Tutoring"      class="card-img-top"   loading="lazy"
+  decoding="async">
 
           <h3 class="fw-bold h4">Science</h3>
             <p class="mb-0">
@@ -365,7 +558,8 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         <!-- Exam Prep -->
         <div class="col-md-4">
           <div class="course-card shadow-sm p-4 text-center animate__animated animate__zoomIn">
-            <img src="images/physics-tutor-north-wales-3.jpg" alt="Exam Preparation"      class="card-img-top">
+            <img src="images/physics-tutor-north-wales-3.jpg" alt="Exam Preparation"      class="card-img-top"   loading="lazy"
+  decoding="async">
 
           <h3 class="fw-bold h4">Exam Prep</h3>
             <p class="mb-0">
@@ -390,7 +584,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
       <div class="we-cover-tile bg-mint">
         <i class="bi bi-layers-fill tile-icon"></i>
         <div>
-          <h5 class="fw-semibold mb-1">Key Stages</h5>
+<h3 class="fw-semibold mb-1">Key Stages</h3>
           <p class="mb-0">
             KS1 (5-7), KS2 (7-11), KS3 (11-14), GCSE (14-16), A-Level (16-18)
           </p>
@@ -401,7 +595,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
       <div class="we-cover-tile bg-pink">
         <i class="bi bi-lightbulb-fill tile-icon"></i>
         <div>
-          <h5 class="fw-semibold mb-1">Subjects</h5>
+          <h3 class="fw-semibold mb-1">Subjects</h3>
           <p class="mb-0">
             Mathematics, Economics, Chemistry, Biology, Physics, Further Maths, SATs and more
           </p>
@@ -412,7 +606,7 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
       <div class="we-cover-tile bg-purple">
         <i class="bi bi-award-fill tile-icon"></i>
         <div>
-          <h5 class="fw-semibold mb-1">Exam Boards</h5>
+          <h3 class="fw-semibold mb-1">Exam Boards</h3>
           <p class="mb-0">WJEC, AQA, Edexcel, OCR, Eduqas, & CAIE.</p>
         </div>
       </div>
@@ -434,6 +628,8 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
 
     </div>
   </section>
+
+
 
   <!-- =================================
        REMOTE TUTORING
@@ -470,10 +666,13 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         <div class="col-lg-6 mt-4 mt-lg-0 animate__animated animate__fadeInRight">
           <div class="remote-img rounded-3 overflow-hidden shadow-sm">
             <img
-              src="images/online-course-north-wales-tutoring.jpg"
-              alt="Remote Tutoring"
-              class="img-fluid"
-            />
+  src="images/online-course-north-wales-tutoring.jpg"
+  alt="Remote Tutoring"
+  class="img-fluid"
+  width="800" height="600"
+    loading="lazy"
+  decoding="async">
+
           </div>
         </div>
       </div>
@@ -550,7 +749,8 @@ Whether you’re in Bangor, Wrexham, or Llandudno, we provide engaging online an
         <img 
           src="images/approach-north-wales-tutoring.jpg" 
           alt="Personalized Tutoring Approach at North Wales Tutoring" 
-          style="max-width: 800px; max-height: 800px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);"
+          style="max-width: 800px; max-height: 800px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);"   loading="lazy"
+  decoding="async"
         />
       </div>
       <!-- Text Column -->
@@ -757,6 +957,7 @@ North Wales’ leading online tutors for GCSE, A-Level & SATs: personalised Math
         <ul class="list-unstyled footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="find-tutors-north-wales-uk.html">Our Tutors</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
