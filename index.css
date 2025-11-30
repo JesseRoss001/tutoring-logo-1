@@ -222,6 +222,8 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;                            
   margin-top: 3rem;
+   margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .courses-grid > .col-md-4 {

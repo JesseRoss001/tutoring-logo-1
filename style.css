@@ -469,3 +469,7 @@
   max-width: 850px;   /* tweak width if you’d like it wider/narrower */
   margin: 0 auto;     /* ← this does the actual centring */
 }
+
+html, body {
+  overflow-x: hidden !important;
+}
