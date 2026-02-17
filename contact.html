@@ -31,33 +31,14 @@
 
   
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN5W5PMKD1"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S5V5LRN8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-CN5W5PMKD1');
-
-  gtag('config', 'AW-16513767694');
-</script>
-
-<!-- Event snippet for Contact conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-16513767694/53BRCOn52swZEI6ysMI9',
-      'event_callback': callback
-  });
-  return false;
-}
+  gtag('config', 'G-K1S5V5LRN8');
 </script>
 
 <!-- Meta Pixel Code -->
@@ -356,8 +337,7 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
 
       <!-- CTA Button -->
       <a href="contact.html"
-         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3"
-         onclick="return gtag_report_conversion('contact.html');">
+         class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
         Book Your First Lesson
       </a>
     </div>
@@ -836,7 +816,6 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
         const json = await res.json();
 
         if (json.success) {
-            gtag('event','conversion',{'send_to':'AW-16513767694/53BRCOn52swZEI6ysMI9'});
 
           Swal.fire({
             icon: 'success',
