@@ -473,3 +473,6 @@
 html, body {
   overflow-x: hidden !important;
 }
+.course-cta-text {
+  color: #FF28A8;
+}
