@@ -102,17 +102,18 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="tutors.css" />
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": ["EducationalOrganization", "LocalBusiness"],
       "@id": "https://northwalestutoring.com/#org",
-      "name": "North Wales Tutoring",
+      "name": "North Wales Tutoring Group",
       "alternateName": [
-        "North Wales Tutoring Group",
-        "North Wales Tutoring UK"
+        "North Wales Tutoring",
+        "North Wales Tutoring UK",
+        "North Wales Tutoring Group UK"
       ],
       "url": "https://northwalestutoring.com/",
       "logo": "https://northwalestutoring.com/images/north%20wales%20tutoring%20logo-small.png",
@@ -162,14 +163,8 @@
         { "@type": "AdministrativeArea", "name": "Blaenau Gwent" }
       ],
       "serviceArea": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "North Wales (primary service area)"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Wales (nationwide service area)"
-        }
+        { "@type": "AdministrativeArea", "name": "North Wales (primary service area)" },
+        { "@type": "AdministrativeArea", "name": "Wales (nationwide service area)" }
       ],
       "knowsAbout": [
         "Online tutoring",
@@ -215,6 +210,22 @@
           "url": "https://wa.me/447480231362",
           "availableLanguage": ["en", "cy"]
         }
+      ],
+      "subOrganization": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://cumbriatutoring.com/#org",
+          "name": "Cumbria Tutoring",
+          "url": "https://cumbriatutoring.com/",
+          "parentOrganization": { "@id": "https://northwalestutoring.com/#org" }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://lincolnshiretutoring.com/#org",
+          "name": "Lincolnshire Tutoring",
+          "url": "https://lincolnshiretutoring.com/",
+          "parentOrganization": { "@id": "https://northwalestutoring.com/#org" }
+        }
       ]
     },
 
@@ -222,7 +233,7 @@
       "@type": "WebSite",
       "@id": "https://northwalestutoring.com/#website",
       "url": "https://northwalestutoring.com/",
-      "name": "North Wales Tutoring",
+      "name": "North Wales Tutoring Group",
       "publisher": { "@id": "https://northwalestutoring.com/#org" },
       "inLanguage": "en-GB"
     },
@@ -231,8 +242,8 @@
       "@type": "WebPage",
       "@id": "https://northwalestutoring.com/find-tutors-north-wales-uk.html#webpage",
       "url": "https://northwalestutoring.com/find-tutors-north-wales-uk.html",
-      "name": "Find Online Tutors in North Wales and Wales",
-      "description": "Browse online tutors for Primary, KS3, GCSE and A-Level across North Wales and Wales, including major exam boards such as WJEC, AQA, Edexcel, OCR, Eduqas and CAIE.",
+      "name": "Find UK Online Tutors (North Wales and Wales)",
+      "description": "Browse online tutors for Primary, KS3, GCSE and A-Level across North Wales and Wales, including WJEC, AQA, Edexcel, OCR, Eduqas and CAIE.",
       "isPartOf": { "@id": "https://northwalestutoring.com/#website" },
       "about": { "@id": "https://northwalestutoring.com/#org" },
       "inLanguage": "en-GB",
@@ -326,10 +337,10 @@
     {
       "@type": "ItemList",
       "@id": "https://northwalestutoring.com/find-tutors-north-wales-uk.html#tutors",
-      "name": "North Wales Tutoring Tutors",
-      "description": "Tutor directory for Primary, KS3, GCSE and A-Level online tutoring across North Wales and Wales.",
+      "name": "North Wales Tutoring Group Tutors",
+      "description": "Tutor directory for Primary, KS3, GCSE and A-Level online tutoring across North Wales, Wales and the UK.",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
-      "numberOfItems": 11,
+      "numberOfItems": 12,
       "url": "https://northwalestutoring.com/find-tutors-north-wales-uk.html",
       "itemListElement": [
         {
@@ -360,8 +371,7 @@
             "image": "https://northwalestutoring.com/images/james-bevan-history-tutor-nort-wales-tutoring.jpg",
             "worksFor": { "@id": "https://northwalestutoring.com/#org" },
             "knowsAbout": ["History", "Geography", "Religious Studies", "GCSE", "A-Level", "WJEC", "AQA", "Edexcel"],
-            "areaServed": ["Wales"],
-            "address": { "@type": "PostalAddress", "addressRegion": "Wales" }
+            "areaServed": ["Wales"]
           }
         },
         {
@@ -498,6 +508,21 @@
             "worksFor": { "@id": "https://northwalestutoring.com/#org" },
             "knowsAbout": ["Biology", "Chemistry", "Combined Science", "GCSE", "A-Level"],
             "areaServed": ["Wales", "United Kingdom"]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://northwalestutoring.com/tutor-ashley.html",
+          "item": {
+            "@type": "Person",
+            "@id": "https://northwalestutoring.com/#tutor-ashley-jones",
+            "name": "Ashley Jones",
+            "jobTitle": "English and Business Tutor",
+            "image": "https://northwalestutoring.com/images/ashley-tutor-north-wales-tutoring-uk.jpg",
+            "worksFor": { "@id": "https://northwalestutoring.com/#org" },
+            "knowsAbout": ["English Language", "English Literature", "Business", "KS3", "GCSE", "WJEC", "AQA", "Edexcel", "OCR", "Eduqas"],
+            "areaServed": ["North Wales", "Wales", "United Kingdom"]
           }
         }
       ]

@@ -57,6 +57,165 @@
 
   <!-- Page specific styles -->
   <link rel="stylesheet" href="tutor-profile.css" />
+
+<!-- Add this JSON-LD inside <head> (ideally after canonical). Tutor page: Howard -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["EducationalOrganization", "LocalBusiness"],
+      "@id": "https://northwalestutoring.com/#org",
+      "name": "North Wales Tutoring Group",
+      "alternateName": ["North Wales Tutoring", "North Wales Tutoring UK"],
+      "url": "https://northwalestutoring.com/",
+      "logo": "https://northwalestutoring.com/images/north%20wales%20tutoring%20logo-small.png",
+      "telephone": "+447480231362",
+      "email": ["northwales@nwttutoring.com", "enquiries@nwttutoring.com"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4 Ffordd Cerrig Mawr",
+        "addressLocality": "Caergelliog",
+        "postalCode": "LL65 3LU",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Wales" },
+        { "@type": "AdministrativeArea", "name": "North Wales" },
+        { "@type": "Country", "name": "United Kingdom" }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "enquiries",
+          "telephone": "+447480231362",
+          "email": "enquiries@nwttutoring.com",
+          "areaServed": "Wales",
+          "availableLanguage": ["en", "cy"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "WhatsApp",
+          "telephone": "+447480231362",
+          "url": "https://wa.me/447480231362",
+          "availableLanguage": ["en", "cy"]
+        }
+      ],
+      "subOrganization": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://cumbriatutoring.com/#org",
+          "name": "Cumbria Tutoring",
+          "url": "https://cumbriatutoring.com/",
+          "parentOrganization": { "@id": "https://northwalestutoring.com/#org" }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://lincolnshiretutoring.com/#org",
+          "name": "Lincolnshire Tutoring",
+          "url": "https://lincolnshiretutoring.com/",
+          "parentOrganization": { "@id": "https://northwalestutoring.com/#org" }
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/NorthWalesTutor",
+        "https://www.instagram.com/northwalestutoring",
+        "https://g.co/kgs/ws3Yd5u"
+      ]
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://northwalestutoring.com/#website",
+      "url": "https://northwalestutoring.com/",
+      "name": "North Wales Tutoring Group",
+      "publisher": { "@id": "https://northwalestutoring.com/#org" },
+      "inLanguage": "en-GB"
+    },
+
+    {
+      "@type": "ImageObject",
+      "@id": "https://northwalestutoring.com/images/howard-trueman-maths-tutor-north-wales-tutoring.jpg#image",
+      "url": "https://northwalestutoring.com/images/howard-trueman-maths-tutor-north-wales-tutoring.jpg",
+      "caption": "Howard Trueman – Maths and Further Maths tutor"
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://northwalestutoring.com/#tutor-howard-trueman",
+      "name": "Howard Trueman",
+      "jobTitle": "Maths and Further Maths Tutor",
+      "image": { "@id": "https://northwalestutoring.com/images/howard-trueman-maths-tutor-north-wales-tutoring.jpg#image" },
+      "worksFor": { "@id": "https://northwalestutoring.com/#org" },
+      "knowsAbout": [
+        "Maths",
+        "Further Maths",
+        "KS3",
+        "GCSE",
+        "A-Level",
+        "Exam technique",
+        "Edexcel",
+        "WJEC"
+      ],
+      "areaServed": ["North Wales", "Wales", "United Kingdom"],
+      "availableLanguage": ["en", "cy"],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Qualified Teacher Status (QTS)"
+        }
+      ]
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://northwalestutoring.com/#service-howard-online-tutoring",
+      "name": "Online Maths and Further Maths tutoring with Howard Trueman",
+      "serviceType": "Online one-to-one tutoring",
+      "provider": { "@id": "https://northwalestutoring.com/#org" },
+      "areaServed": ["North Wales", "Wales", "United Kingdom"],
+      "audience": [
+        { "@type": "EducationalAudience", "educationalRole": "student", "name": "KS3 students" },
+        { "@type": "EducationalAudience", "educationalRole": "student", "name": "GCSE students" },
+        { "@type": "EducationalAudience", "educationalRole": "student", "name": "A-Level students" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://wa.me/447480231362?text=Hi%20I'd%20like%20to%20book%20lessons%20with%20Howard",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://northwalestutoring.com/tutor-howard.html#webpage",
+      "url": "https://northwalestutoring.com/tutor-howard.html",
+      "name": "Howard | Maths & Further Maths Tutor (KS3, GCSE, A-Level) | North Wales Tutoring",
+      "description": "Book online Maths and Further Maths lessons with Howard Trueman (QTS). Calm, structured support for KS3, GCSE and A-Level, with English or Welsh lessons and exam technique help.",
+      "isPartOf": { "@id": "https://northwalestutoring.com/#website" },
+      "about": [
+        { "@id": "https://northwalestutoring.com/#org" },
+        { "@id": "https://northwalestutoring.com/#tutor-howard-trueman" }
+      ],
+      "mainEntity": { "@id": "https://northwalestutoring.com/#tutor-howard-trueman" },
+      "primaryImageOfPage": { "@id": "https://northwalestutoring.com/images/howard-trueman-maths-tutor-north-wales-tutoring.jpg#image" },
+      "inLanguage": "en-GB",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "@id": "https://northwalestutoring.com/tutor-howard.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://northwalestutoring.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Our Tutors & Pricing", "item": "https://northwalestutoring.com/find-tutors-north-wales-uk.html" },
+          { "@type": "ListItem", "position": 3, "name": "Howard Trueman", "item": "https://northwalestutoring.com/tutor-howard.html" }
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+
 </head>
 
 <body>
@@ -208,7 +367,7 @@ As a classroom teacher, I’m very familiar with exam boards (Edexcel, WJEC) and
 
             <div class="tutor-sidebar-row">
               <span class="tutor-sidebar-label">Levels</span>
-              <span class="tutor-sidebar-value">KS3· GCSE · A-Level</span>
+              <span class="tutor-sidebar-value">KS3 · GCSE · A-Level</span>
             </div>
 
             <div class="tutor-sidebar-row">
@@ -259,6 +418,11 @@ As a classroom teacher, I’m very familiar with exam boards (Edexcel, WJEC) and
               <p class="course-card-text">
                 Gentle, confidence-building support focusing on core skills and solid understanding.
               </p>
+              <p class="course-cta mt-3 mb-0">
+  <span class="course-cta-text">
+    Browse Primary & KS3 courses <i class="bi bi-arrow-right-short"></i>
+  </span>
+</p>
             </div>
           </div>
         </a>
@@ -276,6 +440,11 @@ As a classroom teacher, I’m very familiar with exam boards (Edexcel, WJEC) and
               <p class="course-card-text">
                 Structured GCSE support with clear explanations, past papers and targeted revision.
               </p>
+              <p class="course-cta mt-3 mb-0">
+  <span class="course-cta-text">
+    Browse GCSE courses <i class="bi bi-arrow-right-short"></i>
+  </span>
+</p>
             </div>
           </div>
         </a>
@@ -293,6 +462,11 @@ As a classroom teacher, I’m very familiar with exam boards (Edexcel, WJEC) and
               <p class="course-card-text">
                 Expert A-Level tuition for students aiming for top grades with strong exam technique.
               </p>
+              <p class="course-cta mt-3 mb-0">
+  <span class="course-cta-text">
+    Browse A-Level courses <i class="bi bi-arrow-right-short"></i>
+  </span>
+</p>
             </div>
           </div>
         </a>
