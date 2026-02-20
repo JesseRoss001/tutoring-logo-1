@@ -32,6 +32,8 @@
   --white: #FFFFFF;
 }
 
+
+
 /* ————— Navbar Gradient + Colors ————— */
 .navbar-custom {
   background: #fff;
@@ -62,6 +64,10 @@
     display: inline-flex;
     width: auto;
   }
+}
+
+.course-cta-text {
+  color: #FF28A8;
 }
 
 /* ————— “View All Mentors” pill (if still used) ————— */
@@ -472,7 +478,4 @@
 
 html, body {
   overflow-x: hidden !important;
-}
-.course-cta-text {
-  color: #FF28A8;
 }
