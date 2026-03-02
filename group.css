@@ -1,0 +1,411 @@
+/* group.css */
+/* Uses your brand variables from style.css:
+   --primary-color: #09096A (navy)
+   --accent-color:  #FF28A8 (pink)
+   --btn-hover:     #FF28A8 (pink hover)
+*/
+
+.group-page {
+  background: #fff;
+}
+
+.group-page h2 {
+  color: var(--primary-color);
+}
+
+/* Grid */
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* Card shell */
+.group-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  box-shadow: 0 14px 34px rgba(9, 9, 106, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.group-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(9, 9, 106, 0.14);
+}
+
+/* Media */
+.group-card__media {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.group-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tag on image */
+.group-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(9, 9, 106, 0.12);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 650;
+  font-size: 0.85rem;
+  color: #06171f;
+  backdrop-filter: blur(6px);
+}
+
+/* Body */
+.group-card__body {
+  padding: 1.25rem 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Title: lighter weight for long titles */
+.group-card__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #06171f;
+  margin: 0 0 0.8rem;
+  line-height: 1.3;
+}
+
+/* Meta pills */
+.group-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.95rem;
+}
+
+.group-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  background: #f6f7f9;
+  border: 1px solid rgba(9, 9, 106, 0.10);
+  color: #2f3b45;
+  font-size: 0.9rem;
+}
+
+.group-pill i {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+/* Description */
+.group-card__desc {
+  color: #4b5560;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  margin: 0 0 1.15rem;
+}
+
+/* Footer row */
+.group-card__footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.85rem;
+  border-top: 1px solid rgba(9, 9, 106, 0.08);
+}
+
+.group-tutor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.group-tutor__avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+}
+
+.group-tutor__avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fallback initial (shows only if image fails to load) */
+.group-tutor__initial{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 800;
+  background: var(--primary-color);
+}
+
+/* Hide initial when image is successfully loaded */
+.group-tutor__avatar img:not([src=""]) + .group-tutor__initial{
+  background: transparent;
+  color: transparent;
+}
+
+.group-tutor__info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.group-tutor__name {
+  font-weight: 700;
+  color: #06171f;
+  font-size: 0.95rem;
+}
+
+.group-tutor__role {
+  font-size: 0.82rem;
+  color: #6c757d;
+}
+
+.group-price {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.group-price__amount {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #06171f;
+}
+
+.group-price__unit {
+  font-size: 0.82rem;
+  color: #6c757d;
+}
+
+/* Actions */
+.group-card__actions {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+/* Primary button: brand PINK */
+.group-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.52rem 0.9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 0.92rem;
+  line-height: 1;
+  border: 1px solid rgba(255, 40, 168, 0.45);
+  background: var(--accent-color); /* pink */
+  color: #fff;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.group-btn:hover {
+  transform: translateY(-1px);
+  background: var(--primary-color); /* navy on hover */
+  border-color: rgba(9, 9, 106, 0.55);
+  color: #fff;
+}
+
+/* Secondary button: navy outline */
+.group-btn--outline {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: rgba(9, 9, 106, 0.30);
+}
+
+.group-btn--outline:hover {
+  background: rgba(9, 9, 106, 0.06);
+  border-color: rgba(9, 9, 106, 0.45);
+  color: var(--primary-color);
+}
+
+/* Placeholder card */
+.group-card__media--placeholder {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f2e8ff, #ffe8f1);
+}
+
+.group-card__placeholder {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.group-card__placeholder-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: rgba(9, 9, 106, 0.10);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.75rem;
+}
+
+.group-card__placeholder-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .group-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .group-grid {
+    grid-template-columns: 1fr;
+  }
+  .group-card__media {
+    height: 190px;
+  }
+}
+
+/* Buttons stack on very small screens */
+@media (max-width: 420px) {
+  .group-card__actions {
+    flex-wrap: wrap;
+  }
+  .group-btn {
+    width: 100%;
+  }
+}
+
+/* Compact meta row like tutor page */
+.group-card__meta--compact{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.9rem;
+  margin-bottom: 0.85rem;
+}
+
+.group-meta{
+  display:inline-flex;
+  align-items:center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  color: #5b6670;
+}
+
+.group-meta i{
+  color: var(--primary-color); /* purple/navy like tutor page */
+  font-size: 0.95rem;
+}
+
+/* Custom group card header */
+.group-card__media--custom{
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #efe7ff 0%, #fce7f3 100%);
+}
+
+.group-card__custom-hero{
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.group-card__custom-icon{
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(9, 9, 106, 0.10);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.75rem;
+}
+
+.group-card__custom-icon i{
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+/* Avatar stack (3 tutor photos) */
+.group-avatar-stack{
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 34px;
+  margin-right: 0.25rem;
+}
+
+.group-avatar-stack__img{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 10px 22px rgba(9, 9, 106, 0.12);
+}
+
+.group-avatar-stack__img + .group-avatar-stack__img{
+  margin-left: -12px;
+}
+
+/* Make sure tutor row aligns nicely with stacked avatars */
+.group-card--custom .group-tutor{
+  gap: 0.65rem;
+}
+
+/* GCSE / A-Level price styling refinement */
+.group-card--custom .group-price__amount {
+  font-weight: 500;      /* Not bold */
+  font-size: 1rem;       /* Slightly smaller */
+  letter-spacing: 0.2px;
+}
+
+.group-card--custom .group-price__unit {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #6c757d;
+}
+/* Replace tutor with badge style */
+.group-tutor--badge {
+  align-items: center;
+}
+
+.group-tutor__icon {
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #f59f00; /* warm highlight */
+}

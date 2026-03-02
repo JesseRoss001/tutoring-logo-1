@@ -561,11 +561,9 @@
   </div>
 </div>
 
-<!-- NAVBAR (same structure as courses page, only active link changed) -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
   <div class="container">
-
-    <!-- Brand -->
     <a class="navbar-brand d-flex align-items-center" href="/">
       <img src="images/north wales tutoring logo-small.png"
            alt="North Wales Tutoring Logo"
@@ -574,7 +572,6 @@
       <span class="fw-bold">North Wales Tutoring</span>
     </a>
 
-    <!-- Toggler -->
     <button
       class="navbar-toggler border-0"
       type="button"
@@ -582,36 +579,35 @@
       data-bs-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Links + CTA -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav mx-auto align-items-center">
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="find-tutors-north-wales-uk.html">Our Tutors & Pricing</a>
+          <a class="nav-link" href="find-tutors-north-wales-uk.html">Our Tutors</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" href="courses.html">Courses</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="group-tutoring-north-wales-uk.html">Group Class</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="wjec-tutoring-in-wales-uk.html">WJEC Tutoring</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
       </ul>
 
-      <!-- CTA Button -->
       <a href="contact.html"
          class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-3">
         Book Your First Lesson
@@ -672,6 +668,106 @@
 </section>
 
     <div class="row g-4" id="tutors-container">
+
+      <div class="col-md-4 tutor-item"
+     data-category="ks3 gcse alevel maths furthermaths">
+  <article class="tutor-card h-100">
+
+    <div class="tutor-card-image">
+      <img src="images/claire-north-wales-tutoring-tutor.jpg"
+           alt="Claire - Primary tutor"
+           class="img-fluid"
+           loading="lazy"
+     decoding="async" />
+    </div>
+
+    <div class="tutor-card-body d-flex flex-column">
+
+      <span class="tutor-tag">Primary · KS3 </span>
+
+      <h3 class="tutor-name mb-1">Claire Cooper</h3>
+
+      <p class="tutor-location mb-2">
+        <i class="bi bi-geo-alt-fill" style="color:#a611ff;"></i>
+        North Wales
+        &nbsp;·&nbsp;
+        <i class="bi bi-camera-video-fill" style="color:#a611ff;"></i>
+        Online Tutor
+      </p>
+
+      <p class="tutor-summary mb-3">
+        Claire is a highly experienced and reliable former primary school teacher with 21 years in primary education, including 18 years at Christ Church, Moreton. She has extensive curriculum knowledge, strong adaptive teaching skills, and has held several leadership roles including English Lead, PE Lead, KS2 Lead, and member of the Senior Leadership Team.
+      </p>
+
+      <div class="tutor-meta-row mb-3">
+        <span class="tutor-badge">Primary</span>
+        <span class="tutor-badge">Maths</span>
+        <span class="tutor-badge">English</span>
+        <span class="tutor-badge">Biology</span>
+        <span class="tutor-badge">QTS</span>
+      </div>
+
+      <div class="tutor-bottom-row mt-auto">
+        <span class="tutor-price">Starting from £35/hr</span>
+        <a href="tutor-claire.html"
+           class="btn btn-sm btn-outline-dark tutor-cta">
+          About Claire
+        </a>
+      </div>
+
+    </div>
+
+  </article>
+</div>
+
+            <div class="col-md-4 tutor-item"
+     data-category="ks3 gcse alevel maths furthermaths">
+  <article class="tutor-card h-100">
+
+    <div class="tutor-card-image">
+      <img src="images/lucy-north-wales-tutoring-tutor.jpg"
+           alt="Lucy - English, Maths and Physics tutor"
+           class="img-fluid"
+           loading="lazy"
+     decoding="async" />
+    </div>
+
+    <div class="tutor-card-body d-flex flex-column">
+
+      <span class="tutor-tag">Primary · KS3 · GCSE · A-Level</span>
+
+      <h3 class="tutor-name mb-1">Lucy Blanchard</h3>
+
+      <p class="tutor-location mb-2">
+        <i class="bi bi-geo-alt-fill" style="color:#a611ff;"></i>
+        United Kingdom
+        &nbsp;·&nbsp;
+        <i class="bi bi-camera-video-fill" style="color:#a611ff;"></i>
+        Online Tutor
+      </p>
+
+      <p class="tutor-summary mb-3">
+        Lucy is an experienced tutor of A-Level Maths, AS-Level Physics, GCSE Maths and Science, with a strong focus on tailoring lessons to each student’s needs through adaptive pacing and custom exam-style questions.
+      </p>
+
+      <div class="tutor-meta-row mb-3">
+        <span class="tutor-badge">English Language & Literature</span>
+        <span class="tutor-badge">Maths</span>
+        <span class="tutor-badge">Science</span>
+      </div>
+
+      <div class="tutor-bottom-row mt-auto">
+        <span class="tutor-price">Starting from £25/hr</span>
+        <a href="tutor-lucy.html"
+           class="btn btn-sm btn-outline-dark tutor-cta">
+          About Lucy
+        </a>
+      </div>
+
+    </div>
+
+  </article>
+</div>
 
       <div class="col-md-4 tutor-item"
      data-category="ks3 gcse alevel maths furthermaths">
@@ -1307,7 +1403,7 @@
   </div>
 </section>
 
-<!-- FOOTER (same as courses footer) -->
+<!-- FOOTER (global footer) -->
 <footer class="footer-section">
   <div class="container">
     <div class="row gy-4">
@@ -1331,7 +1427,6 @@
           </a>
         </div>
       </div>
-
       <div class="col-md-2">
         <h6 class="footer-title">Quick Links</h6>
         <ul class="list-unstyled footer-links">
@@ -1339,6 +1434,8 @@
           <li><a href="about.html">About</a></li>
           <li><a href="find-tutors-north-wales-uk.html">Our Tutors</a></li>
           <li><a href="courses.html">Courses</a></li>
+          <li><a href="group-tutoring-north-wales-uk.html">Group Class</a></li>
+          <li><a href="wjec-tutoring-in-wales-uk.html">WJEC Tutoring</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
