@@ -486,3 +486,14 @@
 html, body {
   overflow-x: clip;
 }
+
+.footer-section p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-section p a:hover,
+.footer-section p a:focus {
+  color: #FF28A8;
+  text-decoration: underline;
+}
