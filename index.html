@@ -225,8 +225,7 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
 <!-- /COOKIE BANNER -->
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
-  <div class="container">
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-custom sticky-top py-3">  <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="/">
       <img src="images/north wales tutoring logo-small.png"
            alt="North Wales Tutoring Logo"
@@ -257,14 +256,19 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
         <li class="nav-item">
           <a class="nav-link" href="find-tutors-north-wales-uk.html">Our Tutors</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="courses.html">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="group-tutoring-north-wales-uk.html">Group Class</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="wjec-tutoring-in-wales-uk.html">WJEC Tutoring</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="coursesDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Courses
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="courses.html">1-to-1 Tutoring</a></li>
+            <li><a class="dropdown-item" href="group-tutoring-north-wales-uk.html">Group Tutoring</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact Us</a>
@@ -768,6 +772,90 @@ We tailor each lesson to match the UK curriculum and all exam boards, including 
 </p>
 
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================
+     WJEC TUTORING IN WALES
+===================================== -->
+<section id="wjec-wales" class="wjec-wales-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      
+      <div class="col-lg-6">
+        <div class="wjec-wales-image-wrap">
+          <img
+            src="images/online-tutoring-in-wales-wjec-tutoring.jpg"
+            alt="Online WJEC tutors in Wales for GCSE and A Level students"
+            class="img-fluid wjec-wales-image"
+            width="900"
+            height="700"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="section-title mb-4">
+          <h2><i class="bi bi-mortarboard-fill me-2"></i>Online WJEC Tutors Across Wales</h2>
+          <p class="section-subtitle">
+            Expert WJEC tutoring for students in North Wales, Cardiff, Swansea, Newport, Wrexham and across all of Wales.
+          </p>
+        </div>
+
+        <p class="mb-4">
+          North Wales Tutoring provides expert online WJEC tutoring in Wales for
+          GCSE, AS and A Level students. We support learners across the country with
+          structured one-to-one lessons in Maths, English, Biology, Chemistry, Physics, Geography, History, Religious Studies, French, Spanish and German
+          using targeted teaching, WJEC past paper practice and exam-focused guidance.
+        </p>
+
+        <p class="mb-4">
+          Whether you are looking for a WJEC GCSE tutor, a
+          WJEC A Level tutor, or an online tutor in Wales who understands
+          the demands of the WJEC specification, we match families with experienced tutors who build
+          confidence, improve technique and help students prepare properly for exams.
+        </p>
+
+        <div class="row g-3 mb-4 wjec-points">
+          <div class="col-sm-6">
+            <div class="wjec-point-card">
+              <i class="bi bi-check2-circle"></i>
+              <span>WJEC GCSE &amp; A Level support</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="wjec-point-card">
+              <i class="bi bi-check2-circle"></i>
+              <span>Maths, English, Science, Humanities, French, Spanish and German tutoring</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="wjec-point-card">
+              <i class="bi bi-check2-circle"></i>
+              <span>Past papers &amp; exam technique</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="wjec-point-card">
+              <i class="bi bi-check2-circle"></i>
+              <span>Online lessons across Wales</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="wjec-tutoring-in-wales-uk.html" class="btn btn-dark rounded-pill px-4 py-3">
+            Explore WJEC Tutoring
+          </a>
+          <a href="contact.html" class="btn btn-outline-dark rounded-pill px-4 py-3">
+            Book Your First Lesson
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

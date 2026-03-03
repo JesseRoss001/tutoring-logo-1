@@ -260,10 +260,7 @@
 
 <body class="wales-page">
 
-<!-- Navigation -->
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
-  <div class="container">
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-custom sticky-top py-3">  <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="/">
       <img src="images/north wales tutoring logo-small.png"
            alt="North Wales Tutoring Logo"
@@ -294,14 +291,19 @@
         <li class="nav-item">
           <a class="nav-link" href="find-tutors-north-wales-uk.html">Our Tutors</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="courses.html">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="group-tutoring-north-wales-uk.html">Group Class</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="wjec-tutoring-in-wales-uk.html">WJEC Tutoring</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="coursesDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Courses
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="courses.html">1-to-1 Tutoring</a></li>
+            <li><a class="dropdown-item" href="group-tutoring-north-wales-uk.html">Group Tutoring</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact Us</a>
@@ -315,6 +317,7 @@
     </div>
   </div>
 </nav>
+
 
 <!-- Hero Section --> 
 <section class="ui-hero py-5">
@@ -497,7 +500,7 @@ Our GCSE tutoring is ideal for students who need a reliable GCSE tutor in Wales 
   </div>
 </section>
 
-<!-- FOOTER (same as courses footer) -->
+<!-- FOOTER (global footer) -->
 <footer class="footer-section">
   <div class="container">
     <div class="row gy-4">
