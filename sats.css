@@ -1,0 +1,852 @@
+body.sats-page {
+  --sats-navy: var(--primary-color, #09096A);
+  --sats-pink: var(--accent-color, #FF28A8);
+  --sats-dark: #06171f;
+  --sats-text: #47515e;
+  --sats-purple: var(--bg-purple, #F2E8FF);
+  --sats-pink-soft: var(--bg-pink, #FFE8F1);
+  --sats-green: var(--bg-green, #E8FFF2);
+  --sats-yellow: var(--bg-yellow, #FFF8E8);
+  --sats-light: #fafafa;
+  --sats-white: #ffffff;
+  --sats-border: rgba(9, 9, 106, 0.11);
+  --sats-shadow: 0 18px 48px rgba(9, 9, 106, 0.12);
+
+  color: var(--sats-dark);
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.sats-page main { overflow: hidden; }
+.sats-page h1,
+.sats-page h2,
+.sats-page h3 { color: var(--sats-dark); }
+
+.sats-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .42rem .82rem;
+  color: var(--sats-navy);
+  background: var(--sats-purple);
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .035em;
+}
+
+.sats-pill::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--sats-pink);
+  border-radius: 50%;
+}
+
+.sats-pill.light {
+  color: #fff;
+  background: rgba(255,255,255,.12);
+}
+
+.sats-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: .82rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, color .22s ease;
+}
+
+.sats-btn-primary {
+  color: #fff;
+  background: var(--sats-pink);
+  box-shadow: 0 12px 28px rgba(255,40,168,.2);
+}
+.sats-btn-primary:hover { color:#fff; background:var(--sats-navy); transform:translateY(-2px); }
+
+.sats-btn-outline {
+  color: var(--sats-navy);
+  background: #fff;
+  border: 2px solid var(--sats-navy);
+}
+.sats-btn-outline:hover { color:#fff; background:var(--sats-navy); transform:translateY(-2px); }
+
+.sats-btn-white {
+  color: var(--sats-navy);
+  background: #fff;
+}
+.sats-btn-white:hover { color:#fff; background:var(--sats-pink); transform:translateY(-2px); }
+
+.sats-btn-pink {
+  color:#fff;
+  background:var(--sats-pink);
+}
+.sats-btn-pink:hover { color:#fff; background:#fff; color:var(--sats-navy); transform:translateY(-2px); }
+
+/* Hero */
+.sats-hero {
+  position: relative;
+  padding: 5.5rem 0 4.5rem;
+  background:
+    linear-gradient(120deg, #fff 0 55%, var(--sats-purple) 55% 100%);
+}
+
+.sats-hero::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  top: 70px;
+  width: 110px;
+  height: 110px;
+  border: 18px solid var(--sats-pink-soft);
+  border-radius: 50%;
+}
+
+.sats-hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0,1.05fr) minmax(420px,.95fr);
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.sats-hero-copy h1 {
+  max-width: 760px;
+  margin: 1.2rem 0 1.4rem;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  line-height: 1.03;
+  letter-spacing: -.045em;
+}
+
+.sats-hero-copy h1 span {
+  color: var(--sats-navy);
+  background: linear-gradient(transparent 74%, var(--sats-pink-soft) 74%);
+}
+
+.sats-lead {
+  max-width: 700px;
+  color: var(--sats-text);
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.sats-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  margin-top: 1.8rem;
+}
+
+.sats-mini-proof {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .7rem;
+  margin-top: 1.8rem;
+}
+
+.sats-mini-proof > div {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem;
+  background:#fff;
+  border:1px solid var(--sats-border);
+  border-radius:14px;
+  box-shadow:0 8px 22px rgba(9,9,106,.05);
+}
+
+.sats-mini-proof i { color:var(--sats-pink); font-size:1.2rem; }
+.sats-mini-proof span { color:var(--sats-text); font-size:.84rem; line-height:1.35; }
+.sats-mini-proof strong { color:var(--sats-dark); display:block; }
+
+.sats-hero-visual {
+  position: relative;
+  min-height: 600px;
+}
+
+.sats-photo-frame {
+  position: absolute;
+  inset: 25px 30px 35px 0;
+  padding: 14px;
+  background:#fff;
+  border-radius:42% 24px 42% 24px;
+  box-shadow:var(--sats-shadow);
+}
+
+.sats-photo-frame img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:42% 18px 42% 18px;
+}
+
+.sats-score-card {
+  position:absolute;
+  right:0;
+  bottom:70px;
+  display:flex;
+  align-items:center;
+  gap:.85rem;
+  width:280px;
+  padding:1rem;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 18px 42px rgba(9,9,106,.16);
+}
+
+.score-number {
+  display:grid;
+  place-items:center;
+  width:68px;
+  height:68px;
+  flex:0 0 68px;
+  color:#fff;
+  background:var(--sats-navy);
+  border-radius:18px;
+  font-size:1.3rem;
+  font-weight:800;
+}
+
+.sats-score-card strong,
+.sats-score-card small { display:block; }
+.sats-score-card small { color:var(--sats-text); margin-top:.2rem; }
+
+.sats-subject-badge {
+  position:absolute;
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+  padding:.6rem .85rem;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow:0 10px 26px rgba(9,9,106,.12);
+}
+
+.sats-subject-badge.maths {
+  left:-18px;
+  top:70px;
+  color:var(--sats-navy);
+  background:var(--sats-yellow);
+}
+.sats-subject-badge.reading {
+  right:15px;
+  top:22px;
+  color:var(--sats-navy);
+  background:var(--sats-green);
+}
+
+/* Numbers */
+.sats-numbers {
+  background:var(--sats-navy);
+}
+.sats-number-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.sats-number-grid > div {
+  padding:1.35rem 1rem;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.14);
+}
+.sats-number-grid > div:last-child { border-right:0; }
+.sats-number-grid strong { display:block; color:#fff; font-size:1.25rem; }
+.sats-number-grid span { display:block; margin-top:.15rem; color:rgba(255,255,255,.7); font-size:.86rem; }
+
+/* Path */
+.sats-path { background:#fff; }
+.sats-section-heading {
+  max-width:780px;
+  margin:0 auto 3rem;
+  text-align:center;
+}
+.sats-section-heading h2 {
+  margin:1rem 0;
+  font-size:clamp(2.2rem,4vw,3.7rem);
+}
+.sats-section-heading p { color:var(--sats-text); font-size:1.05rem; }
+
+.sats-path-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+}
+.sats-path-grid article {
+  position:relative;
+  min-height:285px;
+  padding:1.6rem;
+  border:1px solid var(--sats-border);
+  border-radius:24px;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(9,9,106,.07);
+}
+.sats-path-grid article:nth-child(2) { background:var(--sats-purple); }
+.sats-path-grid article:nth-child(3) { background:var(--sats-pink-soft); }
+.sats-path-grid article:nth-child(4) { background:var(--sats-green); }
+
+.sats-path-grid article > span {
+  position:absolute;
+  right:1.2rem;
+  top:1rem;
+  color:rgba(9,9,106,.12);
+  font-size:2.5rem;
+  font-weight:800;
+}
+.sats-path-grid article > i {
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:var(--sats-navy);
+  border-radius:16px;
+  font-size:1.3rem;
+  margin-bottom:1.4rem;
+}
+.sats-path-grid h3 { font-size:1.22rem; font-weight:750; }
+.sats-path-grid p { color:var(--sats-text); line-height:1.65; }
+
+/* Subjects */
+.sats-subjects {
+  background:var(--sats-navy);
+  color:#fff;
+}
+.sats-subject-intro h2 { color:#fff; margin:1rem 0; font-size:clamp(2.1rem,4vw,3.4rem); }
+.sats-subject-intro p { color:rgba(255,255,255,.75); line-height:1.7; margin-bottom:1.5rem; }
+
+.sats-subject-stack { display:grid; gap:.85rem; }
+.sats-subject-stack article {
+  display:grid;
+  grid-template-columns:58px 1fr;
+  gap:1rem;
+  align-items:start;
+  padding:1.25rem;
+  background:#fff;
+  border-radius:20px;
+}
+.subject-icon {
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:var(--sats-pink);
+  border-radius:15px;
+  font-size:1.25rem;
+}
+.sats-subject-stack article span {
+  color:var(--sats-pink);
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.sats-subject-stack h3 { margin:.15rem 0 .35rem; font-size:1.15rem; font-weight:750; }
+.sats-subject-stack p { color:var(--sats-text); line-height:1.55; margin:0; }
+
+/* Papers */
+.sats-papers { background:#fff; }
+.sats-paper-visual {
+  position:relative;
+  max-width:560px;
+  padding:18px;
+  background:var(--sats-purple);
+  border-radius:30px;
+  box-shadow:var(--sats-shadow);
+}
+.sats-paper-visual img {
+  display:block;
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  border-radius:22px;
+}
+.paper-tab {
+  position:absolute;
+  left:-20px;
+  padding:.55rem .9rem;
+  color:var(--sats-navy);
+  background:#fff;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow:0 10px 24px rgba(9,9,106,.12);
+}
+.tab-one { top:70px; }
+.tab-two { top:135px; background:var(--sats-yellow); }
+.tab-three { top:200px; background:var(--sats-green); }
+
+.sats-paper-list { display:grid; gap:.85rem; margin-top:1.5rem; }
+.sats-paper-list > div { display:flex; gap:.75rem; align-items:flex-start; }
+.sats-paper-list i { color:var(--sats-pink); margin-top:.15rem; }
+.sats-paper-list span { color:var(--sats-text); }
+
+/* Wales */
+.sats-wales { background:var(--sats-purple); }
+.sats-wales-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);
+  gap:2rem;
+  align-items:stretch;
+}
+.sats-wales-copy {
+  padding:2.4rem;
+  color:#fff;
+  background:var(--sats-navy);
+  border-radius:30px;
+}
+.sats-wales-copy h2 { color:#fff; margin:1rem 0; font-size:clamp(2rem,3.6vw,3.2rem); }
+.sats-wales-copy p { color:rgba(255,255,255,.76); line-height:1.7; }
+
+.sats-location-tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.3rem; }
+.sats-location-tags span {
+  padding:.42rem .72rem;
+  color:#fff;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  font-size:.82rem;
+}
+
+.sats-wales-card {
+  padding:2.4rem;
+  background:#fff;
+  border-radius:30px;
+  box-shadow:var(--sats-shadow);
+}
+.sats-wales-card > i { color:var(--sats-pink); font-size:2.1rem; }
+.sats-wales-card h3 { margin:1rem 0; font-size:1.55rem; }
+.sats-wales-card ul { list-style:none; padding:0; margin:0 0 1.5rem; }
+.sats-wales-card li { display:flex; gap:.6rem; margin-bottom:.85rem; color:var(--sats-text); }
+.sats-wales-card li i { color:var(--sats-pink); }
+
+/* Standard */
+.sats-standard { background:#fff; }
+.sats-standard-card {
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:2rem;
+  align-items:center;
+  padding:2.5rem;
+  background:linear-gradient(135deg,var(--sats-yellow),#fff);
+  border:1px solid var(--sats-border);
+  border-radius:30px;
+  box-shadow:0 14px 40px rgba(9,9,106,.08);
+}
+.standard-score {
+  width:150px;
+  height:150px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:var(--sats-pink);
+  border:14px solid #fff;
+  border-radius:50%;
+  box-shadow:0 12px 28px rgba(255,40,168,.2);
+  font-size:2.6rem;
+  font-weight:800;
+}
+.standard-copy h2 { margin:.8rem 0; font-size:clamp(2rem,3.4vw,3rem); }
+.standard-copy p { color:var(--sats-text); line-height:1.7; margin:0; }
+
+/* FAQ */
+.sats-faq { background:var(--sats-light); }
+.sats-page .faq-title { color:var(--sats-dark); }
+.sats-page .faq-sub { color:var(--sats-text); }
+.sats-page .faq-accordion { max-width:900px; }
+.sats-page .faq-accordion .accordion-item {
+  border:1px solid var(--sats-border);
+  border-radius:16px;
+  margin-bottom:.9rem;
+  box-shadow:0 8px 22px rgba(9,9,106,.05);
+}
+.sats-page .faq-accordion .accordion-button {
+  color:var(--sats-dark);
+  background:#fff;
+}
+.sats-page .faq-accordion .accordion-button:not(.collapsed) {
+  color:var(--sats-navy);
+  background:var(--sats-purple);
+}
+.sats-page .faq-accordion .accordion-body { color:var(--sats-text); }
+
+/* Final CTA */
+.sats-final { background:#fff; }
+.sats-final-card {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 310px;
+  gap:2.5rem;
+  align-items:center;
+  padding:3.2rem;
+  color:#fff;
+  background:
+    radial-gradient(circle at 88% 15%, rgba(255,40,168,.28), transparent 26%),
+    var(--sats-navy);
+  border-radius:32px;
+  box-shadow:0 22px 55px rgba(9,9,106,.2);
+}
+.sats-final-card h2 { color:#fff; margin:.8rem 0; font-size:clamp(2rem,3.6vw,3.3rem); }
+.sats-final-card p { color:rgba(255,255,255,.76); line-height:1.65; margin:0; }
+.sats-final-actions { display:flex; flex-direction:column; gap:.8rem; }
+.sats-final-actions .sats-btn { width:100%; white-space:nowrap; }
+
+@media (max-width: 991.98px) {
+  .sats-hero { background:linear-gradient(180deg,#fff 0 56%,var(--sats-purple) 56% 100%); }
+  .sats-hero-grid { grid-template-columns:1fr; gap:2rem; }
+  .sats-hero-visual { min-height:540px; max-width:680px; width:100%; margin:0 auto; }
+  .sats-path-grid { grid-template-columns:repeat(2,1fr); }
+  .sats-wales-grid { grid-template-columns:1fr; }
+  .sats-final-card { grid-template-columns:1fr; }
+  .sats-final-actions { flex-direction:row; flex-wrap:wrap; }
+  .sats-final-actions .sats-btn { width:auto; }
+}
+
+@media (max-width: 767.98px) {
+  .sats-hero,
+  .sats-path,
+  .sats-subjects,
+  .sats-papers,
+  .sats-wales,
+  .sats-standard,
+  .sats-final { text-align:center; }
+
+  .sats-hero { padding-top:3.5rem; }
+  .sats-hero-copy h1 { font-size:2.4rem; }
+  .sats-actions,
+  .sats-mini-proof { justify-content:center; }
+  .sats-mini-proof { grid-template-columns:1fr; }
+  .sats-mini-proof > div { text-align:left; }
+
+  .sats-hero-visual { min-height:auto; }
+  .sats-photo-frame { position:relative; inset:auto; height:390px; }
+  .sats-score-card { position:relative; right:auto; bottom:auto; margin:-40px auto 0; text-align:left; }
+  .sats-subject-badge { display:none; }
+
+  .sats-number-grid { grid-template-columns:repeat(2,1fr); }
+  .sats-number-grid > div { border-bottom:1px solid rgba(255,255,255,.14); }
+  .sats-number-grid > div:nth-child(2) { border-right:0; }
+
+  .sats-path-grid { grid-template-columns:1fr; }
+  .sats-path-grid article { text-align:center; }
+  .sats-path-grid article > i { margin-left:auto; margin-right:auto; }
+
+  .sats-subject-stack article { text-align:left; }
+  .sats-paper-visual { margin:0 auto; }
+  .sats-paper-visual img { height:360px; }
+  .paper-tab { display:none; }
+  .sats-paper-list,
+  .sats-wales-card ul { text-align:left; }
+
+  .sats-standard-card { grid-template-columns:1fr; }
+  .standard-score { margin:0 auto; }
+
+  .sats-final-actions { flex-direction:column; }
+  .sats-final-actions .sats-btn { width:100%; white-space:normal; }
+}
+
+@media (max-width: 480px) {
+  .sats-btn { width:100%; }
+  .sats-photo-frame { height:310px; }
+  .sats-wales-copy,
+  .sats-wales-card,
+  .sats-final-card { padding:2rem 1.2rem; }
+}
+
+
+/* =========================================================
+   WALES LOCATION SECTION BALANCE FIX
+========================================================= */
+
+.sats-wales-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+  align-items: stretch;
+}
+
+.sats-wales-copy,
+.sats-wales-card {
+  min-height: 100%;
+}
+
+.sats-wales-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sats-wales-card h3 {
+  max-width: 420px;
+}
+
+.sats-wales-card ul {
+  margin-bottom: 1.75rem;
+}
+
+.sats-wales-card .sats-btn {
+  align-self: flex-start;
+  width: auto;
+  min-width: 270px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+  .sats-wales-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sats-wales-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sats-wales-card {
+    min-height: 0;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sats-wales-card {
+    align-items: center;
+  }
+
+  .sats-wales-card .sats-btn {
+    align-self: center;
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   ENHANCED WALES LOCATION CARD
+   Replaces the plain white card with a more engaging,
+   conversion-focused layout and a clear CTA button.
+========================================================= */
+
+.sats-wales-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2.2rem;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255,40,168,.12), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #fffafd 100%);
+  border: 1px solid rgba(9,9,106,.10);
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(9,9,106,.12);
+}
+
+.sats-wales-card::before {
+  content: "";
+  position: absolute;
+  right: -54px;
+  top: -54px;
+  width: 150px;
+  height: 150px;
+  background: var(--sats-pink-soft);
+  border-radius: 50%;
+  opacity: .75;
+}
+
+.sats-wales-card-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: 1.1rem;
+}
+
+.sats-wales-card-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--sats-pink);
+  border-radius: 16px;
+  font-size: 1.35rem;
+  box-shadow: 0 10px 24px rgba(255,40,168,.22);
+}
+
+.sats-wales-card-label {
+  padding: .42rem .72rem;
+  color: var(--sats-navy);
+  background: var(--sats-purple);
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 750;
+}
+
+.sats-wales-card h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 460px;
+  margin: 0 0 .65rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.sats-wales-card-intro {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.35rem;
+  color: var(--sats-text);
+  line-height: 1.6;
+}
+
+.sats-wales-benefits {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: .8rem;
+  margin-bottom: 1.35rem;
+}
+
+.sats-wales-benefits > div {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: .8rem;
+  align-items: start;
+  padding: .85rem;
+  background: #fff;
+  border: 1px solid rgba(9,9,106,.08);
+  border-radius: 15px;
+  box-shadow: 0 8px 22px rgba(9,9,106,.045);
+}
+
+.sats-wales-benefits .benefit-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: var(--sats-pink);
+  background: var(--sats-pink-soft);
+  border-radius: 12px;
+}
+
+.sats-wales-benefits strong,
+.sats-wales-benefits small {
+  display: block;
+}
+
+.sats-wales-benefits strong {
+  color: var(--sats-dark);
+  font-size: .94rem;
+}
+
+.sats-wales-benefits small {
+  margin-top: .13rem;
+  color: var(--sats-text);
+  line-height: 1.4;
+}
+
+.sats-wales-cta-box {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding: 1.15rem;
+  background: linear-gradient(135deg, var(--sats-pink-soft), var(--sats-purple));
+  border: 1px solid rgba(255,40,168,.16);
+  border-radius: 20px;
+}
+
+.sats-wales-cta-box > div {
+  margin-bottom: .85rem;
+}
+
+.sats-wales-cta-box strong,
+.sats-wales-cta-box small {
+  display: block;
+}
+
+.sats-wales-cta-box strong {
+  color: var(--sats-dark);
+  font-size: 1rem;
+}
+
+.sats-wales-cta-box small {
+  margin-top: .16rem;
+  color: var(--sats-text);
+  line-height: 1.4;
+}
+
+.sats-wales-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 52px;
+  padding: .78rem .9rem .78rem 1.15rem;
+  color: #fff;
+  background: var(--sats-pink);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(255,40,168,.24);
+  font-weight: 750;
+  text-decoration: none;
+  transition: transform .22s ease, background-color .22s ease, box-shadow .22s ease;
+}
+
+.sats-wales-cta i {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: var(--sats-pink);
+  background: #fff;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.sats-wales-cta:hover,
+.sats-wales-cta:focus {
+  color: #fff;
+  background: var(--sats-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(9,9,106,.22);
+}
+
+.sats-wales-cta:hover i,
+.sats-wales-cta:focus i {
+  color: var(--sats-navy);
+}
+
+@media (max-width: 991.98px) {
+  .sats-wales-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sats-wales-card {
+    text-align: left;
+  }
+
+  .sats-wales-card-top {
+    justify-content: flex-start;
+  }
+
+  .sats-wales-cta {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .sats-wales-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .sats-wales-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .sats-wales-cta {
+    font-size: .9rem;
+  }
+}
