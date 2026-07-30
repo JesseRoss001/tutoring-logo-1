@@ -1,129 +1,223 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
 
- <url>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+
+  <!-- MAIN WEBSITE PAGES -->
+
+  <url>
     <loc>https://northwalestutoring.com/</loc>
     <lastmod>2026-04-15T15:10:44+00:00</lastmod>
     <priority>1.00</priority>
   </url>
-  <url>
-    <loc>https://northwalestutoring.com/cookie-policy.html</loc>
-    <lastmod>2026-04-15T15:10:43+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+
   <url>
     <loc>https://northwalestutoring.com/about.html</loc>
     <lastmod>2026-04-15T15:10:43+00:00</lastmod>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://northwalestutoring.com/find-tutors-north-wales-uk.html</loc>
-    <lastmod>2026-04-15T15:10:43+00:00</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://northwalestutoring.com/courses.html</loc>
     <lastmod>2026-04-15T15:10:43+00:00</lastmod>
-    <priority>0.80</priority>7
+    <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://northwalestutoring.com/group-tutoring-north-wales-uk.html</loc>
     <lastmod>2026-04-15T15:10:43+00:00</lastmod>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://northwalestutoring.com/contact.html</loc>
     <lastmod>2026-04-15T15:10:44+00:00</lastmod>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://northwalestutoring.com/wjec-tutoring-in-wales-uk.html</loc>
     <lastmod>2026-04-15T15:10:59+00:00</lastmod>
     <priority>0.80</priority>
   </url>
-  <url>
-    <loc>https://northwalestutoring.com/privacy.html</loc>
-    <lastmod>2026-04-15T15:10:44+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-solomon.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-claire.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-lucy.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-howard.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-robert.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-sihaam.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-nic.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-john.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-muskan.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-martin.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-eshal.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-aimee.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://northwalestutoring.com/tutor-mahima.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
+
+
+  <!-- EXAM PREPARATION PAGES -->
+
   <url>
     <loc>https://northwalestutoring.com/online-11-plus-tutoring-north-wales-uk.html</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://northwalestutoring.com/online-sats-tutoring-north-wales-uk.html</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://northwalestutoring.com/online-ucat-tutoring-north-wales-uk.html</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.90</priority>
+  </url>
+
+
+  <!-- EXISTING TUTOR PROFILES -->
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-solomon.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-claire.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-lucy.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-howard.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-robert.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-sihaam.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-nic.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-john.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-muskan.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-martin.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-eshal.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-aimee.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-mahima.html</loc>
+    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
+  <!-- NEW TUTOR PROFILES -->
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-bryan.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-sarah.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-shihab.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-thomas.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-wahida.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-andy.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-anne.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-katy.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
+  <!-- LEGAL PAGES -->
+
+  <url>
+    <loc>https://northwalestutoring.com/privacy.html</loc>
+    <lastmod>2026-04-15T15:10:44+00:00</lastmod>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/cookie-policy.html</loc>
+    <lastmod>2026-04-15T15:10:43+00:00</lastmod>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
