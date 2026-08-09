@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jake | Online Maths Tutor from Primary to University</title>
+
+  <meta
+    name="description"
+    content="Book online Maths lessons with Jake, an experienced Mathematics tutor with 14 years of teaching experience and a PhD in Mathematics. Primary, KS2, KS3, GCSE, A-Level, university and adult tuition from £38 per hour."
+  >
+
+  <link
+    rel="canonical"
+    href="https://northwalestutoring.com/tutor-jake.html"
+  >
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="North Wales Tutoring">
+
+  <meta
+    property="og:title"
+    content="Jake | Online Maths Tutor"
+  >
+
+  <meta
+    property="og:description"
+    content="Personalised Maths tuition from Primary to university level with a PhD-qualified tutor and 14 years of teaching experience."
+  >
+
+  <meta
+    property="og:url"
+    content="https://northwalestutoring.com/tutor-jake.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://northwalestutoring.com/images/jake-maths-tutor-uk.jpg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Jake, online Mathematics tutor"
+  >
+
+
+  <!-- GOOGLE TAG -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-K1S5V5LRN8">
+  </script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-K1S5V5LRN8");
+  </script>
+
+
+  <!-- FAVICONS -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="images/north wales tutoring logo (1).png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="images/north wales tutoring logo (1).png"
+  >
+
+
+  <!-- BOOTSTRAP -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+  >
+
+
+  <!-- WEBSITE STYLES -->
+  <link rel="stylesheet" href="cookie.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tutor-profile.css">
+
+
+  <style>
+    /* =========================================
+       JAKE PROFILE
+    ========================================== */
+
+    .jake-page {
+      overflow: hidden;
+      color: var(--text-dark);
+      background: #ffffff;
+    }
+
+    .jake-page h1,
+    .jake-page h2,
+    .jake-page h3 {
+      color: var(--primary-color);
+    }
+
+    .jake-page p {
+      line-height: 1.75;
+    }
+
+
+    /* =========================================
+       SHARED
+    ========================================== */
+
+    .jake-section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+      color: var(--accent-color);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .jake-section-label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      background: var(--accent-color);
+      border-radius: 50%;
+    }
+
+    .jake-section-title {
+      max-width: 760px;
+      margin-bottom: 1.4rem;
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+    }
+
+    .jake-book-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 50px;
+      padding: 0.72rem 1.6rem;
+      color: #ffffff;
+      background: var(--primary-color);
+      border: 2px solid var(--primary-color);
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .jake-book-button:hover,
+    .jake-book-button:focus {
+      color: #ffffff;
+      background: var(--accent-color);
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================== */
+
+    .jake-hero {
+      padding: 5rem 0;
+      background:
+        url("images/cta-bg.svg")
+        center / cover
+        no-repeat;
+    }
+
+    .jake-hero-card {
+      overflow: hidden;
+      padding: 1.25rem;
+      background: #ffffff;
+      border-radius: 1.5rem;
+      box-shadow: 0 16px 42px rgba(9, 9, 106, 0.11);
+    }
+
+    .jake-hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 2.4rem 2.5rem;
+    }
+
+    .jake-online-tag {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+      padding: 0.42rem 0.95rem;
+      color: var(--primary-color);
+      background: var(--bg-purple);
+      border-radius: 50px;
+      font-size: 0.83rem;
+      font-weight: 600;
+    }
+
+    .jake-online-tag i {
+      color: var(--accent-color);
+    }
+
+    .jake-name {
+      margin-bottom: 0.7rem;
+      font-size: clamp(3.2rem, 7vw, 5.1rem);
+      font-weight: 700;
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .jake-role {
+      max-width: 710px;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+      font-size: clamp(1.1rem, 2vw, 1.36rem);
+      font-weight: 600;
+      line-height: 1.48;
+    }
+
+    .jake-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem 1.3rem;
+      margin-bottom: 1.5rem;
+      color: #6c757d;
+      font-size: 0.91rem;
+    }
+
+    .jake-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+    }
+
+    .jake-meta i {
+      color: var(--accent-color);
+    }
+
+    .jake-introduction {
+      max-width: 700px;
+      margin-bottom: 1.65rem;
+      color: var(--text-dark);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .jake-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .jake-tags span {
+      display: inline-flex;
+      padding: 0.4rem 0.82rem;
+      color: var(--primary-color);
+      background: #ffffff;
+      border: 1px solid rgba(9, 9, 106, 0.14);
+      border-radius: 50px;
+      font-size: 0.81rem;
+      font-weight: 600;
+    }
+
+    .jake-price-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem 1.5rem;
+    }
+
+    .jake-price {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .jake-price span {
+      margin-bottom: 0.1rem;
+      color: #777782;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .jake-price strong {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+
+    /* =========================================
+       PHOTO
+    ========================================== */
+
+    .jake-photo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 550px;
+      padding: 1rem;
+    }
+
+    .jake-photo {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--bg-purple);
+      border-radius: 1.15rem;
+      box-shadow: 0 12px 30px rgba(9, 9, 106, 0.1);
+    }
+
+    .jake-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+
+    /* =========================================
+       DETAILS STRIP
+    ========================================== */
+
+    .jake-details-section {
+      background: var(--primary-color);
+    }
+
+    .jake-details-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .jake-detail-item {
+      min-width: 0;
+      padding: 1.6rem 1.25rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .jake-detail-item:last-child {
+      border-right: none;
+    }
+
+    .jake-detail-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .jake-detail-value {
+      display: block;
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.5;
+      overflow-wrap: break-word;
+    }
+
+
+    /* =========================================
+       ABOUT
+    ========================================== */
+
+    .jake-about-section {
+      padding: 5.5rem 0;
+      background: #ffffff;
+    }
+
+    .jake-about-copy {
+      max-width: 770px;
+      color: var(--text-dark);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .jake-about-copy p {
+      margin-bottom: 1.2rem;
+    }
+
+    .jake-about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================
+       QUALIFICATIONS
+    ========================================== */
+
+    .jake-qualifications-box {
+      height: 100%;
+      padding: 2rem;
+      background: var(--bg-purple);
+      border-radius: 1.2rem;
+      box-shadow: 0 10px 28px rgba(9, 9, 106, 0.07);
+    }
+
+    .jake-qualifications-box h2 {
+      margin-bottom: 1.3rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+    }
+
+    .jake-qualification-row {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 0.9rem;
+      align-items: flex-start;
+      min-width: 0;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(9, 9, 106, 0.12);
+    }
+
+    .jake-qualification-row:first-of-type {
+      padding-top: 0;
+    }
+
+    .jake-qualification-row:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .jake-qualification-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: var(--accent-color);
+      background: #ffffff;
+      border-radius: 50%;
+      font-size: 0.95rem;
+    }
+
+    .jake-qualification-copy {
+      min-width: 0;
+    }
+
+    .jake-qualification-copy strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      color: var(--primary-color);
+      font-size: 0.96rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .jake-qualification-copy span {
+      display: block;
+      color: #667078;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+
+    /* =========================================
+       TEACHING APPROACH
+    ========================================== */
+
+    .jake-teaching-section {
+      padding: 5.5rem 0;
+      background: var(--light-bg);
+    }
+
+    .jake-teaching-heading {
+      max-width: 760px;
+      margin: 0 auto 2.8rem;
+      text-align: center;
+    }
+
+    .jake-teaching-heading .jake-section-title {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .jake-teaching-heading p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #667078;
+    }
+
+    .jake-approach-card {
+      height: 100%;
+      padding: 1.8rem;
+      background: #ffffff;
+      border-radius: 1.05rem;
+      box-shadow: 0 12px 32px rgba(9, 9, 106, 0.08);
+    }
+
+    .jake-approach-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 1.1rem;
+      color: var(--accent-color);
+      background: var(--bg-pink);
+      border-radius: 12px;
+      font-size: 1.15rem;
+    }
+
+    .jake-approach-card h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .jake-approach-card p {
+      margin: 0;
+      color: #667078;
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================
+       LEVELS
+    ========================================== */
+
+    .jake-levels-section {
+      padding: 5.5rem 0;
+      background: #ffffff;
+    }
+
+    .jake-levels-copy {
+      max-width: 690px;
+    }
+
+    .jake-levels-copy p {
+      margin-bottom: 1.2rem;
+    }
+
+    .jake-levels-list {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: var(--bg-pink);
+      border-radius: 1.2rem;
+      box-shadow: 0 10px 28px rgba(9, 9, 106, 0.07);
+    }
+
+    .jake-levels-list li {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 0.85rem;
+      align-items: center;
+      min-width: 0;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid rgba(9, 9, 106, 0.13);
+    }
+
+    .jake-levels-list li:last-child {
+      border-bottom: none;
+    }
+
+    .jake-level-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: var(--accent-color);
+      background: #ffffff;
+      border-radius: 50%;
+      font-size: 0.95rem;
+    }
+
+    .jake-level-copy {
+      min-width: 0;
+    }
+
+    .jake-level-copy strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      color: var(--primary-color);
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .jake-level-copy span {
+      display: block;
+      color: #667078;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+
+    /* =========================================
+       QUOTE
+    ========================================== */
+
+    .jake-quote-section {
+      padding: 4.5rem 0;
+      background: var(--primary-color);
+    }
+
+    .jake-quote-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .jake-quote-inner i {
+      display: block;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+      font-size: 2rem;
+    }
+
+    .jake-quote-inner blockquote {
+      margin: 0 0 1rem;
+      color: #ffffff;
+      font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .jake-quote-inner p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 700;
+    }
+
+
+    /* =========================================
+       COURSE CARDS
+    ========================================== */
+
+    .jake-page .browse-courses-section {
+      padding: 5.5rem 0;
+      background: var(--light-bg);
+    }
+
+    .jake-page .browse-courses-section .row {
+      align-items: stretch;
+    }
+
+    .jake-page .browse-courses-section .col-md-4 {
+      display: flex;
+    }
+
+    .jake-page .course-card-link {
+      display: block;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .jake-page .course-card-link:hover,
+    .jake-page .course-card-link:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .jake-page .course-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 12px 32px rgba(9, 9, 106, 0.08);
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .jake-page .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 42px rgba(9, 9, 106, 0.15);
+    }
+
+    .jake-page .course-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--bg-purple);
+    }
+
+    .jake-page .course-card-img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .jake-page .course-card:hover .course-card-img img {
+      transform: scale(1.03);
+    }
+
+    .jake-page .course-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 1.4rem 1.4rem 1.5rem;
+    }
+
+    .jake-page .course-card-title {
+      margin-bottom: 0.75rem;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .jake-page .course-card-text {
+      margin-bottom: 0;
+      color: var(--text-dark);
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    .jake-page .course-cta {
+      margin-top: auto !important;
+      padding-top: 1.2rem;
+    }
+
+    .jake-page .course-cta-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--accent-color);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+    ========================================== */
+
+    @media (max-width: 1199.98px) {
+      .jake-details-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .jake-detail-item:nth-child(3) {
+        border-right: none;
+      }
+
+      .jake-detail-item:nth-child(-n + 3) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .jake-hero {
+        padding: 4rem 0;
+      }
+
+      .jake-hero-content {
+        padding: 2rem 1rem 1rem;
+      }
+
+      .jake-photo-wrap {
+        min-height: auto;
+        padding: 1.5rem 1rem;
+      }
+
+      .jake-photo {
+        max-width: 380px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .jake-hero,
+      .jake-about-section,
+      .jake-teaching-section,
+      .jake-levels-section,
+      .jake-page .browse-courses-section {
+        padding: 4rem 0;
+      }
+
+      .jake-details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .jake-detail-item,
+      .jake-detail-item:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.18);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .jake-detail-item:nth-child(even) {
+        border-right: none;
+      }
+
+      .jake-detail-item:last-child {
+        border-right: none;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .jake-name {
+        font-size: 3rem;
+      }
+
+      .jake-hero-card {
+        padding: 1rem;
+      }
+
+      .jake-hero-content {
+        padding: 1.5rem 0.25rem 0.4rem;
+      }
+
+      .jake-price-row {
+        align-items: flex-start;
+      }
+
+      .jake-book-button {
+        width: 100%;
+      }
+
+      .jake-photo {
+        max-width: 290px;
+      }
+
+      .jake-details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .jake-detail-item,
+      .jake-detail-item:nth-child(even),
+      .jake-detail-item:nth-child(3) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .jake-detail-item:last-child {
+        border-bottom: none;
+      }
+
+      .jake-qualifications-box {
+        padding: 1.5rem;
+      }
+
+      .jake-levels-list li {
+        padding: 1rem;
+      }
+    }
+  </style>
+
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": [
+          "EducationalOrganization",
+          "LocalBusiness"
+        ],
+        "@id": "https://northwalestutoring.com/#org",
+        "name": "North Wales Tutoring Group",
+        "alternateName": [
+          "North Wales Tutoring",
+          "North Wales Tutoring UK"
+        ],
+        "url": "https://northwalestutoring.com/",
+        "logo": "https://northwalestutoring.com/images/north%20wales%20tutoring%20logo-small.png",
+        "telephone": "+447480231362",
+        "email": [
+          "northwales@nwttutoring.com",
+          "enquiries@nwttutoring.com"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4 Ffordd Cerrig Mawr",
+          "addressLocality": "Caergelliog",
+          "postalCode": "LL65 3LU",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "North Wales"
+          },
+          {
+            "@type": "Country",
+            "name": "Wales"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/NorthWalesTutor",
+          "https://www.instagram.com/northwalestutoring",
+          "https://g.co/kgs/ws3Yd5u"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://northwalestutoring.com/#website",
+        "url": "https://northwalestutoring.com/",
+        "name": "North Wales Tutoring Group",
+        "publisher": {
+          "@id": "https://northwalestutoring.com/#org"
+        },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://northwalestutoring.com/images/jake-maths-tutor-uk.jpg#image",
+        "url": "https://northwalestutoring.com/images/jake-maths-tutor-uk.jpg",
+        "caption": "Jake, online Mathematics tutor"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://northwalestutoring.com/#tutor-jake",
+        "name": "Jake",
+        "jobTitle": "Online Mathematics Tutor",
+        "description": "Jake is a Mathematics tutor with 14 years of experience teaching learners from Primary through to undergraduate level. He holds a PhD in Mathematics from the University of Manchester, a Distinction in MSc Mathematics from the University of Sussex and a First Class Honours BSc in Mathematics from Loughborough University.",
+        "image": {
+          "@id": "https://northwalestutoring.com/images/jake-maths-tutor-uk.jpg#image"
+        },
+        "worksFor": {
+          "@id": "https://northwalestutoring.com/#org"
+        },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Eastbourne, United Kingdom"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Manchester"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Sussex"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Loughborough University"
+          }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "PhD in Mathematics"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "MSc Mathematics with Distinction"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "First Class Honours BSc Mathematics"
+          }
+        ],
+        "knowsAbout": [
+          "Mathematics",
+          "Primary Mathematics",
+          "KS2 Mathematics",
+          "KS3 Mathematics",
+          "GCSE Mathematics",
+          "A-Level Mathematics",
+          "Undergraduate Mathematics",
+          "Adult Mathematics education",
+          "Mathematical theory",
+          "Exam technique",
+          "Personalised teaching"
+        ],
+        "areaServed": [
+          "Wales",
+          "United Kingdom"
+        ],
+        "availableLanguage": [
+          "en"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://northwalestutoring.com/#service-jake-maths-tutoring",
+        "name": "Online Mathematics tutoring with Jake",
+        "serviceType": "Online one-to-one Mathematics tutoring",
+        "provider": {
+          "@id": "https://northwalestutoring.com/#org"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "audience": [
+          {
+            "@type": "EducationalAudience",
+            "name": "Primary and KS2 Maths students"
+          },
+          {
+            "@type": "EducationalAudience",
+            "name": "KS3 and GCSE Maths students"
+          },
+          {
+            "@type": "EducationalAudience",
+            "name": "A-Level Maths students"
+          },
+          {
+            "@type": "EducationalAudience",
+            "name": "Undergraduate Mathematics students"
+          },
+          {
+            "@type": "EducationalAudience",
+            "name": "Adult Mathematics learners"
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "38.00",
+          "priceCurrency": "GBP",
+          "description": "Online Mathematics tutoring with Jake from £38 per hour",
+          "availability": "https://schema.org/InStock",
+          "url": "https://northwalestutoring.com/tutor-jake.html"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://northwalestutoring.com/tutor-jake.html#webpage",
+        "url": "https://northwalestutoring.com/tutor-jake.html",
+        "name": "Jake | Online Maths Tutor from Primary to University",
+        "description": "Book online Maths lessons with Jake, an experienced Mathematics tutor with 14 years of teaching experience and a PhD in Mathematics.",
+        "isPartOf": {
+          "@id": "https://northwalestutoring.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://northwalestutoring.com/#tutor-jake"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://northwalestutoring.com/images/jake-maths-tutor-uk.jpg#image"
+        },
+        "inLanguage": "en-GB"
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div
+    id="cookie-banner"
+    class="cookie-banner visually-hidden"
+    role="dialog"
+    aria-live="polite"
+    aria-label="Cookie consent banner"
+  >
+    <p class="cookie-text mb-2">
+      🍪 We use cookies to improve your browsing experience,
+      deliver personalised content and analyse our traffic.
+      By clicking “Accept All”, you consent to our use of cookies.
+      See our
+      <a href="cookie-policy.html" class="cookie-link">
+        Cookie&nbsp;Policy
+      </a>
+      for details.
+    </p>
+
+    <div class="cookie-actions d-flex gap-2">
+      <button
+        id="cookie-accept"
+        class="btn btn-primary btn-sm flex-grow-1"
+      >
+        Accept&nbsp;All 🍪
+      </button>
+
+      <button
+        id="cookie-decline"
+        class="btn btn-outline-secondary btn-sm flex-grow-1"
+      >
+        Decline
+      </button>
+    </div>
+  </div>
+
+
+  <!-- NAVIGATION -->
+  <nav
+    id="mainNav"
+    class="navbar navbar-expand-lg navbar-custom sticky-top py-3"
+  >
+    <div class="container">
+
+      <a
+        class="navbar-brand d-flex align-items-center"
+        href="/"
+      >
+        <img
+          src="images/north wales tutoring logo-small.png"
+          alt="North Wales Tutoring Logo"
+          width="50"
+          height="50"
+          class="me-2"
+        >
+
+        <span class="fw-bold">
+          North Wales Tutoring
+        </span>
+      </a>
+
+
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav mx-auto align-items-center">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="find-tutors-north-wales-uk.html"
+            >
+              Our Tutors
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="coursesDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Courses
+            </a>
+
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="coursesDropdown"
+            >
+              <li>
+                <a class="dropdown-item" href="courses.html">
+                  1-to-1 Tutoring
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="group-tutoring-north-wales-uk.html"
+                >
+                  Group Tutoring
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="online-11-plus-tutoring-north-wales-uk.html"
+                >
+                  11 Plus Tutoring
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="online-sats-tutoring-north-wales-uk.html"
+                >
+                  SATs Tutoring
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="online-ucat-tutoring-north-wales-uk.html"
+                >
+                  UCAT Tutoring
+                </a>
+              </li>
+            <li><a class="dropdown-item" href="online-university-maths-tutoring-north-wales-uk.html">University Maths</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              Contact Us
+            </a>
+          </li>
+
+        </ul>
+
+
+        <a
+          href="contact.html"
+          class="btn btn-outline-dark btn-mentor d-flex align-items-center ms-lg-3"
+        >
+          Book Your First Lesson
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="jake-page">
+
+    <!-- HERO -->
+    <section class="jake-hero">
+      <div class="container">
+
+        <div class="jake-hero-card">
+          <div class="row g-0 align-items-center">
+
+            <div class="col-lg-7">
+              <div class="jake-hero-content">
+
+                <span class="jake-online-tag">
+                  <i class="bi bi-camera-video-fill"></i>
+                  Online Mathematics tutoring
+                </span>
+
+                <h1 class="jake-name">
+                  Jake
+                </h1>
+
+                <p class="jake-role">
+                  Mathematics tutor from Primary through to
+                  undergraduate level
+                </p>
+
+                <div class="jake-meta">
+                  <span>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Eastbourne
+                  </span>
+
+                  <span>
+                    <i class="bi bi-clock-fill"></i>
+                    14 years of tutoring experience
+                  </span>
+
+                  <span>
+                    <i class="bi bi-mortarboard-fill"></i>
+                    PhD in Mathematics
+                  </span>
+                </div>
+
+                <p class="jake-introduction">
+                  Jake is a friendly, enthusiastic and understanding
+                  Mathematics tutor who adapts his teaching to the way
+                  each individual student learns best.
+                </p>
+
+                <div
+                  class="jake-tags"
+                  aria-label="Jake's tutoring levels"
+                >
+                  <span>Primary</span>
+                  <span>KS2</span>
+                  <span>KS3</span>
+                  <span>GCSE</span>
+                  <span>A-Level</span>
+                  <span>University</span>
+                  <span>Adult learners</span>
+                </div>
+
+                <div class="jake-price-row">
+
+                  <div class="jake-price">
+                    <span>
+                      Online lessons
+                    </span>
+
+                    <strong>
+                      From £38/hr
+                    </strong>
+                  </div>
+
+                  <a
+                    href="https://wa.me/447480231362?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20online%20Maths%20lessons%20with%20Jake"
+                    class="jake-book-button"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="bi bi-whatsapp"></i>
+                    Book lessons with Jake
+                  </a>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-5">
+              <div class="jake-photo-wrap">
+
+                <div class="jake-photo">
+                  <img
+                    src="images/jake-maths-tutor-uk.jpg"
+                    alt="Jake, online Mathematics tutor"
+                    width="800"
+                    height="1000"
+                    fetchpriority="high"
+                  >
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DETAILS STRIP -->
+    <section
+      class="jake-details-section"
+      aria-label="Jake's tutoring information"
+    >
+      <div class="container">
+
+        <div class="jake-details-grid">
+
+          <div class="jake-detail-item">
+            <span class="jake-detail-label">
+              Subject
+            </span>
+
+            <span class="jake-detail-value">
+              Mathematics
+            </span>
+          </div>
+
+          <div class="jake-detail-item">
+            <span class="jake-detail-label">
+              Levels
+            </span>
+
+            <span class="jake-detail-value">
+              Primary to undergraduate
+            </span>
+          </div>
+
+          <div class="jake-detail-item">
+            <span class="jake-detail-label">
+              Experience
+            </span>
+
+            <span class="jake-detail-value">
+              14 years of tutoring
+            </span>
+          </div>
+
+          <div class="jake-detail-item">
+            <span class="jake-detail-label">
+              Qualifications
+            </span>
+
+            <span class="jake-detail-value">
+              PhD, MSc and BSc Mathematics
+            </span>
+          </div>
+
+          <div class="jake-detail-item">
+            <span class="jake-detail-label">
+              Rate
+            </span>
+
+            <span class="jake-detail-value">
+              From £38 per hour
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="jake-about-section">
+      <div class="container">
+
+        <div class="row g-5 align-items-stretch">
+
+          <div class="col-lg-7">
+
+            <span class="jake-section-label">
+              About Jake
+            </span>
+
+            <h2 class="jake-section-title">
+              Fourteen years of Mathematics tutoring across a wide
+              range of ages and levels
+            </h2>
+
+            <div class="jake-about-copy">
+
+              <p>
+                Jake is a friendly, enthusiastic and understanding
+                Mathematics tutor with 14 years of teaching and
+                tutoring experience.
+              </p>
+
+              <p>
+                He has tutored students at all levels, from Primary
+                and KS2 through to GCSE, A-Level, undergraduate
+                Mathematics and adult learning.
+              </p>
+
+              <p>
+                While much of his experience has focused on GCSE and
+                A-Level Mathematics, his academic background allows
+                him to support students studying more advanced
+                university-level material.
+              </p>
+
+              <p>
+                Jake’s goal is to help every student achieve their
+                own personal objectives, whether that involves
+                improving confidence, strengthening core
+                understanding, preparing for examinations or
+                developing advanced mathematical knowledge.
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-5">
+
+            <aside class="jake-qualifications-box">
+
+              <h2>
+                Academic qualifications
+              </h2>
+
+              <div class="jake-qualification-row">
+                <span class="jake-qualification-icon">
+                  <i class="bi bi-award-fill"></i>
+                </span>
+
+                <div class="jake-qualification-copy">
+                  <strong>
+                    PhD in Mathematics
+                  </strong>
+
+                  <span>
+                    University of Manchester
+                  </span>
+                </div>
+              </div>
+
+              <div class="jake-qualification-row">
+                <span class="jake-qualification-icon">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </span>
+
+                <div class="jake-qualification-copy">
+                  <strong>
+                    MSc Mathematics with Distinction
+                  </strong>
+
+                  <span>
+                    University of Sussex
+                  </span>
+                </div>
+              </div>
+
+              <div class="jake-qualification-row">
+                <span class="jake-qualification-icon">
+                  <i class="bi bi-journal-check"></i>
+                </span>
+
+                <div class="jake-qualification-copy">
+                  <strong>
+                    First Class Honours BSc Mathematics
+                  </strong>
+
+                  <span>
+                    Loughborough University
+                  </span>
+                </div>
+              </div>
+
+              <div class="jake-qualification-row">
+                <span class="jake-qualification-icon">
+                  <i class="bi bi-calculator-fill"></i>
+                </span>
+
+                <div class="jake-qualification-copy">
+                  <strong>
+                    A-Level Mathematics and Further Mathematics
+                  </strong>
+
+                  <span>
+                    Grade A in both subjects
+                  </span>
+                </div>
+              </div>
+
+              <div class="jake-qualification-row">
+                <span class="jake-qualification-icon">
+                  <i class="bi bi-stars"></i>
+                </span>
+
+                <div class="jake-qualification-copy">
+                  <strong>
+                    GCSE Mathematics
+                  </strong>
+
+                  <span>
+                    Grade A*
+                  </span>
+                </div>
+              </div>
+
+            </aside>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TEACHING APPROACH -->
+    <section class="jake-teaching-section">
+      <div class="container">
+
+        <div class="jake-teaching-heading">
+
+          <span class="jake-section-label">
+            Teaching approach
+          </span>
+
+          <h2 class="jake-section-title">
+            Teaching Mathematics in the way each student understands
+            best
+          </h2>
+
+          <p>
+            Jake identifies how each student learns most effectively
+            and adapts his explanations, examples and lesson structure
+            accordingly.
+          </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-xl-3">
+            <article class="jake-approach-card">
+
+              <span class="jake-approach-icon">
+                <i class="bi bi-person-check-fill"></i>
+              </span>
+
+              <h3>
+                Individualised teaching
+              </h3>
+
+              <p>
+                Jake learns how each student processes information
+                and then adapts lessons to suit their specific
+                learning needs.
+              </p>
+
+            </article>
+          </div>
+
+
+          <div class="col-md-6 col-xl-3">
+            <article class="jake-approach-card">
+
+              <span class="jake-approach-icon">
+                <i class="bi bi-lightbulb-fill"></i>
+              </span>
+
+              <h3>
+                Theory when needed
+              </h3>
+
+              <p>
+                Some students benefit from understanding the deeper
+                theory behind a topic before moving on to practical
+                examples.
+              </p>
+
+            </article>
+          </div>
+
+
+          <div class="col-md-6 col-xl-3">
+            <article class="jake-approach-card">
+
+              <span class="jake-approach-icon">
+                <i class="bi bi-pencil-square"></i>
+              </span>
+
+              <h3>
+                Learning through examples
+              </h3>
+
+              <p>
+                Other students learn best by working through examples,
+                recognising patterns and applying methods to new
+                questions.
+              </p>
+
+            </article>
+          </div>
+
+
+          <div class="col-md-6 col-xl-3">
+            <article class="jake-approach-card">
+
+              <span class="jake-approach-icon">
+                <i class="bi bi-journal-check"></i>
+              </span>
+
+              <h3>
+                Exam technique
+              </h3>
+
+              <p>
+                Lessons can include targeted exam preparation,
+                question interpretation and methods for presenting
+                clear, accurate solutions.
+              </p>
+
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- LEVELS -->
+    <section class="jake-levels-section">
+      <div class="container">
+
+        <div class="row g-5 align-items-start">
+
+          <div class="col-lg-7">
+
+            <div class="jake-levels-copy">
+
+              <span class="jake-section-label">
+                Levels taught
+              </span>
+
+              <h2 class="jake-section-title">
+                Mathematics support from early foundations to
+                university study
+              </h2>
+
+              <p>
+                Jake supports students across a broad range of levels,
+                adapting the depth, pace and style of teaching to the
+                learner’s age, course and personal objectives.
+              </p>
+
+              <p>
+                Younger learners can develop strong foundations and
+                confidence, while GCSE and A-Level students can receive
+                focused subject and examination support.
+              </p>
+
+              <p>
+                University students and adult learners can work on
+                advanced concepts, mathematical theory or areas where
+                they require additional explanation and guidance.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-lg-5">
+
+            <ul class="jake-levels-list">
+
+              <li>
+                <span class="jake-level-icon">
+                  <i class="bi bi-pencil-fill"></i>
+                </span>
+
+                <div class="jake-level-copy">
+                  <strong>
+                    Primary and KS2
+                  </strong>
+
+                  <span>
+                    Core skills, confidence and mathematical
+                    foundations
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <span class="jake-level-icon">
+                  <i class="bi bi-calculator"></i>
+                </span>
+
+                <div class="jake-level-copy">
+                  <strong>
+                    KS3 Mathematics
+                  </strong>
+
+                  <span>
+                    Building knowledge and preparing for GCSE study
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <span class="jake-level-icon">
+                  <i class="bi bi-journal-text"></i>
+                </span>
+
+                <div class="jake-level-copy">
+                  <strong>
+                    GCSE Mathematics
+                  </strong>
+
+                  <span>
+                    Topic support, problem solving and exam preparation
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <span class="jake-level-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </span>
+
+                <div class="jake-level-copy">
+                  <strong>
+                    A-Level Mathematics
+                  </strong>
+
+                  <span>
+                    Advanced concepts, techniques and exam questions
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <span class="jake-level-icon">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </span>
+
+                <div class="jake-level-copy">
+                  <strong>
+                    University undergraduate
+                  </strong>
+
+                  <span>
+                    Higher-level theory and advanced mathematical
+                    topics
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <span class="jake-level-icon">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+
+                <div class="jake-level-copy">
+                  <strong>
+                    Adult learners
+                  </strong>
+
+                  <span>
+                    Flexible support based on individual study or
+                    professional goals
+                  </span>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- QUOTE -->
+    <section class="jake-quote-section">
+      <div class="container">
+
+        <div class="jake-quote-inner">
+
+          <i class="bi bi-chat-quote-fill"></i>
+
+          <blockquote>
+            “My aim as a tutor is to learn the ways in which each
+            individual student learns optimally, then teach them in
+            the way they will understand best.”
+          </blockquote>
+
+          <p>
+            Jake
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BROWSE COURSES -->
+    <section class="browse-courses-section">
+      <div class="container">
+
+        <h2 class="text-center fw-bold mb-2">
+          Browse our courses
+        </h2>
+
+        <p class="text-center text-muted mb-5">
+          Explore our Primary, KS3, GCSE and A-Level Mathematics
+          tuition.
+        </p>
+
+
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <a
+              href="courses.html"
+              class="course-card-link"
+            >
+              <article class="course-card">
+
+                <div class="course-card-img">
+                  <img
+                    src="images/ks1-ks3-tutoring-north-wales-uk.jpg"
+                    alt="Primary and KS3 online tutoring"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="course-card-body">
+
+                  <h3 class="course-card-title">
+                    Primary &amp; KS3 Maths
+                  </h3>
+
+                  <p class="course-card-text">
+                    Personalised support that develops confidence,
+                    fluency and strong mathematical foundations.
+                  </p>
+
+                  <p class="course-cta mb-0">
+                    <span class="course-cta-text">
+                      Browse Primary &amp; KS3 courses
+                      <i class="bi bi-arrow-right-short"></i>
+                    </span>
+                  </p>
+
+                </div>
+              </article>
+            </a>
+          </div>
+
+
+          <div class="col-md-4">
+            <a
+              href="courses.html"
+              class="course-card-link"
+            >
+              <article class="course-card">
+
+                <div class="course-card-img">
+                  <img
+                    src="images/gcse-tutoring-north-wales-uk.jpg"
+                    alt="GCSE Maths online tutoring"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="course-card-body">
+
+                  <h3 class="course-card-title">
+                    GCSE Maths tuition
+                  </h3>
+
+                  <p class="course-card-text">
+                    Structured topic support, exam preparation and
+                    clear explanations tailored to each student.
+                  </p>
+
+                  <p class="course-cta mb-0">
+                    <span class="course-cta-text">
+                      Browse GCSE courses
+                      <i class="bi bi-arrow-right-short"></i>
+                    </span>
+                  </p>
+
+                </div>
+              </article>
+            </a>
+          </div>
+
+
+          <div class="col-md-4">
+            <a
+              href="courses.html"
+              class="course-card-link"
+            >
+              <article class="course-card">
+
+                <div class="course-card-img">
+                  <img
+                    src="images/alevel-tutoring-north-wales-uk.jpg"
+                    alt="A-Level Maths online tutoring"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="course-card-body">
+
+                  <h3 class="course-card-title">
+                    A-Level Maths support
+                  </h3>
+
+                  <p class="course-card-text">
+                    Advanced Mathematics tuition supported by Jake’s
+                    extensive academic knowledge and experience.
+                  </p>
+
+                  <p class="course-cta mb-0">
+                    <span class="course-cta-text">
+                      Browse A-Level courses
+                      <i class="bi bi-arrow-right-short"></i>
+                    </span>
+                  </p>
+
+                </div>
+              </article>
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="text-center mt-4">
+          <a
+            href="courses.html"
+            class="btn btn-primary btn-cta"
+          >
+            View all courses &amp; pricing
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+ <!-- FOOTER (global footer) -->
+<footer class="footer-section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-4">
+        <p class="footer-logo d-inline-flex align-items-center mb-3">
+          <img src="images/north wales tutoring logo (4) (1).png"
+               alt="North Wales Tutoring Logo"
+               width="32" height="32">
+          <span class="ms-2 h5 mb-0">North Wales Tutoring</span>
+        </p>
+        <p class="footer-desc text-muted mb-3">
+          North Wales’ leading online tutors for GCSE, A-Level & SATs: personalised Mathematics & Physics tutoring, Chemistry, Biology, Economics, History, Geography, Religious Study & English exam prep with expert led WJEC, GCSE, A-Level, SATs, AQA, Edexcel, OCR, Eduqas, CAIE sessions.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/NorthWalesTutor" class="me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/northwalestutoring"><i class="bi bi-instagram"></i></a>
+          <a href="https://g.co/kgs/ws3Yd5u"><i class="bi bi-google"></i></a>
+          <a href="https://wa.me/447480231362" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+       <div class="col-md-2">
+        <h6 class="footer-title">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="find-tutors-north-wales-uk.html">Our Tutors</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="wjec-tutoring-in-wales-uk.html">WJEC Tutoring</a></li>
+            <li><a class="dropdown-item" href="online-university-maths-tutoring-north-wales-uk.html">University Maths Tutoring</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+ <div class="col-md-2">
+<h6 class="footer-title">Exam Preparation</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="online-sats-tutoring-north-wales-uk.html">SATs Tutoring</a></li>
+          <li><a href="online-11-plus-tutoring-north-wales-uk.html">11 Plus Tutoring</a></li>
+          <li><a href="online-ucat-tutoring-north-wales-uk.html">UCAT Tutoring</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-md-4">
+        <h6 class="footer-title">Contact Us</h6>
+        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i><a href="https://wa.me/447480231362" target="_blank" rel="noopener">+44 7480 231362</a></p>
+        <p class="mb-2"><i class="bi bi-envelope me-2"></i><a href="mailto:northwales@nwttutoring.com">northwales@nwttutoring.com</a></p>
+        <p><i class="bi bi-geo-alt me-2"></i>4 Ffordd Cerrig Mawr, Holyhead, United Kingdom</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom text-center mt-5 pt-3">
+    <small>© 2026 <strong>North Wales Tutoring</strong>. All rights reserved.</small>
+<p class="design-credit mt-2">Part of <a href="https://nwttutoring.com" target="_blank" rel="noopener">North Wales Tutoring Group</a></p>
+    <p class="design-credit mt-2">Website Design by <a href="https://cleandesignuk.com" target="_blank" rel="noopener">Clean Design UK</a></p>
+  </div>
+</footer>
+
+
+  <!-- SCRIPTS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <script src="cookie.js" defer></script>
+
+</body>
+
+</html>
