@@ -27,25 +27,18 @@
 
 .hero-section .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--overlay-color);
-  z-index: 1;
-}
-.hero-section .overlay{
-  position:absolute;
-  inset:0;                              
-  background:linear-gradient(
-              rgba(0,0,0,.55) 0%,       
-              rgba(0,0,0,.35) 30%,      
-              rgba(0,0,0,.35) 70%,
-              rgba(0,0,0,.55) 100%);    
-  z-index:1;                           
-  pointer-events:none;                 
-}
+  inset: 0;
 
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.58) 30%,
+    rgba(0, 0, 0, 0.58) 70%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
 .hero-section .container {
   position: relative;
   z-index: 2;
