@@ -1263,13 +1263,23 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
 
         if (json.success) {
 
+          // Record a genuine lead only after Web3Forms confirms success
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              form_name: 'contact_form',
+              form_location: 'contact_page'
+            });
+          }
+
           Swal.fire({
             icon: 'success',
             title: 'Thank you!',
             text: 'Our team will contact you soon.',
             confirmButtonColor: '#ff28a8'
           });
+
           form.reset();
+        }
         } else {
           throw new Error('server');
         }
