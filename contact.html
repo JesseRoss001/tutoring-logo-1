@@ -1209,91 +1209,129 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- contact-form guard + SweetAlert feedback -->
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form   = document.getElementById('contactForm'),
-          phone  = document.getElementById('phoneNumber'),
-          msgBox = document.getElementById('messageText');
-    if (!form) return;
+<!-- contact-form guard + SweetAlert feedback + GA4 lead tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-    // Only check that it's 7–15 digits long
-    function isValidPhone(raw) {
-      const digits = raw.replace(/\D/g, '');
-      return digits.length >= 7 && digits.length <= 15;
+  const form = document.getElementById('contactForm');
+  const phone = document.getElementById('phoneNumber');
+  const msgBox = document.getElementById('messageText');
+
+  if (!form) return;
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // Only check that it's 7–15 digits long
+  function isValidPhone(raw) {
+    const digits = raw.replace(/\D/g, '');
+    return digits.length >= 7 && digits.length <= 15;
+  }
+
+  // Quick spam-phrase check
+  const banned = [
+    /rank\s+your\s+website/i,
+    /i\s+can\s+help\s+your\s+website/i,
+    /improve\s+your\s+seo/i,
+    /back\s?links?/i
+  ];
+
+  const isSpam = txt => banned.some(r => r.test(txt));
+
+  form.addEventListener('submit', async e => {
+
+    e.preventDefault();
+
+    // Phone check
+    if (!isValidPhone(phone.value)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid phone number',
+        text: 'Please enter a real phone number (7–15 digits).',
+        confirmButtonColor: '#ff28a8'
+      });
+
+      return;
     }
 
-    // Quick spam-phrase check (unchanged)
-    const banned = [
-      /rank\s+your\s+website/i,
-      /i\s+can\s+help\s+your\s+website/i,
-      /improve\s+your\s+seo/i,
-      /back\s?links?/i
-    ];
-    const isSpam = txt => banned.some(r => r.test(txt));
+    // Spam check
+    if (isSpam(msgBox.value)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Message blocked',
+        text: 'Please re-phrase your enquiry and try again.',
+        confirmButtonColor: '#ff28a8'
+      });
 
-    form.addEventListener('submit', async e => {
-      e.preventDefault();
+      return;
+    }
 
-      // Phone check
-      if (!isValidPhone(phone.value)) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Invalid phone number',
-          text: 'Please enter a real phone number (7–15 digits).',
-          confirmButtonColor: '#ff28a8'
-        });
-        return;
-      }
+    // Stop accidental double submissions
+    if (submitBtn && submitBtn.disabled) {
+      return;
+    }
 
-      // Spam check
-      if (isSpam(msgBox.value)) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Message blocked',
-          text: 'Please re-phrase your enquiry and try again.',
-          confirmButtonColor: '#ff28a8'
-        });
-        return;
-      }
+    if (submitBtn) {
+      submitBtn.disabled = true;
+    }
 
-      // Send to Web3Forms
-      try {
-        const res  = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-        const json = await res.json();
+    // Send to Web3Forms
+    try {
 
-        if (json.success) {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+      });
 
-          // Record a genuine lead only after Web3Forms confirms success
-          if (typeof gtag === 'function') {
-            gtag('event', 'generate_lead', {
-              form_name: 'contact_form',
-              form_location: 'contact_page'
-            });
-          }
+      const json = await res.json();
 
-          Swal.fire({
-            icon: 'success',
-            title: 'Thank you!',
-            text: 'Our team will contact you soon.',
-            confirmButtonColor: '#ff28a8'
+      if (json.success) {
+
+        // GA4: count a lead ONLY after Web3Forms confirms success
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            form_name: 'contact_form',
+            form_location: 'contact_page'
           });
+        }
 
-          form.reset();
-        }
-        } else {
-          throw new Error('server');
-        }
-      } catch {
         Swal.fire({
-          icon: 'error',
-          title: 'Submission error',
-          text: 'Something went wrong – please try again later.',
+          icon: 'success',
+          title: 'Thank you!',
+          text: 'Our team will contact you soon.',
           confirmButtonColor: '#ff28a8'
         });
+
+        form.reset();
+
+      } else {
+
+        throw new Error('Web3Forms submission failed');
+
       }
-    });
+
+    } catch (error) {
+
+      console.error('Contact form submission error:', error);
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Submission error',
+        text: 'Something went wrong – please try again later.',
+        confirmButtonColor: '#ff28a8'
+      });
+
+    } finally {
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+      }
+
+    }
+
   });
-  </script>
+
+});
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
