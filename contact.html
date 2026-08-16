@@ -1210,6 +1210,7 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
 
   <!-- contact-form guard + SweetAlert feedback -->
 <!-- contact-form guard + SweetAlert feedback + GA4 lead tracking -->
+<!-- Web3Forms contact form + validation + GA4 lead tracking -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -1221,13 +1222,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const submitBtn = form.querySelector('button[type="submit"]');
 
-  // Only check that it's 7–15 digits long
+  let submissionInProgress = false;
+
+  // Validate phone only if the user entered one.
+  // Allows 7–15 digits after removing spaces, brackets, +, etc.
   function isValidPhone(raw) {
     const digits = raw.replace(/\D/g, '');
     return digits.length >= 7 && digits.length <= 15;
   }
 
-  // Quick spam-phrase check
+  // Basic spam phrase filtering
   const banned = [
     /rank\s+your\s+website/i,
     /i\s+can\s+help\s+your\s+website/i,
@@ -1235,26 +1239,37 @@ document.addEventListener('DOMContentLoaded', () => {
     /back\s?links?/i
   ];
 
-  const isSpam = txt => banned.some(r => r.test(txt));
+  const isSpam = txt => banned.some(pattern => pattern.test(txt));
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', async event => {
 
-    e.preventDefault();
+    event.preventDefault();
 
-    // Phone check
-    if (!isValidPhone(phone.value)) {
+    // Prevent duplicate submissions
+    if (submissionInProgress) {
+      return;
+    }
+
+    // Phone validation - only validate when something was entered
+    const phoneValue = phone ? phone.value.trim() : '';
+
+    if (phoneValue && !isValidPhone(phoneValue)) {
+
       Swal.fire({
         icon: 'error',
         title: 'Invalid phone number',
-        text: 'Please enter a real phone number (7–15 digits).',
+        text: 'Please enter a valid phone number containing 7–15 digits.',
         confirmButtonColor: '#ff28a8'
       });
 
       return;
     }
 
-    // Spam check
-    if (isSpam(msgBox.value)) {
+    // Spam phrase check
+    const messageValue = msgBox ? msgBox.value.trim() : '';
+
+    if (isSpam(messageValue)) {
+
       Swal.fire({
         icon: 'error',
         title: 'Message blocked',
@@ -1265,49 +1280,85 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Stop accidental double submissions
-    if (submitBtn && submitBtn.disabled) {
-      return;
-    }
+    submissionInProgress = true;
 
     if (submitBtn) {
       submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-disabled', 'true');
     }
 
-    // Send to Web3Forms
     try {
 
-      const res = await fetch(form.action, {
+      // Submit enquiry to Web3Forms
+      const response = await fetch(form.action, {
         method: 'POST',
-        body: new FormData(form)
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
       });
 
-      const json = await res.json();
+      // Make sure Web3Forms returned valid JSON
+      let result;
 
-      if (json.success) {
+      try {
+        result = await response.json();
+      } catch {
+        throw new Error('Invalid response received from Web3Forms');
+      }
 
-        // GA4: count a lead ONLY after Web3Forms confirms success
-        if (typeof gtag === 'function') {
-          gtag('event', 'generate_lead', {
-            form_name: 'contact_form',
-            form_location: 'contact_page'
-          });
-        }
+      // Only treat the submission as successful when
+      // Web3Forms actually confirms success
+      if (!response.ok || !result.success) {
 
-        Swal.fire({
-          icon: 'success',
-          title: 'Thank you!',
-          text: 'Our team will contact you soon.',
-          confirmButtonColor: '#ff28a8'
+        const errorMessage =
+          result && result.message
+            ? result.message
+            : 'Web3Forms submission failed';
+
+        throw new Error(errorMessage);
+      }
+
+      /*
+       * GA4 LEAD TRACKING
+       *
+       * This is deliberately placed AFTER Web3Forms success.
+       * Therefore:
+       *
+       * Page visit            = no lead
+       * Form start            = no lead
+       * Validation failure    = no lead
+       * Web3Forms failure     = no lead
+       * Web3Forms success     = generate_lead
+       */
+
+      if (typeof window.gtag === 'function') {
+
+        window.gtag('event', 'generate_lead', {
+          send_to: 'G-K1S5V5LRN8',
+          form_name: 'contact_form',
+          form_location: 'contact_page'
         });
-
-        form.reset();
 
       } else {
 
-        throw new Error('Web3Forms submission failed');
+        // The enquiry still succeeds even if Analytics is unavailable
+        console.warn(
+          'GA4 generate_lead was not sent because gtag is unavailable.'
+        );
 
       }
+
+      // Show successful submission message
+      await Swal.fire({
+        icon: 'success',
+        title: 'Thank you!',
+        text: 'Our team will contact you soon.',
+        confirmButtonColor: '#ff28a8'
+      });
+
+      // Clear form only after successful submission
+      form.reset();
 
     } catch (error) {
 
@@ -1322,8 +1373,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } finally {
 
+      submissionInProgress = false;
+
       if (submitBtn) {
         submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-disabled');
       }
 
     }
