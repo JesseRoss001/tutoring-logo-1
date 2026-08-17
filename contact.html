@@ -347,129 +347,179 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
   </div>
 </nav>
 
-  <!-- ======================================
-       CONTACT BANNER (“We’re Here To Help!”)
-  ======================================= -->
-  <section id="contact-banner" class="text-center">
-    <div class="banner-heading">
-      <h1>We're Here To <span class="text-highlight">Help!</span></h1>
-      <p class="banner-subtext">We want to hear from you. Let us know how we can help.</p>
-    </div>
-  </section>
+<section id="contact-banner" class="text-center">
+  <div class="banner-heading">
+    <h1>Find the Right <span class="text-highlight">Tutor in Wales / UK</span></h1>
+    <p class="banner-subtext">
+      Contact North Wales Tutoring for personalised one-to-one online tuition
+      across North Wales, Wales and the UK, from Primary through to university level.
+    </p>
+  </div>
+</section>
 
-  <!-- ======================================
-       CONTACT FORM + INFO CARDS
-  ======================================= -->
-  <section id="contact-form-section" class="py-5">
-    <div class="container">
-      <div class="row gx-4">
+<!-- ======================================
+     CONTACT FORM + INFO CARDS
+======================================= -->
+<section id="contact-form-section" class="py-5">
+  <div class="container">
+    <div class="row gx-4">
 
-        <!-- LEFT COLUMN: White “Send Us A Message” Card -->
-        <div class="col-lg-6">
-          <div class="contact-card mx-auto">
-            <h2>Send Us A Message</h2>
-            <p class="card-description">Whether you need help with WJEC revision, GCSE maths, A-Level physics, or SATs, send us your questions below and we’ll be in touch.</p>
-            <form id="contactForm" method="POST" action="https://api.web3forms.com/submit">
-              <!-- Replace with your actual access key if using Web3Forms -->
-              <input type="hidden" name="access_key" value="2f8b66ae-5de1-48ee-b2e4-aee11d9dc319" />
+      <!-- LEFT COLUMN: Contact Form -->
+      <div class="col-lg-6">
+        <div class="contact-card mx-auto">
+          <h2>Tell Us What Support You Need</h2>
 
-              <!-- Row: Full Name / Email -->
-              <div class="row mb-3">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="form-label fw-semibold" for="fullName">Full Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="fullName"
-                    name="name"
-                    placeholder="Full Name"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label fw-semibold" for="emailAddress">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="emailAddress"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-              </div>
+          <p class="card-description">
+            We match students with experienced online tutors for Maths, English,
+            Biology, Chemistry, Physics, Economics, Business, Humanities, Languages
+            and more.
+          </p>
 
-              <!-- Row: Phone / Date -->
-              <div class="row mb-3">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="form-label fw-semibold" for="phoneNumber">Phone</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="phoneNumber"
-                    name="phone"
-                    placeholder="Phone"
-                  />
-                </div>
-              </div>
+          <p class="card-description">
+            Our tutors support WJEC, AQA, Edexcel, OCR, Eduqas, CAIE and other UK
+            exam boards, including GCSE, A-Level, resits, SATs, 11+, UCAT, TMUA,
+            Functional Skills and university study.
+          </p>
 
-              <!-- Textarea: Message -->
-              <div class="mb-4">
-                <label class="form-label fw-semibold" for="messageText">Message</label>
-                <textarea
+          <form
+            id="contactForm"
+            method="POST"
+            action="https://api.web3forms.com/submit"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="2f8b66ae-5de1-48ee-b2e4-aee11d9dc319"
+            />
+
+            <!-- Full Name and Email -->
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="form-label fw-semibold" for="fullName">
+                  Your Name
+                </label>
+                <input
+                  type="text"
                   class="form-control"
-                  id="messageText"
-                  name="message"
-                  rows="5"
-                  placeholder="Type your tutoring needs here (e.g. GCSE Maths, A-Level Physics, WJEC Chemistry, etc.)"
+                  id="fullName"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
                   required
-                ></textarea>
+                />
               </div>
 
-              <!-- Submit Button -->
-              <button type="submit" class="btn-contact-submit">
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN: Three Info Cards -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
-
-          <!-- Email Us -->
-          <div class="info-card bg-lavender mb-4">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-envelope-fill info-icon me-3"></i>
-              <div class="info-text-block">
-                <h5 class="mb-1">Email Us</h5>
-                <p class="mb-1 small">Ask about our WJEC, GCSE, A-Level & SATs packages</p>
-                <a href="mailto:northwales@nwttutoring.com" class="info-link">northwales@nwttutoring.com</a>
-                <a href="mailto:enquiries@nwttutoring.com" class="info-link">enquiries@nwttutoring.com</a>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold" for="emailAddress">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailAddress"
+                  name="email"
+                  placeholder="Your email address"
+                  autocomplete="email"
+                  required
+                />
               </div>
             </div>
+
+            <!-- Phone Number -->
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="form-label fw-semibold" for="phoneNumber">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  name="phone"
+                  placeholder="Your phone number"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <!-- Tutoring Requirements -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold" for="messageText">
+                What tutoring support do you need?
+              </label>
+              <textarea
+                class="form-control"
+                id="messageText"
+                name="message"
+                rows="5"
+                placeholder="For example: Year 11 WJEC Maths, A-Level Biology, Primary English, 11+ preparation or university Maths. Please include your preferred lesson times."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-contact-submit">
+              Find a Tutor
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Contact Options -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
+
+        <!-- Email -->
+        <div class="info-card bg-lavender mb-4">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-envelope-fill info-icon me-3"></i>
+
+            <div class="info-text-block">
+              <h3 class="h5 mb-1">Email North Wales Tutoring</h3>
+              <p class="mb-1 small">
+                Ask about tutor availability, subjects, exam boards and lesson times
+              </p>
+
+              <a
+                href="mailto:northwales@nwttutoring.com"
+                class="info-link"
+              >
+                northwales@nwttutoring.com
+              </a>
+
+              <a
+                href="mailto:enquiries@nwttutoring.com"
+                class="info-link"
+              >
+                enquiries@nwttutoring.com
+              </a>
+            </div>
           </div>
-
-          <!-- Contact Us (Phone) -->
-<a href="https://wa.me/447480231362?text=Hi%20North%20Wales%20Tutoring%20team%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20tutoring%20courses."
-   class="info-card info-card-link bg-mint d-block text-decoration-none"
-   target="_blank"
-   rel="noopener"
-   aria-label="Contact North Wales Tutoring on WhatsApp">
-  <div class="d-flex align-items-center">
-    <i class="bi bi-whatsapp info-icon me-3"></i>
-    <div class="info-text-block">
-      <h5 class="mb-1">Contact Us</h5>
-      <p class="mb-1 small">Book your first lesson</p>
-      <span class="info-link">+44 7480 231362</span>
-    </div>
-  </div>
-</a>
-
-
         </div>
 
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/447480231362?text=Hi%20North%20Wales%20Tutoring%20team%2C%20I%E2%80%99d%20like%20help%20finding%20an%20online%20tutor.%20The%20subject%20and%20level%20are%3A%20"
+          class="info-card info-card-link bg-mint d-block text-decoration-none"
+          target="_blank"
+          rel="noopener"
+          aria-label="Ask North Wales Tutoring about tutor availability on WhatsApp"
+        >
+          <div class="d-flex align-items-center">
+            <i class="bi bi-whatsapp info-icon me-3"></i>
+
+            <div class="info-text-block">
+              <h3 class="h5 mb-1">Message Us on WhatsApp</h3>
+              <p class="mb-1 small">
+                Tell us the subject and level to check tutor availability
+              </p>
+              <span class="info-link">+44 7480 231362</span>
+            </div>
+          </div>
+        </a>
+
       </div>
+    </div>
+  </div>
+</section>
 
 <!-- WHY CHOOSE US -->
 <div class="contact-why-us">
