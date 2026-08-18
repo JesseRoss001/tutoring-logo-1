@@ -293,60 +293,280 @@ src="https://www.facebook.com/tr?id=1746799169344195&ev=PageView&noscript=1"
 <!-- =================================
      HERO SECTION
 ===================================== -->
-<header class="hero-section d-flex align-items-center justify-content-center" id="hero">
-  <div class="overlay"></div>
-    <!-- NEW: responsive hero image  -->
-  <picture class="hero-media">
-    <!-- large / retina screens (served first so the browser can pick quickly) -->
-    <source
-      srcset="images/hero-nwt.webp"
-      media="(min-width: 800px)"
-      type="image/webp">
+<header class="hero-section" id="hero">
 
-    <!-- small / mobile fallback -->
+  <div class="overlay"></div>
+
+
+  <!-- Background Image -->
+  <picture class="hero-media">
+
+    <source
+      srcset="images/online-tutoring-primary-ks3-gcse-alevel-university-north-wales-uk-2.jpg"
+      media="(min-width: 800px)">
+
     <img
-      src="images/hero-nwt.webp"
-      alt="Confident student studying online with North Wales Tutoring"
-      width="1920" height="800"       
-      loading="eager"                 
+      src="images/online-tutoring-primary-ks3-gcse-alevel-university-north-wales-uk-2.jpg"
+      alt="Expert Maths, Physics, Chemistry, Biology and English tutoring across North Wales, Wales and the UK"
+      width="1920"
+      height="800"
+      loading="eager"
       decoding="async"
-      fetchpriority="high"                 
+      fetchpriority="high"
       class="hero-img">
+
   </picture>
-  <div class="container text-center animate__animated animate__fadeInDown">
-    <h1 class="display-3 text-white fw-bold mb-3">
-      Remote Tutoring North Wales 
-    </h1>
-    <p class="lead text-white  mb-4">
-      Boost your grades with our friendly and interactive lessons for Primary (KS1–KS2), KS3, SATs, WJEC, GCSE, A-Level, AQA, Edexcel, OCR, Eduqas, & CAIE tutoring in North Wales and Wales.
-    </p>
-          <!-- phone-capture form -->
-      <form class="row g-2 justify-content-center"
+
+
+  <div class="container hero-container">
+
+    <div class="row align-items-center g-4 g-xl-5">
+
+
+      <!-- =================================
+           LEFT HERO CONTENT
+      ================================== -->
+      <div class="col-lg-7">
+
+        <div class="hero-copy">
+
+
+          <!-- Trust / Brand Label -->
+          <div class="hero-eyebrow">
+
+            <i
+              class="bi bi-mortarboard-fill"
+              aria-hidden="true">
+            </i>
+
+            <span>
+              North Wales Tutoring • Experienced UK Tutors • WJEC &amp; All UK Exam Boards
+            </span>
+
+          </div>
+
+
+          <!-- Main H1 -->
+          <h1 class="display-3 text-white fw-bold mb-3">
+            Expert Tutoring in North Wales, Across Wales &amp; the UK
+          </h1>
+
+
+          <!-- Business Summary -->
+          <p class="lead text-white mb-4">
+            Personalised tutoring for Primary, KS3, SATs, 11+, GCSE, A-Level, UCAT and University students. Our experienced UK tutors provide support in Maths and Physics, Chemistry, Biology, English, Economics, Business, Computer Science, Humanities, Languages and more, covering WJEC, AQA, Edexcel, OCR, Eduqas, CAIE and all UK exam boards. <strong>Lessons are delivered online across Wales and the UK.</strong>
+          </p>
+
+
+          <!-- USPs -->
+          <div
+            class="hero-trust-list"
+            aria-label="Why choose North Wales Tutoring">
+
+
+            <!-- USP 1 -->
+            <div class="hero-trust-item">
+
+              <span class="hero-trust-icon">
+                <i
+                  class="bi bi-check-lg"
+                  aria-hidden="true">
+                </i>
+              </span>
+
+              <span>
+                <strong>Experienced UK tutors</strong>
+                across a wide range of subjects and levels
+              </span>
+
+            </div>
+
+
+            <!-- USP 2 -->
+            <div class="hero-trust-item">
+
+              <span class="hero-trust-icon">
+                <i
+                  class="bi bi-check-lg"
+                  aria-hidden="true">
+                </i>
+              </span>
+
+              <span>
+                <strong>Personalised one-to-one tutoring</strong>
+                tailored to each student, subject and exam board
+              </span>
+
+            </div>
+
+
+            <!-- USP 3 -->
+            <div class="hero-trust-item">
+
+              <span class="hero-trust-icon">
+                <i
+                  class="bi bi-check-lg"
+                  aria-hidden="true">
+                </i>
+              </span>
+
+              <span>
+                <strong>Pay as you go</strong>
+                with no subscription or long-term commitment
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================
+           RIGHT CONVERSION CARD
+      ================================== -->
+      <div class="col-lg-5">
+
+        <div class="hero-form-card">
+
+
+          <!-- Small Label -->
+          <div class="hero-form-kicker">
+            Find Your Tutor
+          </div>
+
+
+          <!-- H2 -->
+          <h2>
+            Tutoring for Students Across North Wales, Wales &amp; the UK
+          </h2>
+
+
+          <!-- Form Intro -->
+          <p class="hero-form-intro">
+            Tell us the subject, level and exam board you need support with. Our team will recommend the most suitable tutor from our experienced UK tutoring team and confirm your tutoring options within 24 hours.
+          </p>
+
+
+          <!-- Form -->
+          <form
+            class="hero-enquiry-form"
             action="https://api.web3forms.com/submit"
             method="POST">
-        <!-- Web3Forms key (replace with yours) -->
-        <input type="hidden" name="access_key" value="2f8b66ae-5de1-48ee-b2e4-aee11d9dc319">
-        <input type="hidden" name="subject" value="Hero First Lesson Request">
 
-        <div class="col-12 col-sm-6 col-md-4">
-          <input type="tel"
-                 name="phone"
-                 class="form-control form-control-lg rounded-pill"
-                 placeholder="Your phone number"
-                 pattern="\+?[0-9]{7,15}"
-                 title="7–15 digits, optional leading +"
-                 required>
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="2f8b66ae-5de1-48ee-b2e4-aee11d9dc319">
+
+
+            <input
+              type="hidden"
+              name="subject"
+              value="Homepage Hero Tutoring Enquiry">
+
+
+            <input
+              type="hidden"
+              name="source"
+              value="Homepage Hero">
+
+
+            <!-- Phone -->
+            <label
+              for="hero-phone"
+              class="form-label">
+
+              Your phone number
+
+            </label>
+
+
+            <div class="hero-phone-wrap">
+
+              <i
+                class="bi bi-telephone-fill"
+                aria-hidden="true">
+              </i>
+
+              <input
+                type="tel"
+                id="hero-phone"
+                name="phone"
+                class="form-control form-control-lg"
+                placeholder="Your phone number"
+                pattern="\+?[0-9]{7,15}"
+                title="7–15 digits, optional leading +"
+                autocomplete="tel"
+                inputmode="tel"
+                required>
+
+            </div>
+
+
+            <!-- CTA -->
+            <button
+              type="submit"
+              class="btn btn-lg hero-submit-btn">
+
+              Find My Tutor
+
+              <i
+                class="bi bi-arrow-right"
+                aria-hidden="true">
+              </i>
+
+            </button>
+
+
+          </form>
+
+
+          <!-- Reassurance -->
+          <div class="hero-form-reassurance">
+
+
+            <span>
+
+              <i
+                class="bi bi-clock"
+                aria-hidden="true">
+              </i>
+
+              Tutor recommendation within 24 hours
+
+            </span>
+
+
+            <span>
+
+              <i
+                class="bi bi-shield-check"
+                aria-hidden="true">
+              </i>
+
+              No subscription or long-term commitment
+
+            </span>
+
+
+          </div>
+
+
         </div>
 
-        <div class="col-auto">
-          <button type="submit"
-                  class="btn btn-lg btn-cta d-flex align-items-center">
-            Book Your First Lesson
-          </button>
-        </div>
-      </form>
+      </div>
+
+
+    </div>
 
   </div>
+
 </header>
 
 <main>
