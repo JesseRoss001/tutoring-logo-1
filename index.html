@@ -1940,7 +1940,405 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
+  const carouselElement =
+    document.getElementById('nwtTestimonialCarousel');
+
+  if (!carouselElement) {
+    return;
+  }
+
+
+  const carouselInner =
+    carouselElement.querySelector('.carousel-inner');
+
+
+  /*
+   * Store every testimonial card.
+   *
+   * We move these SAME DOM elements when changing
+   * between desktop, tablet and mobile layouts.
+   */
+  const testimonialCards = Array.from(
+    carouselElement.querySelectorAll('.nwt-testimonial-card')
+  );
+
+
+  let currentCardsPerSlide = null;
+
+
+  /* =========================================================
+     DETERMINE CARDS PER SLIDE
+  ========================================================= */
+
+  function getCardsPerSlide() {
+
+    /*
+     * Mobile:
+     * 1 testimonial
+     */
+    if (window.innerWidth < 768) {
+      return 1;
+    }
+
+
+    /*
+     * Tablet:
+     * 2 testimonials
+     */
+    if (window.innerWidth < 992) {
+      return 2;
+    }
+
+
+    /*
+     * Desktop:
+     * 3 testimonials
+     */
+    return 3;
+
+  }
+
+
+  /* =========================================================
+     RESET READ MORE STATES
+  ========================================================= */
+
+  function collapseAllTestimonials() {
+
+    testimonialCards.forEach(function (card) {
+
+      const text =
+        card.querySelector('.testimonial-text');
+
+      const button =
+        card.querySelector('.testimonial-read-more');
+
+
+      if (text) {
+        text.classList.remove('is-expanded');
+      }
+
+
+      if (button) {
+
+        button.textContent = 'Read more';
+
+        button.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+      }
+
+    });
+
+  }
+
+
+  /* =========================================================
+     BUILD RESPONSIVE CAROUSEL
+  ========================================================= */
+
+  function rebuildCarousel() {
+
+    const cardsPerSlide =
+      getCardsPerSlide();
+
+
+    /*
+     * Only rebuild if we actually crossed
+     * a responsive breakpoint.
+     */
+    if (cardsPerSlide === currentCardsPerSlide) {
+      return;
+    }
+
+
+    currentCardsPerSlide =
+      cardsPerSlide;
+
+
+    /*
+     * Reset expanded reviews when changing
+     * between desktop/tablet/mobile.
+     */
+    collapseAllTestimonials();
+
+
+    /*
+     * Remove existing Bootstrap instance.
+     */
+    const existingInstance =
+      bootstrap.Carousel.getInstance(
+        carouselElement
+      );
+
+
+    if (existingInstance) {
+      existingInstance.dispose();
+    }
+
+
+    /*
+     * Clear old slide wrappers.
+     *
+     * testimonialCards still contains references
+     * to all six actual testimonial elements.
+     */
+    carouselInner.innerHTML = '';
+
+
+    /*
+     * Create new slide groups.
+     */
+    for (
+      let index = 0;
+      index < testimonialCards.length;
+      index += cardsPerSlide
+    ) {
+
+      const carouselItem =
+        document.createElement('div');
+
+
+      carouselItem.className =
+        'carousel-item';
+
+
+      /*
+       * First slide active.
+       */
+      if (index === 0) {
+
+        carouselItem.classList.add(
+          'active'
+        );
+
+      }
+
+
+      const row =
+        document.createElement('div');
+
+
+      row.className =
+        'row g-4 justify-content-center';
+
+
+      /*
+       * Get testimonials belonging
+       * to this slide.
+       */
+      const cardsForSlide =
+        testimonialCards.slice(
+          index,
+          index + cardsPerSlide
+        );
+
+
+      cardsForSlide.forEach(function (card) {
+
+        const column =
+          document.createElement('div');
+
+
+        /*
+         * Mobile
+         */
+        if (cardsPerSlide === 1) {
+
+          column.className =
+            'col-12';
+
+        }
+
+
+        /*
+         * Tablet
+         */
+        else if (cardsPerSlide === 2) {
+
+          column.className =
+            'col-md-6';
+
+        }
+
+
+        /*
+         * Desktop
+         */
+        else {
+
+          column.className =
+            'col-lg-4';
+
+        }
+
+
+        column.appendChild(card);
+
+        row.appendChild(column);
+
+      });
+
+
+      carouselItem.appendChild(row);
+
+      carouselInner.appendChild(
+        carouselItem
+      );
+
+    }
+
+
+    /*
+     * Reinitialise Bootstrap carousel.
+     */
+    new bootstrap.Carousel(
+      carouselElement,
+      {
+        interval: false,
+        ride: false,
+        touch: true,
+        wrap: true
+      }
+    );
+
+  }
+
+
+  /* =========================================================
+     READ MORE / READ LESS
+     EVENT DELEGATION
+  ========================================================= */
+
+  /*
+   * IMPORTANT:
+   *
+   * We attach ONE click listener to the carousel.
+   *
+   * This means Read More continues working even
+   * after cards have been moved into newly-created
+   * carousel slides.
+   *
+   * This is much more reliable than attaching
+   * listeners to individual buttons.
+   */
+  carouselElement.addEventListener(
+    'click',
+    function (event) {
+
+      const button =
+        event.target.closest(
+          '.testimonial-read-more'
+        );
+
+
+      if (!button) {
+        return;
+      }
+
+
+      /*
+       * Prevent this button click from doing
+       * anything else.
+       */
+      event.preventDefault();
+
+      event.stopPropagation();
+
+
+      const textWrap =
+        button.closest(
+          '.testimonial-text-wrap'
+        );
+
+
+      if (!textWrap) {
+        return;
+      }
+
+
+      const testimonialText =
+        textWrap.querySelector(
+          '.testimonial-text'
+        );
+
+
+      if (!testimonialText) {
+        return;
+      }
+
+
+      /*
+       * Toggle expanded state.
+       */
+      const expanded =
+        testimonialText.classList.toggle(
+          'is-expanded'
+        );
+
+
+      /*
+       * Change button wording.
+       */
+      button.textContent =
+        expanded
+          ? 'Read less'
+          : 'Read more';
+
+
+      /*
+       * Accessibility state.
+       */
+      button.setAttribute(
+        'aria-expanded',
+        expanded
+          ? 'true'
+          : 'false'
+      );
+
+    }
+  );
+
+
+  /* =========================================================
+     INITIAL BUILD
+  ========================================================= */
+
+  rebuildCarousel();
+
+
+  /* =========================================================
+     RESPONSIVE REBUILD
+  ========================================================= */
+
+  let resizeTimer;
+
+
+  window.addEventListener(
+    'resize',
+    function () {
+
+      clearTimeout(
+        resizeTimer
+      );
+
+
+      resizeTimer =
+        setTimeout(
+          rebuildCarousel,
+          150
+        );
+
+    }
+  );
+
+});
+</script>
 <script src="cookie.js" defer></script>
 
 
