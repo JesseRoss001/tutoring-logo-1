@@ -892,3 +892,136 @@
   }
 
 }
+
+/* =========================================================
+   DBS / SAFEGUARDING STATUS BADGES
+========================================================= */
+
+.tutor-dbs-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tutor-dbs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  width: fit-content;
+
+  padding: 0.45rem 0.75rem;
+
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.tutor-dbs-badge:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   DBS CHECKED
+   North Wales Tutoring branded purple
+========================================= */
+
+.tutor-dbs-badge.dbs-checked {
+  color: #6f00b8;
+  background: #f3e8ff;
+  border: 1px solid rgba(166, 17, 255, 0.28);
+}
+
+.tutor-dbs-badge.dbs-checked i {
+  color: #a611ff;
+}
+
+.tutor-dbs-badge.dbs-checked:hover {
+  color: #590094;
+  background: #ead5ff;
+
+  box-shadow:
+    0 5px 14px rgba(166, 17, 255, 0.13);
+}
+
+
+/* =========================================
+   DBS IN PROGRESS
+========================================= */
+
+.tutor-dbs-badge.dbs-progress {
+  color: #835a00;
+  background: #fff8e8;
+  border: 1px solid #efd28a;
+}
+
+.tutor-dbs-badge.dbs-progress i {
+  color: #b97900;
+}
+
+.tutor-dbs-badge.dbs-progress:hover {
+  color: #6c4900;
+  background: #fff3d4;
+
+  box-shadow:
+    0 5px 14px rgba(131, 90, 0, 0.1);
+}
+
+
+/* =========================================
+   INFO ICON
+========================================= */
+
+.tutor-dbs-badge .dbs-info-icon {
+  font-size: 0.72rem;
+  opacity: 0.65;
+}
+
+/* =========================================
+   LEVEL FILTER YEAR LABELS
+========================================= */
+
+.level-filter-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.15rem;
+
+  min-height: 58px;
+  padding: 0.65rem 1.15rem;
+
+  line-height: 1.15;
+  text-align: center;
+}
+
+.filter-level-detail {
+  display: block;
+
+  margin: 0;
+
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1;
+
+  color: #777;
+  opacity: 1;
+}
+
+.level-filter-btn.active .filter-level-detail {
+  color: inherit;
+  opacity: 0.7;
+}

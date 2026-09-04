@@ -840,3 +840,105 @@
     padding-inline: 1rem;
   }
 }
+
+/* =========================================
+   JESSE CTA BUTTONS
+========================================= */
+
+.jesse-cta-group {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  margin-top: 1.5rem;
+}
+
+.jesse-general-btn,
+.jesse-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  min-height: 52px;
+  padding: 0.75rem 1.2rem;
+
+  border-radius: 50px;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  white-space: nowrap;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* GENERAL ENQUIRY */
+
+.jesse-general-btn {
+  background-color: #09096A;
+  border: 2px solid #09096A;
+  color: #FFFFFF;
+}
+
+.jesse-general-btn:hover,
+.jesse-general-btn:focus {
+  background-color: #FF28A8;
+  border-color: #FF28A8;
+  color: #FFFFFF;
+
+  transform: translateY(-2px);
+}
+
+
+/* BOOK JESSE */
+
+.jesse-whatsapp-btn {
+  background-color: #FFFFFF;
+  border: 2px solid #09096A;
+  color: #09096A;
+}
+
+.jesse-whatsapp-btn:hover,
+.jesse-whatsapp-btn:focus {
+  background-color: #09096A;
+  border-color: #09096A;
+  color: #FFFFFF;
+
+  transform: translateY(-2px);
+}
+
+
+/* ICONS */
+
+.jesse-general-btn i,
+.jesse-whatsapp-btn i {
+  margin: 0 !important;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767.98px) {
+
+  .jesse-cta-group {
+    flex-direction: column;
+  }
+
+  .jesse-general-btn,
+  .jesse-whatsapp-btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+}

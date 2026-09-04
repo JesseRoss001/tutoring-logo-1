@@ -1,0 +1,2037 @@
+/* ===================================================================
+   NORTH WALES TUTORING
+   SAFEGUARDING PAGE
+   safeguarding.css
+
+   Sections:
+   1. Page Defaults
+   2. Hero
+   3. Designated Safeguarding Lead Card
+   4. Safeguarding Commitments
+   5. Policy Layout
+   6. Policy Navigation
+   7. Policy Content
+   8. Online Safeguarding Rules
+   9. Concern Types
+   10. Process
+   11. Safeguarding Form
+   12. Responsibility Section
+   13. FAQ
+   14. Final CTA
+   15. Responsive
+=================================================================== */
+
+
+/* ===================================================================
+   1. PAGE DEFAULTS
+=================================================================== */
+
+.safeguarding-page {
+  background-color: #FFFFFF;
+  color: var(--text-dark, #373B3E);
+}
+
+
+.safeguarding-page main {
+  overflow: hidden;
+}
+
+
+.safeguarding-page h1,
+.safeguarding-page h2,
+.safeguarding-page h3,
+.safeguarding-page h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.safeguarding-page p,
+.safeguarding-page li,
+.safeguarding-page label,
+.safeguarding-page input,
+.safeguarding-page select,
+.safeguarding-page textarea,
+.safeguarding-page button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ===================================================================
+   SHARED SECTION HEADING
+=================================================================== */
+
+.safeguarding-section-heading {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+
+.safeguarding-section-label {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 0.9rem;
+
+  padding: 0.4rem 0.9rem;
+
+  background-color: var(--bg-purple, #F2E8FF);
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 50px;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.safeguarding-section-heading h2 {
+  margin: 0;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+
+.safeguarding-section-heading > p {
+  max-width: 690px;
+
+  margin: 1rem auto 0;
+
+  color: #5A606A;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+
+/* ===================================================================
+   2. HERO
+=================================================================== */
+
+.safeguarding-hero {
+  position: relative;
+
+  padding: 5.5rem 0;
+
+  background-color: #FAF9FD;
+
+  overflow: hidden;
+}
+
+
+/* Decorative solid shapes */
+
+.safeguarding-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -220px;
+  right: -120px;
+
+  background-color: var(--bg-pink, #FFE8F1);
+
+  border-radius: 50%;
+
+  opacity: 0.9;
+
+  pointer-events: none;
+}
+
+
+.safeguarding-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  bottom: -130px;
+  left: -60px;
+
+  background-color: var(--bg-purple, #F2E8FF);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.safeguarding-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Hero copy */
+
+.safeguarding-hero-copy {
+  max-width: 730px;
+}
+
+
+.safeguarding-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 1.25rem;
+
+  padding: 0.5rem 0.9rem;
+
+  background-color: var(--bg-purple, #F2E8FF);
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 50px;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+
+.safeguarding-eyebrow i {
+  color: var(--primary-color, #09096A);
+  font-size: 0.95rem;
+}
+
+
+.safeguarding-hero h1 {
+  max-width: 700px;
+
+  margin: 0 0 1.25rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: clamp(2.6rem, 5vw, 4.35rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+
+.safeguarding-hero-lead {
+  max-width: 690px;
+
+  margin-bottom: 1rem;
+
+  color: #20252B;
+
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+
+.safeguarding-hero-text {
+  max-width: 680px;
+
+  margin-bottom: 1.7rem;
+
+  color: #555E68;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* Hero buttons */
+
+.safeguarding-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin-bottom: 1.5rem;
+}
+
+
+.safeguarding-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  min-height: 50px;
+
+  padding: 0.75rem 1.4rem;
+
+  background-color: var(--primary-color, #09096A);
+  color: #FFFFFF;
+
+  border: 2px solid var(--primary-color, #09096A);
+  border-radius: 50px;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.safeguarding-primary-btn:hover,
+.safeguarding-primary-btn:focus {
+  background-color: var(--accent-color, #FF28A8);
+  border-color: var(--accent-color, #FF28A8);
+  color: #FFFFFF;
+
+  transform: translateY(-2px);
+}
+
+
+.safeguarding-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+
+  padding: 0.75rem 1.4rem;
+
+  background-color: #FFFFFF;
+  color: var(--primary-color, #09096A);
+
+  border: 2px solid rgba(9, 9, 106, 0.17);
+  border-radius: 50px;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.safeguarding-secondary-btn:hover,
+.safeguarding-secondary-btn:focus {
+  background-color: var(--bg-purple, #F2E8FF);
+  border-color: var(--primary-color, #09096A);
+  color: var(--primary-color, #09096A);
+}
+
+
+/* Emergency notice */
+
+.safeguarding-emergency-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  width: fit-content;
+
+  padding: 0.75rem 1rem;
+
+  background-color: #FFF4E5;
+  color: #68440A;
+
+  border: 1px solid #F6D9A6;
+  border-radius: 12px;
+
+  font-size: 0.9rem;
+}
+
+
+.safeguarding-emergency-inline i {
+  color: #D88200;
+  font-size: 1rem;
+}
+
+
+
+/* ===================================================================
+   3. DESIGNATED SAFEGUARDING LEAD CARD
+=================================================================== */
+
+.dsl-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 440px;
+
+  margin-left: auto;
+
+  padding: 2rem;
+
+  background-color: #FFFFFF;
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 60px rgba(9, 9, 106, 0.13);
+}
+
+
+.dsl-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+
+  height: 5px;
+
+  background-color: var(--accent-color, #FF28A8);
+
+  border-radius: 0 0 6px 6px;
+}
+
+
+.dsl-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  margin-bottom: 1.3rem;
+
+  background-color: var(--bg-purple, #F2E8FF);
+  color: var(--primary-color, #09096A);
+
+  border-radius: 18px;
+
+  font-size: 1.65rem;
+}
+
+
+.dsl-label {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: var(--accent-color, #FF28A8);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+
+.dsl-card h2 {
+  margin: 0;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+.dsl-role {
+  margin: 0.25rem 0 1rem;
+
+  color: #20242A;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+
+.dsl-description {
+  margin-bottom: 1.5rem;
+
+  color: #59616A;
+
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+
+.dsl-contact {
+  display: grid;
+  gap: 0.75rem;
+
+  padding-top: 1rem;
+
+  border-top: 1px solid #ECEEF2;
+}
+
+
+.dsl-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+
+  padding: 0.8rem;
+
+  background-color: #FAFAFC;
+
+  border-radius: 12px;
+}
+
+
+.dsl-contact-row > i {
+  flex-shrink: 0;
+
+  margin-top: 0.15rem;
+
+  color: var(--accent-color, #FF28A8);
+}
+
+
+.dsl-contact-row div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.dsl-contact-row span {
+  margin-bottom: 0.1rem;
+
+  color: #727983;
+
+  font-size: 0.72rem;
+}
+
+
+.dsl-contact-row strong,
+.dsl-contact-row a {
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.dsl-contact-row a:hover {
+  color: var(--accent-color, #FF28A8);
+}
+
+
+
+/* ===================================================================
+   4. SAFEGUARDING COMMITMENTS
+=================================================================== */
+
+.safeguarding-commitments-section {
+  padding: 5.5rem 0;
+
+  background-color: #FFFFFF;
+}
+
+
+.safeguarding-commitment-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1rem;
+}
+
+
+.safeguarding-feature-card {
+  padding: 1.6rem;
+
+  border-radius: 22px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.safeguarding-feature-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(9, 9, 106, 0.09);
+}
+
+
+.safeguarding-purple {
+  background-color: var(--bg-purple, #F2E8FF);
+}
+
+
+.safeguarding-green {
+  background-color: var(--bg-green, #E8FFF2);
+}
+
+
+.safeguarding-pink {
+  background-color: var(--bg-pink, #FFE8F1);
+}
+
+
+.safeguarding-yellow {
+  background-color: var(--bg-yellow, #FFF8E8);
+}
+
+
+.safeguarding-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 1rem;
+
+  background-color: #FFFFFF;
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 50%;
+
+  font-size: 1.2rem;
+
+  box-shadow:
+    0 4px 14px rgba(9, 9, 106, 0.07);
+}
+
+
+.safeguarding-feature-card h3 {
+  margin: 0 0 0.55rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+
+.safeguarding-feature-card p {
+  margin: 0;
+
+  color: #4E5660;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+
+/* ===================================================================
+   5. POLICY LAYOUT
+=================================================================== */
+
+.safeguarding-policy-section {
+  padding: 5.5rem 0;
+
+  background-color: #FAFAFC;
+}
+
+
+
+/* ===================================================================
+   6. POLICY NAVIGATION
+=================================================================== */
+
+.policy-navigation {
+  position: sticky;
+  top: 110px;
+
+  padding: 1.4rem;
+
+  background-color: #FFFFFF;
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 28px rgba(9, 9, 106, 0.06);
+}
+
+
+.policy-navigation-title {
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+
+.policy-navigation nav {
+  display: grid;
+  gap: 0.15rem;
+}
+
+
+.policy-navigation a {
+  position: relative;
+
+  display: block;
+
+  padding: 0.5rem 0.65rem;
+
+  color: #5F6670;
+
+  border-radius: 8px;
+
+  font-size: 0.82rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.policy-navigation a:hover,
+.policy-navigation a:focus {
+  background-color: var(--bg-purple, #F2E8FF);
+  color: var(--primary-color, #09096A);
+}
+
+
+
+/* ===================================================================
+   7. POLICY CONTENT
+=================================================================== */
+
+.policy-content {
+  display: grid;
+  gap: 1.25rem;
+}
+
+
+.policy-block {
+  position: relative;
+
+  padding: 2.2rem;
+
+  background-color: #FFFFFF;
+
+  border: 1px solid rgba(9, 9, 106, 0.07);
+  border-radius: 22px;
+
+  box-shadow:
+    0 8px 28px rgba(9, 9, 106, 0.05);
+}
+
+
+.policy-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 42px;
+  height: 30px;
+
+  margin-bottom: 0.85rem;
+
+  padding: 0 0.65rem;
+
+  background-color: var(--bg-purple, #F2E8FF);
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 50px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+
+.policy-block h2 {
+  margin: 0 0 1.15rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+
+.policy-block > p {
+  margin-bottom: 1rem;
+
+  color: #505862;
+
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+
+.policy-block > p:last-child {
+  margin-bottom: 0;
+}
+
+
+.policy-block strong {
+  color: #252A30;
+}
+
+
+/* Policy highlight */
+
+.policy-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  margin-top: 1.4rem;
+
+  padding: 1rem 1.1rem;
+
+  background-color: var(--bg-green, #E8FFF2);
+
+  border-radius: 14px;
+}
+
+
+.policy-highlight i {
+  flex-shrink: 0;
+
+  margin-top: 0.18rem;
+
+  color: #078552;
+}
+
+
+.policy-highlight p {
+  margin: 0;
+
+  color: #36584A;
+
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+
+/* Policy callout */
+
+.policy-callout {
+  margin-top: 1.4rem;
+
+  padding: 1.2rem;
+
+  border-radius: 15px;
+}
+
+
+.policy-callout-purple {
+  background-color: var(--bg-purple, #F2E8FF);
+}
+
+
+.policy-callout strong {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.94rem;
+}
+
+
+.policy-callout p {
+  margin: 0;
+
+  color: #505862;
+
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+
+/* Policy review grid */
+
+.policy-review-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 0.8rem;
+
+  margin-top: 1.5rem;
+}
+
+
+.policy-review-grid > div {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+
+  background-color: #FAFAFC;
+
+  border: 1px solid #ECEEF2;
+  border-radius: 12px;
+}
+
+
+.policy-review-grid span {
+  margin-bottom: 0.2rem;
+
+  color: #777E88;
+
+  font-size: 0.72rem;
+}
+
+
+.policy-review-grid strong {
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.9rem;
+}
+
+
+
+/* ===================================================================
+   8. ONLINE SAFEGUARDING RULES
+=================================================================== */
+
+.safeguarding-rules-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 0.75rem;
+
+  margin: 1.5rem 0;
+}
+
+
+.safeguarding-rule {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+
+  padding: 1rem;
+
+  background-color: #FAFAFC;
+
+  border: 1px solid #ECEEF2;
+  border-radius: 14px;
+}
+
+
+.safeguarding-rule > i {
+  flex-shrink: 0;
+
+  color: var(--accent-color, #FF28A8);
+
+  font-size: 1.15rem;
+}
+
+
+.safeguarding-rule h3 {
+  margin: 0 0 0.25rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+
+.safeguarding-rule p {
+  margin: 0;
+
+  color: #5B626C;
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+
+
+/* ===================================================================
+   9. CONCERN TYPES
+=================================================================== */
+
+.concern-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+
+  margin: 1.3rem 0;
+}
+
+
+.concern-pill-list span {
+  display: inline-flex;
+
+  padding: 0.5rem 0.75rem;
+
+  background-color: var(--bg-pink, #FFE8F1);
+  color: #7C1F55;
+
+  border-radius: 50px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+
+/* Disclosure checklist */
+
+.safeguarding-check-list {
+  display: grid;
+  gap: 0.65rem;
+
+  margin: 1.2rem 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.safeguarding-check-list li {
+  position: relative;
+
+  padding-left: 1.8rem;
+
+  color: #505862;
+
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+
+.safeguarding-check-list li::before {
+  content: "\F26A";
+
+  position: absolute;
+
+  left: 0;
+  top: 0.08rem;
+
+  color: #078552;
+
+  font-family: "bootstrap-icons";
+  font-size: 1rem;
+}
+
+
+
+/* ===================================================================
+   10. PROCESS
+=================================================================== */
+
+.safeguarding-process {
+  display: grid;
+  gap: 0.75rem;
+
+  margin-top: 1.2rem;
+}
+
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  background-color: #FAFAFC;
+
+  border-radius: 14px;
+}
+
+
+.process-step > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 38px;
+
+  width: 38px;
+  height: 38px;
+
+  background-color: var(--primary-color, #09096A);
+  color: #FFFFFF;
+
+  border-radius: 50%;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+
+.process-step h3 {
+  margin: 0 0 0.2rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+
+.process-step p {
+  margin: 0;
+
+  color: #5A626C;
+
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+
+
+/* ===================================================================
+   11. SAFEGUARDING REPORT FORM
+=================================================================== */
+
+.safeguarding-report-section {
+  padding: 6rem 0;
+
+  background-color: #FFFFFF;
+}
+
+
+/* Intro */
+
+.report-intro {
+  max-width: 500px;
+}
+
+
+.report-intro h2 {
+  margin: 0 0 1rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+
+.report-intro > p {
+  color: #555D66;
+
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+
+.report-intro strong {
+  color: #22262C;
+}
+
+
+/* Emergency card */
+
+.report-emergency-card,
+.report-guidance-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+
+  margin-top: 1rem;
+
+  padding: 1.1rem;
+
+  border-radius: 15px;
+}
+
+
+.report-emergency-card {
+  background-color: #FFF3E6;
+
+  border: 1px solid #F2D5B0;
+}
+
+
+.report-guidance-card {
+  background-color: #F7F5FC;
+
+  border: 1px solid #E6DFF4;
+}
+
+
+.report-emergency-card > i,
+.report-guidance-card > i {
+  flex-shrink: 0;
+
+  margin-top: 0.12rem;
+
+  font-size: 1.1rem;
+}
+
+
+.report-emergency-card > i {
+  color: #C46B00;
+}
+
+
+.report-guidance-card > i {
+  color: var(--accent-color, #FF28A8);
+}
+
+
+.report-emergency-card strong,
+.report-guidance-card strong {
+  display: block;
+
+  margin-bottom: 0.2rem;
+
+  color: #282C31;
+
+  font-size: 0.88rem;
+}
+
+
+.report-emergency-card p,
+.report-guidance-card p {
+  margin: 0;
+
+  color: #606770;
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+
+/* Form card */
+
+.safeguarding-form-card {
+  padding: 2rem;
+
+  background-color: #FAF9FD;
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 55px rgba(9, 9, 106, 0.11);
+}
+
+
+.safeguarding-form-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+
+  margin-bottom: 1.7rem;
+}
+
+
+.safeguarding-form-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 52px;
+
+  width: 52px;
+  height: 52px;
+
+  background-color: var(--bg-pink, #FFE8F1);
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 16px;
+
+  font-size: 1.2rem;
+}
+
+
+.safeguarding-form-header span {
+  color: var(--accent-color, #FF28A8);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+.safeguarding-form-header h2 {
+  margin: 0.15rem 0 0;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+
+/* Fieldsets */
+
+.safeguarding-form-card fieldset {
+  margin: 0 0 1.7rem;
+  padding: 0;
+
+  border: 0;
+}
+
+
+.safeguarding-form-card legend {
+  width: 100%;
+
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.6rem;
+
+  color: var(--primary-color, #09096A);
+
+  border-bottom: 1px solid #E3E4E9;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+
+/* Labels */
+
+.safeguarding-form-card .form-label {
+  margin-bottom: 0.4rem;
+
+  color: #30363D;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+
+.safeguarding-form-card .form-label span {
+  color: var(--accent-color, #FF28A8);
+}
+
+
+/* Inputs */
+
+.safeguarding-form-card .form-control,
+.safeguarding-form-card .form-select {
+  min-height: 48px;
+
+  padding: 0.7rem 0.8rem;
+
+  background-color: #FFFFFF;
+  color: #20252A;
+
+  border: 1.5px solid #DADDE3;
+  border-radius: 11px;
+
+  font-size: 0.9rem;
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.safeguarding-form-card textarea.form-control {
+  min-height: auto;
+
+  resize: vertical;
+}
+
+
+.safeguarding-form-card .form-control:focus,
+.safeguarding-form-card .form-select:focus {
+  border-color: var(--accent-color, #FF28A8);
+
+  box-shadow:
+    0 0 0 0.2rem rgba(255, 40, 168, 0.11);
+}
+
+
+.form-help {
+  margin-top: 0.4rem;
+
+  color: #737B84;
+
+  font-size: 0.73rem;
+  line-height: 1.45;
+}
+
+
+/* Privacy notice */
+
+.safeguarding-form-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  margin: 0.5rem 0 1rem;
+
+  padding: 1rem;
+
+  background-color: var(--bg-purple, #F2E8FF);
+
+  border-radius: 13px;
+}
+
+
+.safeguarding-form-notice i {
+  flex-shrink: 0;
+
+  margin-top: 0.12rem;
+
+  color: var(--primary-color, #09096A);
+}
+
+
+.safeguarding-form-notice p {
+  margin: 0;
+
+  color: #555C67;
+
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+
+.safeguarding-confirmation {
+  margin-bottom: 1.2rem;
+}
+
+
+.safeguarding-confirmation .form-check-input:checked {
+  background-color: var(--primary-color, #09096A);
+
+  border-color: var(--primary-color, #09096A);
+}
+
+
+.safeguarding-confirmation label {
+  color: #555C64;
+
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+
+/* Submit */
+
+.safeguarding-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  width: 100%;
+  min-height: 54px;
+
+  padding: 0.8rem 1.2rem;
+
+  background-color: var(--primary-color, #09096A);
+  color: #FFFFFF;
+
+  border: 0;
+  border-radius: 12px;
+
+  font-size: 0.94rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 24px rgba(9, 9, 106, 0.17);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.safeguarding-submit-btn:hover,
+.safeguarding-submit-btn:focus {
+  background-color: var(--accent-color, #FF28A8);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgba(255, 40, 168, 0.20);
+}
+
+
+.safeguarding-submit-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+.safeguarding-form-footer {
+  margin: 0.9rem 0 0;
+
+  color: #747B84;
+
+  font-size: 0.73rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+
+/* ===================================================================
+   12. RESPONSIBILITY SECTION
+=================================================================== */
+
+.safeguarding-responsibility-section {
+  padding: 1rem 0 5.5rem;
+
+  background-color: #FFFFFF;
+}
+
+
+.responsibility-card {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  gap: 1.4rem;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 2.5rem;
+
+  background-color: var(--primary-color, #09096A);
+  color: #FFFFFF;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 18px 45px rgba(9, 9, 106, 0.20);
+}
+
+
+.responsibility-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+
+  border-radius: 17px;
+
+  font-size: 1.35rem;
+}
+
+
+.responsibility-card .safeguarding-section-label {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+
+.responsibility-card h2 {
+  margin: 0 0 1rem;
+
+  color: #FFFFFF;
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+.responsibility-card p {
+  max-width: 780px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+
+.responsibility-card strong {
+  color: #FFFFFF;
+}
+
+
+
+/* ===================================================================
+   13. FAQ
+=================================================================== */
+
+.safeguarding-faq-section {
+  padding: 5.5rem 0;
+
+  background-color: #FAFAFC;
+}
+
+
+.safeguarding-accordion {
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+
+.safeguarding-accordion .accordion-item {
+  margin-bottom: 0.9rem;
+
+  background-color: #FFFFFF;
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+
+.safeguarding-accordion .accordion-button {
+  padding: 1.2rem;
+
+  background-color: #FFFFFF;
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.98rem;
+  font-weight: 700;
+
+  box-shadow: none;
+}
+
+
+.safeguarding-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--bg-purple, #F2E8FF);
+  color: var(--primary-color, #09096A);
+}
+
+
+.safeguarding-accordion .accordion-button:focus {
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 40, 168, 0.17);
+}
+
+
+.safeguarding-accordion .accordion-body {
+  padding: 0 1.2rem 1.2rem;
+
+  color: #555D67;
+
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+
+
+/* ===================================================================
+   14. FINAL SAFEGUARDING CTA
+=================================================================== */
+
+.safeguarding-final-section {
+  padding: 5rem 0;
+
+  background-color: #FFFFFF;
+}
+
+
+.safeguarding-final-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  padding: 2.5rem 3rem;
+
+  background-color: var(--bg-pink, #FFE8F1);
+
+  border-radius: 24px;
+}
+
+
+.safeguarding-final-card h2 {
+  margin: 0 0 0.7rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+.safeguarding-final-card p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #5A5963;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+
+.safeguarding-final-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+
+  flex-shrink: 0;
+}
+
+
+.safeguarding-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  color: var(--primary-color, #09096A);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.safeguarding-email-link:hover {
+  color: var(--accent-color, #FF28A8);
+}
+
+
+
+/* ===================================================================
+   15. TABLET
+=================================================================== */
+
+@media (max-width: 991.98px) {
+
+
+  /* Hero */
+
+  .safeguarding-hero {
+    padding: 4.5rem 0;
+  }
+
+
+  .safeguarding-hero-copy {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  .safeguarding-hero-lead,
+  .safeguarding-hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .safeguarding-hero-actions {
+    justify-content: center;
+  }
+
+
+  .safeguarding-emergency-inline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .dsl-card {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+
+  /* Commitments */
+
+  .safeguarding-commitment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* Policy */
+
+  .policy-navigation {
+    position: static;
+  }
+
+
+  .policy-navigation nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* Report */
+
+  .report-intro {
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+
+  /* Final */
+
+  .safeguarding-final-card {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}
+
+
+
+/* ===================================================================
+   16. MOBILE
+=================================================================== */
+
+@media (max-width: 767.98px) {
+
+
+  .safeguarding-section-heading h2 {
+    font-size: 1.85rem;
+  }
+
+
+  /* Hero */
+
+  .safeguarding-hero {
+    padding: 3.5rem 0;
+  }
+
+
+  .safeguarding-hero h1 {
+    font-size: 2.45rem;
+  }
+
+
+  .safeguarding-hero-lead {
+    font-size: 1rem;
+  }
+
+
+  .safeguarding-hero-text {
+    font-size: 0.9rem;
+  }
+
+
+  .safeguarding-hero-actions {
+    flex-direction: column;
+  }
+
+
+  .safeguarding-primary-btn,
+  .safeguarding-secondary-btn {
+    width: 100%;
+    max-width: 380px;
+  }
+
+
+  /* DSL */
+
+  .dsl-card {
+    padding: 1.5rem;
+
+    border-radius: 20px;
+  }
+
+
+  /* Commitments */
+
+  .safeguarding-commitments-section {
+    padding: 4rem 0;
+  }
+
+
+  .safeguarding-commitment-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Policy */
+
+  .safeguarding-policy-section {
+    padding: 4rem 0;
+  }
+
+
+  .policy-navigation nav {
+    grid-template-columns: 1fr;
+  }
+
+
+  .policy-block {
+    padding: 1.5rem;
+  }
+
+
+  .policy-block h2 {
+    font-size: 1.45rem;
+  }
+
+
+  .policy-review-grid,
+  .safeguarding-rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Form */
+
+  .safeguarding-report-section {
+    padding: 4rem 0;
+  }
+
+
+  .report-intro h2 {
+    font-size: 2rem;
+  }
+
+
+  .safeguarding-form-card {
+    padding: 1.4rem;
+
+    border-radius: 20px;
+  }
+
+
+  /* Responsibility */
+
+  .responsibility-card {
+    grid-template-columns: 1fr;
+
+    padding: 1.7rem;
+
+    text-align: left;
+  }
+
+
+  .responsibility-card h2 {
+    font-size: 1.6rem;
+  }
+
+
+  /* FAQ */
+
+  .safeguarding-faq-section {
+    padding: 4rem 0;
+  }
+
+
+  /* Final */
+
+  .safeguarding-final-section {
+    padding: 4rem 0;
+  }
+
+
+  .safeguarding-final-card {
+    padding: 2rem 1.4rem;
+  }
+
+
+  .safeguarding-final-card h2 {
+    font-size: 1.65rem;
+  }
+
+}
+
+
+
+/* ===================================================================
+   17. SMALL MOBILE
+=================================================================== */
+
+@media (max-width: 575.98px) {
+
+
+  .safeguarding-section-heading {
+    margin-bottom: 2rem;
+  }
+
+
+  .safeguarding-section-heading h2 {
+    font-size: 1.65rem;
+  }
+
+
+  .safeguarding-section-heading > p {
+    font-size: 0.88rem;
+  }
+
+
+  .safeguarding-hero {
+    padding: 3rem 0;
+  }
+
+
+  .safeguarding-hero h1 {
+    font-size: 2.05rem;
+  }
+
+
+  .safeguarding-eyebrow {
+    font-size: 0.68rem;
+  }
+
+
+  .safeguarding-emergency-inline {
+    align-items: flex-start;
+
+    text-align: left;
+  }
+
+
+  .policy-block {
+    padding: 1.3rem;
+  }
+
+
+  .safeguarding-rule {
+    flex-direction: column;
+  }
+
+
+  .process-step {
+    gap: 0.75rem;
+  }
+
+
+  .safeguarding-form-card {
+    padding: 1.15rem;
+  }
+
+
+  .safeguarding-form-header {
+    align-items: flex-start;
+  }
+
+
+  .responsibility-card {
+    padding: 1.5rem;
+  }
+
+
+  .safeguarding-final-card {
+    border-radius: 18px;
+  }
+
+}
