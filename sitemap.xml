@@ -8,7 +8,9 @@
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
 
-  <!-- MAIN WEBSITE PAGES -->
+  <!-- =====================================================
+       MAIN WEBSITE PAGES
+  ====================================================== -->
 
   <url>
     <loc>https://northwalestutoring.com/</loc>
@@ -22,11 +24,11 @@
     <priority>0.80</priority>
   </url>
 
-<url>
-  <loc>https://northwalestutoring.com/find-tutors-north-wales-uk.html</loc>
-  <lastmod>2026-08-27</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://northwalestutoring.com/find-tutors-north-wales-uk.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.80</priority>
+  </url>
 
   <url>
     <loc>https://northwalestutoring.com/courses.html</loc>
@@ -53,7 +55,9 @@
   </url>
 
 
-  <!-- EXAM PREPARATION PAGES -->
+  <!-- =====================================================
+       EXAM PREPARATION PAGES
+  ====================================================== -->
 
   <url>
     <loc>https://northwalestutoring.com/online-11-plus-tutoring-north-wales-uk.html</loc>
@@ -72,14 +76,17 @@
     <lastmod>2026-07-17</lastmod>
     <priority>0.90</priority>
   </url>
-<url>
-  <loc>https://northwalestutoring.com/online-university-maths-tutoring-north-wales-uk.html</loc>
-  <lastmod>2026-07-15</lastmod>
-  <priority>0.90</priority>
-</url>
+
+  <url>
+    <loc>https://northwalestutoring.com/online-university-maths-tutoring-north-wales-uk.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <priority>0.90</priority>
+  </url>
 
 
-  <!-- EXISTING TUTOR PROFILES -->
+  <!-- =====================================================
+       EXISTING TUTOR PROFILES
+  ====================================================== -->
 
   <url>
     <loc>https://northwalestutoring.com/tutor-solomon.html</loc>
@@ -100,19 +107,7 @@
   </url>
 
   <url>
-    <loc>https://northwalestutoring.com/tutor-howard.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
     <loc>https://northwalestutoring.com/tutor-sihaam.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://northwalestutoring.com/tutor-nic.html</loc>
     <lastmod>2026-04-15T15:10:59+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -154,7 +149,9 @@
   </url>
 
 
-  <!-- NEW TUTOR PROFILES -->
+  <!-- =====================================================
+       JULY / AUGUST TUTOR PROFILES
+  ====================================================== -->
 
   <url>
     <loc>https://northwalestutoring.com/tutor-bryan.html</loc>
@@ -199,12 +196,6 @@
   </url>
 
   <url>
-    <loc>https://northwalestutoring.com/tutor-katy.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
     <loc>https://northwalestutoring.com/tutor-caroline.html</loc>
     <lastmod>2026-08-18</lastmod>
     <priority>0.64</priority>
@@ -235,12 +226,6 @@
   </url>
 
   <url>
-    <loc>https://northwalestutoring.com/tutor-kimmone.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
     <loc>https://northwalestutoring.com/tutor-bevan.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.64</priority>
@@ -252,19 +237,51 @@
     <priority>0.64</priority>
   </url>
 
+
+  <!-- =====================================================
+       SEPTEMBER 2026 TUTOR PROFILES
+  ====================================================== -->
+
   <url>
-    <loc>https://northwalestutoring.com/tutor-ayesha.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://northwalestutoring.com/tutor-patrick.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://northwalestutoring.com/tutor-blue.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://northwalestutoring.com/tutor-ffion.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <priority>0.64</priority>
   </url>
 
-  <!-- LEGAL PAGES -->
+  <url>
+    <loc>https://northwalestutoring.com/tutor-madeleine.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-jonathan.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-archita.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-donna.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
+  <!-- =====================================================
+       LEGAL PAGES
+  ====================================================== -->
 
   <url>
     <loc>https://northwalestutoring.com/privacy.html</loc>
