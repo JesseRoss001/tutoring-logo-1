@@ -1025,3 +1025,92 @@
   color: inherit;
   opacity: 0.7;
 }
+
+/* =========================================================
+   TUTOR AVAILABILITY BADGE
+========================================================= */
+
+.tutor-card-image {
+  position: relative;
+}
+
+.tutor-availability-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.5rem 0.8rem;
+
+  background-color: #09096A;
+  color: #FFFFFF;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+
+  box-shadow: 0 6px 18px rgba(9, 9, 106, 0.22);
+
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.tutor-availability-badge i {
+  margin: 0;
+  color: #FF28A8;
+  font-size: 0.78rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+
+  .tutor-availability-badge {
+    top: 12px;
+    left: 12px;
+
+    padding: 0.45rem 0.7rem;
+
+    font-size: 0.72rem;
+  }
+
+}
+
+.tutor-availability-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.52rem 0.9rem;
+
+  background: #FFE8F1;
+  color: #09096A;
+
+  border: 1px solid rgba(9, 9, 106, 0.10);
+  border-radius: 999px;
+
+  box-shadow: 0 6px 16px rgba(9, 9, 106, 0.10);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tutor-availability-badge i {
+  color: #FF28A8;
+  font-size: 0.72rem;
+  line-height: 1;
+}

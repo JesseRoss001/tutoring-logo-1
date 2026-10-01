@@ -260,3 +260,311 @@
 .category-pill.primary { background-color: #ffcb29; color: #000; }  /* yellow */
 .category-pill.gcse    { background-color: #fa60d9; }  /* pink */
 .category-pill.alevel  { background-color: #a611ff; }  /* purple */
+
+
+/* ===================================================================
+   2026 COURSE PAGE REFINEMENTS
+   Keeps existing layout, improves pricing + card presentation
+=================================================================== */
+
+
+/* ---------------------------------------
+   PRICING AVAILABILITY NOTICE
+--------------------------------------- */
+
+.course-pricing-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+
+  max-width: 800px;
+  margin: -0.5rem auto 2rem;
+  padding: 0.8rem 1.1rem;
+
+  background-color: #F2E8FF;
+  color: #09096A;
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 50px;
+
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.course-pricing-note i {
+  flex: 0 0 auto;
+  color: #FF28A8;
+  font-size: 1rem;
+}
+
+
+/* ---------------------------------------
+   COURSE CARDS
+--------------------------------------- */
+
+.course-card {
+  background-color: #FFFFFF;
+  border-radius: 1.15rem;
+
+  box-shadow:
+    0 6px 22px rgba(9, 9, 106, 0.07) !important;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(9, 9, 106, 0.12) !important;
+}
+
+
+/* Images were previously very tall at 400px */
+
+.course-card .card-img-top {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+
+  border-top-left-radius: 1.15rem;
+  border-top-right-radius: 1.15rem;
+}
+
+
+/* Slightly more breathing room */
+
+.course-card .card-body {
+  padding: 1.3rem 1.35rem 1.5rem;
+}
+
+
+/* Keeps level + price neat */
+
+.course-card .card-body > .d-flex.justify-content-between {
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+
+/* ---------------------------------------
+   LEVEL PILLS
+--------------------------------------- */
+
+.category-pill {
+  padding: 0.4rem 0.75rem;
+
+  border-radius: 50px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+
+/* Softer NWT brand colours */
+
+.category-pill.primary {
+  background-color: #FFF8E8;
+  color: #09096A;
+}
+
+.category-pill.gcse {
+  background-color: #FFE8F1;
+  color: #09096A;
+}
+
+.category-pill.alevel {
+  background-color: #F2E8FF;
+  color: #09096A;
+}
+
+
+/* ---------------------------------------
+   COURSE PRICE
+--------------------------------------- */
+
+.price {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.45rem 0.75rem;
+
+  background-color: #FFE8F1;
+  color: #09096A !important;
+
+  border: 1px solid rgba(255, 40, 168, 0.18);
+  border-radius: 50px;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* Extra information beneath descriptions */
+
+.course-price-detail,
+.course-current-tutor {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  margin: -0.15rem 0 1rem;
+
+  color: #626873;
+
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.course-price-detail i,
+.course-current-tutor i {
+  color: #FF28A8;
+}
+
+.course-current-tutor a {
+  color: #09096A;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.course-current-tutor a:hover {
+  color: #FF28A8;
+  text-decoration: underline;
+}
+
+
+/* ---------------------------------------
+   FEATURED MATHS PRICE CHIPS
+--------------------------------------- */
+
+.price-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.price-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.6rem 0.85rem;
+
+  background-color: #F2E8FF;
+  color: #09096A;
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 50px;
+
+  box-shadow: none;
+
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.price-chip.alt {
+  background-color: #FFE8F1;
+  color: #09096A;
+}
+
+.price-chip strong {
+  color: #09096A;
+  font-weight: 800;
+}
+
+.price-chip .sub {
+  color: #606970;
+  opacity: 1;
+  font-size: 0.76rem;
+}
+
+.price-availability-note {
+  margin: 0;
+  color: #6B7179;
+
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+
+/* ---------------------------------------
+   COURSE CTA
+--------------------------------------- */
+
+.btn-details {
+  gap: 0.4rem;
+
+  padding: 0.55rem 1.1rem;
+
+  background-color: #09096A;
+  color: #FFFFFF;
+
+  border: 2px solid #09096A;
+  border-radius: 50px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-details:hover,
+.btn-details:focus {
+  background-color: #FF28A8;
+  border-color: #FF28A8;
+  color: #FFFFFF;
+
+  transform: translateY(-1px);
+
+  text-decoration: none;
+}
+
+
+/* ---------------------------------------
+   MOBILE
+--------------------------------------- */
+
+@media (max-width: 576px) {
+
+  .course-pricing-note {
+    justify-content: flex-start;
+
+    margin-bottom: 1.5rem;
+
+    border-radius: 1rem;
+
+    text-align: left;
+  }
+
+  .course-card .card-img-top {
+    height: 240px;
+  }
+
+  .course-card .card-body {
+    padding: 1.15rem 1.15rem 1.35rem;
+  }
+
+  .price {
+    font-size: 0.78rem;
+  }
+
+  .price-stack {
+    width: 100%;
+  }
+
+}
