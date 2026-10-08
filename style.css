@@ -1605,3 +1605,73 @@ html, body {
   }
 
 }
+
+
+/* BUSINESS WALES FOOTER PLEDGES */
+
+.footer-pledges {
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  text-align: center;
+}
+
+.footer-pledges .footer-title {
+  margin-bottom: 24px;
+}
+
+.footer-pledges-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-pledges-grid a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.25s ease,
+              opacity 0.25s ease;
+}
+
+.footer-pledges-grid img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.footer-pledges-grid a:hover {
+  transform: translateY(-4px);
+  opacity: 0.85;
+}
+
+.footer-pledges-grid a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .footer-pledges {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+
+  .footer-pledges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-pledges-grid img {
+    width: 85px;
+    height: 85px;
+  }
+
+}

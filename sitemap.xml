@@ -24,21 +24,21 @@
     <priority>0.80</priority>
   </url>
 
-<url>
-  <loc>https://northwalestutoring.com/find-tutors-north-wales-uk.html</loc>
-  <lastmod>2026-09-26</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://northwalestutoring.com/find-tutors-north-wales-uk.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.80</priority>
+  </url>
 
   <url>
     <loc>https://northwalestutoring.com/courses.html</loc>
-    <lastmod>2026-04-15T15:10:43+00:00</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://northwalestutoring.com/group-tutoring-north-wales-uk.html</loc>
-    <lastmod>2026-04-15T15:10:43+00:00</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
 
@@ -138,7 +138,7 @@
 
 
   <!-- =====================================================
-       JULY / AUGUST TUTOR PROFILES
+       JULY / AUGUST 2026 TUTOR PROFILES
   ====================================================== -->
 
   <url>
@@ -190,12 +190,6 @@
   </url>
 
   <url>
-    <loc>https://northwalestutoring.com/tutor-enzo.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
     <loc>https://northwalestutoring.com/tutor-jake.html</loc>
     <lastmod>2026-08-18</lastmod>
     <priority>0.64</priority>
@@ -242,7 +236,6 @@
     <priority>0.64</priority>
   </url>
 
-
   <url>
     <loc>https://northwalestutoring.com/tutor-donna.html</loc>
     <lastmod>2026-09-07</lastmod>
@@ -287,13 +280,25 @@
 
 
   <!-- =====================================================
+       OCTOBER 2026 TUTOR PROFILES
+  ====================================================== -->
+
+  <url>
+    <loc>https://northwalestutoring.com/tutor-sian.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
+  <!-- =====================================================
        LEGAL PAGES
   ====================================================== -->
-<url>
-  <loc>https://northwalestutoring.com/safeguarding.html</loc>
-  <lastmod>2026-09-04</lastmod>
-  <priority>0.50</priority>
-</url>
+
+  <url>
+    <loc>https://northwalestutoring.com/safeguarding.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.50</priority>
+  </url>
 
   <url>
     <loc>https://northwalestutoring.com/privacy.html</loc>
