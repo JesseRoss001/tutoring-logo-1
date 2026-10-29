@@ -1,0 +1,1269 @@
+/* =========================================================
+   TIWTORA MATHEMATEG YN GYMRAEG
+   Page-specific styles
+   Uses global brand variables from style.css
+========================================================= */
+
+.welsh-maths-shell {
+  background: #FFFFFF;
+  color: var(--text-dark, #373B3E);
+}
+
+.welsh-maths-page {
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.welsh-maths-page p,
+.welsh-maths-page li,
+.welsh-maths-page span,
+.welsh-maths-page a,
+.welsh-maths-page button,
+.welsh-maths-page small,
+.welsh-maths-page label {
+  font-size: 16px;
+}
+
+.welsh-maths-page p,
+.welsh-maths-page li {
+  line-height: 1.75;
+}
+
+.welsh-maths-page h1,
+.welsh-maths-page h2,
+.welsh-maths-page h3,
+.welsh-maths-page h4 {
+  color: var(--primary-color, #09096A);
+}
+
+
+/* =========================================================
+   SHARED SECTIONS
+========================================================= */
+
+.wm-section {
+  padding: 5.25rem 0;
+}
+
+.wm-section-soft {
+  background: var(--light-bg, #FAFAFA);
+}
+
+.wm-section-heading {
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+}
+
+.wm-section-heading.wm-centred {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.wm-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 0.9rem;
+  padding: 0.42rem 0.85rem;
+
+  background: var(--bg-purple, #F2E8FF);
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.wm-heading {
+  margin-bottom: 1rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.wm-lead {
+  margin: 0;
+
+  color: #596169;
+
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.wm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  min-height: 48px;
+
+  padding: 0.75rem 1.35rem;
+
+  background: var(--primary-color, #09096A);
+  color: #FFFFFF;
+
+  border: 2px solid var(--primary-color, #09096A);
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.wm-btn:hover,
+.wm-btn:focus {
+  transform: translateY(-2px);
+
+  background: var(--accent-color, #FF28A8);
+  border-color: var(--accent-color, #FF28A8);
+
+  color: #FFFFFF;
+}
+
+.wm-btn-outline {
+  background: transparent;
+  color: var(--primary-color, #09096A);
+}
+
+.wm-btn-outline:hover,
+.wm-btn-outline:focus {
+  color: #FFFFFF;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.wm-hero {
+  position: relative;
+
+  padding: 6.25rem 0 5.5rem;
+
+  background:
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(255, 40, 168, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 85%,
+      rgba(9, 9, 106, 0.12),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #F9F6FF 0%,
+      #FFFFFF 60%,
+      #E8FFF2 100%
+    );
+}
+
+.wm-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(9, 9, 106, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(9, 9, 106, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 32px 32px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55),
+      transparent 85%
+    );
+}
+
+.wm-hero-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(320px, 0.85fr);
+
+  gap: 4rem;
+
+  align-items: center;
+}
+
+.wm-hero-copy {
+  max-width: 780px;
+}
+
+.wm-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.55rem;
+
+  margin-bottom: 1.25rem;
+  padding: 0.52rem 0.95rem;
+
+  background: #FFFFFF;
+  color: var(--primary-color, #09096A);
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow:
+    0 6px 24px
+    rgba(9, 9, 106, 0.06);
+}
+
+.wm-hero-eyebrow i {
+  color: var(--accent-color, #FF28A8);
+}
+
+.wm-hero h1 {
+  margin: 0 0 1.25rem;
+
+  font-size: clamp(2.75rem, 6vw, 5rem);
+  font-weight: 850;
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
+}
+
+.wm-hero-intro {
+  max-width: 735px;
+
+  margin-bottom: 1.35rem;
+
+  color: #4E5860;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.wm-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+
+  margin-top: 1.75rem;
+}
+
+.wm-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.65rem;
+
+  margin-top: 1.6rem;
+}
+
+.wm-hero-point {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.45rem;
+
+  padding: 0.5rem 0.8rem;
+
+  background: #FFFFFF;
+  color: #4B535A;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 4px 18px
+    rgba(9, 9, 106, 0.05);
+
+  font-weight: 650;
+}
+
+.wm-hero-point i {
+  color: var(--accent-color, #FF28A8);
+}
+
+
+/* =========================================================
+   HERO SIDE PANEL
+========================================================= */
+
+.wm-hero-panel {
+  position: relative;
+
+  padding: 2rem;
+
+  background: var(--primary-color, #09096A);
+  color: #FFFFFF;
+
+  border-radius: 1.5rem;
+
+  box-shadow:
+    0 20px 50px
+    rgba(9, 9, 106, 0.18);
+}
+
+.wm-hero-panel::before {
+  content: "";
+
+  position: absolute;
+
+  top: -18px;
+  right: -18px;
+
+  width: 110px;
+  height: 110px;
+
+  background: var(--accent-color, #FF28A8);
+
+  border-radius: 50%;
+
+  opacity: 0.22;
+}
+
+.wm-hero-panel h2 {
+  position: relative;
+
+  margin-bottom: 1.1rem;
+
+  color: #FFFFFF;
+
+  font-size: 1.55rem;
+  font-weight: 750;
+}
+
+.wm-hero-panel p {
+  position: relative;
+
+  margin-bottom: 1.25rem;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.wm-hero-panel-list {
+  position: relative;
+
+  display: grid;
+
+  gap: 0.85rem;
+}
+
+.wm-hero-panel-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+
+  padding: 0.9rem 1rem;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+}
+
+.wm-hero-panel-item i {
+  flex: 0 0 auto;
+
+  margin-top: 0.1rem;
+
+  color: #FF7FCB;
+}
+
+
+/* =========================================================
+   WELSH-MEDIUM INTRO
+========================================================= */
+
+.wm-copy-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  gap: 4rem;
+
+  align-items: start;
+}
+
+.wm-copy-aside {
+  padding: 1.8rem;
+
+  background: var(--bg-yellow, #FFF8E8);
+
+  border-left: 5px solid var(--accent-color, #FF28A8);
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+
+.wm-copy-aside h3 {
+  margin-bottom: 0.7rem;
+
+  font-size: 1.3rem;
+  font-weight: 750;
+}
+
+.wm-copy-aside p {
+  margin: 0;
+
+  color: #596169;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.wm-service-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+.wm-service-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+
+  padding: 2rem;
+
+  background: #FFFFFF;
+
+  border: 1px solid rgba(9, 9, 106, 0.07);
+  border-radius: 1.4rem;
+
+  box-shadow:
+    0 10px 30px
+    rgba(9, 9, 106, 0.06);
+}
+
+.wm-service-card:first-child {
+  border-top: 5px solid var(--accent-color, #FF28A8);
+}
+
+.wm-service-card:last-child {
+  border-top: 5px solid var(--primary-color, #09096A);
+}
+
+.wm-service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  margin-bottom: 1rem;
+
+  background: var(--bg-purple, #F2E8FF);
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 50%;
+
+  font-size: 1.35rem;
+}
+
+.wm-service-card h3 {
+  margin-bottom: 0.7rem;
+
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.wm-service-card p {
+  color: #596169;
+}
+
+.wm-check-list {
+  display: grid;
+
+  gap: 0.6rem;
+
+  margin: 0 0 1.5rem;
+  padding: 0;
+
+  list-style: none;
+}
+
+.wm-check-list li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0.65rem;
+
+  color: #4E5860;
+}
+
+.wm-check-list i {
+  flex: 0 0 auto;
+
+  margin-top: 0.2rem;
+
+  color: var(--accent-color, #FF28A8);
+}
+
+.wm-service-card .wm-btn {
+  align-self: flex-start;
+
+  margin-top: auto;
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.wm-benefit-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+.wm-benefit-card {
+  min-height: 100%;
+
+  padding: 1.5rem;
+
+  border-radius: 1.2rem;
+}
+
+.wm-benefit-card:nth-child(1),
+.wm-benefit-card:nth-child(5) {
+  background: var(--bg-purple, #F2E8FF);
+}
+
+.wm-benefit-card:nth-child(2) {
+  background: var(--bg-pink, #FFE8F1);
+}
+
+.wm-benefit-card:nth-child(3) {
+  background: var(--bg-green, #E8FFF2);
+}
+
+.wm-benefit-card:nth-child(4) {
+  background: var(--bg-yellow, #FFF8E8);
+}
+
+.wm-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 0.9rem;
+
+  background: #FFFFFF;
+  color: var(--accent-color, #FF28A8);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 5px 18px
+    rgba(9, 9, 106, 0.07);
+}
+
+.wm-benefit-card h3 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.12rem;
+  font-weight: 750;
+}
+
+.wm-benefit-card p {
+  margin: 0;
+
+  color: #525C64;
+}
+
+
+/* =========================================================
+   TUTOR SECTION
+========================================================= */
+
+.wm-tutors-section {
+  background: var(--primary-color, #09096A);
+}
+
+.wm-tutors-section .wm-kicker {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FF7FCC;
+}
+
+.wm-tutors-section .wm-heading {
+  color: #FFFFFF;
+}
+
+.wm-tutors-section .wm-lead {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+
+/* =========================================================
+   TUTOR GRID
+========================================================= */
+
+.wm-tutor-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1.25rem;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   TUTOR CARD
+========================================================= */
+
+.wm-tutor-card {
+  display: grid;
+
+  /*
+   * Wider portrait area.
+   * Previous 180px column was far too narrow and caused
+   * aggressive cropping on desktop.
+   */
+  grid-template-columns:
+    minmax(230px, 38%)
+    minmax(0, 1fr);
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #FFFFFF;
+
+  border-radius: 1.35rem;
+
+  box-shadow:
+    0 14px 35px
+    rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   TUTOR PHOTO
+   DESKTOP FIX
+========================================================= */
+
+.wm-tutor-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #F2E8FF,
+      #E8FFF2
+    );
+}
+
+.wm-tutor-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  /*
+   * IMPORTANT:
+   * contain prevents faces / bodies being chopped.
+   */
+  object-fit: contain;
+  object-position: center center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #F2E8FF,
+      #E8FFF2
+    );
+}
+
+
+/* =========================================================
+   TUTOR CONTENT
+========================================================= */
+
+.wm-tutor-body {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding: 1.5rem;
+}
+
+.wm-tutor-levels {
+  display: inline-flex;
+
+  align-self: flex-start;
+
+  margin-bottom: 0.7rem;
+
+  padding: 0.35rem 0.7rem;
+
+  background: var(--bg-purple, #F2E8FF);
+  color: var(--primary-color, #09096A);
+
+  border-radius: 999px;
+
+  font-weight: 700;
+}
+
+.wm-tutor-body h3 {
+  margin-bottom: 0.3rem;
+
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.wm-tutor-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.45rem 0.9rem;
+
+  margin-bottom: 0.9rem;
+
+  color: #697178;
+}
+
+.wm-tutor-meta span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.35rem;
+}
+
+.wm-tutor-meta i {
+  color: var(--accent-color, #FF28A8);
+}
+
+.wm-tutor-body p {
+  margin-bottom: 1rem;
+
+  color: #566068;
+}
+
+.wm-tutor-badges {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.45rem;
+
+  margin-bottom: 1.25rem;
+}
+
+.wm-tutor-badges span {
+  padding: 0.35rem 0.65rem;
+
+  background: #F7F7FA;
+  color: #4D5560;
+
+  border-radius: 999px;
+
+  font-weight: 650;
+}
+
+.wm-tutor-bottom {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 0.75rem;
+
+  margin-top: auto;
+
+  padding-top: 1rem;
+
+  border-top:
+    1px solid
+    rgba(9, 9, 106, 0.08);
+}
+
+.wm-tutor-price {
+  color: var(--accent-color, #FF28A8);
+
+  font-size: 18px !important;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   AREAS
+========================================================= */
+
+.wm-areas-wrap {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  gap: 4rem;
+
+  align-items: center;
+}
+
+.wm-area-pills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.65rem;
+}
+
+.wm-area-pill {
+  padding: 0.55rem 0.85rem;
+
+  background: #FFFFFF;
+  color: var(--primary-color, #09096A);
+
+  border: 1px solid rgba(9, 9, 106, 0.10);
+  border-radius: 999px;
+
+  font-weight: 650;
+
+  box-shadow:
+    0 4px 16px
+    rgba(9, 9, 106, 0.04);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.wm-process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+.wm-process-card {
+  position: relative;
+
+  padding: 1.8rem;
+
+  background: #FFFFFF;
+
+  border: 1px solid rgba(9, 9, 106, 0.07);
+  border-radius: 1.25rem;
+}
+
+.wm-process-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: 1rem;
+
+  background: var(--primary-color, #09096A);
+  color: #FFFFFF;
+
+  border-radius: 50%;
+
+  font-weight: 800;
+}
+
+.wm-process-card:nth-child(2) .wm-process-number {
+  background: var(--accent-color, #FF28A8);
+}
+
+.wm-process-card:nth-child(3) .wm-process-number {
+  background: #46A77B;
+}
+
+.wm-process-card h3 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.25rem;
+  font-weight: 750;
+}
+
+.wm-process-card p {
+  margin: 0;
+
+  color: #596169;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.wm-faq {
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.wm-faq .accordion-item {
+  margin-bottom: 0.9rem;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(9, 9, 106, 0.08);
+  border-radius: 1rem;
+}
+
+.wm-faq .accordion-button {
+  padding: 1.2rem 1.3rem;
+
+  background: #FFFFFF;
+  color: var(--primary-color, #09096A);
+
+  font-size: 16px;
+  font-weight: 750;
+
+  box-shadow: none;
+}
+
+.wm-faq .accordion-button:not(.collapsed) {
+  background: var(--bg-purple, #F2E8FF);
+  color: var(--primary-color, #09096A);
+}
+
+.wm-faq .accordion-body {
+  padding: 0 1.3rem 1.3rem;
+
+  color: #505961;
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.wm-final-cta {
+  padding: 5rem 0;
+}
+
+.wm-final-card {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  gap: 2rem;
+
+  align-items: center;
+
+  padding: 2.6rem;
+
+  background:
+    linear-gradient(
+      125deg,
+      var(--primary-color, #09096A) 0%,
+      #171787 100%
+    );
+
+  color: #FFFFFF;
+
+  border-radius: 1.5rem;
+
+  box-shadow:
+    0 16px 40px
+    rgba(9, 9, 106, 0.18);
+}
+
+.wm-final-card h2 {
+  margin-bottom: 0.6rem;
+
+  color: #FFFFFF;
+
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+}
+
+.wm-final-card p {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.wm-final-card .wm-btn {
+  background: var(--accent-color, #FF28A8);
+  border-color: var(--accent-color, #FF28A8);
+}
+
+.wm-final-card .wm-btn:hover,
+.wm-final-card .wm-btn:focus {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+
+  color: var(--primary-color, #09096A);
+}
+
+
+/* =========================================================
+   GLOBAL PAGE OVERRIDES
+========================================================= */
+
+.welsh-maths-shell .footer-section,
+.welsh-maths-shell .footer-section p,
+.welsh-maths-shell .footer-section li,
+.welsh-maths-shell .footer-section a,
+.welsh-maths-shell .footer-section small,
+.welsh-maths-shell .footer-section span,
+.welsh-maths-shell .floating-whatsapp,
+.welsh-maths-shell .navbar-custom .nav-link,
+.welsh-maths-shell .navbar-custom .dropdown-item,
+.welsh-maths-shell .btn-mentor {
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1199.98px) {
+
+  .wm-benefit-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  /*
+   * Slightly reduce photo width on smaller laptops,
+   * but keep enough width to avoid portrait cropping.
+   */
+  .wm-tutor-card {
+    grid-template-columns:
+      minmax(205px, 37%)
+      minmax(0, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .wm-hero-grid,
+  .wm-copy-grid,
+  .wm-areas-wrap {
+    grid-template-columns: 1fr;
+
+    gap: 2.5rem;
+  }
+
+  .wm-hero-copy {
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .wm-hero-actions,
+  .wm-hero-points {
+    justify-content: center;
+  }
+
+  .wm-hero-panel {
+    max-width: 680px;
+
+    margin: 0 auto;
+  }
+
+  .wm-benefit-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  /*
+   * One tutor card per row on tablet.
+   * This gives the photo significantly more room.
+   */
+  .wm-tutor-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+  }
+
+  .wm-tutor-card {
+    grid-template-columns:
+      minmax(250px, 34%)
+      minmax(0, 1fr);
+  }
+
+  .wm-tutor-photo img {
+    min-height: 360px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .wm-section {
+    padding: 4rem 0;
+  }
+
+  .wm-hero {
+    padding: 4.5rem 0 4rem;
+  }
+
+  .wm-service-grid,
+  .wm-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* TUTOR CARD BECOMES VERTICAL */
+
+  .wm-tutor-card {
+    display: block;
+  }
+
+  .wm-tutor-photo {
+    width: 100%;
+
+    padding: 1rem;
+
+    background:
+      linear-gradient(
+        145deg,
+        #F2E8FF,
+        #E8FFF2
+      );
+  }
+
+  .wm-tutor-photo img {
+    width: 100%;
+    height: auto;
+
+    max-height: 440px;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 0.85rem;
+  }
+
+
+  /* FINAL CTA */
+
+  .wm-final-card {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .wm-final-card .wm-btn {
+    justify-self: center;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .wm-hero h1 {
+    font-size: 2.65rem;
+  }
+
+  .wm-benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wm-btn {
+    width: 100%;
+  }
+
+  .wm-service-card,
+  .wm-benefit-card,
+  .wm-process-card,
+  .wm-tutor-body,
+  .wm-final-card {
+    padding: 1.35rem;
+  }
+
+  .wm-tutor-photo {
+    padding: 0.85rem;
+  }
+
+  .wm-tutor-photo img {
+    max-height: 390px;
+  }
+
+}
