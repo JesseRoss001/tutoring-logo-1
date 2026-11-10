@@ -117,12 +117,6 @@
   </url>
 
   <url>
-    <loc>https://northwalestutoring.com/tutor-john.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
     <loc>https://northwalestutoring.com/tutor-muskan.html</loc>
     <lastmod>2026-04-15T15:10:59+00:00</lastmod>
     <priority>0.64</priority>
@@ -338,6 +332,16 @@
 <url>
   <loc>https://northwalestutoring.com/tutor-georgia.html</loc>
   <lastmod>2026-10-29</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- =====================================================
+     NOVEMBER 2026 TUTOR PROFILES
+====================================================== -->
+
+<url>
+  <loc>https://northwalestutoring.com/tutor-shara.html</loc>
+  <lastmod>2026-11-10</lastmod>
   <priority>0.64</priority>
 </url>
 
