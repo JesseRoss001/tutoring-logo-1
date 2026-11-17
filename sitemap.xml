@@ -23,10 +23,9 @@
     <lastmod>2026-04-15T15:10:43+00:00</lastmod>
     <priority>0.80</priority>
   </url>
-
 <url>
   <loc>https://northwalestutoring.com/find-tutors-north-wales-uk.html</loc>
-  <lastmod>2026-10-29</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.80</priority>
 </url>
 
@@ -63,6 +62,12 @@
 <url>
   <loc>https://northwalestutoring.com/tiwtora-cymraeg-ar-lein.html</loc>
   <lastmod>2026-11-08</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://northwalestutoring.com/sen-send-tutoring-north-wales-uk.html</loc>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.90</priority>
 </url>
   <!-- =====================================================
@@ -134,11 +139,6 @@
     <priority>0.64</priority>
   </url>
 
-  <url>
-    <loc>https://northwalestutoring.com/tutor-mahima.html</loc>
-    <lastmod>2026-04-15T15:10:59+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
 
 
   <!-- =====================================================
@@ -318,12 +318,6 @@
 </url>
 
 <url>
-  <loc>https://northwalestutoring.com/tutor-shannon.html</loc>
-  <lastmod>2026-10-22</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
   <loc>https://northwalestutoring.com/tutor-arianwen.html</loc>
   <lastmod>2026-10-29</lastmod>
   <priority>0.64</priority>
@@ -342,6 +336,42 @@
 <url>
   <loc>https://northwalestutoring.com/tutor-shara.html</loc>
   <lastmod>2026-11-10</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://northwalestutoring.com/tutor-albert.html</loc>
+  <lastmod>2026-11-17</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://northwalestutoring.com/tutor-sadia.html</loc>
+  <lastmod>2026-11-17</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://northwalestutoring.com/tutor-gabriel.html</loc>
+  <lastmod>2026-11-17</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://northwalestutoring.com/tutor-hamza.html</loc>
+  <lastmod>2026-11-17</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://northwalestutoring.com/tutor-sami.html</loc>
+  <lastmod>2026-11-17</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://northwalestutoring.com/tutor-elan.html</loc>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.64</priority>
 </url>
 
